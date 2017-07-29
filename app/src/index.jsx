@@ -2,6 +2,7 @@
 import React from "react";
 import { render } from "react-dom";
 
+import Routes from "./Routes.jsx"
 
 function App(){
   return (
@@ -12,7 +13,7 @@ function App(){
 class Root extends React.Component{
   render() {
     return (
-      <App/>
+      <Routes />
     );
   }
 }
