@@ -1,25 +1,29 @@
 import { UserManager, Log } from 'oidc-client';
 import { Observable, Subject, ReplaySubject } from 'rxjs';
 
+import { User } from './user';
+
 Log.logger = console;
 Log.level = Log.ERROR;
 
 export class AuthServiceProvider{
   constructor(serviceManager,settings){
     this.userManager = new UserManager(settings);
+    this.settings = settings;
     this._user = null;  
     this.userSubject = new Subject();
     this.userReplay = new ReplaySubject(1);
     this._loginState = 0;
     this.services = serviceManager;
     this._initBindings();
-    console.log(this.userManager);
   }
 
   _initBindings(){
+    
     this.userManager.events.addUserLoaded((user) => {
       this.setToken(user,true);
-    })
+    });
+
     Observable.from(this.userManager.getUser()).subscribe((user) => {
       this.setToken(user,true);
     });
@@ -31,15 +35,27 @@ export class AuthServiceProvider{
   }
   
   setToken(user,push){
-    let u = user && user.access_token || null;
-    this._user = u;
+    let u = null;
     this._loginState = 0;
-    //This side-effect might be a bit sneaky
-    this.services.getService("http").setAuth(u);
-    if(push){
-      this.userSubject.next(user);
-      this.userReplay.next(user);
-    }
+    this.services.getService("http").setToken(user.access_token);
+    if(user && user.access_token)
+      this.services.getService("http").get(this.settings.metadata.userinfo_endpoint).map((profile) => {
+        return new User(user.access_token,user.scope,profile);
+      }).catch((err) => {
+        return Observable.of(new User(user.access_token,user.scope,null));
+      }).subscribe((user) => {
+        this._user = user;
+        console.log("Complete",this._user);
+        if(push){
+          this.userSubject.next(this._user);
+          this.userReplay.next(this._user);
+        };
+      });
+    else if(push)
+      this.userSubject.next(null);
+      this.userReplay.next(null);
+       
+
   }
 
   //Login
@@ -54,7 +70,7 @@ export class AuthServiceProvider{
     this._loginState = 2;
     sessionStorage.clear();
     this.setToken(null,true);
-    //Revoking the token does not work atm "405 Method not allowed"
+    //Revoking the token does not work "405 Method not allowed"
     /*Observable.from(this.userManager.signoutRedirect()).subscribe((user)=> {
     });*/
     return this.getUser();
