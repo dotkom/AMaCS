@@ -1,7 +1,9 @@
 import React from "react";
+import _ from "lodash";
 
 import Selectable from "./Selectable.jsx"
 import SelectedList from "./SelectedList.jsx"
+
 import _s from 'assets/css/SelectContainer.css';
 
 class SelectContainer extends React.Component {
@@ -9,14 +11,10 @@ class SelectContainer extends React.Component {
     super(props);
 
     this.choiceCount = 3;
-
-    this.state = {
-      selected: []
-    }
   }
 
   handleSelect(committeeName) {
-    let { selected } = this.state;
+    let { selected, onChange } = this.props;
     const selectedIndex = selected.indexOf(committeeName)
     const alreadySelected = selectedIndex !== -1;
     if(alreadySelected) {
@@ -27,14 +25,11 @@ class SelectContainer extends React.Component {
     } else if(selected.length < this.choiceCount) {
       selected = [...selected, committeeName];
     }
-    this.setState({
-      selected
-    });
+    this.props.onChange(selected);
   }
 
   render() {
-    const { committees } = this.props;
-    const { selected } = this.state;
+    const { committees, selected } = this.props;
     return (
       <div className={_s.container}>
         <div className={_s.selectables}>

@@ -1,4 +1,5 @@
 import React from "react";
+import _ from "lodash";
 
 import CommitteeInfo from "./CommitteeInfo.jsx";
 import SelectContainer from "./SelectContainer.jsx";
@@ -6,6 +7,7 @@ import NavigationButton from "../NavigationButton.jsx";
 import Login from "../Login.jsx";
 
 import _s from "assets/css/Home.css";
+
 
 const committees = {
   dotkom: {
@@ -77,41 +79,85 @@ const committees = {
   }
 }
 
+class Home extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      name: props.user ? props.user.fullname : "",
+      email: props.user ? props.user.email : "",
+      selectedComittees: [],
+      ordered: true
+    }
+  }
 
+  componentWillReceiveProps(props){
+    this.setState({
+      name: props.user ? props.user.fullname : "",
+      email: props.user ? props.user.email : ""
+    });
+  }
 
-function Home({ user, serviceProvider }) {
-  console.log(user,serviceProvider);
-  return(
-    <div className={_s.background}>
-      <div className={_s.nav}>
-        <NavigationButton link="/info">
-          <img src="/static/arrow-blue.png" />
-          Tilbake
-        </NavigationButton>
-      </div>
-      <div className={_s.alternative}>
-        <div className={_s.content}>
-          <Login serviceProvider={serviceProvider} loggedIn={!!user}/>
+  _infoChanged(info){
+    this.setState(_.pick(info,["name","email"]));
+  }
+
+  _selectedChanged(selected){
+    this.setState({
+      selectedComittees: selected.slice(0,3)
+    });
+  }
+
+  _setOrdered(ordered){
+    this.setState({
+      ordered: ordered,
+      selectedComittees: ordered ? [] : this.state.selectedComittees
+    });
+  }
+
+  render() {
+    const { serviceProvider } = this.props;
+    return (
+      <div className={_s.background}>
+        <div className={_s.nav}>
+          <NavigationButton link="/info">
+            <img src="/static/arrow-blue.png" />
+            Tilbake
+          </NavigationButton>
+        </div>
+        <div className={_s.alternative}>
+          <div className={_s.content}>
+            <Login
+              onChange={(info) => this._infoChanged(info)}
+              serviceProvider={serviceProvider}
+              loggedIn={!!this.props.user}
+              info={_.pick(this.state,["name","email"])}
+            />
+          </div>
+        </div>
+        <div className={_s.main}>
+          <div className={_s.content}>
+            { Object.keys(committees).map((key) => (
+              <CommitteeInfo key={key} committee={committees[key]} />
+            ))}
+          </div>
+        </div>
+        <div className={_s.main}>
+          <div className={_s.content}>
+            <SelectContainer
+              ordered={this.state.ordered}
+              selected={this.state.selectedComittees}
+              onChange={(selected) => this._selectedChanged(selected) }
+              committees={committees}
+            />
+          </div>
         </div>
       </div>
-      <div className={_s.main}>
-        <div className={_s.content}>
-          { Object.keys(committees).map((key) => (
-            <CommitteeInfo key={key} committee={committees[key]} />
-          ))}
-        </div>
-      </div>
-      <div className={_s.main}>
-        <div className={_s.content}>
-          <SelectContainer committees={committees} />
-        </div>
-      </div>
-    </div>
-  )
-} 
+    )
+  }
+}
 
 Home.defaultProps = {
-  loggedIn: false
+  user: null
 }
 
 export default Home;
