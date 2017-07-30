@@ -1,49 +1,61 @@
-import React from "react"
-import PropTypes from 'prop-types';
+import React from "react";
+
+const style = {
+  card: {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "24rem",
+    borderStyle: "solid",
+    border: "2px",
+    padding: "0.5rem",
+    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+    margin: "1.5rem"
+  },
+  info: {
+    display: "block"
+  },
+  name: {
+    paddingLeft: "1rem",
+    float: "right"
+  },
+  img: {
+    float: "left"
+  }
+}
 
 class CommitteeInfo extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       showInfo: false,
     };
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick() {
+    const { showInfo } = this.state;
+    this.setState({ showInfo: !showInfo })
   }
 
   render() {
     const { committee } = this.props
+    const { showInfo } = this.state
 
     return(
-      <div>
-        <img src={ committee.icon } />
-        <p>{ committee.name }</p>
-        <p> 
-
-        { showInfo ? committee.info : undefined }
+      <div onClick={this.handleClick} style={style.card}>
+        <section>
+          <img style={style.img} height={60} width={60} src={ committee.icon } />
+          <h3 style={style.name}>{ committee.name }</h3>
+        </section>
+        <p style={style.info}> 
+          <br />
+          { showInfo ? committee.info : undefined }
         </p>
       </div>
     )
   }
 }
-
-/*
-CommitteeInfo.propTypes = {
-  showInfo: PropTypes.bool,
-  committee: {
-    name: PropTypes.string,
-    info: PropTypes.string,
-    icon: PropTypes.string,
-  }
-}
-
-CommitteeInfo.defaultProps = {
-  showInfo: false,
-  committee: {
-    name: "Komitenavn",
-    info: "--&$-Svada-$&--",
-    icon: "https://avatars0.githubusercontent.com/u/693951?v=4&s=400",
-  }
-}
-*/
 
 export default CommitteeInfo;
