@@ -1,7 +1,7 @@
 import React from "react";
 
 import CommitteeInfo from "./CommitteeInfo.jsx";
-//import SelectContainer from "./SelectContainer.jsx";
+import SelectContainer from "./SelectContainer.jsx";
 import Login from "../Login.jsx";
 
 const committees = [
@@ -77,9 +77,9 @@ const style = {
     alignItems: "center",
     justifyContent: "center",
     maxWidth: "64rem",
-    border: "1px black",
     margin: "0 auto",
     padding: "1rem",
+    backgroundColor: "#F2F2F2",
   },
 }
 
@@ -94,9 +94,9 @@ function Home({ loggedIn }) {
           <CommitteeInfo key={committee.name} committee={committee} />
         ))}
       </div>
-      {/*<div style={style.main}>
+      <div style={style.main}>
         <SelectContainer committees={committees} />
-      </div>*/}
+      </div>
     </div>
   )
 }

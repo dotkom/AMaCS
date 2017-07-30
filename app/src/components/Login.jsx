@@ -1,20 +1,33 @@
 import React from "react"
 
+import Button from "./Button.jsx"
+import Input from "./Input.jsx"
+
 const style = {
   login: {
-    width: "64rem"
+    width: "60rem",
+    backgroundColor: "white",
+    fontFamily: "Open Sans",
+    fontStyle: "normal",
+    fontWeight: "bold",
+    lineHeight: "normal",
+    fontSize: "24px",
+    textTransform: "uppercase",
+    color: "#E9E9E9",
+    borderRadius: "2px",
+    padding: "1em",
+    margin: "2em",
   }
 }
 
 function Login({ loggedIn }) {
   return(
-    <div>
+    <div style={style.login}>
       <a href={loggedIn ? '/logout' : '/login'}>
-        <button>Logg {loggedIn ? 'ut' : 'inn'}</button>
+        <Button>Logg {loggedIn ? 'ut' : 'inn'}</Button>
       </a>
-      <p>&emsp;eller navn og mail::&emsp;</p>
-      <input type="text" placeholder="Navn"></input>
-      <input type="email" placeholder="Mailadresse"></input>
+      <Input type="text" placeholder="Navn" name="name" label="navn"></Input>
+      <Input type="email" placeholder="Mailadresse" name="email" label="E-Postadresse"></Input>
     </div>
   )
 }
