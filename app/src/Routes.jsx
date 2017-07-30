@@ -37,7 +37,7 @@ export default class Routes extends React.Component {
             user: this.state.user,
             serviceProvider: this.props.serviceProvider
           })} />
-          <Route path="/admin" render={(props) => RenderComponent(AdminContainer,props,{user: user})} />
+          <Route path="/admin" render={(props) => RenderComponent(AdminContainer,props,{user: this.state.user})} />
           <Route component={NotFound} />
         </Switch>
       </Router>

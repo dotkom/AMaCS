@@ -88,7 +88,7 @@ function Home({ user, serviceProvider }) {
   return(
     <div>
       <div style={style.main}>
-        <Login serviceProvider={serviceProvider} loggedIn={!!user}/>
+        <Login serviceProvider={serviceProvider} user={user}/>
       </div>
       <div style={style.main}>
         { committees.map((committee) => (

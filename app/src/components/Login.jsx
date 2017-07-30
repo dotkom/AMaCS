@@ -6,27 +6,57 @@ const style = {
   }
 }
 
-function Login({ loggedIn, serviceProvider }) {
-  const clickHandler = () => {
-    if(loggedIn)
-      serviceProvider.getService("auth").logout();
+
+class Login extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      name: props.user ? props.user.fullname : "",
+      email: props.user ? props.user.email : ""
+    }
+  }
+
+  componentWillReceiveProps(props){
+    this.setState({
+      name: props.user ? props.user.fullname : "",
+      email: props.user ? props.user.email : ""
+    });
+  }
+
+  _handleLoginClick(){
+    if(!!this.props.user)
+      this.props.serviceProvider.getService("auth").logout();
     else
-      serviceProvider.getService("auth").login();
+      this.props.serviceProvider.getService("auth").login();
+  }
+
+  _onNameChange(name){
+    this.setState({
+      name: name
+    });
+  }
+
+  _onEmailChange(email){
+    this.setState({
+      email: email
+    });
   }
   
-  
-  return(
-    <div>
-      <button onClick={clickHandler}>Logg {loggedIn ? 'ut' : 'inn'}</button>
-      <p>&emsp;eller navn og mail::&emsp;</p>
-      <input type="text" placeholder="Navn"></input>
-      <input type="email" placeholder="Mailadresse"></input>
-    </div>
-  )
+  render(){
+    return (
+      <div>
+        <button onClick={() => this._handleLoginClick()}>Logg {!!this.props.user ? 'ut' : 'inn'}</button>
+        <p>&emsp;eller navn og mail::&emsp;</p>
+        <input onChange={(r) => this._onNameChange(r.value) } disabled={!!this.props.user} value={this.state.name} type="text" placeholder="Navn" />
+        <input onChange={(r) => this._onEmailChange(r.value)} disabled={!!this.props.user} type="email" value={this.state.email} placeholder="Mailadresse" />
+      </div>
+    );
+  }
 }
 
+
 Login.defaultProps = {
-  loggedIn: false
+  user: null
 }
 
 export default Login;
