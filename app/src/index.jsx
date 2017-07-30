@@ -20,14 +20,6 @@ serviceManager.registerService("auth.service",AuthServiceProvider,OAUTH_SETTINGS
 serviceManager.alias("auth","auth.service");
 
 
-
-
-const serviceManager = new ServiceManager();
-serviceManager.registerService("http.service",HttpServiceProvider);
-serviceManager.alias("http","http.service");
-serviceManager.registerService("auth.service",AuthServiceProvider,OAUTH_SETTINGS);
-serviceManager.alias("auth","auth.service");
-
 class Root extends React.Component{
   render() {
     return (
