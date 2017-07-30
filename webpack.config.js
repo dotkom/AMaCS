@@ -8,7 +8,7 @@ const APP_SRC = path.resolve(__dirname,'./app/src');
 
 
 module.exports = {
-  entry: [path.join(APP_SRC,'./index.jsx')],
+  entry: ["babel-polyfill",path.join(APP_SRC,'./index.jsx')],
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
@@ -43,6 +43,9 @@ module.exports = {
         ],
       }
     ],
+  },
+  devServer: {
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({
