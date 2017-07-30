@@ -9,6 +9,7 @@ import { ServiceManager, HttpServiceProvider, AuthServiceProvider } from 'servic
 
 import { OAUTH_SETTINGS } from 'common/constants';
 
+import { AppContainer } from 'components/App/AppContainer.jsx';
 
 
 
@@ -19,48 +20,10 @@ serviceManager.registerService("auth.service",AuthServiceProvider,OAUTH_SETTINGS
 serviceManager.alias("auth","auth.service");
 
 
-
-class App extends React.Component{
-  constructor(props){
-    super(props);
-    this.auth = serviceManager.getService("auth");
-    this.state = {loggedIn: false}
-  }
-  componentDidMount(){
-    this.auth.onUserChange().subscribe((user) => {
-      console.log("New user",!!user);
-      this.setState({
-        loggedIn: !!user
-      });
-    });
-  }
-
-  login(){
-    this.auth.login();
-  }
-  
-  logout(){
-    this.auth.logout();
-  }
-
-  render(){
-    const loggedIn = this.state.loggedIn;
-    return (
-      <div>
-        <h1>Initial setup</h1>
-        {
-          loggedIn ? <button onClick={() => this.logout()}>Logout</button> :
-          <button onClick={() => this.login()}>Login</button> 
-        }
-      </div>
-    );
-  }
-}
-
 class Root extends React.Component{
   render() {
     return (
-      <Routes />
+      <Routes serviceProvider={serviceManager} />
     );
   }
 }

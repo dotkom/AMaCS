@@ -45,7 +45,6 @@ export class AuthServiceProvider{
         return Observable.of(new User(user.access_token,user.scope,null));
       }).subscribe((user) => {
         this._user = user;
-        console.log("Complete",this._user);
         if(push){
           this.userSubject.next(this._user);
           this.userReplay.next(this._user);
