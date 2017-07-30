@@ -10,7 +10,7 @@ const style = {
     fontWeight: "normal",
     lineWeight: "normal",
     width: "24em",
-    height: "3em",
+    height: "3.5em",
   },
   label: {
     fontFamily: "Open Sans",
@@ -20,13 +20,15 @@ const style = {
     fontSize: "20px",
     textTransform: "uppercase",
     color: "#909090",
+  },
+  container: {
+    marginBottom: "0.50em",
   }
 };
 
 function Input({ children, type, placeholder, label, name, id, value}) {
   return(
-    <span>
-      <br />
+    <div style={style.container}>
       <label style={style.label} htmlFor={name}>{label}</label>
       <br />
       <input
@@ -37,7 +39,7 @@ function Input({ children, type, placeholder, label, name, id, value}) {
         value={value}
         name={name}
       />
-    </span>
+    </div>
   )
 }
 

@@ -26,6 +26,10 @@ const style = {
     color: "white",
     margin: "0 auto",
     alignItems: "center",
+    fontFamily: "Open Sans",
+    fontStyle: "normal",
+    fontWeight: "bold",
+    lineHeight: "normal",
   }
 
 };
