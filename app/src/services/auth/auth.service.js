@@ -38,7 +38,7 @@ export class AuthServiceProvider{
   setToken(user,push){
     let u = null;
     this._loginState = 0;
-    this.services.getService("http").setToken(user.access_token);
+    this.services.getService("http").setToken(user && user.access_token);
     if(user && user.access_token)
       this.services.getService("http").get(this.settings.metadata.userinfo_endpoint).map((profile) => {
         return new User(user.access_token,user.scope,profile);

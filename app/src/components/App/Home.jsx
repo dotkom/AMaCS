@@ -83,11 +83,12 @@ const style = {
   },
 }
 
-function Home({ loggedIn }) {
+function Home({ user, serviceProvider }) {
+  console.log(user,serviceProvider);
   return(
     <div>
       <div style={style.main}>
-        <Login loggedIn={loggedIn}/>
+        <Login serviceProvider={serviceProvider} loggedIn={!!user}/>
       </div>
       <div style={style.main}>
         { committees.map((committee) => (

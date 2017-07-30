@@ -6,12 +6,18 @@ const style = {
   }
 }
 
-function Login({ loggedIn }) {
+function Login({ loggedIn, serviceProvider }) {
+  const clickHandler = () => {
+    if(loggedIn)
+      serviceProvider.getService("auth").logout();
+    else
+      serviceProvider.getService("auth").login();
+  }
+  
+  
   return(
     <div>
-      <a href={loggedIn ? '/logout' : '/login'}>
-        <button>Logg {loggedIn ? 'ut' : 'inn'}</button>
-      </a>
+      <button onClick={clickHandler}>Logg {loggedIn ? 'ut' : 'inn'}</button>
       <p>&emsp;eller navn og mail::&emsp;</p>
       <input type="text" placeholder="Navn"></input>
       <input type="email" placeholder="Mailadresse"></input>
