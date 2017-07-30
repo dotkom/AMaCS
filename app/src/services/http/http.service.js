@@ -3,7 +3,7 @@ import { Observable, Subject } from 'rxjs';
 
 export class HttpServiceProvider {
 
-  constructor() {
+  constructor(serviceManager) {
     this.requestQueue = [];
     this.requestSubject = new Subject();
     // Subject for handling requests, each request is seperated by 150ms
@@ -33,8 +33,15 @@ export class HttpServiceProvider {
   }
 
   setAuth(token) {
-    this.auth_token = token;
-  }
+    if(token){
+      this.auth_token = token.access_token;
+      this.token_type = token.token_type;
+
+    }else{
+      this.auth_token = null;
+      this.token_type = null;
+    } 
+ }
 
   handleResponse(r) {
     if (!r.ok) {
@@ -49,7 +56,7 @@ export class HttpServiceProvider {
   request(request) {
     // Add token to request
     if(this.auth_token){
-      request.headers.set('Authorization', `Bearer ${this.auth_token}`);
+      request.headers.set('Authorization', `${this.token_type} ${this.auth_token}`);
     }
     const resolver = new Subject();
     // Push request into request 'stream'/queue
