@@ -1,6 +1,7 @@
 import { UserManager, Log } from 'oidc-client';
 import { Observable, Subject, ReplaySubject } from 'rxjs';
 
+
 import { User } from './user';
 
 Log.logger = console;
@@ -54,7 +55,6 @@ export class AuthServiceProvider{
       this.userSubject.next(null);
       this.userReplay.next(null);
        
-
   }
 
   //Login
