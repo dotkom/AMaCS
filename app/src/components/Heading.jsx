@@ -6,21 +6,27 @@ const style = {
     boxShadow: "0 0 0 0 rgba(0, 0, 0, 0.1)",
     background:"#0060A3"
   },
-  content: {
+  logo: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     maxWidth: "64rem",
-    border: "1px black",
     margin: "0 auto",
     padding: "1rem",
   },
   header: {
-    color: "white",
-    fontSize: "2rem",
-    margin: "0",
-    transition: "all 0.3s"
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    maxWidth: "64rem",
+    margin: "0 auto",
+    paddingBottom: "1rem",
   },
+  text: {
+    color: "white",
+    margin: "0 auto",
+    alignItems: "center",
+  }
 
 };
 
@@ -36,8 +42,11 @@ class Heading extends React.Component {
   render () {
     return (
       <header style={style.heading}>
-        <div style={style.content}>
+        <div style={style.logo}>
           <Link to="/"><img src="https://online.ntnu.no/static/img/online_logo.svg" /></Link>
+        </div>
+        <div style={style.header}>
+          <p style={style.text} >Komitésøknadssystemet Supreme-Guacamole</p>
         </div>
       </header>
     )
