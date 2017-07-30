@@ -20,9 +20,6 @@ export class AuthServiceProvider{
     this.userManager.events.addUserLoaded((user) => {
       this.setToken(user,true);
     })
-    /*Observable.from(this.userManager.querySessionStatus()).subscribe(...a => {
-      console.log("Session status",...a);
-    });*/
     Observable.from(this.userManager.getUser()).subscribe((user) => {
       this.setToken(user,true);
     });
@@ -34,15 +31,11 @@ export class AuthServiceProvider{
   }
   
   setToken(user,push){
-    console.log(user);
-    this._user = user;
+    let u = user && user.access_token || null;
+    this._user = u;
     this._loginState = 0;
     //This side-effect might be a bit sneaky
-    this.services.getService("http").setAuth(user);
-    if(user)
-      Observable.from(this.userManager.getUser(user)).subscribe((...a) => {
-        console.log("getUser",...a);
-      });
+    this.services.getService("http").setAuth(u);
     if(push){
       this.userSubject.next(user);
       this.userReplay.next(user);
@@ -52,8 +45,7 @@ export class AuthServiceProvider{
   //Login
   login(){
     this._loginState = 1;
-    Observable.from(this.userManager.signinPopup()).flatMap((user)=> {
-      //this.setToken(user,true);
+    Observable.from(this.userManager.signinPopup()).subscribe(()=> {
     });
     return this.getUser();
   }

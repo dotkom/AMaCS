@@ -32,16 +32,10 @@ export class HttpServiceProvider {
       });
   }
 
-  setAuth(token) {
-    if(token){
-      this.auth_token = token.access_token;
-      this.token_type = token.token_type;
-
-    }else{
-      this.auth_token = null;
-      this.token_type = null;
-    } 
- }
+  setToken(token) {
+    this.auth_token = token;
+    this.token_type = "Bearer"; 
+  }
 
   handleResponse(r) {
     if (!r.ok) {
@@ -88,6 +82,7 @@ export class HttpServiceProvider {
     }
     return `?${ret}`;
   }
+  
   /** Performs a post request
    * @param {string} url
    * @param {params} {key: value}
