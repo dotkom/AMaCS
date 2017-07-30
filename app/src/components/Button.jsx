@@ -11,6 +11,10 @@ const style = {
     height: "3em",
     color: "white",
     textTransform: "uppercase",
+    ontFamily: "Open Sans",
+    fontStyle: "normal",
+    fontWeight: "bold",
+    lineHeight: "normal",
   },
   button_active: {
     background: "#F2F2F2",

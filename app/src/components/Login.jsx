@@ -5,29 +5,37 @@ import Input from "./Input.jsx"
 
 const style = {
   login: {
-    width: "60rem",
+    maxWidth: "60rem",
     backgroundColor: "white",
-    fontFamily: "Open Sans",
-    fontStyle: "normal",
-    fontWeight: "bold",
-    lineHeight: "normal",
-    fontSize: "24px",
     textTransform: "uppercase",
     color: "#E9E9E9",
     borderRadius: "2px",
     padding: "1em",
     margin: "2em",
+  },
+  right: {
+    float: "right",
+    maxWidth: "20rem",
+  },
+  left: {
+    float: "left",
+    maxWidth: "20rem",
   }
 }
 
 function Login({ loggedIn }) {
   return(
     <div style={style.login}>
-      <a href={loggedIn ? '/logout' : '/login'}>
-        <Button>Logg {loggedIn ? 'ut' : 'inn'}</Button>
-      </a>
-      <Input type="text" placeholder="Navn" name="name" label="navn"></Input>
-      <Input type="email" placeholder="Mailadresse" name="email" label="E-Postadresse"></Input>
+      <h2>Brukerinfo</h2>
+      <div style={style.left}>
+        <a href={loggedIn ? '/logout' : '/login'}>
+          <Button>Logg {loggedIn ? 'ut' : 'inn'}</Button>
+        </a>
+      </div>
+      <div style={style.right}>
+        <Input type="text" placeholder="Navn" name="name" label="navn"></Input>
+        <Input type="email" placeholder="Mailadresse" name="email" label="E-Postadresse"></Input>
+      </div>
     </div>
   )
 }

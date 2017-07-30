@@ -79,13 +79,15 @@ const style = {
     maxWidth: "64rem",
     margin: "0 auto",
     padding: "1rem",
-    backgroundColor: "#F2F2F2",
   },
+  background: {
+    backgroundColor: "#F2F2F2",
+  }
 }
 
 function Home({ loggedIn }) {
   return(
-    <div>
+    <div style={style.background}>
       <div style={style.main}>
         <Login loggedIn={loggedIn}/>
       </div>
