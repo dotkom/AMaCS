@@ -1,5 +1,7 @@
 import React from "react"
 
+import _ from 'lodash';
+
 const style = {
   login: {
     width: "64rem"
@@ -7,51 +9,31 @@ const style = {
 }
 
 
-class Login extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      name: props.user ? props.user.fullname : "",
-      email: props.user ? props.user.email : ""
+function Login({info,loggedIn,serviceProvider,onChange}){
+  const _handleLoginClick = () => {
+    if(loggedIn)
+      serviceProvider.getService("auth").logout();
+    else
+      serviceProvider.getService("auth").login();
+  }
+
+  const _handleChange = (field,value) => {
+    let newState = _.pick(_.assign({},info,{
+      [field]: value
+    }),["name","email"]);
+    if(onChange){
+      onChange(newState);
     }
   }
-
-  componentWillReceiveProps(props){
-    this.setState({
-      name: props.user ? props.user.fullname : "",
-      email: props.user ? props.user.email : ""
-    });
-  }
-
-  _handleLoginClick(){
-    if(!!this.props.user)
-      this.props.serviceProvider.getService("auth").logout();
-    else
-      this.props.serviceProvider.getService("auth").login();
-  }
-
-  _onNameChange(name){
-    this.setState({
-      name: name
-    });
-  }
-
-  _onEmailChange(email){
-    this.setState({
-      email: email
-    });
-  }
   
-  render(){
-    return (
-      <div>
-        <button onClick={() => this._handleLoginClick()}>Logg {!!this.props.user ? 'ut' : 'inn'}</button>
-        <p>&emsp;eller navn og mail::&emsp;</p>
-        <input onChange={(r) => this._onNameChange(r.value) } disabled={!!this.props.user} value={this.state.name} type="text" placeholder="Navn" />
-        <input onChange={(r) => this._onEmailChange(r.value)} disabled={!!this.props.user} type="email" value={this.state.email} placeholder="Mailadresse" />
-      </div>
-    );
-  }
+  return (
+    <div>
+      <button onClick={_handleLoginClick}>Logg {loggedIn ? 'ut' : 'inn'}</button>
+      <p>&emsp;eller navn og mail::&emsp;</p>
+      <input onChange={(r) => _handleChange("name",r.target.value)} disabled={loggedIn} value={info.name || ""} type="text" placeholder="Navn" />
+      <input onChange={(r) => _handleChange("email",r.target.value)} disabled={loggedIn} value={info.email || ""} type="email" placeholder="Mailadresse" />
+    </div>
+  );
 }
 
 
