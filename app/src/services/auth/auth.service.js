@@ -13,13 +13,16 @@ export class AuthServiceProvider{
     this._loginState = 0;
     this.services = serviceManager;
     this._initBindings();
+    console.log(this.userManager);
   }
 
   _initBindings(){
     this.userManager.events.addUserLoaded((user) => {
       this.setToken(user,true);
     })
-    
+    /*Observable.from(this.userManager.querySessionStatus()).subscribe(...a => {
+      console.log("Session status",...a);
+    });*/
     Observable.from(this.userManager.getUser()).subscribe((user) => {
       this.setToken(user,true);
     });
