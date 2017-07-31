@@ -1,7 +1,7 @@
 import React from "react";
 
 import _s from "assets/css/Selectable.css";
-import classNames from "classNames";
+import classNames from "classnames";
 
 
 function Selectable({ committee, onClick }) {
