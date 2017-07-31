@@ -19,3 +19,18 @@
   background: #F2F2F2;
   border: 4px solid #0060A3;
 }
+:local .iconLeft {
+  width: 2rem;
+  margin-right: 8px;
+}
+
+:local .iconRight {
+  width: 2rem;
+  margin-left: 8px;
+}
+
+:local .text {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 0;
+}

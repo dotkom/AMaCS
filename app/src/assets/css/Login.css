@@ -25,7 +25,8 @@
 
 :local .header {
   color: #636363;
-  font-family: 'Open Sans'
+  font-family: 'Open Sans';
+  margin-left: 1rem;
 }
 
 :local .label {
