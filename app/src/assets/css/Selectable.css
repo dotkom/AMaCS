@@ -1,0 +1,13 @@
+
+:local .body {
+  margin: 1rem;
+}
+
+:local .img {
+  height: 60px;
+  width: 60px;
+}
+
+:local .text {
+  display: inline-block;
+}

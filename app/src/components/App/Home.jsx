@@ -4,6 +4,8 @@ import CommitteeInfo from "./CommitteeInfo.jsx";
 import SelectContainer from "./SelectContainer.jsx";
 import Login from "../Login.jsx";
 
+import _s from "assets/css/Home.css";
+
 const committees = [
   {
     name: "Undefinedkom",
@@ -69,39 +71,25 @@ const committees = [
   }
 ]
 
-const style = {
-   main: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-    alignItems: "center",
-    justifyContent: "center",
-    maxWidth: "64rem",
-    margin: "0 auto",
-    padding: "1rem",
-  },
-  background: {
-    backgroundColor: "#F2F2F2",
-  }
-}
+
 
 function Home({ loggedIn }) {
   return(
-    <div style={style.background}>
-      <div style={style.main}>
+    <div className={_s.background}>
+      <div className={_s.main}>
         <Login loggedIn={loggedIn}/>
       </div>
-      <div style={style.main}>
+      <div className={_s.main}>
         { committees.map((committee) => (
           <CommitteeInfo key={committee.name} committee={committee} />
         ))}
       </div>
-      <div style={style.main}>
+      <div className={_s.main}>
         <SelectContainer committees={committees} />
       </div>
     </div>
   )
-}
+} 
 
 Home.defaultProps = {
   loggedIn: false
