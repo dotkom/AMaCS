@@ -23,13 +23,32 @@ const style = {
     boxSizing: "border-box",
     boxShadow: "0px 3px 4px rgba(0, 0, 0, 0.25)",
     borderRadius: "2px",
+  },
+  iconLeft: {
+    width: "2rem",
+    marginRight: "8px"
+  },
+  iconRight: {
+    width: "2rem",
+    marginLeft: "8px"
+  },
+  text: {
+    fontSize: "1.5rem",
+    display: "inline-block",
+    margin: 0
   }
 }
 
-function Button({ children, onClick }) {
+function Button({ children, onClick, text, iconLeft, iconRight }) {
     return(
         <button style={style.button} onClick={onClick}>
-          {children}
+          { iconLeft ?
+            <img style={style.iconLeft} src={iconLeft} /> : undefined
+          }
+          <p style={style.text}>{ text }</p>
+          { iconRight ?
+            <img style={style.iconRight} src={iconRight} /> : undefined
+          }
         </button>
     )
 }

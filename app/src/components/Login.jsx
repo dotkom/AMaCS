@@ -29,6 +29,7 @@ const style = {
   header: {
     color: "#636363",
     fontFamily: "Open Sans",
+    marginLeft: "1rem",
   },
   label: {
     fontFamily: "Open Sans",
@@ -41,14 +42,20 @@ const style = {
   },
 }
 
+const onlineIconWhite = "/static/online-icon-white.png"
+
 function Login({ loggedIn }) {
+  const buttonText = loggedIn ? 'ut' : 'inn'
   return(
     <div style={style.login}>
       <h2 style={style.header}>Brukerinfo</h2>
       <div style={style.left}>
         <label style={style.label}>Hent Brukerinfo</label>
         <a href={loggedIn ? '/logout' : '/login'}>
-          <Button>Logg {loggedIn ? 'ut' : 'inn'}</Button>
+          <Button
+            iconLeft={onlineIconWhite}
+            text={"Logg " + buttonText}
+          />
         </a>
         <label style={style.label}>Ingen Online bruker?</label>
         <br />
