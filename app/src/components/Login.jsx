@@ -4,16 +4,23 @@ import Button from "./Button.jsx";
 import Input from "./Input.jsx";
 import ToggleSwitch from "./ToggleSwitch.jsx";
 
+
 import _s from "assets/css/Login.css";
 
+const onlineIconWhite = "/static/online-icon-white.png"
+
 function Login({ loggedIn }) {
+  const buttonText = loggedIn ? 'ut' : 'inn'
   return(
     <div className={_s.login}>
       <h2 className={_s.header}>Brukerinfo</h2>
       <div className={_s.left}>
         <label className={_s.label}>Hent Brukerinfo</label>
         <a href={loggedIn ? '/logout' : '/login'}>
-          <Button>Logg {loggedIn ? 'ut' : 'inn'}</Button>
+          <Button
+            iconLeft={onlineIconWhite}
+            text={"Logg " + buttonText}
+          />
         </a>
         <label className={_s.label}>Ingen Online bruker?</label>
         <br />

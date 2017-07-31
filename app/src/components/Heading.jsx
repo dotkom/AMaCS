@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 import _s from 'assets/css/Heading.css';
 
+const onlineLogoWhite = "/static/online-logo-white.png"
+const onlineLogoWhiteGuacamole = "/static/online-logo-white-guacamole.png"
+
 class Heading extends React.Component {
   constructor(props) {
     super(props)
