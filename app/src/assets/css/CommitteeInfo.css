@@ -1,0 +1,24 @@
+
+
+:local .card {
+  display: flex;
+  justify-content: space-between;
+  width: 24rem;
+  border-style: solid;
+  border: 2px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 1.5rem;
+}
+
+:local .info {
+  display: block;
+}
+
+:local .name {
+  padding-left: 1rem;
+  float: right;
+}
+:local .img {
+  float: left;
+}

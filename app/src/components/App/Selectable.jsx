@@ -1,23 +1,14 @@
 import React from "react";
 
-const style = {
-  selectable: {
-    margin: "1rem",
-  },
-  img: {
-    height: 60,
-    width: 60,
-  },
-  text: {
-    display: "inline-block",
-  }
-};
+import _s from "assets/css/Selectable.css";
+import classNames from "classnames";
+
 
 function Selectable({ committee, onClick }) {
   return(
-    <div style={style.selectable} onClick={onClick}>
-      <img style={style.img} src={committee.icon} />
-      <p style={style.text} >{committee.name}</p>
+    <div className={classNames(_s.body)} onClick={onClick}>
+      <img className={classNames(_s.img)} src={committee.icon} />
+      <p className={classNames(_s.text)}>{committee.name}</p>
     </div>
   )
 }
