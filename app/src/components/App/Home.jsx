@@ -1,8 +1,10 @@
 import React from "react";
 
 import CommitteeInfo from "./CommitteeInfo.jsx";
-//import SelectContainer from "./SelectContainer.jsx";
+import SelectContainer from "./SelectContainer.jsx";
 import Login from "../Login.jsx";
+
+import _ from "lodash";
 
 const committees = [
   {
@@ -83,27 +85,66 @@ const style = {
   },
 }
 
-function Home({ user, serviceProvider }) {
-  console.log(user,serviceProvider);
-  return(
-    <div>
-      <div style={style.main}>
-        <Login serviceProvider={serviceProvider} loggedIn={!!user}/>
+
+class Home extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      name: props.user ? props.user.fullname : "",
+      email: props.user ? props.user.email : "",
+      selectedComittees: [],
+      ordered: true
+    }
+  }
+
+  componentWillReceiveProps(props){
+    this.setState({
+      name: props.user ? props.user.fullname : "",
+      email: props.user ? props.user.email : ""
+    });
+  }
+  
+  _infoChanged(info){
+    this.setState(_.pick(info,["name","email"]));
+  }
+
+  _selectedChanged(selected){
+    this.setState({
+      selectedComittees: selected.slice(0,3)
+    });
+  }
+
+  _setOrdered(ordered){
+    this.setState({
+      ordered: ordered,
+      selectedComittees: ordered ? [] : this.state.selectedComittees
+    });
+  }
+
+  render(){
+    return (
+      <div>
+        <div style={style.main}>
+          <Login onChange={(info) => this._infoChanged(info)} serviceProvider={this.props.serviceProvider} loggedIn={!!this.props.user} info={_.pick(this.state,["name","email"])}/>
+        </div>
+        <div style={style.main}>
+          { committees.map((committee) => (
+            <CommitteeInfo key={committee.name} committee={committee} />
+          ))}
+        </div>
+        <div style={style.main}>
+          <input type="checkbox" onChange={(r) => this._setOrdered(r.target.checked)} checked={this.state.ordered} />
+          <label>Ordered?</label>
+          <SelectContainer ordered={this.state.ordered} committees={committees} selected={this.state.selectedComittees} onChange={(selected) => this._selectedChanged(selected) }/>
+        </div>
       </div>
-      <div style={style.main}>
-        { committees.map((committee) => (
-          <CommitteeInfo key={committee.name} committee={committee} />
-        ))}
-      </div>
-      {/*<div style={style.main}>
-        <SelectContainer committees={committees} />
-      </div>*/}
-    </div>
-  )
+    );
+  }
 }
 
+
 Home.defaultProps = {
-  loggedIn: false
+  user: null
 }
 
 export default Home;
