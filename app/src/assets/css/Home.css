@@ -10,6 +10,10 @@
   padding: 1rem;
 }
 
+.nav {
+  padding-top: 1rem;
+}
+
 :local .background {
   background-color: #F2F2F2
 }

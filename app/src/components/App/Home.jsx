@@ -78,7 +78,7 @@ function Home({ user, serviceProvider }) {
   console.log(user,serviceProvider);
   return(
     <div className={_s.background}>
-      <div className={_s.main}>
+      <div className={_s.nav}>
         <NavigationButton link="/info">
           <img src="/static/arrow-blue.png" />
           Tilbake
