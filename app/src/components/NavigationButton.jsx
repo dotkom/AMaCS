@@ -20,9 +20,11 @@ const style = {
 
 function NavigationButton({ children, link }) {
   return(
-    <div as={Link} to={link} style={style.container}>
-      { children }
-    </div>
+    <Link to={link}>
+      <div style={style.container}>
+        { children }
+      </div>
+    </Link>
   )
 }
 
