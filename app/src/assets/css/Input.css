@@ -1,0 +1,26 @@
+:local .input {
+  background: #F4F4F4;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  line-weight: normal;
+  width: 24em;
+  height: 3.5em;
+}
+
+:local .label {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  line-weight: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #909090;
+}
+
+:local container {
+  margin-bottom: 0.5em;
+}
+

@@ -1,0 +1,15 @@
+
+
+:local .main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+:local .background {
+  background-color: #F2F2F2
+}
