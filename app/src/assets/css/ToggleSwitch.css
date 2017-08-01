@@ -1,56 +1,29 @@
-:local .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-:local .text {
-  color: #333333;
-  font-family: 'Open Sans';
-}
-
-:local .slider {
-  position: absolute;
+.container {
+  display: flex;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transform: .4s;
-  -webkit-transform: .4s;
-  transition: .4s;
-  border-radius: 34px;
+  background-color: #ffffff;
+  border: 2px solid #636363;
+  border-radius: 2rem;
+  justify-content: center;
 }
 
-/*
-const style = {
+.container:focus {
+  outline: none;
+}
 
-  switch_input: {
-    display: "none"
-  },
-  slider_before: {
-    position: "absolute",
-    content: "\"\"",
-    height: "26px",
-    width: "26px",
-    left: "4px",
-    bottom: "4px",
-    backgroundColor: "white",
-    WebkitTransition: ".4s",
-    transition: ".4s",
-    borderRadius: "50%",
-  },
-  input_checked____slider: {
-    backgroundColor: "#2196F3"
-  },
-  input_focus____slider: {
-    boxShadow: "0 0 1px #2196F3"
-  },
-  input_checked____slider_before: {
-    WebkitTransform: "translateX(26px)",
-    MsTransform: "translateX(26px)",
-    transform: "translateX(26px)"
-  }
-}*/
+.slider {
+  margin: 0.07rem -0.17rem;
+  margin-right: 1.5rem;
+  align-self: left;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: .4s;
+  border-radius: 100%;
+  background: #D06969;
+}
+
+.checked {
+  margin-left: 1.5rem;
+  margin-right: -0.17rem;
+  background: #0060A3;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from 'classnames';
 
 import _s from 'assets/css/ToggleSwitch.css';
 
@@ -7,26 +8,25 @@ class ToggleSwitch extends React.Component {
     super(props);
 
     this.state = {
-      checked: false,
+      checked: this.props.checked || false,
     };
-
-    this.handleToggle = this.handleToggle.bind(this);
   }
 
   handleToggle(e, a) {
-    console.log("[ToggleSwitch](handleToggle) A: " + a)
+    this.setState({
+      checked: !this.state.checked
+    });
   }
 
   render() {
-    const { text } = this.props;
+    const { checked } = this.state;
     return(
-      <span className={_s.text}>
-        <label className={_s.switch}>
-          <input type="checkbox" onChange={this.handleToggle} />
-          <span className={_s.slider}></span>
-        </label>
-        { text }
-      </span>
+      <button
+        onClick={() => this.handleToggle()}
+        className={_s.container}
+      >
+        <div className={classNames(_s.slider, { [_s.checked]: checked })}></div>
+      </button>
     )
   }
 }
