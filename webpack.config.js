@@ -32,7 +32,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2)(\?[a-z0-9=&.]+)?$/,
+        test: /\.(eot|ttf|woff|woff2)(\?[a-z0-9=&.]+)?$/,
         use: [
           {
             loader: 'url-loader',
@@ -50,6 +50,20 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.svg$/,
+        loaders: [
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'react-svg-loader',
+            query: {
+              jsx: true
             }
           }
         ]
