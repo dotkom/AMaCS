@@ -4,6 +4,7 @@ import { Link, Route, Switch } from "react-router-dom";
 import Heading from "../Heading.jsx";
 import Home from "./Home.jsx"
 import NotFound from "../NotFound.jsx"
+import 'assets/css/base.css';
 
 import { RenderComponent } from 'common/utils';
 
