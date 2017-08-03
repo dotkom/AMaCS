@@ -19,9 +19,9 @@ function Login({ loggedIn, serviceProvider }) {
   const buttonText = loggedIn ? 'ut' : 'inn'
 
   return(
-    <div className={_s.login}>
+    <div className={_s.container}>
       <h2 className={_s.header}>Brukerinfo</h2>
-      <div className={_s.left}>
+      <div className={_s.box}>
         <label className={_s.label}>Hent Brukerinfo</label>
         <Button
           onClick={clickHandler}
@@ -29,13 +29,11 @@ function Login({ loggedIn, serviceProvider }) {
           text={"Logg " + buttonText}
         />
         <label className={_s.label}>Ingen Online bruker?</label>
-        <br />
         <ToggleSwitch text="Fyll inn rukerinfo selv"/>
       </div>
-      <div className={_s.right}>
-        <Input type="text" placeholder="Navn" name="name" label="navn"></Input>
-        <br />
-        <Input type="email" placeholder="Mailadresse" name="email" label="E-Postadresse"></Input>
+      <div className={_s.box}>
+        <Input type="text" placeholder="Navn" name="name" label="Navn" />
+        <Input type="email" placeholder="Mailadresse" name="email" label="E-Postadresse" />
       </div>
     </div>
   )

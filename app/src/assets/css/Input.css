@@ -1,16 +1,24 @@
-:local .input {
+.input {
   background: #F4F4F4;
   border: 1px solid #E0E0E0;
-  width: 24em;
-  height: 3.5em;
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 1rem 0.5rem; 
+  /* height: 3.5em; */
 }
 
-:local .label {
-  font-size: 20px;
+.input::placeholder {
+  color: #b8b8b8;
+}
+
+.label {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
   text-transform: uppercase;
   color: #909090;
 }
 
-:local container {
-  margin-bottom: 0.5em;
+.container {
+  margin: 1rem 0;
 }
