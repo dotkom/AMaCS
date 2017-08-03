@@ -1,13 +1,22 @@
 
-:local .body {
-  margin: 1rem;
+.container {
+  background: #ffffff;
+  padding: 0.6rem 0.8rem;
+  margin: 0.8rem;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-:local .img {
-  height: 60px;
-  width: 60px;
+.img {
+  height: 63px;
+  width: 63px;
 }
 
-:local .text {
-  display: inline-block;
+.name {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333333;
+  font-weight: 600;
 }

@@ -2,6 +2,7 @@ import React from "react";
 
 import Selectable from "./Selectable.jsx"
 //import SelectedList from "./SelectedList.jsx"
+import _s from 'assets/css/SelectContainer.css';
 
 class SelectContainer extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class SelectContainer extends React.Component {
   render() {
     const { committees } = this.props;
     return(
-      <div>
+      <div className={_s.container}>
         { committees.map((committee) => (
           <Selectable key={committee.name} committee={committee} />
         ))}

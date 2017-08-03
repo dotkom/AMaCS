@@ -6,9 +6,9 @@ import classNames from "classnames";
 
 function Selectable({ committee, onClick }) {
   return(
-    <div className={classNames(_s.body)} onClick={onClick}>
+    <div className={classNames(_s.container)} onClick={onClick}>
       <img className={classNames(_s.img)} src={committee.icon} />
-      <p className={classNames(_s.text)}>{committee.name}</p>
+      <h2 className={classNames(_s.name)}>{committee.name}</h2>
     </div>
   )
 }
