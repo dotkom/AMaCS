@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from 'classnames';
 
 import _s from 'assets/css/CommitteeInfo.css';
 
@@ -10,7 +11,6 @@ class CommitteeInfo extends React.Component {
       showInfo: false,
     };
 
-    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick() {
@@ -23,16 +23,15 @@ class CommitteeInfo extends React.Component {
     const { showInfo } = this.state
 
     return(
-      <div onClick={this.handleClick} className={_s.card}>
-        <section>
-          <img className={_s.img} height={60} width={60} src={ committee.icon } />
+      <section onClick={() => this.handleClick()} className={classNames(_s.container, { [_s.open]: showInfo})}>
+        <header className={_s.header}>
+          <img className={_s.img} src={ committee.icon } />
           <h3 className={_s.name}>{ committee.name }</h3>
-        </section>
-        <p className={_s.info}> 
-          <br />
-          { showInfo ? committee.info : undefined }
-        </p>
-      </div>
+        </header>
+        <div className={_s.info}>
+          { committee.info }
+        </div>
+      </section>
     )
   }
 }
