@@ -1,19 +1,21 @@
+.main {
+  margin-top: 1rem;
+}
 
+.alternative {
+  margin-top: 1rem;
+  background: #ffffff;
+}
 
-:local .main {
+.content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   max-width: 64rem;
   margin: 0 auto;
-  padding: 1rem;
 }
 
 .nav {
   padding-top: 1rem;
-}
-
-:local .background {
-  background-color: #F2F2F2
 }

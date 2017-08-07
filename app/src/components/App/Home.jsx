@@ -84,16 +84,22 @@ function Home({ user, serviceProvider }) {
           Tilbake
         </NavigationButton>
       </div>
-      <div className={_s.main}>
-        <Login serviceProvider={serviceProvider} loggedIn={!!user}/>
+      <div className={_s.alternative}>
+        <div className={_s.content}>
+          <Login serviceProvider={serviceProvider} loggedIn={!!user}/>
+        </div>
       </div>
       <div className={_s.main}>
-        { committees.map((committee) => (
-          <CommitteeInfo key={committee.name} committee={committee} />
-        ))}
+        <div className={_s.content}>
+          { committees.map((committee) => (
+            <CommitteeInfo key={committee.name} committee={committee} />
+          ))}
+        </div>
       </div>
       <div className={_s.main}>
-        <SelectContainer committees={committees} />
+        <div className={_s.content}>
+          <SelectContainer committees={committees} />
+        </div>
       </div>
     </div>
   )

@@ -1,10 +1,13 @@
+.container {
+  margin-bottom: 1rem;
+}
+
 .input {
   background: #F4F4F4;
   border: 1px solid #E0E0E0;
   width: 100%;
   font-size: 1.25rem;
   padding: 1rem 0.5rem; 
-  /* height: 3.5em; */
 }
 
 .input::placeholder {
@@ -17,8 +20,4 @@
   font-size: 1.25rem;
   text-transform: uppercase;
   color: #909090;
-}
-
-.container {
-  margin: 1rem 0;
 }
