@@ -22,7 +22,7 @@ class AppContainer extends React.Component {
         <Heading />
         <main>
           <Switch>
-            <Route extact path={match.path} render={props =>
+            <Route exact path={match.path} render={props =>
               <Home
                 user={user}
                 serviceProvider={serviceProvider}
