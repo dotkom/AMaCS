@@ -6,8 +6,6 @@ import AppContainer from "./components/App/AppContainer.jsx";
 import AdminContainer from "./components/Admin/AdminContainer.jsx";
 import NotFound from "./components/NotFound.jsx"
 
-import { RenderComponent } from 'common/utils';
-
 export default class Routes extends React.Component {
   constructor(props){
     super(props);
@@ -33,11 +31,12 @@ export default class Routes extends React.Component {
     return (
       <Router>
         <Switch>
-          <Route path="/" render={(props) => RenderComponent(AppContainer,props,{
-            user: this.state.user,
-            serviceProvider: this.props.serviceProvider
-          })} />
-          <Route path="/admin" render={(props) => RenderComponent(AdminContainer,props,{user: user})} />
+          <Route path="/" render={props => <AppContainer
+            user={this.state.user}
+            serviceProvider={this.props.serviceProvider}
+            {...props}
+          />} />
+          <Route path="/admin" render={props => <AdminContainer user={user} {...props} />} />
           <Route component={NotFound} />
         </Switch>
       </Router>

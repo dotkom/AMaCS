@@ -6,8 +6,6 @@ import Home from "./Home.jsx"
 import NotFound from "../NotFound.jsx"
 import 'assets/css/base.css';
 
-import { RenderComponent } from 'common/utils';
-
 class AppContainer extends React.Component {
   constructor(props) {
     super(props)
@@ -18,16 +16,19 @@ class AppContainer extends React.Component {
   }
 
   render() {
-    const { match } = this.props
+    const { match, user, serviceProvider } = this.props
     return(
       <div>
         <Heading />
         <main>
           <Switch>
-            <Route extact path={match.path} render={(props) => RenderComponent(Home,props,{
-              user: this.props.user,
-              serviceProvider: this.props.serviceProvider
-            })} />
+            <Route extact path={match.path} render={props =>
+              <Home
+                user={user}
+                serviceProvider={serviceProvider}
+                {...props}
+              />
+            } />
             <Route component={NotFound} />
           </Switch>
         </main>
