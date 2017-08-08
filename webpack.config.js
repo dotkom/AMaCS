@@ -8,12 +8,17 @@ const APP_SRC = path.resolve(__dirname,'./app/src');
 
 
 module.exports = {
-  entry: ["babel-polyfill",path.join(APP_SRC,'./index.jsx')],
+  entry: [
+    'babel-polyfill',
+    'react-hot-loader/patch',
+    path.join(APP_SRC,'./index.jsx')
+  ],
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
     filename: '[name].js',
   },
+  devtool: 'inline-source-map',
   resolve: {
     modules: [
       APP_SRC,
@@ -84,6 +89,7 @@ module.exports = {
       minChunks: module => (
         module.context && module.context.indexOf('node_modules') !== -1
       ),
-    })
+    }),
+    new webpack.NamedModulesPlugin()
   ],
 };

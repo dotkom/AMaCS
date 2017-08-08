@@ -1,17 +1,12 @@
 
 import React from "react";
-import { render } from "react-dom";
+import ReactDOM from "react-dom";
+import { AppContainer } from 'react-hot-loader'
 
 import Routes from "./Routes.jsx"
 
-//Setting up services
 import { ServiceManager, HttpServiceProvider, AuthServiceProvider } from 'services';
-
 import { OAUTH_SETTINGS } from 'common/constants';
-
-import { AppContainer } from 'components/App/AppContainer.jsx';
-
-
 
 const serviceManager = new ServiceManager();
 serviceManager.registerService("http.service",HttpServiceProvider);
@@ -19,16 +14,20 @@ serviceManager.alias("http","http.service");
 serviceManager.registerService("auth.service",AuthServiceProvider,OAUTH_SETTINGS);
 serviceManager.alias("auth","auth.service");
 
-
-class Root extends React.Component{
-  render() {
-    return (
-      <Routes serviceProvider={serviceManager} />
-    );
-  }
+const render = Component => {
+  ReactDOM.render(
+    <AppContainer>
+       <Component serviceProvider={serviceManager} />
+    </AppContainer>,
+    document.getElementById("app")
+  );
 }
 
-render(
-  <Root />,
-  document.getElementById("app")
-);
+
+render(Routes);
+
+if (module.hot) {
+  module.hot.accept('./Routes.jsx', () => {
+    render(Routes);
+  });
+}
