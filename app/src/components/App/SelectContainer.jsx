@@ -36,11 +36,12 @@ class SelectContainer extends React.Component {
     return (
       <div className={_s.container}>
         <div className={_s.selectables}>
-          { committees.map((committee, index) => {
+          { Object.keys(committees).map((key) => {
+            const committee = committees[key];
             const { name } = committee;
             return <Selectable
-              key={name}
-              onClick={() => this.handleSelect(index)}
+              key={key}
+              onClick={() => this.handleSelect(key)}
               committee={committee}
             />
           })}
