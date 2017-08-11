@@ -5,13 +5,20 @@ import Selectable from "./Selectable.jsx"
 
 import _s from 'assets/css/SelectedList.css';
 
-function SelectedList({ committees }) {
+function SelectedList({ committees, totalChoices }) {
   return (
-    <div>
+    <div className={_s.container}>
       {
-        committees.map(committee => (
-          <Selectable key={committee.name} committee={committee} />
-        ))
+        [...Array(totalChoices)].map((_, i) => {
+          const committee = committees[i];
+          const key = committee  ? committee.name : `empty${i}`;
+          return (
+            <div key={key} className={_s.committee}>
+              <div className={_s.number}>{ i + 1 }</div>
+              { committee && <Selectable small committee={committee} /> }
+            </div>
+          );
+        })
       }
     </div>
   );

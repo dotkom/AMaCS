@@ -8,6 +8,8 @@ class SelectContainer extends React.Component {
   constructor(props) {
     super(props);
 
+    this.choiceCount = 3;
+
     this.state = {
       selected: []
     }
@@ -22,7 +24,7 @@ class SelectContainer extends React.Component {
         ...selected.slice(0, selectedIndex),
         ...selected.slice(selectedIndex + 1)
       ];
-    } else if(selected.length < 3) {
+    } else if(selected.length < this.choiceCount) {
       selected = [...selected, committeeName];
     }
     this.setState({
@@ -49,6 +51,7 @@ class SelectContainer extends React.Component {
         <div className={_s.selectedList}>
           <SelectedList
             committees={selected.map(committeeName => committees[committeeName])}
+            totalChoices={this.choiceCount}
           />
         </div>
       </div>
