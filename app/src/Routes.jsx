@@ -6,7 +6,9 @@ import AppContainer from "./components/App/AppContainer.jsx";
 import AdminContainer from "./components/Admin/AdminContainer.jsx";
 import NotFound from "./components/NotFound.jsx"
 
-export default class Routes extends React.Component {
+import { connectServices } from 'services';
+
+class Routes extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -14,7 +16,7 @@ export default class Routes extends React.Component {
     }
   }
   componentDidMount(){
-    const auth = this.props.serviceProvider.getService("auth");
+    const { auth } = this.props;
     this.userSub = auth.onUserChange().subscribe((user) => {
       this.setState({
         user: user
@@ -29,14 +31,12 @@ export default class Routes extends React.Component {
   
   render() {
     const { user } = this.state;
-    const { serviceProvider } = this.props;
     return (
       <Router>
         <Switch>
           <Route path="/admin" render={props => <AdminContainer user={user} {...props} />} />
           <Route path="/" render={props => <AppContainer
             user={user}
-            serviceProvider={serviceProvider}
             {...props}
           />} />
           <Route component={NotFound} />
@@ -45,3 +45,9 @@ export default class Routes extends React.Component {
     )
   }
 }
+
+const mapServicesToProps = (serviceManager) => ({
+  auth: serviceManager.getService("auth")
+})
+
+export default connectServices(mapServicesToProps)(Routes);

@@ -6,15 +6,16 @@ import ToggleSwitch from "./ToggleSwitch.jsx";
 
 
 import _s from "assets/css/Login.css";
+import { connectServices } from 'services';
 
 const onlineIconWhite = "/static/online-icon-white.png"
 
-function Login({info, loggedIn, serviceProvider, onChange}) {
+function Login({info, loggedIn, authService, onChange}) {
   const handleLoginClick = () => {
     if(loggedIn)
-      serviceProvider.getService("auth").logout();
+      authService.logout();
     else
-      serviceProvider.getService("auth").login();
+      authService.login();
   }
 
   const handleInputChange = (field, value) => {
@@ -69,4 +70,8 @@ Login.defaultProps = {
   loggedIn: false
 }
 
-export default Login;
+const mapServicesToProps = (serviceManager) => ({
+  authService: serviceManager.getService("auth")
+})
+
+export default connectServices(mapServicesToProps)(Login);

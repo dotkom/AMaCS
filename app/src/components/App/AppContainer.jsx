@@ -16,7 +16,7 @@ class AppContainer extends React.Component {
   }
 
   render() {
-    const { match, user, serviceProvider } = this.props
+    const { match, user } = this.props
     return(
       <div>
         <Heading />
@@ -25,7 +25,6 @@ class AppContainer extends React.Component {
             <Route exact path={match.path} render={props =>
               <Home
                 user={user}
-                serviceProvider={serviceProvider}
                 {...props}
               />
             } />
