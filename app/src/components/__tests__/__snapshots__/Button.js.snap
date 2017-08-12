@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button renders correctly 1`] = `
+<button
+  className="button"
+  onClick={undefined}
+/>
+`;
+
+exports[`button renders correctly with icon 1`] = `
+<button
+  className="button"
+  onClick={undefined}
+>
+  <img
+    className="iconLeft"
+    src="/static/icon.png"
+  />
+  Button with icon
+</button>
+`;
+
+exports[`button renders correctly with text 1`] = `
+<button
+  className="button"
+  onClick={undefined}
+>
+  Button with text
+</button>
+`;
