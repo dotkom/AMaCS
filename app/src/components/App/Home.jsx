@@ -1,4 +1,5 @@
 import React from "react";
+import _ from "lodash";
 
 import CommitteeInfo from "./CommitteeInfo.jsx";
 import SelectContainer from "./SelectContainer.jsx";
@@ -7,8 +8,9 @@ import Login from "../Login.jsx";
 
 import _s from "assets/css/Home.css";
 
-const committees = [
-  {
+
+const committees = {
+  dotkom: {
     name: "Dotkom",
     info: `Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
     datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
@@ -20,7 +22,8 @@ const committees = [
     unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
     Ingen forkunnskaper er påkrevd annet enn stor lærevilje!`,
     icon: "/static/dotkom-square.png",
-  }, {
+  },
+  trikom: {
     name: "Trikom",
     info: `Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
     Dette inkluderer å arrangere små arrangementer i skoletiden,
@@ -29,7 +32,8 @@ const committees = [
     kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
     Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.`,
     icon: "/static/trikom-square.png",
-  }, {
+  },
+  prokom: {
     name: "Prokom",
     info: `Profil- og aviskomiteen sørger for at Onlines ansikt utad er
     profesjonelt og konsistent. Alt profileringsmateriale som klær,
@@ -39,7 +43,8 @@ const committees = [
     skribent i magen? Vi leter etter deg som er interessert i design,
     markedsføring, journalisme eller skriving!`,
     icon: "/static/prokom-square.png",
-  }, {
+  },
+  fagkom: {
     name: "Fagkom",
     info: `Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
     gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
@@ -49,7 +54,8 @@ const committees = [
     vil du få god innsikt i emner utenfor skolen, og samtidig knytte
     tettere bånd til din fremtidige arbeidsgiver.`,
     icon: "/static/fagkom-square.png",
-  }, {
+  },
+  bedkom: {
     name: "Bedkom",
     info: `Bedriftskomiteens oppgave er å knytte studentene og næringslivet
     sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
@@ -61,7 +67,8 @@ const committees = [
     og bli kjent under et godt måltid. Bedriftskomiteen er også
     knutepunktet til våre samarbeidspartnere i næringslivet ellers.`,
     icon: "/static/bedkom-square.png",
-  }, {
+  },
+  arrkom: {
     name: "Arrkom",
     info: `Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
     tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
@@ -70,43 +77,87 @@ const committees = [
     person selv? Da er kanskje Arrangementskomitéen stedet for deg!`,
     icon: "/static/arrkom-square.png",
   }
-]
+}
 
+class Home extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      name: props.user ? props.user.fullname : "",
+      email: props.user ? props.user.email : "",
+      selectedComittees: [],
+      ordered: true
+    }
+  }
 
+  componentWillReceiveProps(props){
+    this.setState({
+      name: props.user ? props.user.fullname : "",
+      email: props.user ? props.user.email : ""
+    });
+  }
 
-function Home({ user, serviceProvider }) {
-  console.log(user,serviceProvider);
-  return(
-    <div className={_s.background}>
-      <div className={_s.nav}>
-        <NavigationButton link="/info">
-          <img src="/static/arrow-blue.png" />
-          Tilbake
-        </NavigationButton>
-      </div>
-      <div className={_s.alternative}>
-        <div className={_s.content}>
-          <Login serviceProvider={serviceProvider} loggedIn={!!user}/>
+  _infoChanged(info){
+    this.setState(_.pick(info,["name","email"]));
+  }
+
+  _selectedChanged(selected){
+    this.setState({
+      selectedComittees: selected.slice(0,3)
+    });
+  }
+
+  _setOrdered(ordered){
+    this.setState({
+      ordered: ordered,
+      selectedComittees: ordered ? [] : this.state.selectedComittees
+    });
+  }
+
+  render() {
+    const { serviceProvider } = this.props;
+    return (
+      <div className={_s.background}>
+        <div className={_s.nav}>
+          <NavigationButton link="/info">
+            <img src="/static/arrow-blue.png" />
+            Tilbake
+          </NavigationButton>
+        </div>
+        <div className={_s.alternative}>
+          <div className={_s.content}>
+            <Login
+              onChange={(info) => this._infoChanged(info)}
+              serviceProvider={serviceProvider}
+              loggedIn={!!this.props.user}
+              info={_.pick(this.state,["name","email"])}
+            />
+          </div>
+        </div>
+        <div className={_s.main}>
+          <div className={_s.content}>
+            { Object.keys(committees).map((key) => (
+              <CommitteeInfo key={key} committee={committees[key]} />
+            ))}
+          </div>
+        </div>
+        <div className={_s.main}>
+          <div className={_s.content}>
+            <SelectContainer
+              ordered={this.state.ordered}
+              selected={this.state.selectedComittees}
+              onChange={(selected) => this._selectedChanged(selected) }
+              committees={committees}
+            />
+          </div>
         </div>
       </div>
-      <div className={_s.main}>
-        <div className={_s.content}>
-          { committees.map((committee) => (
-            <CommitteeInfo key={committee.name} committee={committee} />
-          ))}
-        </div>
-      </div>
-      <div className={_s.main}>
-        <div className={_s.content}>
-          <SelectContainer committees={committees} />
-        </div>
-      </div>
-    </div>
-  )
-} 
+    )
+  }
+}
 
 Home.defaultProps = {
-  loggedIn: false
+  user: null
 }
 
 export default Home;

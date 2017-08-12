@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 8rem;
+  padding: 0.5rem 0;
+  background: #e0e0e0;
+}
+
+.committee {
+  flex: 1;
+  height: 100%;
+  padding: 0 0.5rem;
+  position: relative;
+}
+
+.committee + .committee {
+  border-left: 1px solid #c4c4c4;
+}
+
+.number {
+  position: absolute;
+  top: 0;
+  left: 0.25rem;
+  font-size: 1.25rem;
+  color: #909090;
+}

@@ -9,13 +9,23 @@ import _s from "assets/css/Login.css";
 
 const onlineIconWhite = "/static/online-icon-white.png"
 
-function Login({ loggedIn, serviceProvider }) {
-  const clickHandler = () => {
+function Login({info, loggedIn, serviceProvider, onChange}) {
+  const handleLoginClick = () => {
     if(loggedIn)
       serviceProvider.getService("auth").logout();
     else
       serviceProvider.getService("auth").login();
   }
+
+  const handleInputChange = (field, value) => {
+    const { name, email } = Object.assign({}, info, {
+      [field]: value
+    });
+    if(onChange){
+      onChange({ name, email });
+    }
+  }
+
   const buttonText = loggedIn ? 'ut' : 'inn'
 
   return(
@@ -24,7 +34,7 @@ function Login({ loggedIn, serviceProvider }) {
       <div className={_s.box}>
         <label className={_s.label}>Hent Brukerinfo</label>
         <Button
-          onClick={clickHandler}
+          onClick={handleLoginClick}
           iconLeft={onlineIconWhite}
           text={"Logg " + buttonText}
         />
@@ -32,8 +42,24 @@ function Login({ loggedIn, serviceProvider }) {
         <ToggleSwitch text="Fyll inn rukerinfo selv"/>
       </div>
       <div className={_s.box}>
-        <Input type="text" placeholder="Navn" name="name" label="Navn" />
-        <Input type="email" placeholder="Mailadresse" name="email" label="E-Postadresse" />
+        <Input
+          type="text"
+          placeholder="Navn"
+          name="name"
+          label="Navn"
+          value={info.name || ""}
+          onChange={(r) => handleInputChange("name", r.target.value)}
+          disabled={loggedIn}
+        />
+        <Input
+          type="email"
+          placeholder="Mailadresse"
+          name="email"
+          label="E-Postadresse"
+          onChange={(r) => handleInputChange("email", r.target.value)}
+          disabled={loggedIn}
+          value={info.email || ""}
+        />
       </div>
     </div>
   )
