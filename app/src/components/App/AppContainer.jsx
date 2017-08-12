@@ -1,9 +1,9 @@
 import React, { PropTypes } from "react";
 import { Link, Route, Switch } from "react-router-dom";
 
-import Heading from "../Heading.jsx";
-import Home from "./Home.jsx"
-import NotFound from "../NotFound.jsx"
+import Heading from "../Heading";
+import Home from "./Home"
+import NotFound from "../NotFound"
 import 'assets/css/base.css';
 
 class AppContainer extends React.Component {

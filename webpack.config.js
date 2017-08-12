@@ -24,6 +24,7 @@ module.exports = {
       APP_SRC,
       'node_modules',
     ],
+    extensions: ['.js', '.json', '.jsx']
   },
   module: {
     rules: [

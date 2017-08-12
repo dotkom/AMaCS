@@ -1,8 +1,8 @@
 import React from "react";
 import _ from "lodash";
 
-import Selectable from "./Selectable.jsx"
-import SelectedList from "./SelectedList.jsx"
+import Selectable from "./Selectable"
+import SelectedList from "./SelectedList"
 
 import _s from 'assets/css/SelectContainer.css';
 

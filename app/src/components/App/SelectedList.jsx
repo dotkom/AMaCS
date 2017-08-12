@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import Selectable from "./Selectable.jsx"
+import Selectable from "./Selectable"
 
 
 import _s from 'assets/css/SelectedList.css';

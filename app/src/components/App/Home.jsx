@@ -1,10 +1,10 @@
 import React from "react";
 import _ from "lodash";
 
-import CommitteeInfo from "./CommitteeInfo.jsx";
-import SelectContainer from "./SelectContainer.jsx";
-import NavigationButton from "../NavigationButton.jsx";
-import Login from "../Login.jsx";
+import CommitteeInfo from "./CommitteeInfo";
+import SelectContainer from "./SelectContainer";
+import NavigationButton from "../NavigationButton";
+import Login from "../Login";
 
 import _s from "assets/css/Home.css";
 
