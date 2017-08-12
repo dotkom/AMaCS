@@ -115,7 +115,6 @@ class Home extends React.Component {
   }
 
   render() {
-    const { serviceProvider } = this.props;
     return (
       <div className={_s.background}>
         <div className={_s.nav}>
@@ -128,7 +127,6 @@ class Home extends React.Component {
           <div className={_s.content}>
             <Login
               onChange={(info) => this._infoChanged(info)}
-              serviceProvider={serviceProvider}
               loggedIn={!!this.props.user}
               info={_.pick(this.state,["name","email"])}
             />

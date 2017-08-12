@@ -5,7 +5,7 @@ import { AppContainer } from 'react-hot-loader'
 
 import Routes from "./Routes.jsx"
 
-import { ServiceManager, HttpServiceProvider, AuthServiceProvider } from 'services';
+import { ServiceProvider, ServiceManager, HttpServiceProvider, AuthServiceProvider } from 'services';
 import { OAUTH_SETTINGS } from 'common/constants';
 
 const serviceManager = new ServiceManager();
@@ -17,7 +17,9 @@ serviceManager.alias("auth","auth.service");
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
-       <Component serviceProvider={serviceManager} />
+      <ServiceProvider serviceManager={serviceManager}>
+       <Component />
+      </ServiceProvider>
     </AppContainer>,
     document.getElementById("app")
   );
