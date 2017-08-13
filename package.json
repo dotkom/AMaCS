@@ -29,7 +29,8 @@
     },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
+    ],
+    "collectCoverageFrom" : ["app/**/*.{js,jsx}", "!**/node_modules/**", "!**/vendor/**"]
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
