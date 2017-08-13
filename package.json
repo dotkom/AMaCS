@@ -7,6 +7,7 @@
     "start": "webpack-dev-server --inline --hot",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "build": "webpack",
     "watch": "webpack -w",
     "dev": "webpack-dev-server --watch-poll --inline --hot"
@@ -25,7 +26,10 @@
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "identity-obj-proxy"
-    }
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
@@ -45,6 +49,8 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^1.5.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.29.0",
     "identity-obj-proxy": "^3.0.0",
