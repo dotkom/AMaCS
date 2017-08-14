@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Selectable renders correctly 1`] = `
+<div
+  className="container"
+  onClick={null}
+>
+  <img
+    className="img"
+    src="icon-here"
+  />
+  <h2
+    className="name"
+  >
+    Testkom
+  </h2>
+</div>
+`;

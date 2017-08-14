@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommitteeInfo renders correctly 1`] = `
+<section
+  className="container"
+  onClick={[Function]}
+>
+  <header
+    className="header"
+  >
+    <img
+      className="img"
+      src="icon-here"
+    />
+    <h3
+      className="name"
+    >
+      Testkom
+    </h3>
+  </header>
+  <div
+    className="info"
+  >
+    Testkom does stuff
+  </div>
+</section>
+`;
+
+exports[`CommitteeInfo renders correctly after click 1`] = `
+<section
+  className="container open"
+  onClick={[Function]}
+>
+  <header
+    className="header"
+  >
+    <img
+      className="img"
+      src="icon-here"
+    />
+    <h3
+      className="name"
+    >
+      Testkom
+    </h3>
+  </header>
+  <div
+    className="info"
+  >
+    Testkom does stuff
+  </div>
+</section>
+`;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppContainer renders correctly 1`] = `
+<div>
+  <Heading />
+  <main>
+    <Switch>
+      <Route
+        exact={true}
+        path="/path"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </main>
+</div>
+`;
