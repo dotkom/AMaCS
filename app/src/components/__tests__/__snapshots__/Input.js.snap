@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input passes props 1`] = `
+<div
+  className="container"
+>
+  <label
+    className="label"
+    htmlFor="labely"
+  />
+  <input
+    className="input"
+    name="labely"
+    placeholder="Placeholder"
+  />
+</div>
+`;
+
+exports[`Input renders correctly 1`] = `
+<div
+  className="container"
+>
+  <label
+    className="label"
+  />
+  <input
+    className="input"
+  />
+</div>
+`;
+
+exports[`Input renders label 1`] = `
+<div
+  className="container"
+>
+  <label
+    className="label"
+  >
+    Test label
+  </label>
+  <input
+    className="input"
+  />
+</div>
+`;

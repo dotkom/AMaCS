@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login renders correctly 1`] = `
+<div
+  className="container"
+>
+  <h2
+    className="header"
+  >
+    Brukerinfo
+  </h2>
+  <div
+    className="box"
+  >
+    <label
+      className="label"
+    >
+      Hent Brukerinfo
+    </label>
+    <Button
+      iconLeft="/static/online-icon-white.png"
+      onClick={[Function]}
+      text="Logg inn"
+    />
+    <label
+      className="label"
+    >
+      Ingen Online bruker?
+    </label>
+    <ToggleSwitch
+      text="Fyll inn rukerinfo selv"
+    />
+  </div>
+  <div
+    className="box"
+  >
+    <Input
+      disabled={false}
+      label="Navn"
+      name="name"
+      onChange={[Function]}
+      placeholder="Navn"
+      type="text"
+      value=""
+    />
+    <Input
+      disabled={false}
+      label="E-Postadresse"
+      name="email"
+      onChange={[Function]}
+      placeholder="Mailadresse"
+      type="email"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`Login renders with user info 1`] = `
+<div
+  className="container"
+>
+  <h2
+    className="header"
+  >
+    Brukerinfo
+  </h2>
+  <div
+    className="box"
+  >
+    <label
+      className="label"
+    >
+      Hent Brukerinfo
+    </label>
+    <Button
+      iconLeft="/static/online-icon-white.png"
+      onClick={[Function]}
+      text="Logg inn"
+    />
+    <label
+      className="label"
+    >
+      Ingen Online bruker?
+    </label>
+    <ToggleSwitch
+      text="Fyll inn rukerinfo selv"
+    />
+  </div>
+  <div
+    className="box"
+  >
+    <Input
+      disabled={false}
+      label="Navn"
+      name="name"
+      onChange={[Function]}
+      placeholder="Navn"
+      type="text"
+      value="Name"
+    />
+    <Input
+      disabled={false}
+      label="E-Postadresse"
+      name="email"
+      onChange={[Function]}
+      placeholder="Mailadresse"
+      type="email"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`Login renders with user info and logged in 1`] = `
+<div
+  className="container"
+>
+  <h2
+    className="header"
+  >
+    Brukerinfo
+  </h2>
+  <div
+    className="box"
+  >
+    <label
+      className="label"
+    >
+      Hent Brukerinfo
+    </label>
+    <Button
+      iconLeft="/static/online-icon-white.png"
+      onClick={[Function]}
+      text="Logg ut"
+    />
+    <label
+      className="label"
+    >
+      Ingen Online bruker?
+    </label>
+    <ToggleSwitch
+      text="Fyll inn rukerinfo selv"
+    />
+  </div>
+  <div
+    className="box"
+  >
+    <Input
+      disabled={true}
+      label="Navn"
+      name="name"
+      onChange={[Function]}
+      placeholder="Navn"
+      type="text"
+      value="Name"
+    />
+    <Input
+      disabled={true}
+      label="E-Postadresse"
+      name="email"
+      onChange={[Function]}
+      placeholder="Mailadresse"
+      type="email"
+      value=""
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleSwitch.jsx renders checked 1`] = `
+<button
+  className="container"
+  onClick={[Function]}
+>
+  <div
+    className="slider checked"
+  >
+    <span
+      className="icon"
+    >
+      <SVGMockComponent
+        width={12}
+      />
+    </span>
+  </div>
+</button>
+`;
+
+exports[`ToggleSwitch.jsx renders correctly 1`] = `
+<button
+  className="container"
+  onClick={[Function]}
+>
+  <div
+    className="slider"
+  >
+    <span
+      className="icon"
+    >
+      <SVGMockComponent
+        width={12}
+      />
+    </span>
+  </div>
+</button>
+`;
+
+exports[`ToggleSwitch.jsx toggles checked when clicked 1`] = `
+<button
+  className="container"
+  onClick={[Function]}
+>
+  <div
+    className="slider checked"
+  >
+    <span
+      className="icon"
+    >
+      <SVGMockComponent
+        width={12}
+      />
+    </span>
+  </div>
+</button>
+`;

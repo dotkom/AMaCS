@@ -23,14 +23,17 @@
   },
   "homepage": "https://github.com/dotkom/supreme-guacamole#readme",
   "jest": {
+    "rootDir": "app",
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "identity-obj-proxy"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy",
+      "\\.svg$": "<rootDir>/__mocks__/svgMock.js"
     },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
-    "collectCoverageFrom" : ["app/**/*.{js,jsx}", "!**/node_modules/**", "!**/vendor/**"]
+    "moduleDirectories": ["node_modules", "<rootDir>/src"],
+    "collectCoverageFrom" : ["app/**/*.{js,jsx}", "!**/node_modules/**"]
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
