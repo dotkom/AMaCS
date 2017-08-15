@@ -20,35 +20,25 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
     }
   }
 >
-  <MemoryRouter>
+  <StaticRouter
+    basename=""
+    context={Object {}}
+    location="/"
+  >
     <Router
       history={
         Object {
           "action": "POP",
           "block": [Function],
-          "canGo": [Function],
           "createHref": [Function],
-          "entries": Array [
-            Object {
-              "hash": "",
-              "key": "cf7syh",
-              "pathname": "/",
-              "search": "",
-              "state": undefined,
-            },
-          ],
           "go": [Function],
           "goBack": [Function],
           "goForward": [Function],
-          "index": 0,
-          "length": 1,
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "cf7syh",
             "pathname": "/",
             "search": "",
-            "state": undefined,
           },
           "push": [Function],
           "replace": [Function],
@@ -81,10 +71,8 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
               location={
                 Object {
                   "hash": "",
-                  "key": "cf7syh",
                   "pathname": "/",
                   "search": "",
-                  "state": undefined,
                 }
               }
               path="/"
@@ -95,29 +83,15 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                   Object {
                     "action": "POP",
                     "block": [Function],
-                    "canGo": [Function],
                     "createHref": [Function],
-                    "entries": Array [
-                      Object {
-                        "hash": "",
-                        "key": "cf7syh",
-                        "pathname": "/",
-                        "search": "",
-                        "state": undefined,
-                      },
-                    ],
                     "go": [Function],
                     "goBack": [Function],
                     "goForward": [Function],
-                    "index": 0,
-                    "length": 1,
                     "listen": [Function],
                     "location": Object {
                       "hash": "",
-                      "key": "cf7syh",
                       "pathname": "/",
                       "search": "",
-                      "state": undefined,
                     },
                     "push": [Function],
                     "replace": [Function],
@@ -126,10 +100,8 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                 location={
                   Object {
                     "hash": "",
-                    "key": "cf7syh",
                     "pathname": "/",
                     "search": "",
-                    "state": undefined,
                   }
                 }
                 match={
@@ -140,6 +112,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                     "url": "/",
                   }
                 }
+                staticContext={Object {}}
                 user={null}
               >
                 <div>
@@ -190,10 +163,8 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                         location={
                           Object {
                             "hash": "",
-                            "key": "cf7syh",
                             "pathname": "/",
                             "search": "",
-                            "state": undefined,
                           }
                         }
                         path="/"
@@ -204,29 +175,15 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                             Object {
                               "action": "POP",
                               "block": [Function],
-                              "canGo": [Function],
                               "createHref": [Function],
-                              "entries": Array [
-                                Object {
-                                  "hash": "",
-                                  "key": "cf7syh",
-                                  "pathname": "/",
-                                  "search": "",
-                                  "state": undefined,
-                                },
-                              ],
                               "go": [Function],
                               "goBack": [Function],
                               "goForward": [Function],
-                              "index": 0,
-                              "length": 1,
                               "listen": [Function],
                               "location": Object {
                                 "hash": "",
-                                "key": "cf7syh",
                                 "pathname": "/",
                                 "search": "",
-                                "state": undefined,
                               },
                               "push": [Function],
                               "replace": [Function],
@@ -235,10 +192,8 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                           location={
                             Object {
                               "hash": "",
-                              "key": "cf7syh",
                               "pathname": "/",
                               "search": "",
-                              "state": undefined,
                             }
                           }
                           match={
@@ -249,6 +204,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               "url": "/",
                             }
                           }
+                          staticContext={Object {}}
                           user={null}
                         >
                           <div
@@ -1065,7 +1021,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
         </Routes>
       </ConnectedServiceComponent>
     </Router>
-  </MemoryRouter>
+  </StaticRouter>
 </ServiceProvider>
 `;
 

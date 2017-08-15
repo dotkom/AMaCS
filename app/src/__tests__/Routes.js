@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { ServiceProvider, ServiceManager } from 'services';
-import { MemoryRouter } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom';
 
 import ConnectedRoutes, { Routes } from '../Routes';
 
@@ -47,9 +47,9 @@ describe('ConnectedRoutes', () => {
   it('renders mounted root route', () => {
     const wrapper = mount(
       <ServiceProvider serviceManager={serviceManager}>
-        <MemoryRouter>
+        <StaticRouter context={{}}>
           <ConnectedRoutes />
-        </MemoryRouter>
+        </StaticRouter>
       </ServiceProvider>
     );
     expect(wrapper).toMatchSnapshot();
