@@ -5,7 +5,6 @@ import SelectContainer from '../SelectContainer';
 import NavigationButton from '../../NavigationButton';
 import Login from '../../Login';
 
-import committees from 'common/committees';
 import _s from 'assets/css/Application.css';
 
 class Application extends Component {
@@ -67,7 +66,6 @@ class Application extends Component {
               ordered={this.state.ordered}
               selected={this.state.selectedComittees}
               onChange={(selected) => this._selectedChanged(selected) }
-              committees={committees}
             />
           </div>
         </div>

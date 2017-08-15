@@ -15,9 +15,9 @@ function Home() {
         Her kan du søke om å bli en av oss!
       </p>
       <div className={_s.content}>
-        { Object.keys(committees).map((key) => (
-          <CommitteeInfo key={key} committee={committees[key]} />
-        ))}
+        { Array.from(committees).map(([key, committee]) => (
+          <CommitteeInfo key={key} committee={committee} />
+        )) }
       </div>
       <div className={_s.nextLink}>
         <Link to="/application">
