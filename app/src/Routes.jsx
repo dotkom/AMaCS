@@ -2,9 +2,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import AppContainer from "./components/App/AppContainer.jsx";
-import AdminContainer from "./components/Admin/AdminContainer.jsx";
-import NotFound from "./components/NotFound.jsx"
+import AppContainer from "./components/App/AppContainer";
+import AdminContainer from "./components/Admin/AdminContainer";
+import NotFound from "./components/NotFound"
 
 import { connectServices } from 'services';
 

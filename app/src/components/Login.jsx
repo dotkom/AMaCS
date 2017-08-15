@@ -1,8 +1,8 @@
 import React from "react";
 
-import Button from "./Button.jsx";
-import Input from "./Input.jsx";
-import ToggleSwitch from "./ToggleSwitch.jsx";
+import Button from "./Button";
+import Input from "./Input";
+import ToggleSwitch from "./ToggleSwitch";
 
 
 import _s from "assets/css/Login.css";

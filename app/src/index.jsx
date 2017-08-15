@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from 'react-hot-loader'
 
-import Routes from "./Routes.jsx"
+import Routes from "./Routes"
 
 import { ServiceProvider, ServiceManager, HttpServiceProvider, AuthServiceProvider } from 'services';
 import { OAUTH_SETTINGS } from 'common/constants';
@@ -29,7 +29,7 @@ const render = Component => {
 render(Routes);
 
 if (module.hot) {
-  module.hot.accept('./Routes.jsx', () => {
+  module.hot.accept('./Routes', () => {
     render(Routes);
   });
 }
