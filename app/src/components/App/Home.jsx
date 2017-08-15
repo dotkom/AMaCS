@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 import CommitteeInfo from "./CommitteeInfo";
 
+import Button from 'components/Button';
 import committees from 'common/committees';
 import _s from "assets/css/Home.css";
 
@@ -18,6 +20,11 @@ function Home() {
             <CommitteeInfo key={key} committee={committees[key]} />
           ))}
         </div>
+      </div>
+      <div className={_s.nextLink}>
+      <Link to="/application">
+        <Button text="Gå til søknad" />
+      </Link>
       </div>
     </div>
   );

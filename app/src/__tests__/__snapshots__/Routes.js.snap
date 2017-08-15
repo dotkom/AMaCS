@@ -490,6 +490,29 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                 </CommitteeInfo>
                               </div>
                             </div>
+                            <div
+                              className="nextLink"
+                            >
+                              <Link
+                                replace={false}
+                                to="/application"
+                              >
+                                <a
+                                  href="/application"
+                                  onClick={[Function]}
+                                >
+                                  <Button
+                                    text="Gå til søknad"
+                                  >
+                                    <button
+                                      className="button"
+                                    >
+                                      Gå til søknad
+                                    </button>
+                                  </Button>
+                                </a>
+                              </Link>
+                            </div>
                           </div>
                         </Home>
                       </Route>

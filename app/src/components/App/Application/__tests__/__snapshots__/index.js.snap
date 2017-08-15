@@ -6,7 +6,7 @@ exports[`Application renders correctly 1`] = `
     className="nav"
   >
     <NavigationButton
-      link="/info"
+      link="/"
     >
       <img
         src="/static/arrow-blue.png"
@@ -125,7 +125,7 @@ exports[`Application renders correctly with user info 1`] = `
     className="nav"
   >
     <NavigationButton
-      link="/info"
+      link="/"
     >
       <img
         src="/static/arrow-blue.png"
@@ -244,7 +244,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
     className="nav"
   >
     <NavigationButton
-      link="/info"
+      link="/"
     >
       <img
         src="/static/arrow-blue.png"
@@ -367,7 +367,7 @@ exports[`Application updates info on onChange from login 1`] = `
     className="nav"
   >
     <NavigationButton
-      link="/info"
+      link="/"
     >
       <img
         src="/static/arrow-blue.png"
@@ -486,7 +486,7 @@ exports[`Application updates user info on new props 1`] = `
     className="nav"
   >
     <NavigationButton
-      link="/info"
+      link="/"
     >
       <img
         src="/static/arrow-blue.png"

@@ -36,3 +36,7 @@
   width: 2rem;
   margin-left: 0.5rem;
 }
+
+a .button:hover {
+  cursor: pointer;
+}

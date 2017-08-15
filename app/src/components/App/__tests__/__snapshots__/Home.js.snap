@@ -104,5 +104,17 @@ exports[`Home renders correctly 1`] = `
       />
     </div>
   </div>
+  <div
+    className="nextLink"
+  >
+    <Link
+      replace={false}
+      to="/application"
+    >
+      <Button
+        text="Gå til søknad"
+      />
+    </Link>
+  </div>
 </div>
 `;

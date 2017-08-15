@@ -47,7 +47,7 @@ class Application extends Component {
     return (
       <div>
         <div className={_s.nav}>
-          <NavigationButton link="/info">
+          <NavigationButton link="/">
             <img src="/static/arrow-blue.png" />
             Tilbake
           </NavigationButton>
