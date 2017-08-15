@@ -9,22 +9,20 @@ import _s from "assets/css/Home.css";
 
 function Home() {
   return (
-    <div>
-      <p>
+    <div className={_s.container}>
+      <p className={_s.text}>
         Komitémedlemmene våre arbeider for at Online fungerer, og at alle informatikkstudenter har en flott studiehverdag.
         Her kan du søke om å bli en av oss!
       </p>
-      <div className={_s.main}>
-        <div className={_s.content}>
-          { Object.keys(committees).map((key) => (
-            <CommitteeInfo key={key} committee={committees[key]} />
-          ))}
-        </div>
+      <div className={_s.content}>
+        { Object.keys(committees).map((key) => (
+          <CommitteeInfo key={key} committee={committees[key]} />
+        ))}
       </div>
       <div className={_s.nextLink}>
-      <Link to="/application">
-        <Button text="Gå til søknad" />
-      </Link>
+        <Link to="/application">
+          <Button text="Gå til søknad" />
+        </Link>
       </div>
     </div>
   );
