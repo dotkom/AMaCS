@@ -1,4 +1,5 @@
 import React from "react";
+import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
 
 import _s from 'assets/css/CommitteeInfo.css';
@@ -35,5 +36,13 @@ class CommitteeInfo extends React.Component {
     )
   }
 }
+
+CommitteeInfo.propTypes = {
+  committee: PropTypes.shape({
+    name: PropTypes.string,
+    icon: PropTypes.string,
+    info: PropTypes.string,
+  }),
+};
 
 export default CommitteeInfo;

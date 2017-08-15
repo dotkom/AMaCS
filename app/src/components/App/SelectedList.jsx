@@ -10,7 +10,7 @@ function SelectedList({ committees, totalChoices }) {
     <div className={_s.container}>
       {
         [...Array(totalChoices)].map((_, i) => {
-          const committee = committees[i];
+          const committee = (committees && committees.length > i)  ? committees[i] : null;
           const key = committee  ? committee.name : `empty${i}`;
           return (
             <div key={key} className={_s.committee}>

@@ -6,26 +6,31 @@ import SelectedList from "./SelectedList"
 
 import _s from 'assets/css/SelectContainer.css';
 
+export function updateSelection(selected, committeeName, maxSelected) {
+  const selectedIndex = selected.indexOf(committeeName)
+  const alreadySelected = selectedIndex !== -1;
+  if(alreadySelected) {
+    selected = [
+      ...selected.slice(0, selectedIndex),
+      ...selected.slice(selectedIndex + 1)
+    ];
+  } else if(selected.length < maxSelected) {
+    selected = [...selected, committeeName];
+  }
+  return selected;
+}
+
 class SelectContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    this.choiceCount = 3;
+    this.maxSelected = 3;
   }
 
   handleSelect(committeeName) {
-    let { selected, onChange } = this.props;
-    const selectedIndex = selected.indexOf(committeeName)
-    const alreadySelected = selectedIndex !== -1;
-    if(alreadySelected) {
-      selected = [
-        ...selected.slice(0, selectedIndex),
-        ...selected.slice(selectedIndex + 1)
-      ];
-    } else if(selected.length < this.choiceCount) {
-      selected = [...selected, committeeName];
-    }
-    this.props.onChange(selected);
+    const { selected, onChange } = this.props;
+    const newSelection = updateSelection(selected, committeeName, this.maxSelected);
+    this.props.onChange(newSelection);
   }
 
   render() {
@@ -46,7 +51,7 @@ class SelectContainer extends React.Component {
         <div className={_s.selectedList}>
           <SelectedList
             committees={selected.map(committeeName => committees[committeeName])}
-            totalChoices={this.choiceCount}
+            totalChoices={this.maxSelected}
           />
         </div>
       </div>

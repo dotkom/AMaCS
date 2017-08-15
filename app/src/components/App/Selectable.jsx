@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 import _s from "assets/css/Selectable.css";
 import classNames from "classnames";
@@ -14,7 +15,19 @@ function Selectable({ committee, onClick, small, selected }) {
 }
 
 Selectable.defaultProps = {
-  small: false
+  small: false,
+  onClick: null,
+  selected: false
+}
+
+Selectable.propTypes = {
+  committee: PropTypes.shape({
+    icon: PropTypes.string,
+    name: PropTypes.string,
+  }).isRequired,
+  onClick: PropTypes.func,
+  small: PropTypes.bool,
+  selected: PropTypes.bool
 }
 
 export default Selectable;

@@ -1,6 +1,6 @@
 
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import AppContainer from "./components/App/AppContainer";
 import AdminContainer from "./components/Admin/AdminContainer";
@@ -8,7 +8,7 @@ import NotFound from "./components/NotFound"
 
 import { connectServices } from 'services';
 
-class Routes extends React.Component {
+export class Routes extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -32,16 +32,14 @@ class Routes extends React.Component {
   render() {
     const { user } = this.state;
     return (
-      <Router>
-        <Switch>
-          <Route path="/admin" render={props => <AdminContainer user={user} {...props} />} />
-          <Route path="/" render={props => <AppContainer
-            user={user}
-            {...props}
-          />} />
-          <Route component={NotFound} />
-        </Switch>
-      </Router>
+      <Switch>
+        <Route path="/admin" render={props => <AdminContainer user={user} {...props} />} />
+        <Route path="/" render={props => <AppContainer
+          user={user}
+          {...props}
+        />} />
+        <Route component={NotFound} />
+      </Switch>
     )
   }
 }

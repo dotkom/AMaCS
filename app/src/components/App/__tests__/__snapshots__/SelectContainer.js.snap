@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectContainer renders correctly with none selected 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="selectables"
+  >
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "name": "Test0kom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={false}
+    />
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "name": "Test1kom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={false}
+    />
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "name": "Test2kom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={false}
+    />
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "name": "Test3kom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={false}
+    />
+  </div>
+  <div
+    className="selectedList"
+  >
+    <SelectedList
+      committees={Array []}
+      totalChoices={3}
+    />
+  </div>
+</div>
+`;
+
+exports[`SelectContainer renders correctly with one selected 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="selectables"
+  >
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "name": "Test0kom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={false}
+    />
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "name": "Test1kom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={false}
+    />
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "name": "Test2kom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={false}
+    />
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "name": "Test3kom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={false}
+    />
+  </div>
+  <div
+    className="selectedList"
+  >
+    <SelectedList
+      committees={
+        Array [
+          Object {
+            "icon": "MockIcon",
+            "info": "Default info",
+            "name": "Test1kom",
+          },
+        ]
+      }
+      totalChoices={3}
+    />
+  </div>
+</div>
+`;
+
+exports[`SelectContainer renders correctly with two selected 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="selectables"
+  >
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "name": "Test0kom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={false}
+    />
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "name": "Test1kom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={false}
+    />
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "name": "Test2kom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={false}
+    />
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "name": "Test3kom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={false}
+    />
+  </div>
+  <div
+    className="selectedList"
+  >
+    <SelectedList
+      committees={
+        Array [
+          Object {
+            "icon": "MockIcon",
+            "info": "Default info",
+            "name": "Test2kom",
+          },
+          Object {
+            "icon": "MockIcon",
+            "info": "Default info",
+            "name": "Test1kom",
+          },
+        ]
+      }
+      totalChoices={3}
+    />
+  </div>
+</div>
+`;

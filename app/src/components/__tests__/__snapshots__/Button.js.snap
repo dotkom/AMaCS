@@ -3,14 +3,12 @@
 exports[`button renders correctly 1`] = `
 <button
   className="button"
-  onClick={undefined}
 />
 `;
 
 exports[`button renders correctly with icon 1`] = `
 <button
   className="button"
-  onClick={undefined}
 >
   <img
     className="iconLeft"
@@ -20,10 +18,21 @@ exports[`button renders correctly with icon 1`] = `
 </button>
 `;
 
+exports[`button renders correctly with right icon 1`] = `
+<button
+  className="button"
+>
+  Button with icon right
+  <img
+    className="iconRight"
+    src="/static/icon2.png"
+  />
+</button>
+`;
+
 exports[`button renders correctly with text 1`] = `
 <button
   className="button"
-  onClick={undefined}
 >
   Button with text
 </button>

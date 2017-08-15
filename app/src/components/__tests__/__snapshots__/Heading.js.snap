@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders correctly 1`] = `
+<header
+  className="heading"
+>
+  <div
+    className="logo"
+  >
+    <Link
+      replace={false}
+      to="/"
+    >
+      <img
+        src="https://online.ntnu.no/static/img/online_logo.svg"
+      />
+    </Link>
+  </div>
+  <div
+    className="header"
+  >
+    <p
+      className="text"
+    >
+      Komitésøknadssystemet Supreme-Guacamole
+    </p>
+  </div>
+</header>
+`;

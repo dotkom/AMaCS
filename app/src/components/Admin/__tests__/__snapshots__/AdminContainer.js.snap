@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminContainer renders correctly 1`] = `
+<div>
+  <p>
+    "AdminContainer"
+  </p>
+</div>
+`;

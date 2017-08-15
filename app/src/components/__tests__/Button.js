@@ -1,30 +1,39 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
+
 import Button from '../Button';
 
 
 describe('button', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(
+    const wrapper = shallow(
       <Button />
-    ).toJSON();
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('renders correctly with text', () => {
-    const tree = renderer.create(
+    const wrapper = shallow(
       <Button text="Button with text" />
-    ).toJSON();
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('renders correctly with icon', () => {
-    const tree = renderer.create(
+    const wrapper = shallow(
       <Button text="Button with icon" iconLeft="/static/icon.png" />
-    ).toJSON();
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders correctly with right icon', () => {
+    const wrapper = shallow(
+      <Button text="Button with icon right" iconRight="/static/icon2.png" />
+    );
+
+    expect(wrapper).toMatchSnapshot();
   });
 });

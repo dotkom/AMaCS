@@ -10,7 +10,7 @@ import { connectServices } from 'services';
 
 const onlineIconWhite = "/static/online-icon-white.png"
 
-function Login({info, loggedIn, authService, onChange}) {
+export function Login({info, loggedIn, authService, onChange}) {
   const handleLoginClick = () => {
     if(loggedIn)
       authService.logout();
@@ -67,7 +67,8 @@ function Login({info, loggedIn, authService, onChange}) {
 }
 
 Login.defaultProps = {
-  loggedIn: false
+  loggedIn: false,
+  info: {}
 }
 
 const mapServicesToProps = (serviceManager) => ({
