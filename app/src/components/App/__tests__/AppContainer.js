@@ -14,7 +14,7 @@ const createAppContainer = (path, user) => (
 describe('AppContainer', () => {
   it('renders correctly', () => {
     const wrapper = shallow(
-      createAppContainer('/path')
+      createAppContainer('/')
     );
     expect(wrapper).toMatchSnapshot();
   });
