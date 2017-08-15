@@ -2,6 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from 'react-hot-loader'
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Routes from "./Routes"
 
@@ -18,7 +19,9 @@ const render = Component => {
   ReactDOM.render(
     <AppContainer>
       <ServiceProvider serviceManager={serviceManager}>
-       <Component />
+        <Router>
+          <Component />
+        </Router>
       </ServiceProvider>
     </AppContainer>,
     document.getElementById("app")
