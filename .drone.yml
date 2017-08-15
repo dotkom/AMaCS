@@ -1,0 +1,8 @@
+pipeline:
+  test:
+    image: node:8-alpine
+    when:
+      event: pull_request
+    commands:
+      - yarn
+      - yarn test
