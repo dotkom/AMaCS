@@ -86,7 +86,8 @@ class Home extends React.Component {
       name: props.user ? props.user.fullname : "",
       email: props.user ? props.user.email : "",
       selectedComittees: [],
-      ordered: true
+      ordered: true,
+      inputEnabled: false
     }
   }
 
@@ -98,7 +99,7 @@ class Home extends React.Component {
   }
 
   _infoChanged(info){
-    this.setState(_.pick(info,["name","email"]));
+    this.setState(_.pick(info,["name","email","inputEnabled"]));
   }
 
   _selectedChanged(selected){
@@ -128,7 +129,7 @@ class Home extends React.Component {
             <Login
               onChange={(info) => this._infoChanged(info)}
               loggedIn={!!this.props.user}
-              info={_.pick(this.state,["name","email"])}
+              info={_.pick(this.state,["name","email","inputEnabled"])}
             />
           </div>
         </div>
