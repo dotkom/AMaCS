@@ -1,12 +1,17 @@
 
 .container {
   background: #ffffff;
+  border: .2rem solid #fff;
   padding: 0.6em 0.8em;
   margin: 0.8em;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.container:hover {
+  border: 0.2rem solid #0060a3;
 }
 
 .container.small {
