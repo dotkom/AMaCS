@@ -45,6 +45,7 @@ class SelectContainer extends React.Component {
               key={key}
               onClick={() => this.handleSelect(key)}
               committee={committee}
+              selected={selected.some(c => c.toLowerCase() === committee.name.toLowerCase())}
             />
           ))}
         </div>

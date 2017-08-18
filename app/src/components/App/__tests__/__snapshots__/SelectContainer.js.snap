@@ -95,7 +95,7 @@ exports[`SelectContainer renders correctly with one selected 1`] = `
         }
       }
       onClick={[Function]}
-      selected={false}
+      selected={true}
       small={false}
     />
     <Selectable
@@ -170,7 +170,7 @@ exports[`SelectContainer renders correctly with two selected 1`] = `
         }
       }
       onClick={[Function]}
-      selected={false}
+      selected={true}
       small={false}
     />
     <Selectable
@@ -182,7 +182,7 @@ exports[`SelectContainer renders correctly with two selected 1`] = `
         }
       }
       onClick={[Function]}
-      selected={false}
+      selected={true}
       small={false}
     />
     <Selectable
