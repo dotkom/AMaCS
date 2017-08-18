@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
+import Button from '../../Button';
 import SelectContainer from '../SelectContainer';
 import NavigationButton from '../../NavigationButton';
 import Login from '../../Login';
@@ -18,6 +19,7 @@ class Application extends Component {
       ordered: true,
       inputEnabled: false,
       applicationText: '',
+      isRequesting: false,
     }
   }
 
@@ -76,6 +78,13 @@ class Application extends Component {
             onChange={(text) => this.setState({ applicationText: text })}
             placeholder="Din søknadstext..."
           />
+        </div>
+        <div className={_s.alternative}>
+            { this.state.responseMessage.length > 0 && <p>{this.state.responseMessage}</p> }
+              <Button
+                text={"Send søknad"}
+                disabled={this.state.isRequesting}
+                />
         </div>
       </div>
     );
