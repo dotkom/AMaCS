@@ -4,6 +4,7 @@ import _ from "lodash";
 import Selectable from "./Selectable"
 import SelectedList from "./SelectedList"
 
+import committeesMap from 'common/committees';
 import _s from 'assets/css/SelectContainer.css';
 
 export function updateSelection(selected, committeeName, maxSelected) {
@@ -34,23 +35,22 @@ class SelectContainer extends React.Component {
   }
 
   render() {
-    const { committees, selected } = this.props;
+    const { selected } = this.props;
+    const committees = this.props.committees || committeesMap;
     return (
       <div className={_s.container}>
         <div className={_s.selectables}>
-          { Object.keys(committees).map((key) => {
-            const committee = committees[key];
-            const { name } = committee;
-            return <Selectable
+          { Array.from(committees).map(([key, committee]) => (
+            <Selectable
               key={key}
               onClick={() => this.handleSelect(key)}
               committee={committee}
             />
-          })}
+          ))}
         </div>
         <div className={_s.selectedList}>
           <SelectedList
-            committees={selected.map(committeeName => committees[committeeName])}
+            committees={selected.map(committeeName => committees.get(committeeName))}
             totalChoices={this.maxSelected}
           />
         </div>

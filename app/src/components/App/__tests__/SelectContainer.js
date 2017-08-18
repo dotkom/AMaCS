@@ -6,12 +6,12 @@ import SelectContainer, { updateSelection } from '../SelectContainer';
 import { createCommitteeObject } from 'common/testUtils';
 
 describe('SelectContainer', () => {
-  const committees = {
-    Test0kom: createCommitteeObject('Test0kom'),
-    Test1kom: createCommitteeObject('Test1kom'),
-    Test2kom: createCommitteeObject('Test2kom'),
-    Test3kom: createCommitteeObject('Test3kom'),
-  };
+  const committees = new Map([
+    ['Test0kom', createCommitteeObject('Test0kom')],
+    ['Test1kom', createCommitteeObject('Test1kom')],
+    ['Test2kom', createCommitteeObject('Test2kom')],
+    ['Test3kom', createCommitteeObject('Test3kom')],
+  ]);
 
   it('renders correctly with none selected', () => {
   const selected = [];
