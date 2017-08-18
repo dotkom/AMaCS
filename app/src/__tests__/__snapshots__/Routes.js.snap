@@ -246,6 +246,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                   info={
                                     Object {
                                       "email": "",
+                                      "inputEnabled": false,
                                       "name": "",
                                     }
                                   }
@@ -266,6 +267,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                     info={
                                       Object {
                                         "email": "",
+                                        "inputEnabled": false,
                                         "name": "",
                                       }
                                     }
@@ -310,10 +312,14 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                           Ingen Online bruker?
                                         </label>
                                         <ToggleSwitch
+                                          checked={false}
+                                          disabled={false}
+                                          onChange={[Function]}
                                           text="Fyll inn rukerinfo selv"
                                         >
                                           <button
                                             className="container"
+                                            disabled={false}
                                             onClick={[Function]}
                                           >
                                             <div
@@ -334,7 +340,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                         className="box"
                                       >
                                         <Input
-                                          disabled={false}
+                                          disabled={true}
                                           label="Navn"
                                           name="name"
                                           onChange={[Function]}
@@ -353,7 +359,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                             </label>
                                             <input
                                               className="input"
-                                              disabled={false}
+                                              disabled={true}
                                               name="name"
                                               onChange={[Function]}
                                               placeholder="Navn"
@@ -363,7 +369,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                           </div>
                                         </Input>
                                         <Input
-                                          disabled={false}
+                                          disabled={true}
                                           label="E-Postadresse"
                                           name="email"
                                           onChange={[Function]}
@@ -382,7 +388,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                             </label>
                                             <input
                                               className="input"
-                                              disabled={false}
+                                              disabled={true}
                                               name="email"
                                               onChange={[Function]}
                                               placeholder="Mailadresse"
