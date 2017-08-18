@@ -79,7 +79,6 @@ class Application extends Component {
 
       if (resp.status === 201) {
         this.setState({
-          isRequesting: false,
           responseMessage: 'Søknad er sendt.' ,
         });
         return;
