@@ -12,12 +12,19 @@
   transition: 0.25s border-color;
 }
 
-.container:hover {
+.container:hover, .container.container.selected:hover {
   border-color: #0060a3;
 }
 
 .container.small {
   font-size: 0.9rem;
+}
+
+.container.selected {
+  background: #C4C4C4;
+  border-color: #f2f2f2;
+  box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
 }
 
 .img {
