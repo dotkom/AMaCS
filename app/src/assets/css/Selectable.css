@@ -8,11 +8,12 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  border-radius: 2px;
+  transition: 0.25s border-color;
 }
 
 .container:hover {
-  animation: border-animation 0.75s;
-  border: 0.1rem solid #0060a3;
+  border-color: #0060a3;
 }
 
 .container.small {
@@ -29,9 +30,4 @@
   font-size: 0.9em;
   color: #333333;
   font-weight: 600;
-}
-
-@keyframes border-animation {
-  0% { border: 0.10rem solid #ffffff; }
-  100% { border: 0.10rem solid #0060a3; }
 }

@@ -12,15 +12,16 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   flex: 1;
   background: #ffffff;
-  border: 0.10rem solid #ffffff;
+  border: 0.1rem solid #ffffff;
   padding: 0.5rem;
   display: flex;
   align-items: center;
+  transition: 0.25s border;
+  border-radius: 2px;
 }
 
 .header:hover {
-  animation: border-animation 0.75s;
-  border: 0.10rem solid #0060a3;
+  border-color: #0060a3;
 }
 
 .open .header {
@@ -49,9 +50,4 @@
 .img {
   width: 2.5rem;
   display: inline-block;
-}
-
-@keyframes border-animation {
-  0% { border: 0.10rem solid #ffffff; }
-  100% { border: 0.10rem solid #0060a3; }
 }
