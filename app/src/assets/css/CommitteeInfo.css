@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   width: 24rem;
   border-style: solid;
   border: 2px;
