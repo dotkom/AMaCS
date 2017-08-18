@@ -4,7 +4,10 @@
   color: #333333;
   display: block;
   width: 100%;
-  min-height: 20rem;
+  min-height: 10rem;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 0.5rem;
 }
 
 .component::placeholder {
