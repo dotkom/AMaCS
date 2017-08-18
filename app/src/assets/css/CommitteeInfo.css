@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  width: 24rem;
+  width: 32rem;
   border-style: solid;
   border: 2px;
   padding: 0.5rem;
@@ -44,4 +44,11 @@
 .img {
   width: 2.5rem;
   display: inline-block;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
 }
