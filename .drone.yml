@@ -4,6 +4,5 @@ pipeline:
     when:
       event: pull_request
     commands:
-      - cp app/src/common/constants.example.js app/src/common/constants.js
       - yarn
       - yarn test

@@ -151,6 +151,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                   <main>
                     <Switch>
                       <Route
+                        component={[Function]}
                         computedMatch={
                           Object {
                             "isExact": true,
@@ -168,7 +169,6 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                           }
                         }
                         path="/"
-                        render={[Function]}
                       >
                         <Home
                           history={
@@ -205,815 +205,313 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                             }
                           }
                           staticContext={Object {}}
-                          user={null}
                         >
                           <div
-                            className="background"
+                            className="container"
                           >
-                            <div
-                              className="nav"
+                            <p
+                              className="text"
                             >
-                              <NavigationButton
-                                link="/info"
+                              Komitémedlemmene våre arbeider for at Online fungerer, og at alle informatikkstudenter har en flott studiehverdag. Her kan du søke om å bli en av oss!
+                            </p>
+                            <div
+                              className="content"
+                            >
+                              <CommitteeInfo
+                                committee={
+                                  Object {
+                                    "icon": "/static/arrkom-square.png",
+                                    "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
+                                      tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
+                                      immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
+                                      mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
+                                      person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
+                                    "name": "Arrkom",
+                                  }
+                                }
                               >
-                                <div
+                                <section
                                   className="container"
+                                  onClick={[Function]}
                                 >
-                                  <Link
-                                    replace={false}
-                                    to="/info"
+                                  <header
+                                    className="header"
                                   >
-                                    <a
-                                      href="/info"
-                                      onClick={[Function]}
+                                    <img
+                                      className="img"
+                                      src="/static/arrkom-square.png"
+                                    />
+                                    <h3
+                                      className="name"
                                     >
-                                      <img
-                                        src="/static/arrow-blue.png"
-                                      />
-                                      Tilbake
-                                    </a>
-                                  </Link>
-                                </div>
-                              </NavigationButton>
-                            </div>
-                            <div
-                              className="alternative"
-                            >
-                              <div
-                                className="content"
-                              >
-                                <ConnectedServiceComponent
-                                  info={
-                                    Object {
-                                      "email": "",
-                                      "inputEnabled": false,
-                                      "name": "",
-                                    }
-                                  }
-                                  loggedIn={false}
-                                  onChange={[Function]}
-                                >
-                                  <Login
-                                    authService={
-                                      AuthServiceMock {
-                                        "getUserMock": [Function],
-                                        "loginMock": [Function],
-                                        "logoutMock": [Function],
-                                        "onUserChangeMock": Object {
-                                          "subscribe": [Function],
-                                        },
-                                      }
-                                    }
-                                    info={
-                                      Object {
-                                        "email": "",
-                                        "inputEnabled": false,
-                                        "name": "",
-                                      }
-                                    }
-                                    loggedIn={false}
-                                    onChange={[Function]}
-                                  >
-                                    <div
-                                      className="container"
-                                    >
-                                      <h2
-                                        className="header"
-                                      >
-                                        Brukerinfo
-                                      </h2>
-                                      <div
-                                        className="box"
-                                      >
-                                        <label
-                                          className="label"
-                                        >
-                                          Hent Brukerinfo
-                                        </label>
-                                        <Button
-                                          iconLeft="/static/online-icon-white.png"
-                                          onClick={[Function]}
-                                          text="Logg inn"
-                                        >
-                                          <button
-                                            className="button"
-                                            onClick={[Function]}
-                                          >
-                                            <img
-                                              className="iconLeft"
-                                              src="/static/online-icon-white.png"
-                                            />
-                                            Logg inn
-                                          </button>
-                                        </Button>
-                                        <label
-                                          className="label"
-                                        >
-                                          Ingen Online bruker?
-                                        </label>
-                                        <ToggleSwitch
-                                          checked={false}
-                                          disabled={false}
-                                          onChange={[Function]}
-                                          text="Fyll inn rukerinfo selv"
-                                        >
-                                          <button
-                                            className="container"
-                                            disabled={false}
-                                            onClick={[Function]}
-                                          >
-                                            <div
-                                              className="slider"
-                                            >
-                                              <span
-                                                className="icon"
-                                              >
-                                                <SVGMockComponent
-                                                  width={12}
-                                                />
-                                              </span>
-                                            </div>
-                                          </button>
-                                        </ToggleSwitch>
-                                      </div>
-                                      <div
-                                        className="box"
-                                      >
-                                        <Input
-                                          disabled={true}
-                                          label="Navn"
-                                          name="name"
-                                          onChange={[Function]}
-                                          placeholder="Navn"
-                                          type="text"
-                                          value=""
-                                        >
-                                          <div
-                                            className="container"
-                                          >
-                                            <label
-                                              className="label"
-                                              htmlFor="name"
-                                            >
-                                              Navn
-                                            </label>
-                                            <input
-                                              className="input"
-                                              disabled={true}
-                                              name="name"
-                                              onChange={[Function]}
-                                              placeholder="Navn"
-                                              type="text"
-                                              value=""
-                                            />
-                                          </div>
-                                        </Input>
-                                        <Input
-                                          disabled={true}
-                                          label="E-Postadresse"
-                                          name="email"
-                                          onChange={[Function]}
-                                          placeholder="Mailadresse"
-                                          type="email"
-                                          value=""
-                                        >
-                                          <div
-                                            className="container"
-                                          >
-                                            <label
-                                              className="label"
-                                              htmlFor="email"
-                                            >
-                                              E-Postadresse
-                                            </label>
-                                            <input
-                                              className="input"
-                                              disabled={true}
-                                              name="email"
-                                              onChange={[Function]}
-                                              placeholder="Mailadresse"
-                                              type="email"
-                                              value=""
-                                            />
-                                          </div>
-                                        </Input>
-                                      </div>
-                                    </div>
-                                  </Login>
-                                </ConnectedServiceComponent>
-                              </div>
-                            </div>
-                            <div
-                              className="main"
-                            >
-                              <div
-                                className="content"
-                              >
-                                <CommitteeInfo
-                                  committee={
-                                    Object {
-                                      "icon": "/static/dotkom-square.png",
-                                      "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
-                                        datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
-                                        e-postsystemer, filområder og mye annet spennende. I en stor
-                                        linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
-                                        utviklingskomiteen prøver hele tiden å lage smarte løsninger som
-                                        holder en høy standard, slik som i en bedrift. Er du interessert i
-                                        programmering, drifting eller teknologi generelt? Vi kan tilby et
-                                        unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
-                                        Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
-                                      "name": "Dotkom",
-                                    }
-                                  }
-                                >
-                                  <section
-                                    className="container"
-                                    onClick={[Function]}
-                                  >
-                                    <header
-                                      className="header"
-                                    >
-                                      <img
-                                        className="img"
-                                        src="/static/dotkom-square.png"
-                                      />
-                                      <h3
-                                        className="name"
-                                      >
-                                        Dotkom
-                                      </h3>
-                                    </header>
-                                    <div
-                                      className="info"
-                                    >
-                                      Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
-                                          datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
-                                          e-postsystemer, filområder og mye annet spennende. I en stor
-                                          linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
-                                          utviklingskomiteen prøver hele tiden å lage smarte løsninger som
-                                          holder en høy standard, slik som i en bedrift. Er du interessert i
-                                          programmering, drifting eller teknologi generelt? Vi kan tilby et
-                                          unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
-                                          Ingen forkunnskaper er påkrevd annet enn stor lærevilje!
-                                    </div>
-                                  </section>
-                                </CommitteeInfo>
-                                <CommitteeInfo
-                                  committee={
-                                    Object {
-                                      "icon": "/static/trikom-square.png",
-                                      "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
-                                        Dette inkluderer å arrangere små arrangementer i skoletiden,
-                                        for eksempel vaffeldager eller andre ting som skaper trivsel.
-                                        Vi er også ansvarlig for drift av kontoret som vil si å sette opp
-                                        kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
-                                        Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
-                                      "name": "Trikom",
-                                    }
-                                  }
-                                >
-                                  <section
-                                    className="container"
-                                    onClick={[Function]}
-                                  >
-                                    <header
-                                      className="header"
-                                    >
-                                      <img
-                                        className="img"
-                                        src="/static/trikom-square.png"
-                                      />
-                                      <h3
-                                        className="name"
-                                      >
-                                        Trikom
-                                      </h3>
-                                    </header>
-                                    <div
-                                      className="info"
-                                    >
-                                      Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
-                                          Dette inkluderer å arrangere små arrangementer i skoletiden,
-                                          for eksempel vaffeldager eller andre ting som skaper trivsel.
-                                          Vi er også ansvarlig for drift av kontoret som vil si å sette opp
-                                          kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
-                                          Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.
-                                    </div>
-                                  </section>
-                                </CommitteeInfo>
-                                <CommitteeInfo
-                                  committee={
-                                    Object {
-                                      "icon": "/static/prokom-square.png",
-                                      "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
-                                        profesjonelt og konsistent. Alt profileringsmateriale som klær,
-                                        annonser, brev og brosjyrer, plakater, medaljer og andre effekter
-                                        lages av oss. Vi har også en redaksjon som er ansvarlig for
-                                        linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
-                                        skribent i magen? Vi leter etter deg som er interessert i design,
-                                        markedsføring, journalisme eller skriving!",
-                                      "name": "Prokom",
-                                    }
-                                  }
-                                >
-                                  <section
-                                    className="container"
-                                    onClick={[Function]}
-                                  >
-                                    <header
-                                      className="header"
-                                    >
-                                      <img
-                                        className="img"
-                                        src="/static/prokom-square.png"
-                                      />
-                                      <h3
-                                        className="name"
-                                      >
-                                        Prokom
-                                      </h3>
-                                    </header>
-                                    <div
-                                      className="info"
-                                    >
-                                      Profil- og aviskomiteen sørger for at Onlines ansikt utad er
-                                          profesjonelt og konsistent. Alt profileringsmateriale som klær,
-                                          annonser, brev og brosjyrer, plakater, medaljer og andre effekter
-                                          lages av oss. Vi har også en redaksjon som er ansvarlig for
-                                          linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
-                                          skribent i magen? Vi leter etter deg som er interessert i design,
-                                          markedsføring, journalisme eller skriving!
-                                    </div>
-                                  </section>
-                                </CommitteeInfo>
-                                <CommitteeInfo
-                                  committee={
-                                    Object {
-                                      "icon": "/static/fagkom-square.png",
-                                      "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
-                                        gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
-                                        studentenes faglige interesser. Vi oppsøker kompetansen i
-                                        næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
-                                        kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
-                                        vil du få god innsikt i emner utenfor skolen, og samtidig knytte
-                                        tettere bånd til din fremtidige arbeidsgiver.",
-                                      "name": "Fagkom",
-                                    }
-                                  }
-                                >
-                                  <section
-                                    className="container"
-                                    onClick={[Function]}
-                                  >
-                                    <header
-                                      className="header"
-                                    >
-                                      <img
-                                        className="img"
-                                        src="/static/fagkom-square.png"
-                                      />
-                                      <h3
-                                        className="name"
-                                      >
-                                        Fagkom
-                                      </h3>
-                                    </header>
-                                    <div
-                                      className="info"
-                                    >
-                                      Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
-                                          gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
-                                          studentenes faglige interesser. Vi oppsøker kompetansen i
-                                          næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
-                                          kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
-                                          vil du få god innsikt i emner utenfor skolen, og samtidig knytte
-                                          tettere bånd til din fremtidige arbeidsgiver.
-                                    </div>
-                                  </section>
-                                </CommitteeInfo>
-                                <CommitteeInfo
-                                  committee={
-                                    Object {
-                                      "icon": "/static/bedkom-square.png",
-                                      "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
-                                        sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
-                                        hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
-                                        mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
-                                        og potensielle arbeidstakere under studietiden, samtidig som du får et
-                                        innblikk i hvordan bedrifter rekrutterer studenter. Etter en
-                                        bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
-                                        og bli kjent under et godt måltid. Bedriftskomiteen er også
-                                        knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
-                                      "name": "Bedkom",
-                                    }
-                                  }
-                                >
-                                  <section
-                                    className="container"
-                                    onClick={[Function]}
-                                  >
-                                    <header
-                                      className="header"
-                                    >
-                                      <img
-                                        className="img"
-                                        src="/static/bedkom-square.png"
-                                      />
-                                      <h3
-                                        className="name"
-                                      >
-                                        Bedkom
-                                      </h3>
-                                    </header>
-                                    <div
-                                      className="info"
-                                    >
-                                      Bedriftskomiteens oppgave er å knytte studentene og næringslivet
-                                          sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
-                                          hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
-                                          mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
-                                          og potensielle arbeidstakere under studietiden, samtidig som du får et
-                                          innblikk i hvordan bedrifter rekrutterer studenter. Etter en
-                                          bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
-                                          og bli kjent under et godt måltid. Bedriftskomiteen er også
-                                          knutepunktet til våre samarbeidspartnere i næringslivet ellers.
-                                    </div>
-                                  </section>
-                                </CommitteeInfo>
-                                <CommitteeInfo
-                                  committee={
-                                    Object {
-                                      "icon": "/static/arrkom-square.png",
-                                      "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
-                                        tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
-                                        immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
-                                        mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
-                                        person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
-                                      "name": "Arrkom",
-                                    }
-                                  }
-                                >
-                                  <section
-                                    className="container"
-                                    onClick={[Function]}
-                                  >
-                                    <header
-                                      className="header"
-                                    >
-                                      <img
-                                        className="img"
-                                        src="/static/arrkom-square.png"
-                                      />
-                                      <h3
-                                        className="name"
-                                      >
-                                        Arrkom
-                                      </h3>
-                                    </header>
-                                    <div
-                                      className="info"
-                                    >
-                                      Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
-                                          tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
-                                          immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
-                                          mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
-                                          person selv? Da er kanskje Arrangementskomitéen stedet for deg!
-                                    </div>
-                                  </section>
-                                </CommitteeInfo>
-                              </div>
-                            </div>
-                            <div
-                              className="main"
-                            >
-                              <div
-                                className="content"
-                              >
-                                <SelectContainer
-                                  committees={
-                                    Object {
-                                      "arrkom": Object {
-                                        "icon": "/static/arrkom-square.png",
-                                        "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
-                                        tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
-                                        immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
-                                        mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
-                                        person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
-                                        "name": "Arrkom",
-                                      },
-                                      "bedkom": Object {
-                                        "icon": "/static/bedkom-square.png",
-                                        "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
-                                        sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
-                                        hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
-                                        mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
-                                        og potensielle arbeidstakere under studietiden, samtidig som du får et
-                                        innblikk i hvordan bedrifter rekrutterer studenter. Etter en
-                                        bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
-                                        og bli kjent under et godt måltid. Bedriftskomiteen er også
-                                        knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
-                                        "name": "Bedkom",
-                                      },
-                                      "dotkom": Object {
-                                        "icon": "/static/dotkom-square.png",
-                                        "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
-                                        datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
-                                        e-postsystemer, filområder og mye annet spennende. I en stor
-                                        linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
-                                        utviklingskomiteen prøver hele tiden å lage smarte løsninger som
-                                        holder en høy standard, slik som i en bedrift. Er du interessert i
-                                        programmering, drifting eller teknologi generelt? Vi kan tilby et
-                                        unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
-                                        Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
-                                        "name": "Dotkom",
-                                      },
-                                      "fagkom": Object {
-                                        "icon": "/static/fagkom-square.png",
-                                        "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
-                                        gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
-                                        studentenes faglige interesser. Vi oppsøker kompetansen i
-                                        næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
-                                        kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
-                                        vil du få god innsikt i emner utenfor skolen, og samtidig knytte
-                                        tettere bånd til din fremtidige arbeidsgiver.",
-                                        "name": "Fagkom",
-                                      },
-                                      "prokom": Object {
-                                        "icon": "/static/prokom-square.png",
-                                        "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
-                                        profesjonelt og konsistent. Alt profileringsmateriale som klær,
-                                        annonser, brev og brosjyrer, plakater, medaljer og andre effekter
-                                        lages av oss. Vi har også en redaksjon som er ansvarlig for
-                                        linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
-                                        skribent i magen? Vi leter etter deg som er interessert i design,
-                                        markedsføring, journalisme eller skriving!",
-                                        "name": "Prokom",
-                                      },
-                                      "trikom": Object {
-                                        "icon": "/static/trikom-square.png",
-                                        "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
-                                        Dette inkluderer å arrangere små arrangementer i skoletiden,
-                                        for eksempel vaffeldager eller andre ting som skaper trivsel.
-                                        Vi er også ansvarlig for drift av kontoret som vil si å sette opp
-                                        kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
-                                        Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
-                                        "name": "Trikom",
-                                      },
-                                    }
-                                  }
-                                  onChange={[Function]}
-                                  ordered={true}
-                                  selected={Array []}
-                                >
+                                      Arrkom
+                                    </h3>
+                                  </header>
                                   <div
-                                    className="container"
+                                    className="info"
                                   >
-                                    <div
-                                      className="selectables"
-                                    >
-                                      <Selectable
-                                        committee={
-                                          Object {
-                                            "icon": "/static/dotkom-square.png",
-                                            "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
-                                              datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
-                                              e-postsystemer, filområder og mye annet spennende. I en stor
-                                              linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
-                                              utviklingskomiteen prøver hele tiden å lage smarte løsninger som
-                                              holder en høy standard, slik som i en bedrift. Er du interessert i
-                                              programmering, drifting eller teknologi generelt? Vi kan tilby et
-                                              unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
-                                              Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
-                                            "name": "Dotkom",
-                                          }
-                                        }
-                                        onClick={[Function]}
-                                        selected={false}
-                                        small={false}
-                                      >
-                                        <div
-                                          className="container"
-                                          onClick={[Function]}
-                                        >
-                                          <img
-                                            className="img"
-                                            src="/static/dotkom-square.png"
-                                          />
-                                          <h2
-                                            className="name"
-                                          >
-                                            Dotkom
-                                          </h2>
-                                        </div>
-                                      </Selectable>
-                                      <Selectable
-                                        committee={
-                                          Object {
-                                            "icon": "/static/trikom-square.png",
-                                            "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
-                                              Dette inkluderer å arrangere små arrangementer i skoletiden,
-                                              for eksempel vaffeldager eller andre ting som skaper trivsel.
-                                              Vi er også ansvarlig for drift av kontoret som vil si å sette opp
-                                              kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
-                                              Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
-                                            "name": "Trikom",
-                                          }
-                                        }
-                                        onClick={[Function]}
-                                        selected={false}
-                                        small={false}
-                                      >
-                                        <div
-                                          className="container"
-                                          onClick={[Function]}
-                                        >
-                                          <img
-                                            className="img"
-                                            src="/static/trikom-square.png"
-                                          />
-                                          <h2
-                                            className="name"
-                                          >
-                                            Trikom
-                                          </h2>
-                                        </div>
-                                      </Selectable>
-                                      <Selectable
-                                        committee={
-                                          Object {
-                                            "icon": "/static/prokom-square.png",
-                                            "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
-                                              profesjonelt og konsistent. Alt profileringsmateriale som klær,
-                                              annonser, brev og brosjyrer, plakater, medaljer og andre effekter
-                                              lages av oss. Vi har også en redaksjon som er ansvarlig for
-                                              linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
-                                              skribent i magen? Vi leter etter deg som er interessert i design,
-                                              markedsføring, journalisme eller skriving!",
-                                            "name": "Prokom",
-                                          }
-                                        }
-                                        onClick={[Function]}
-                                        selected={false}
-                                        small={false}
-                                      >
-                                        <div
-                                          className="container"
-                                          onClick={[Function]}
-                                        >
-                                          <img
-                                            className="img"
-                                            src="/static/prokom-square.png"
-                                          />
-                                          <h2
-                                            className="name"
-                                          >
-                                            Prokom
-                                          </h2>
-                                        </div>
-                                      </Selectable>
-                                      <Selectable
-                                        committee={
-                                          Object {
-                                            "icon": "/static/fagkom-square.png",
-                                            "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
-                                              gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
-                                              studentenes faglige interesser. Vi oppsøker kompetansen i
-                                              næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
-                                              kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
-                                              vil du få god innsikt i emner utenfor skolen, og samtidig knytte
-                                              tettere bånd til din fremtidige arbeidsgiver.",
-                                            "name": "Fagkom",
-                                          }
-                                        }
-                                        onClick={[Function]}
-                                        selected={false}
-                                        small={false}
-                                      >
-                                        <div
-                                          className="container"
-                                          onClick={[Function]}
-                                        >
-                                          <img
-                                            className="img"
-                                            src="/static/fagkom-square.png"
-                                          />
-                                          <h2
-                                            className="name"
-                                          >
-                                            Fagkom
-                                          </h2>
-                                        </div>
-                                      </Selectable>
-                                      <Selectable
-                                        committee={
-                                          Object {
-                                            "icon": "/static/bedkom-square.png",
-                                            "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
-                                              sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
-                                              hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
-                                              mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
-                                              og potensielle arbeidstakere under studietiden, samtidig som du får et
-                                              innblikk i hvordan bedrifter rekrutterer studenter. Etter en
-                                              bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
-                                              og bli kjent under et godt måltid. Bedriftskomiteen er også
-                                              knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
-                                            "name": "Bedkom",
-                                          }
-                                        }
-                                        onClick={[Function]}
-                                        selected={false}
-                                        small={false}
-                                      >
-                                        <div
-                                          className="container"
-                                          onClick={[Function]}
-                                        >
-                                          <img
-                                            className="img"
-                                            src="/static/bedkom-square.png"
-                                          />
-                                          <h2
-                                            className="name"
-                                          >
-                                            Bedkom
-                                          </h2>
-                                        </div>
-                                      </Selectable>
-                                      <Selectable
-                                        committee={
-                                          Object {
-                                            "icon": "/static/arrkom-square.png",
-                                            "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
-                                              tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
-                                              immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
-                                              mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
-                                              person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
-                                            "name": "Arrkom",
-                                          }
-                                        }
-                                        onClick={[Function]}
-                                        selected={false}
-                                        small={false}
-                                      >
-                                        <div
-                                          className="container"
-                                          onClick={[Function]}
-                                        >
-                                          <img
-                                            className="img"
-                                            src="/static/arrkom-square.png"
-                                          />
-                                          <h2
-                                            className="name"
-                                          >
-                                            Arrkom
-                                          </h2>
-                                        </div>
-                                      </Selectable>
-                                    </div>
-                                    <div
-                                      className="selectedList"
-                                    >
-                                      <SelectedList
-                                        committees={Array []}
-                                        totalChoices={3}
-                                      >
-                                        <div
-                                          className="container"
-                                        >
-                                          <div
-                                            className="committee"
-                                          >
-                                            <div
-                                              className="number"
-                                            >
-                                              1
-                                            </div>
-                                          </div>
-                                          <div
-                                            className="committee"
-                                          >
-                                            <div
-                                              className="number"
-                                            >
-                                              2
-                                            </div>
-                                          </div>
-                                          <div
-                                            className="committee"
-                                          >
-                                            <div
-                                              className="number"
-                                            >
-                                              3
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </SelectedList>
-                                    </div>
+                                    Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
+                                        tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
+                                        immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
+                                        mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
+                                        person selv? Da er kanskje Arrangementskomitéen stedet for deg!
                                   </div>
-                                </SelectContainer>
-                              </div>
+                                </section>
+                              </CommitteeInfo>
+                              <CommitteeInfo
+                                committee={
+                                  Object {
+                                    "icon": "/static/bedkom-square.png",
+                                    "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
+                                      sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
+                                      hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
+                                      mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
+                                      og potensielle arbeidstakere under studietiden, samtidig som du får et
+                                      innblikk i hvordan bedrifter rekrutterer studenter. Etter en
+                                      bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
+                                      og bli kjent under et godt måltid. Bedriftskomiteen er også
+                                      knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
+                                    "name": "Bedkom",
+                                  }
+                                }
+                              >
+                                <section
+                                  className="container"
+                                  onClick={[Function]}
+                                >
+                                  <header
+                                    className="header"
+                                  >
+                                    <img
+                                      className="img"
+                                      src="/static/bedkom-square.png"
+                                    />
+                                    <h3
+                                      className="name"
+                                    >
+                                      Bedkom
+                                    </h3>
+                                  </header>
+                                  <div
+                                    className="info"
+                                  >
+                                    Bedriftskomiteens oppgave er å knytte studentene og næringslivet
+                                        sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
+                                        hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
+                                        mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
+                                        og potensielle arbeidstakere under studietiden, samtidig som du får et
+                                        innblikk i hvordan bedrifter rekrutterer studenter. Etter en
+                                        bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
+                                        og bli kjent under et godt måltid. Bedriftskomiteen er også
+                                        knutepunktet til våre samarbeidspartnere i næringslivet ellers.
+                                  </div>
+                                </section>
+                              </CommitteeInfo>
+                              <CommitteeInfo
+                                committee={
+                                  Object {
+                                    "icon": "/static/dotkom-square.png",
+                                    "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
+                                      datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
+                                      e-postsystemer, filområder og mye annet spennende. I en stor
+                                      linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
+                                      utviklingskomiteen prøver hele tiden å lage smarte løsninger som
+                                      holder en høy standard, slik som i en bedrift. Er du interessert i
+                                      programmering, drifting eller teknologi generelt? Vi kan tilby et
+                                      unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
+                                      Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
+                                    "name": "Dotkom",
+                                  }
+                                }
+                              >
+                                <section
+                                  className="container"
+                                  onClick={[Function]}
+                                >
+                                  <header
+                                    className="header"
+                                  >
+                                    <img
+                                      className="img"
+                                      src="/static/dotkom-square.png"
+                                    />
+                                    <h3
+                                      className="name"
+                                    >
+                                      Dotkom
+                                    </h3>
+                                  </header>
+                                  <div
+                                    className="info"
+                                  >
+                                    Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
+                                        datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
+                                        e-postsystemer, filområder og mye annet spennende. I en stor
+                                        linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
+                                        utviklingskomiteen prøver hele tiden å lage smarte løsninger som
+                                        holder en høy standard, slik som i en bedrift. Er du interessert i
+                                        programmering, drifting eller teknologi generelt? Vi kan tilby et
+                                        unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
+                                        Ingen forkunnskaper er påkrevd annet enn stor lærevilje!
+                                  </div>
+                                </section>
+                              </CommitteeInfo>
+                              <CommitteeInfo
+                                committee={
+                                  Object {
+                                    "icon": "/static/fagkom-square.png",
+                                    "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
+                                      gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
+                                      studentenes faglige interesser. Vi oppsøker kompetansen i
+                                      næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
+                                      kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
+                                      vil du få god innsikt i emner utenfor skolen, og samtidig knytte
+                                      tettere bånd til din fremtidige arbeidsgiver.",
+                                    "name": "Fagkom",
+                                  }
+                                }
+                              >
+                                <section
+                                  className="container"
+                                  onClick={[Function]}
+                                >
+                                  <header
+                                    className="header"
+                                  >
+                                    <img
+                                      className="img"
+                                      src="/static/fagkom-square.png"
+                                    />
+                                    <h3
+                                      className="name"
+                                    >
+                                      Fagkom
+                                    </h3>
+                                  </header>
+                                  <div
+                                    className="info"
+                                  >
+                                    Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
+                                        gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
+                                        studentenes faglige interesser. Vi oppsøker kompetansen i
+                                        næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
+                                        kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
+                                        vil du få god innsikt i emner utenfor skolen, og samtidig knytte
+                                        tettere bånd til din fremtidige arbeidsgiver.
+                                  </div>
+                                </section>
+                              </CommitteeInfo>
+                              <CommitteeInfo
+                                committee={
+                                  Object {
+                                    "icon": "/static/prokom-square.png",
+                                    "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
+                                      profesjonelt og konsistent. Alt profileringsmateriale som klær,
+                                      annonser, brev og brosjyrer, plakater, medaljer og andre effekter
+                                      lages av oss. Vi har også en redaksjon som er ansvarlig for
+                                      linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
+                                      skribent i magen? Vi leter etter deg som er interessert i design,
+                                      markedsføring, journalisme eller skriving!",
+                                    "name": "Prokom",
+                                  }
+                                }
+                              >
+                                <section
+                                  className="container"
+                                  onClick={[Function]}
+                                >
+                                  <header
+                                    className="header"
+                                  >
+                                    <img
+                                      className="img"
+                                      src="/static/prokom-square.png"
+                                    />
+                                    <h3
+                                      className="name"
+                                    >
+                                      Prokom
+                                    </h3>
+                                  </header>
+                                  <div
+                                    className="info"
+                                  >
+                                    Profil- og aviskomiteen sørger for at Onlines ansikt utad er
+                                        profesjonelt og konsistent. Alt profileringsmateriale som klær,
+                                        annonser, brev og brosjyrer, plakater, medaljer og andre effekter
+                                        lages av oss. Vi har også en redaksjon som er ansvarlig for
+                                        linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
+                                        skribent i magen? Vi leter etter deg som er interessert i design,
+                                        markedsføring, journalisme eller skriving!
+                                  </div>
+                                </section>
+                              </CommitteeInfo>
+                              <CommitteeInfo
+                                committee={
+                                  Object {
+                                    "icon": "/static/trikom-square.png",
+                                    "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
+                                      Dette inkluderer å arrangere små arrangementer i skoletiden,
+                                      for eksempel vaffeldager eller andre ting som skaper trivsel.
+                                      Vi er også ansvarlig for drift av kontoret som vil si å sette opp
+                                      kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
+                                      Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
+                                    "name": "Trikom",
+                                  }
+                                }
+                              >
+                                <section
+                                  className="container"
+                                  onClick={[Function]}
+                                >
+                                  <header
+                                    className="header"
+                                  >
+                                    <img
+                                      className="img"
+                                      src="/static/trikom-square.png"
+                                    />
+                                    <h3
+                                      className="name"
+                                    >
+                                      Trikom
+                                    </h3>
+                                  </header>
+                                  <div
+                                    className="info"
+                                  >
+                                    Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
+                                        Dette inkluderer å arrangere små arrangementer i skoletiden,
+                                        for eksempel vaffeldager eller andre ting som skaper trivsel.
+                                        Vi er også ansvarlig for drift av kontoret som vil si å sette opp
+                                        kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
+                                        Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.
+                                  </div>
+                                </section>
+                              </CommitteeInfo>
+                            </div>
+                            <div
+                              className="nextLink"
+                            >
+                              <Link
+                                replace={false}
+                                to="/application"
+                              >
+                                <a
+                                  href="/application"
+                                  onClick={[Function]}
+                                >
+                                  <Button
+                                    text="Gå til søknad"
+                                  >
+                                    <button
+                                      className="button"
+                                    >
+                                      Gå til søknad
+                                    </button>
+                                  </Button>
+                                </a>
+                              </Link>
                             </div>
                           </div>
                         </Home>
