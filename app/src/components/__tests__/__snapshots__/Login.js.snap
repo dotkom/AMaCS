@@ -28,6 +28,8 @@ exports[`Login renders correctly 1`] = `
       Ingen Online bruker?
     </label>
     <ToggleSwitch
+      disabled={false}
+      onChange={[Function]}
       text="Fyll inn rukerinfo selv"
     />
   </div>
@@ -35,7 +37,7 @@ exports[`Login renders correctly 1`] = `
     className="box"
   >
     <Input
-      disabled={false}
+      disabled={true}
       label="Navn"
       name="name"
       onChange={[Function]}
@@ -44,7 +46,7 @@ exports[`Login renders correctly 1`] = `
       value=""
     />
     <Input
-      disabled={false}
+      disabled={true}
       label="E-Postadresse"
       name="email"
       onChange={[Function]}
@@ -84,6 +86,8 @@ exports[`Login renders with user info 1`] = `
       Ingen Online bruker?
     </label>
     <ToggleSwitch
+      disabled={false}
+      onChange={[Function]}
       text="Fyll inn rukerinfo selv"
     />
   </div>
@@ -91,7 +95,7 @@ exports[`Login renders with user info 1`] = `
     className="box"
   >
     <Input
-      disabled={false}
+      disabled={true}
       label="Navn"
       name="name"
       onChange={[Function]}
@@ -100,7 +104,7 @@ exports[`Login renders with user info 1`] = `
       value="Name"
     />
     <Input
-      disabled={false}
+      disabled={true}
       label="E-Postadresse"
       name="email"
       onChange={[Function]}
@@ -140,6 +144,8 @@ exports[`Login renders with user info and logged in 1`] = `
       Ingen Online bruker?
     </label>
     <ToggleSwitch
+      disabled={true}
+      onChange={[Function]}
       text="Fyll inn rukerinfo selv"
     />
   </div>
