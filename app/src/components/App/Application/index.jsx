@@ -51,10 +51,10 @@ class Application extends Component {
 
   async submitApplication() {
     const { name, email,
+      applicationText: application_text,
       ordered: prioritized,
       selectedComittees: committees,
     } = this.state;
-    const application_text = "most awesomest application text"; // @ToDo: Replace with actual application text when implemented.
     const application = {
       name, email, prioritized, application_text,
       committees: committees.map((committee, index) => Object.assign({
