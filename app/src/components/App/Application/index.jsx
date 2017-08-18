@@ -20,7 +20,7 @@ class Application extends Component {
       ordered: true,
       inputEnabled: false,
       applicationText: '',
-      isRequesting: false,
+      disableSubmit: false,
       responseMessage: '',
     }
   }
@@ -64,7 +64,7 @@ class Application extends Component {
     };
 
     const uri = `${process.env.SG_APPLICATION_BACKEND}${process.env.SG_APPLICATION_ENDPOINT}`;
-    this.setState({ isRequesting: true });
+    this.setState({ disableSubmit: true });
 
     try {
       const resp = await fetch(uri, {
@@ -90,14 +90,14 @@ class Application extends Component {
       const errorMessage = json instanceof Array ? json : 'Pass på at du har fylt ut alle feltene og valgt komiteer å søke.';
 
       this.setState({
-        isRequesting: false,
+        disableSubmit: false,
         responseMessage: `Noe gikk galt. ${errorMessage}`
       });
 
     } catch (err) {
       console.error("Error response", err)
       this.setState({
-        isRequesting: false,
+        disableSubmit: false,
         responseMessage: `Noe gikk galt. ${err}`
       });
     }
@@ -139,7 +139,7 @@ class Application extends Component {
             { this.state.responseMessage.length > 0 && <p>{this.state.responseMessage}</p> }
               <Button
                 text={"Send søknad"}
-                disabled={this.state.isRequesting}
+                disabled={this.state.disableSubmit}
                 onClick={() => this.submitApplication()}
                 />
         </div>

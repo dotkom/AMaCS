@@ -42,6 +42,7 @@ exports[`Application renders correctly 1`] = `
         Map {
           "arrkom" => Object {
             "icon": "/static/arrkom-square.svg",
+            "id": 1,
             "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
             tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
             immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
@@ -51,6 +52,7 @@ exports[`Application renders correctly 1`] = `
           },
           "bedkom" => Object {
             "icon": "/static/bedkom-square.svg",
+            "id": 3,
             "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
             sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
             hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
@@ -64,6 +66,7 @@ exports[`Application renders correctly 1`] = `
           },
           "dotkom" => Object {
             "icon": "/static/dotkom-square.svg",
+            "id": 4,
             "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
             datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
             e-postsystemer, filområder og mye annet spennende. I en stor
@@ -77,6 +80,7 @@ exports[`Application renders correctly 1`] = `
           },
           "fagkom" => Object {
             "icon": "/static/fagkom-square.svg",
+            "id": 6,
             "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
             gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
             studentenes faglige interesser. Vi oppsøker kompetansen i
@@ -88,6 +92,7 @@ exports[`Application renders correctly 1`] = `
           },
           "prokom" => Object {
             "icon": "/static/prokom-square.svg",
+            "id": 7,
             "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
             profesjonelt og konsistent. Alt profileringsmateriale som klær,
             annonser, brev og brosjyrer, plakater, medaljer og andre effekter
@@ -99,6 +104,7 @@ exports[`Application renders correctly 1`] = `
           },
           "trikom" => Object {
             "icon": "/static/trikom-square.svg",
+            "id": 8,
             "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
             Dette inkluderer å arrangere små arrangementer i skoletiden,
             for eksempel vaffeldager eller andre ting som skaper trivsel.
@@ -127,6 +133,15 @@ exports[`Application renders correctly 1`] = `
       onChange={[Function]}
       placeholder="Din søknadstext..."
       text=""
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <Button
+      disabled={false}
+      onClick={[Function]}
+      text="Send søknad"
     />
   </div>
 </div>
@@ -174,6 +189,7 @@ exports[`Application renders correctly with user info 1`] = `
         Map {
           "arrkom" => Object {
             "icon": "/static/arrkom-square.svg",
+            "id": 1,
             "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
             tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
             immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
@@ -183,6 +199,7 @@ exports[`Application renders correctly with user info 1`] = `
           },
           "bedkom" => Object {
             "icon": "/static/bedkom-square.svg",
+            "id": 3,
             "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
             sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
             hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
@@ -196,6 +213,7 @@ exports[`Application renders correctly with user info 1`] = `
           },
           "dotkom" => Object {
             "icon": "/static/dotkom-square.svg",
+            "id": 4,
             "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
             datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
             e-postsystemer, filområder og mye annet spennende. I en stor
@@ -209,6 +227,7 @@ exports[`Application renders correctly with user info 1`] = `
           },
           "fagkom" => Object {
             "icon": "/static/fagkom-square.svg",
+            "id": 6,
             "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
             gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
             studentenes faglige interesser. Vi oppsøker kompetansen i
@@ -220,6 +239,7 @@ exports[`Application renders correctly with user info 1`] = `
           },
           "prokom" => Object {
             "icon": "/static/prokom-square.svg",
+            "id": 7,
             "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
             profesjonelt og konsistent. Alt profileringsmateriale som klær,
             annonser, brev og brosjyrer, plakater, medaljer og andre effekter
@@ -231,6 +251,7 @@ exports[`Application renders correctly with user info 1`] = `
           },
           "trikom" => Object {
             "icon": "/static/trikom-square.svg",
+            "id": 8,
             "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
             Dette inkluderer å arrangere små arrangementer i skoletiden,
             for eksempel vaffeldager eller andre ting som skaper trivsel.
@@ -259,6 +280,15 @@ exports[`Application renders correctly with user info 1`] = `
       onChange={[Function]}
       placeholder="Din søknadstext..."
       text=""
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <Button
+      disabled={false}
+      onClick={[Function]}
+      text="Send søknad"
     />
   </div>
 </div>
@@ -306,6 +336,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
         Map {
           "arrkom" => Object {
             "icon": "/static/arrkom-square.svg",
+            "id": 1,
             "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
             tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
             immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
@@ -315,6 +346,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
           },
           "bedkom" => Object {
             "icon": "/static/bedkom-square.svg",
+            "id": 3,
             "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
             sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
             hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
@@ -328,6 +360,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
           },
           "dotkom" => Object {
             "icon": "/static/dotkom-square.svg",
+            "id": 4,
             "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
             datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
             e-postsystemer, filområder og mye annet spennende. I en stor
@@ -341,6 +374,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
           },
           "fagkom" => Object {
             "icon": "/static/fagkom-square.svg",
+            "id": 6,
             "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
             gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
             studentenes faglige interesser. Vi oppsøker kompetansen i
@@ -352,6 +386,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
           },
           "prokom" => Object {
             "icon": "/static/prokom-square.svg",
+            "id": 7,
             "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
             profesjonelt og konsistent. Alt profileringsmateriale som klær,
             annonser, brev og brosjyrer, plakater, medaljer og andre effekter
@@ -363,6 +398,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
           },
           "trikom" => Object {
             "icon": "/static/trikom-square.svg",
+            "id": 8,
             "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
             Dette inkluderer å arrangere små arrangementer i skoletiden,
             for eksempel vaffeldager eller andre ting som skaper trivsel.
@@ -395,6 +431,15 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
       onChange={[Function]}
       placeholder="Din søknadstext..."
       text=""
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <Button
+      disabled={false}
+      onClick={[Function]}
+      text="Send søknad"
     />
   </div>
 </div>
@@ -442,6 +487,7 @@ exports[`Application updates info on onChange from login 1`] = `
         Map {
           "arrkom" => Object {
             "icon": "/static/arrkom-square.svg",
+            "id": 1,
             "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
             tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
             immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
@@ -451,6 +497,7 @@ exports[`Application updates info on onChange from login 1`] = `
           },
           "bedkom" => Object {
             "icon": "/static/bedkom-square.svg",
+            "id": 3,
             "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
             sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
             hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
@@ -464,6 +511,7 @@ exports[`Application updates info on onChange from login 1`] = `
           },
           "dotkom" => Object {
             "icon": "/static/dotkom-square.svg",
+            "id": 4,
             "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
             datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
             e-postsystemer, filområder og mye annet spennende. I en stor
@@ -477,6 +525,7 @@ exports[`Application updates info on onChange from login 1`] = `
           },
           "fagkom" => Object {
             "icon": "/static/fagkom-square.svg",
+            "id": 6,
             "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
             gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
             studentenes faglige interesser. Vi oppsøker kompetansen i
@@ -488,6 +537,7 @@ exports[`Application updates info on onChange from login 1`] = `
           },
           "prokom" => Object {
             "icon": "/static/prokom-square.svg",
+            "id": 7,
             "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
             profesjonelt og konsistent. Alt profileringsmateriale som klær,
             annonser, brev og brosjyrer, plakater, medaljer og andre effekter
@@ -499,6 +549,7 @@ exports[`Application updates info on onChange from login 1`] = `
           },
           "trikom" => Object {
             "icon": "/static/trikom-square.svg",
+            "id": 8,
             "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
             Dette inkluderer å arrangere små arrangementer i skoletiden,
             for eksempel vaffeldager eller andre ting som skaper trivsel.
@@ -527,6 +578,15 @@ exports[`Application updates info on onChange from login 1`] = `
       onChange={[Function]}
       placeholder="Din søknadstext..."
       text=""
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <Button
+      disabled={false}
+      onClick={[Function]}
+      text="Send søknad"
     />
   </div>
 </div>
@@ -574,6 +634,7 @@ exports[`Application updates user info on new props 1`] = `
         Map {
           "arrkom" => Object {
             "icon": "/static/arrkom-square.svg",
+            "id": 1,
             "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
             tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
             immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
@@ -583,6 +644,7 @@ exports[`Application updates user info on new props 1`] = `
           },
           "bedkom" => Object {
             "icon": "/static/bedkom-square.svg",
+            "id": 3,
             "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
             sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
             hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
@@ -596,6 +658,7 @@ exports[`Application updates user info on new props 1`] = `
           },
           "dotkom" => Object {
             "icon": "/static/dotkom-square.svg",
+            "id": 4,
             "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
             datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
             e-postsystemer, filområder og mye annet spennende. I en stor
@@ -609,6 +672,7 @@ exports[`Application updates user info on new props 1`] = `
           },
           "fagkom" => Object {
             "icon": "/static/fagkom-square.svg",
+            "id": 6,
             "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
             gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
             studentenes faglige interesser. Vi oppsøker kompetansen i
@@ -620,6 +684,7 @@ exports[`Application updates user info on new props 1`] = `
           },
           "prokom" => Object {
             "icon": "/static/prokom-square.svg",
+            "id": 7,
             "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
             profesjonelt og konsistent. Alt profileringsmateriale som klær,
             annonser, brev og brosjyrer, plakater, medaljer og andre effekter
@@ -631,6 +696,7 @@ exports[`Application updates user info on new props 1`] = `
           },
           "trikom" => Object {
             "icon": "/static/trikom-square.svg",
+            "id": 8,
             "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
             Dette inkluderer å arrangere små arrangementer i skoletiden,
             for eksempel vaffeldager eller andre ting som skaper trivsel.
@@ -659,6 +725,15 @@ exports[`Application updates user info on new props 1`] = `
       onChange={[Function]}
       placeholder="Din søknadstext..."
       text=""
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <Button
+      disabled={false}
+      onClick={[Function]}
+      text="Send søknad"
     />
   </div>
 </div>
