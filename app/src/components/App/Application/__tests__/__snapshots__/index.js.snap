@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Application renders correctly 1`] = `
-<div>
-  <div
-    className="nav"
-  >
+<div
+  className="component"
+>
+  <div>
     <NavigationButton
       link="/"
     >
@@ -17,43 +17,54 @@ exports[`Application renders correctly 1`] = `
   <div
     className="alternative"
   >
-    <div
-      className="content"
+    <h2
+      className="header"
     >
-      <ConnectedServiceComponent
-        info={
-          Object {
-            "email": "",
-            "inputEnabled": false,
-            "name": "",
-          }
+      Brukerinfo
+    </h2>
+    <ConnectedServiceComponent
+      info={
+        Object {
+          "email": "",
+          "inputEnabled": false,
+          "name": "",
         }
-        loggedIn={false}
-        onChange={[Function]}
-      />
-    </div>
+      }
+      loggedIn={false}
+      onChange={[Function]}
+    />
   </div>
   <div
-    className="main"
+    className="content"
   >
-    <div
-      className="content"
+    <SelectContainer
+      onChange={[Function]}
+      ordered={true}
+      selected={Array []}
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
     >
-      <SelectContainer
-        onChange={[Function]}
-        ordered={true}
-        selected={Array []}
-      />
-    </div>
+      Søknadstekst
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text=""
+    />
   </div>
 </div>
 `;
 
 exports[`Application renders correctly with user info 1`] = `
-<div>
-  <div
-    className="nav"
-  >
+<div
+  className="component"
+>
+  <div>
     <NavigationButton
       link="/"
     >
@@ -66,43 +77,54 @@ exports[`Application renders correctly with user info 1`] = `
   <div
     className="alternative"
   >
-    <div
-      className="content"
+    <h2
+      className="header"
     >
-      <ConnectedServiceComponent
-        info={
-          Object {
-            "email": "email@example.com",
-            "inputEnabled": false,
-            "name": "Test User",
-          }
+      Brukerinfo
+    </h2>
+    <ConnectedServiceComponent
+      info={
+        Object {
+          "email": "email@example.com",
+          "inputEnabled": false,
+          "name": "Test User",
         }
-        loggedIn={true}
-        onChange={[Function]}
-      />
-    </div>
+      }
+      loggedIn={true}
+      onChange={[Function]}
+    />
   </div>
   <div
-    className="main"
+    className="content"
   >
-    <div
-      className="content"
+    <SelectContainer
+      onChange={[Function]}
+      ordered={true}
+      selected={Array []}
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
     >
-      <SelectContainer
-        onChange={[Function]}
-        ordered={true}
-        selected={Array []}
-      />
-    </div>
+      Søknadstekst
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text=""
+    />
   </div>
 </div>
 `;
 
 exports[`Application updates info on onChange from SelectContainer 1`] = `
-<div>
-  <div
-    className="nav"
-  >
+<div
+  className="component"
+>
+  <div>
     <NavigationButton
       link="/"
     >
@@ -115,47 +137,58 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
   <div
     className="alternative"
   >
-    <div
-      className="content"
+    <h2
+      className="header"
     >
-      <ConnectedServiceComponent
-        info={
-          Object {
-            "email": "email@example.com",
-            "inputEnabled": false,
-            "name": "Test Login",
-          }
+      Brukerinfo
+    </h2>
+    <ConnectedServiceComponent
+      info={
+        Object {
+          "email": "email@example.com",
+          "inputEnabled": false,
+          "name": "Test Login",
         }
-        loggedIn={true}
-        onChange={[Function]}
-      />
-    </div>
+      }
+      loggedIn={true}
+      onChange={[Function]}
+    />
   </div>
   <div
-    className="main"
+    className="content"
   >
-    <div
-      className="content"
+    <SelectContainer
+      onChange={[Function]}
+      ordered={true}
+      selected={
+        Array [
+          "Dotkom",
+        ]
+      }
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
     >
-      <SelectContainer
-        onChange={[Function]}
-        ordered={true}
-        selected={
-          Array [
-            "Dotkom",
-          ]
-        }
-      />
-    </div>
+      Søknadstekst
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text=""
+    />
   </div>
 </div>
 `;
 
 exports[`Application updates info on onChange from login 1`] = `
-<div>
-  <div
-    className="nav"
-  >
+<div
+  className="component"
+>
+  <div>
     <NavigationButton
       link="/"
     >
@@ -168,43 +201,54 @@ exports[`Application updates info on onChange from login 1`] = `
   <div
     className="alternative"
   >
-    <div
-      className="content"
+    <h2
+      className="header"
     >
-      <ConnectedServiceComponent
-        info={
-          Object {
-            "email": "emaillogin@example.com",
-            "inputEnabled": false,
-            "name": "Post Login",
-          }
+      Brukerinfo
+    </h2>
+    <ConnectedServiceComponent
+      info={
+        Object {
+          "email": "emaillogin@example.com",
+          "inputEnabled": false,
+          "name": "Post Login",
         }
-        loggedIn={true}
-        onChange={[Function]}
-      />
-    </div>
+      }
+      loggedIn={true}
+      onChange={[Function]}
+    />
   </div>
   <div
-    className="main"
+    className="content"
   >
-    <div
-      className="content"
+    <SelectContainer
+      onChange={[Function]}
+      ordered={true}
+      selected={Array []}
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
     >
-      <SelectContainer
-        onChange={[Function]}
-        ordered={true}
-        selected={Array []}
-      />
-    </div>
+      Søknadstekst
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text=""
+    />
   </div>
 </div>
 `;
 
 exports[`Application updates user info on new props 1`] = `
-<div>
-  <div
-    className="nav"
-  >
+<div
+  className="component"
+>
+  <div>
     <NavigationButton
       link="/"
     >
@@ -217,34 +261,45 @@ exports[`Application updates user info on new props 1`] = `
   <div
     className="alternative"
   >
-    <div
-      className="content"
+    <h2
+      className="header"
     >
-      <ConnectedServiceComponent
-        info={
-          Object {
-            "email": "email2@example.com",
-            "inputEnabled": false,
-            "name": "Test2 User",
-          }
+      Brukerinfo
+    </h2>
+    <ConnectedServiceComponent
+      info={
+        Object {
+          "email": "email2@example.com",
+          "inputEnabled": false,
+          "name": "Test2 User",
         }
-        loggedIn={true}
-        onChange={[Function]}
-      />
-    </div>
+      }
+      loggedIn={true}
+      onChange={[Function]}
+    />
   </div>
   <div
-    className="main"
+    className="content"
   >
-    <div
-      className="content"
+    <SelectContainer
+      onChange={[Function]}
+      ordered={true}
+      selected={Array []}
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
     >
-      <SelectContainer
-        onChange={[Function]}
-        ordered={true}
-        selected={Array []}
-      />
-    </div>
+      Søknadstekst
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text=""
+    />
   </div>
 </div>
 `;
