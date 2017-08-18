@@ -37,8 +37,10 @@ class SelectContainer extends React.Component {
   render() {
     const { selected } = this.props;
     const committees = this.props.committees || committeesMap;
+    const prioritized = this.props.prioritized || false;
     return (
       <div className={_s.container}>
+        <p>Velg komiteene du ønsker å søke ved å klikke på dem{prioritized && ' i prioritert rekkefølge'}.</p>
         <div className={_s.selectables}>
           { Array.from(committees).map(([key, committee]) => (
             <Selectable

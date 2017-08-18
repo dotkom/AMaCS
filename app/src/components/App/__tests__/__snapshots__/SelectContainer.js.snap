@@ -4,6 +4,10 @@ exports[`SelectContainer renders correctly with none selected 1`] = `
 <div
   className="container"
 >
+  <p>
+    Velg komiteene du ønsker å søke ved å klikke på dem
+    .
+  </p>
   <div
     className="selectables"
   >
@@ -71,6 +75,10 @@ exports[`SelectContainer renders correctly with one selected 1`] = `
 <div
   className="container"
 >
+  <p>
+    Velg komiteene du ønsker å søke ved å klikke på dem
+    .
+  </p>
   <div
     className="selectables"
   >
@@ -146,6 +154,10 @@ exports[`SelectContainer renders correctly with two selected 1`] = `
 <div
   className="container"
 >
+  <p>
+    Velg komiteene du ønsker å søke ved å klikke på dem
+    .
+  </p>
   <div
     className="selectables"
   >
