@@ -1,10 +1,16 @@
-.main {
-  margin-top: 1rem;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.alternative {
-  margin-top: 1rem;
-  background: #ffffff;
+.container > * + * {
+  margin-top: 2rem;
+}
+
+.text {
+  max-width: 30rem;
+  margin-bottom: 0;
 }
 
 .content {
@@ -13,9 +19,8 @@
   justify-content: center;
   align-items: center;
   max-width: 64rem;
-  margin: 0 auto;
 }
 
-.nav {
-  padding-top: 1rem;
+.nextLink a {
+  text-decoration: none;
 }

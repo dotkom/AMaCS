@@ -1,6 +1,7 @@
 import React, { PropTypes } from "react";
 import { Link, Route, Switch } from "react-router-dom";
 
+import Application from "./Application"
 import Heading from "../Heading";
 import Home from "./Home"
 import NotFound from "../NotFound"
@@ -22,8 +23,9 @@ class AppContainer extends React.Component {
         <Heading />
         <main>
           <Switch>
-            <Route exact path={match.path} render={props =>
-              <Home
+            <Route exact path={'/'} component={Home} />
+            <Route exact path={`/application`} render={props =>
+              <Application
                 user={user}
                 {...props}
               />

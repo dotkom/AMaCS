@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application renders correctly 1`] = `
+<div>
+  <div
+    className="nav"
+  >
+    <NavigationButton
+      link="/"
+    >
+      <img
+        src="/static/arrow-blue.png"
+      />
+      Tilbake
+    </NavigationButton>
+  </div>
+  <div
+    className="alternative"
+  >
+    <div
+      className="content"
+    >
+      <ConnectedServiceComponent
+        info={
+          Object {
+            "email": "",
+            "name": "",
+          }
+        }
+        loggedIn={false}
+        onChange={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    className="main"
+  >
+    <div
+      className="content"
+    >
+      <SelectContainer
+        onChange={[Function]}
+        ordered={true}
+        selected={Array []}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Application renders correctly with user info 1`] = `
+<div>
+  <div
+    className="nav"
+  >
+    <NavigationButton
+      link="/"
+    >
+      <img
+        src="/static/arrow-blue.png"
+      />
+      Tilbake
+    </NavigationButton>
+  </div>
+  <div
+    className="alternative"
+  >
+    <div
+      className="content"
+    >
+      <ConnectedServiceComponent
+        info={
+          Object {
+            "email": "email@example.com",
+            "name": "Test User",
+          }
+        }
+        loggedIn={true}
+        onChange={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    className="main"
+  >
+    <div
+      className="content"
+    >
+      <SelectContainer
+        onChange={[Function]}
+        ordered={true}
+        selected={Array []}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Application updates info on onChange from SelectContainer 1`] = `
+<div>
+  <div
+    className="nav"
+  >
+    <NavigationButton
+      link="/"
+    >
+      <img
+        src="/static/arrow-blue.png"
+      />
+      Tilbake
+    </NavigationButton>
+  </div>
+  <div
+    className="alternative"
+  >
+    <div
+      className="content"
+    >
+      <ConnectedServiceComponent
+        info={
+          Object {
+            "email": "email@example.com",
+            "name": "Test Login",
+          }
+        }
+        loggedIn={true}
+        onChange={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    className="main"
+  >
+    <div
+      className="content"
+    >
+      <SelectContainer
+        onChange={[Function]}
+        ordered={true}
+        selected={
+          Array [
+            "Dotkom",
+          ]
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Application updates info on onChange from login 1`] = `
+<div>
+  <div
+    className="nav"
+  >
+    <NavigationButton
+      link="/"
+    >
+      <img
+        src="/static/arrow-blue.png"
+      />
+      Tilbake
+    </NavigationButton>
+  </div>
+  <div
+    className="alternative"
+  >
+    <div
+      className="content"
+    >
+      <ConnectedServiceComponent
+        info={
+          Object {
+            "email": "emaillogin@example.com",
+            "name": "Post Login",
+          }
+        }
+        loggedIn={true}
+        onChange={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    className="main"
+  >
+    <div
+      className="content"
+    >
+      <SelectContainer
+        onChange={[Function]}
+        ordered={true}
+        selected={Array []}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Application updates user info on new props 1`] = `
+<div>
+  <div
+    className="nav"
+  >
+    <NavigationButton
+      link="/"
+    >
+      <img
+        src="/static/arrow-blue.png"
+      />
+      Tilbake
+    </NavigationButton>
+  </div>
+  <div
+    className="alternative"
+  >
+    <div
+      className="content"
+    >
+      <ConnectedServiceComponent
+        info={
+          Object {
+            "email": "email2@example.com",
+            "name": "Test2 User",
+          }
+        }
+        loggedIn={true}
+        onChange={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    className="main"
+  >
+    <div
+      className="content"
+    >
+      <SelectContainer
+        onChange={[Function]}
+        ordered={true}
+        selected={Array []}
+      />
+    </div>
+  </div>
+</div>
+`;

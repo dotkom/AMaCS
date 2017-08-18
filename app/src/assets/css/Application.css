@@ -1,0 +1,21 @@
+.main {
+  margin-top: 1rem;
+}
+
+.alternative {
+  margin-top: 1rem;
+  background: #ffffff;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.nav {
+  padding-top: 1rem;
+}
