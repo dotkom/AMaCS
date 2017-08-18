@@ -19,3 +19,11 @@
 .nav {
   padding-top: 1rem;
 }
+
+
+.header {
+  font-weight: normal;
+  font-size: 1.5rem;
+  color: #636363;
+  flex-basis: 100%;
+}

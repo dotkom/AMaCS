@@ -1,0 +1,12 @@
+.component {
+  background: #F4F4F4;
+  border: 1px solid #E0E0E0;
+  color: #333333;
+  display: block;
+  width: 100%;
+  min-height: 20rem;
+}
+
+.component::placeholder {
+  color: #B8B8B8
+}

@@ -46,6 +46,20 @@ exports[`Application renders correctly 1`] = `
       />
     </div>
   </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
+    >
+      Søknadstext
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text="Test"
+    />
+  </div>
 </div>
 `;
 
@@ -94,6 +108,20 @@ exports[`Application renders correctly with user info 1`] = `
         selected={Array []}
       />
     </div>
+  </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
+    >
+      Søknadstext
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text="Test"
+    />
   </div>
 </div>
 `;
@@ -148,6 +176,20 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
       />
     </div>
   </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
+    >
+      Søknadstext
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text="Test"
+    />
+  </div>
 </div>
 `;
 
@@ -197,6 +239,20 @@ exports[`Application updates info on onChange from login 1`] = `
       />
     </div>
   </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
+    >
+      Søknadstext
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text="Test"
+    />
+  </div>
 </div>
 `;
 
@@ -245,6 +301,20 @@ exports[`Application updates user info on new props 1`] = `
         selected={Array []}
       />
     </div>
+  </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
+    >
+      Søknadstext
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text="Test"
+    />
   </div>
 </div>
 `;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea forwards extra props 1`] = `
+<textarea
+  className="component"
+  onChange={[Function]}
+  placeholder="Placeholder text"
+/>
+`;
+
+exports[`TextArea renders correctly 1`] = `
+<textarea
+  className="component"
+  onChange={[Function]}
+/>
+`;
+
+exports[`TextArea renders with text 1`] = `
+<textarea
+  className="component"
+  onChange={[Function]}
+/>
+`;
+
+exports[`TextArea works without onChange  1`] = `
+<textarea
+  className="component"
+  onChange={[Function]}
+/>
+`;

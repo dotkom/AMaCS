@@ -4,6 +4,7 @@ import _ from 'lodash';
 import SelectContainer from '../SelectContainer';
 import NavigationButton from '../../NavigationButton';
 import Login from '../../Login';
+import TextArea from '../../TextArea';
 
 import _s from 'assets/css/Application.css';
 
@@ -69,6 +70,10 @@ class Application extends Component {
               onChange={(selected) => this._selectedChanged(selected) }
             />
           </div>
+        </div>
+        <div className={_s.alternative}>
+          <h2 className={_s.header}>Søknadstext</h2>
+          <TextArea text="Test" placeholder="Din søknadstext..." />
         </div>
       </div>
     );
