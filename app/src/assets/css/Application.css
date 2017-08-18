@@ -1,9 +1,12 @@
-.main {
+.component > * + * {
   margin-top: 1rem;
 }
 
+.content, .alternative {
+  padding: 0.5rem 1.5rem;
+}
+
 .alternative {
-  margin-top: 1rem;
   background: #ffffff;
 }
 
@@ -16,14 +19,10 @@
   margin: 0 auto;
 }
 
-.nav {
-  padding-top: 1rem;
-}
-
-
 .header {
-  font-weight: normal;
   font-size: 1.5rem;
   color: #636363;
   flex-basis: 100%;
+  text-transform: uppercase;
+  font-weight: 300;
 }

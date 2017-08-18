@@ -46,33 +46,30 @@ class Application extends Component {
 
   render() {
     return (
-      <div>
-        <div className={_s.nav}>
+      <div className={_s.component}>
+        <div>
           <NavigationButton link="/">
             <img src="/static/arrow-blue.png" />
             Tilbake
           </NavigationButton>
         </div>
         <div className={_s.alternative}>
-          <div className={_s.content}>
-            <Login
-              onChange={(info) => this._infoChanged(info)}
-              loggedIn={!!this.props.user}
-              info={_.pick(this.state,["name","email","inputEnabled"])}
-            />
-          </div>
+          <h2 className={_s.header}>Brukerinfo</h2>
+          <Login
+            onChange={(info) => this._infoChanged(info)}
+            loggedIn={!!this.props.user}
+            info={_.pick(this.state,["name","email","inputEnabled"])}
+          />
         </div>
-        <div className={_s.main}>
-          <div className={_s.content}>
-            <SelectContainer
-              ordered={this.state.ordered}
-              selected={this.state.selectedComittees}
-              onChange={(selected) => this._selectedChanged(selected) }
-            />
-          </div>
+        <div className={_s.content}>
+          <SelectContainer
+            ordered={this.state.ordered}
+            selected={this.state.selectedComittees}
+            onChange={(selected) => this._selectedChanged(selected) }
+          />
         </div>
         <div className={_s.alternative}>
-          <h2 className={_s.header}>Søknadstext</h2>
+          <h2 className={_s.header}>Søknadstekst</h2>
           <TextArea text="Test" placeholder="Din søknadstext..." />
         </div>
       </div>
