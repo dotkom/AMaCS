@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Application renders correctly 1`] = `
-<div>
-  <div
-    className="nav"
-  >
+<div
+  className="component"
+>
+  <div>
     <NavigationButton
       link="/"
     >
@@ -17,115 +17,126 @@ exports[`Application renders correctly 1`] = `
   <div
     className="alternative"
   >
-    <div
-      className="content"
+    <h2
+      className="header"
     >
-      <ConnectedServiceComponent
-        info={
-          Object {
-            "email": "",
-            "inputEnabled": false,
-            "name": "",
-          }
+      Brukerinfo
+    </h2>
+    <ConnectedServiceComponent
+      info={
+        Object {
+          "email": "",
+          "inputEnabled": false,
+          "name": "",
         }
-        loggedIn={false}
-        onChange={[Function]}
-      />
-    </div>
+      }
+      loggedIn={false}
+      onChange={[Function]}
+    />
   </div>
   <div
-    className="main"
+    className="content"
   >
-    <div
-      className="content"
-    >
-      <SelectContainer
-        committees={
-          Map {
-            "arrkom" => Object {
-              "icon": "/static/arrkom-square.png",
-              "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
-              tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
-              immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
-              mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
-              person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
-              "name": "Arrkom",
-            },
-            "bedkom" => Object {
-              "icon": "/static/bedkom-square.png",
-              "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
-              sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
-              hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
-              mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
-              og potensielle arbeidstakere under studietiden, samtidig som du får et
-              innblikk i hvordan bedrifter rekrutterer studenter. Etter en
-              bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
-              og bli kjent under et godt måltid. Bedriftskomiteen er også
-              knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
-              "name": "Bedkom",
-            },
-            "dotkom" => Object {
-              "icon": "/static/dotkom-square.png",
-              "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
-              datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
-              e-postsystemer, filområder og mye annet spennende. I en stor
-              linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
-              utviklingskomiteen prøver hele tiden å lage smarte løsninger som
-              holder en høy standard, slik som i en bedrift. Er du interessert i
-              programmering, drifting eller teknologi generelt? Vi kan tilby et
-              unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
-              Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
-              "name": "Dotkom",
-            },
-            "fagkom" => Object {
-              "icon": "/static/fagkom-square.png",
-              "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
-              gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
-              studentenes faglige interesser. Vi oppsøker kompetansen i
-              næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
-              kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
-              vil du få god innsikt i emner utenfor skolen, og samtidig knytte
-              tettere bånd til din fremtidige arbeidsgiver.",
-              "name": "Fagkom",
-            },
-            "prokom" => Object {
-              "icon": "/static/prokom-square.png",
-              "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
-              profesjonelt og konsistent. Alt profileringsmateriale som klær,
-              annonser, brev og brosjyrer, plakater, medaljer og andre effekter
-              lages av oss. Vi har også en redaksjon som er ansvarlig for
-              linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
-              skribent i magen? Vi leter etter deg som er interessert i design,
-              markedsføring, journalisme eller skriving!",
-              "name": "Prokom",
-            },
-            "trikom" => Object {
-              "icon": "/static/trikom-square.png",
-              "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
-              Dette inkluderer å arrangere små arrangementer i skoletiden,
-              for eksempel vaffeldager eller andre ting som skaper trivsel.
-              Vi er også ansvarlig for drift av kontoret som vil si å sette opp
-              kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
-              Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
-              "name": "Trikom",
-            },
-          }
+    <SelectContainer
+      committees={
+        Map {
+          "arrkom" => Object {
+            "icon": "/static/arrkom-square.svg",
+            "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
+            tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
+            immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
+            mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
+            person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
+            "name": "Arrkom",
+          },
+          "bedkom" => Object {
+            "icon": "/static/bedkom-square.svg",
+            "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
+            sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
+            hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
+            mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
+            og potensielle arbeidstakere under studietiden, samtidig som du får et
+            innblikk i hvordan bedrifter rekrutterer studenter. Etter en
+            bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
+            og bli kjent under et godt måltid. Bedriftskomiteen er også
+            knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
+            "name": "Bedkom",
+          },
+          "dotkom" => Object {
+            "icon": "/static/dotkom-square.svg",
+            "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
+            datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
+            e-postsystemer, filområder og mye annet spennende. I en stor
+            linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
+            utviklingskomiteen prøver hele tiden å lage smarte løsninger som
+            holder en høy standard, slik som i en bedrift. Er du interessert i
+            programmering, drifting eller teknologi generelt? Vi kan tilby et
+            unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
+            Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
+            "name": "Dotkom",
+          },
+          "fagkom" => Object {
+            "icon": "/static/fagkom-square.svg",
+            "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
+            gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
+            studentenes faglige interesser. Vi oppsøker kompetansen i
+            næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
+            kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
+            vil du få god innsikt i emner utenfor skolen, og samtidig knytte
+            tettere bånd til din fremtidige arbeidsgiver.",
+            "name": "Fagkom",
+          },
+          "prokom" => Object {
+            "icon": "/static/prokom-square.svg",
+            "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
+            profesjonelt og konsistent. Alt profileringsmateriale som klær,
+            annonser, brev og brosjyrer, plakater, medaljer og andre effekter
+            lages av oss. Vi har også en redaksjon som er ansvarlig for
+            linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
+            skribent i magen? Vi leter etter deg som er interessert i design,
+            markedsføring, journalisme eller skriving!",
+            "name": "Prokom",
+          },
+          "trikom" => Object {
+            "icon": "/static/trikom-square.svg",
+            "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
+            Dette inkluderer å arrangere små arrangementer i skoletiden,
+            for eksempel vaffeldager eller andre ting som skaper trivsel.
+            Vi er også ansvarlig for drift av kontoret som vil si å sette opp
+            kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
+            Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
+            "name": "Trikom",
+          },
         }
-        onChange={[Function]}
-        ordered={true}
-        prioritized={false}
-        selected={Array []}
-      />
-    </div>
+      }
+      onChange={[Function]}
+      ordered={true}
+      prioritized={false}
+      selected={Array []}
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
+    >
+      Søknadstekst
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text=""
+    />
   </div>
 </div>
 `;
 
 exports[`Application renders correctly with user info 1`] = `
-<div>
-  <div
-    className="nav"
-  >
+<div
+  className="component"
+>
+  <div>
     <NavigationButton
       link="/"
     >
@@ -138,115 +149,126 @@ exports[`Application renders correctly with user info 1`] = `
   <div
     className="alternative"
   >
-    <div
-      className="content"
+    <h2
+      className="header"
     >
-      <ConnectedServiceComponent
-        info={
-          Object {
-            "email": "email@example.com",
-            "inputEnabled": false,
-            "name": "Test User",
-          }
+      Brukerinfo
+    </h2>
+    <ConnectedServiceComponent
+      info={
+        Object {
+          "email": "email@example.com",
+          "inputEnabled": false,
+          "name": "Test User",
         }
-        loggedIn={true}
-        onChange={[Function]}
-      />
-    </div>
+      }
+      loggedIn={true}
+      onChange={[Function]}
+    />
   </div>
   <div
-    className="main"
+    className="content"
   >
-    <div
-      className="content"
-    >
-      <SelectContainer
-        committees={
-          Map {
-            "arrkom" => Object {
-              "icon": "/static/arrkom-square.png",
-              "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
-              tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
-              immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
-              mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
-              person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
-              "name": "Arrkom",
-            },
-            "bedkom" => Object {
-              "icon": "/static/bedkom-square.png",
-              "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
-              sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
-              hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
-              mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
-              og potensielle arbeidstakere under studietiden, samtidig som du får et
-              innblikk i hvordan bedrifter rekrutterer studenter. Etter en
-              bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
-              og bli kjent under et godt måltid. Bedriftskomiteen er også
-              knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
-              "name": "Bedkom",
-            },
-            "dotkom" => Object {
-              "icon": "/static/dotkom-square.png",
-              "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
-              datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
-              e-postsystemer, filområder og mye annet spennende. I en stor
-              linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
-              utviklingskomiteen prøver hele tiden å lage smarte løsninger som
-              holder en høy standard, slik som i en bedrift. Er du interessert i
-              programmering, drifting eller teknologi generelt? Vi kan tilby et
-              unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
-              Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
-              "name": "Dotkom",
-            },
-            "fagkom" => Object {
-              "icon": "/static/fagkom-square.png",
-              "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
-              gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
-              studentenes faglige interesser. Vi oppsøker kompetansen i
-              næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
-              kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
-              vil du få god innsikt i emner utenfor skolen, og samtidig knytte
-              tettere bånd til din fremtidige arbeidsgiver.",
-              "name": "Fagkom",
-            },
-            "prokom" => Object {
-              "icon": "/static/prokom-square.png",
-              "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
-              profesjonelt og konsistent. Alt profileringsmateriale som klær,
-              annonser, brev og brosjyrer, plakater, medaljer og andre effekter
-              lages av oss. Vi har også en redaksjon som er ansvarlig for
-              linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
-              skribent i magen? Vi leter etter deg som er interessert i design,
-              markedsføring, journalisme eller skriving!",
-              "name": "Prokom",
-            },
-            "trikom" => Object {
-              "icon": "/static/trikom-square.png",
-              "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
-              Dette inkluderer å arrangere små arrangementer i skoletiden,
-              for eksempel vaffeldager eller andre ting som skaper trivsel.
-              Vi er også ansvarlig for drift av kontoret som vil si å sette opp
-              kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
-              Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
-              "name": "Trikom",
-            },
-          }
+    <SelectContainer
+      committees={
+        Map {
+          "arrkom" => Object {
+            "icon": "/static/arrkom-square.svg",
+            "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
+            tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
+            immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
+            mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
+            person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
+            "name": "Arrkom",
+          },
+          "bedkom" => Object {
+            "icon": "/static/bedkom-square.svg",
+            "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
+            sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
+            hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
+            mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
+            og potensielle arbeidstakere under studietiden, samtidig som du får et
+            innblikk i hvordan bedrifter rekrutterer studenter. Etter en
+            bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
+            og bli kjent under et godt måltid. Bedriftskomiteen er også
+            knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
+            "name": "Bedkom",
+          },
+          "dotkom" => Object {
+            "icon": "/static/dotkom-square.svg",
+            "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
+            datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
+            e-postsystemer, filområder og mye annet spennende. I en stor
+            linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
+            utviklingskomiteen prøver hele tiden å lage smarte løsninger som
+            holder en høy standard, slik som i en bedrift. Er du interessert i
+            programmering, drifting eller teknologi generelt? Vi kan tilby et
+            unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
+            Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
+            "name": "Dotkom",
+          },
+          "fagkom" => Object {
+            "icon": "/static/fagkom-square.svg",
+            "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
+            gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
+            studentenes faglige interesser. Vi oppsøker kompetansen i
+            næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
+            kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
+            vil du få god innsikt i emner utenfor skolen, og samtidig knytte
+            tettere bånd til din fremtidige arbeidsgiver.",
+            "name": "Fagkom",
+          },
+          "prokom" => Object {
+            "icon": "/static/prokom-square.svg",
+            "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
+            profesjonelt og konsistent. Alt profileringsmateriale som klær,
+            annonser, brev og brosjyrer, plakater, medaljer og andre effekter
+            lages av oss. Vi har også en redaksjon som er ansvarlig for
+            linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
+            skribent i magen? Vi leter etter deg som er interessert i design,
+            markedsføring, journalisme eller skriving!",
+            "name": "Prokom",
+          },
+          "trikom" => Object {
+            "icon": "/static/trikom-square.svg",
+            "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
+            Dette inkluderer å arrangere små arrangementer i skoletiden,
+            for eksempel vaffeldager eller andre ting som skaper trivsel.
+            Vi er også ansvarlig for drift av kontoret som vil si å sette opp
+            kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
+            Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
+            "name": "Trikom",
+          },
         }
-        onChange={[Function]}
-        ordered={true}
-        prioritized={false}
-        selected={Array []}
-      />
-    </div>
+      }
+      onChange={[Function]}
+      ordered={true}
+      prioritized={false}
+      selected={Array []}
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
+    >
+      Søknadstekst
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text=""
+    />
   </div>
 </div>
 `;
 
 exports[`Application updates info on onChange from SelectContainer 1`] = `
-<div>
-  <div
-    className="nav"
-  >
+<div
+  className="component"
+>
+  <div>
     <NavigationButton
       link="/"
     >
@@ -259,119 +281,130 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
   <div
     className="alternative"
   >
-    <div
-      className="content"
+    <h2
+      className="header"
     >
-      <ConnectedServiceComponent
-        info={
-          Object {
-            "email": "email@example.com",
-            "inputEnabled": false,
-            "name": "Test Login",
-          }
+      Brukerinfo
+    </h2>
+    <ConnectedServiceComponent
+      info={
+        Object {
+          "email": "email@example.com",
+          "inputEnabled": false,
+          "name": "Test Login",
         }
-        loggedIn={true}
-        onChange={[Function]}
-      />
-    </div>
+      }
+      loggedIn={true}
+      onChange={[Function]}
+    />
   </div>
   <div
-    className="main"
+    className="content"
   >
-    <div
-      className="content"
+    <SelectContainer
+      committees={
+        Map {
+          "arrkom" => Object {
+            "icon": "/static/arrkom-square.svg",
+            "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
+            tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
+            immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
+            mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
+            person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
+            "name": "Arrkom",
+          },
+          "bedkom" => Object {
+            "icon": "/static/bedkom-square.svg",
+            "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
+            sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
+            hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
+            mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
+            og potensielle arbeidstakere under studietiden, samtidig som du får et
+            innblikk i hvordan bedrifter rekrutterer studenter. Etter en
+            bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
+            og bli kjent under et godt måltid. Bedriftskomiteen er også
+            knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
+            "name": "Bedkom",
+          },
+          "dotkom" => Object {
+            "icon": "/static/dotkom-square.svg",
+            "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
+            datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
+            e-postsystemer, filområder og mye annet spennende. I en stor
+            linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
+            utviklingskomiteen prøver hele tiden å lage smarte løsninger som
+            holder en høy standard, slik som i en bedrift. Er du interessert i
+            programmering, drifting eller teknologi generelt? Vi kan tilby et
+            unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
+            Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
+            "name": "Dotkom",
+          },
+          "fagkom" => Object {
+            "icon": "/static/fagkom-square.svg",
+            "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
+            gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
+            studentenes faglige interesser. Vi oppsøker kompetansen i
+            næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
+            kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
+            vil du få god innsikt i emner utenfor skolen, og samtidig knytte
+            tettere bånd til din fremtidige arbeidsgiver.",
+            "name": "Fagkom",
+          },
+          "prokom" => Object {
+            "icon": "/static/prokom-square.svg",
+            "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
+            profesjonelt og konsistent. Alt profileringsmateriale som klær,
+            annonser, brev og brosjyrer, plakater, medaljer og andre effekter
+            lages av oss. Vi har også en redaksjon som er ansvarlig for
+            linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
+            skribent i magen? Vi leter etter deg som er interessert i design,
+            markedsføring, journalisme eller skriving!",
+            "name": "Prokom",
+          },
+          "trikom" => Object {
+            "icon": "/static/trikom-square.svg",
+            "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
+            Dette inkluderer å arrangere små arrangementer i skoletiden,
+            for eksempel vaffeldager eller andre ting som skaper trivsel.
+            Vi er også ansvarlig for drift av kontoret som vil si å sette opp
+            kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
+            Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
+            "name": "Trikom",
+          },
+        }
+      }
+      onChange={[Function]}
+      ordered={true}
+      prioritized={false}
+      selected={
+        Array [
+          "Dotkom",
+        ]
+      }
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
     >
-      <SelectContainer
-        committees={
-          Map {
-            "arrkom" => Object {
-              "icon": "/static/arrkom-square.png",
-              "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
-              tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
-              immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
-              mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
-              person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
-              "name": "Arrkom",
-            },
-            "bedkom" => Object {
-              "icon": "/static/bedkom-square.png",
-              "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
-              sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
-              hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
-              mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
-              og potensielle arbeidstakere under studietiden, samtidig som du får et
-              innblikk i hvordan bedrifter rekrutterer studenter. Etter en
-              bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
-              og bli kjent under et godt måltid. Bedriftskomiteen er også
-              knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
-              "name": "Bedkom",
-            },
-            "dotkom" => Object {
-              "icon": "/static/dotkom-square.png",
-              "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
-              datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
-              e-postsystemer, filområder og mye annet spennende. I en stor
-              linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
-              utviklingskomiteen prøver hele tiden å lage smarte løsninger som
-              holder en høy standard, slik som i en bedrift. Er du interessert i
-              programmering, drifting eller teknologi generelt? Vi kan tilby et
-              unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
-              Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
-              "name": "Dotkom",
-            },
-            "fagkom" => Object {
-              "icon": "/static/fagkom-square.png",
-              "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
-              gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
-              studentenes faglige interesser. Vi oppsøker kompetansen i
-              næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
-              kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
-              vil du få god innsikt i emner utenfor skolen, og samtidig knytte
-              tettere bånd til din fremtidige arbeidsgiver.",
-              "name": "Fagkom",
-            },
-            "prokom" => Object {
-              "icon": "/static/prokom-square.png",
-              "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
-              profesjonelt og konsistent. Alt profileringsmateriale som klær,
-              annonser, brev og brosjyrer, plakater, medaljer og andre effekter
-              lages av oss. Vi har også en redaksjon som er ansvarlig for
-              linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
-              skribent i magen? Vi leter etter deg som er interessert i design,
-              markedsføring, journalisme eller skriving!",
-              "name": "Prokom",
-            },
-            "trikom" => Object {
-              "icon": "/static/trikom-square.png",
-              "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
-              Dette inkluderer å arrangere små arrangementer i skoletiden,
-              for eksempel vaffeldager eller andre ting som skaper trivsel.
-              Vi er også ansvarlig for drift av kontoret som vil si å sette opp
-              kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
-              Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
-              "name": "Trikom",
-            },
-          }
-        }
-        onChange={[Function]}
-        ordered={true}
-        prioritized={false}
-        selected={
-          Array [
-            "Dotkom",
-          ]
-        }
-      />
-    </div>
+      Søknadstekst
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text=""
+    />
   </div>
 </div>
 `;
 
 exports[`Application updates info on onChange from login 1`] = `
-<div>
-  <div
-    className="nav"
-  >
+<div
+  className="component"
+>
+  <div>
     <NavigationButton
       link="/"
     >
@@ -384,115 +417,126 @@ exports[`Application updates info on onChange from login 1`] = `
   <div
     className="alternative"
   >
-    <div
-      className="content"
+    <h2
+      className="header"
     >
-      <ConnectedServiceComponent
-        info={
-          Object {
-            "email": "emaillogin@example.com",
-            "inputEnabled": false,
-            "name": "Post Login",
-          }
+      Brukerinfo
+    </h2>
+    <ConnectedServiceComponent
+      info={
+        Object {
+          "email": "emaillogin@example.com",
+          "inputEnabled": false,
+          "name": "Post Login",
         }
-        loggedIn={true}
-        onChange={[Function]}
-      />
-    </div>
+      }
+      loggedIn={true}
+      onChange={[Function]}
+    />
   </div>
   <div
-    className="main"
+    className="content"
   >
-    <div
-      className="content"
-    >
-      <SelectContainer
-        committees={
-          Map {
-            "arrkom" => Object {
-              "icon": "/static/arrkom-square.png",
-              "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
-              tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
-              immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
-              mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
-              person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
-              "name": "Arrkom",
-            },
-            "bedkom" => Object {
-              "icon": "/static/bedkom-square.png",
-              "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
-              sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
-              hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
-              mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
-              og potensielle arbeidstakere under studietiden, samtidig som du får et
-              innblikk i hvordan bedrifter rekrutterer studenter. Etter en
-              bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
-              og bli kjent under et godt måltid. Bedriftskomiteen er også
-              knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
-              "name": "Bedkom",
-            },
-            "dotkom" => Object {
-              "icon": "/static/dotkom-square.png",
-              "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
-              datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
-              e-postsystemer, filområder og mye annet spennende. I en stor
-              linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
-              utviklingskomiteen prøver hele tiden å lage smarte løsninger som
-              holder en høy standard, slik som i en bedrift. Er du interessert i
-              programmering, drifting eller teknologi generelt? Vi kan tilby et
-              unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
-              Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
-              "name": "Dotkom",
-            },
-            "fagkom" => Object {
-              "icon": "/static/fagkom-square.png",
-              "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
-              gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
-              studentenes faglige interesser. Vi oppsøker kompetansen i
-              næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
-              kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
-              vil du få god innsikt i emner utenfor skolen, og samtidig knytte
-              tettere bånd til din fremtidige arbeidsgiver.",
-              "name": "Fagkom",
-            },
-            "prokom" => Object {
-              "icon": "/static/prokom-square.png",
-              "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
-              profesjonelt og konsistent. Alt profileringsmateriale som klær,
-              annonser, brev og brosjyrer, plakater, medaljer og andre effekter
-              lages av oss. Vi har også en redaksjon som er ansvarlig for
-              linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
-              skribent i magen? Vi leter etter deg som er interessert i design,
-              markedsføring, journalisme eller skriving!",
-              "name": "Prokom",
-            },
-            "trikom" => Object {
-              "icon": "/static/trikom-square.png",
-              "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
-              Dette inkluderer å arrangere små arrangementer i skoletiden,
-              for eksempel vaffeldager eller andre ting som skaper trivsel.
-              Vi er også ansvarlig for drift av kontoret som vil si å sette opp
-              kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
-              Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
-              "name": "Trikom",
-            },
-          }
+    <SelectContainer
+      committees={
+        Map {
+          "arrkom" => Object {
+            "icon": "/static/arrkom-square.svg",
+            "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
+            tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
+            immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
+            mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
+            person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
+            "name": "Arrkom",
+          },
+          "bedkom" => Object {
+            "icon": "/static/bedkom-square.svg",
+            "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
+            sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
+            hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
+            mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
+            og potensielle arbeidstakere under studietiden, samtidig som du får et
+            innblikk i hvordan bedrifter rekrutterer studenter. Etter en
+            bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
+            og bli kjent under et godt måltid. Bedriftskomiteen er også
+            knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
+            "name": "Bedkom",
+          },
+          "dotkom" => Object {
+            "icon": "/static/dotkom-square.svg",
+            "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
+            datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
+            e-postsystemer, filområder og mye annet spennende. I en stor
+            linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
+            utviklingskomiteen prøver hele tiden å lage smarte løsninger som
+            holder en høy standard, slik som i en bedrift. Er du interessert i
+            programmering, drifting eller teknologi generelt? Vi kan tilby et
+            unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
+            Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
+            "name": "Dotkom",
+          },
+          "fagkom" => Object {
+            "icon": "/static/fagkom-square.svg",
+            "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
+            gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
+            studentenes faglige interesser. Vi oppsøker kompetansen i
+            næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
+            kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
+            vil du få god innsikt i emner utenfor skolen, og samtidig knytte
+            tettere bånd til din fremtidige arbeidsgiver.",
+            "name": "Fagkom",
+          },
+          "prokom" => Object {
+            "icon": "/static/prokom-square.svg",
+            "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
+            profesjonelt og konsistent. Alt profileringsmateriale som klær,
+            annonser, brev og brosjyrer, plakater, medaljer og andre effekter
+            lages av oss. Vi har også en redaksjon som er ansvarlig for
+            linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
+            skribent i magen? Vi leter etter deg som er interessert i design,
+            markedsføring, journalisme eller skriving!",
+            "name": "Prokom",
+          },
+          "trikom" => Object {
+            "icon": "/static/trikom-square.svg",
+            "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
+            Dette inkluderer å arrangere små arrangementer i skoletiden,
+            for eksempel vaffeldager eller andre ting som skaper trivsel.
+            Vi er også ansvarlig for drift av kontoret som vil si å sette opp
+            kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
+            Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
+            "name": "Trikom",
+          },
         }
-        onChange={[Function]}
-        ordered={true}
-        prioritized={false}
-        selected={Array []}
-      />
-    </div>
+      }
+      onChange={[Function]}
+      ordered={true}
+      prioritized={false}
+      selected={Array []}
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
+    >
+      Søknadstekst
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text=""
+    />
   </div>
 </div>
 `;
 
 exports[`Application updates user info on new props 1`] = `
-<div>
-  <div
-    className="nav"
-  >
+<div
+  className="component"
+>
+  <div>
     <NavigationButton
       link="/"
     >
@@ -505,106 +549,117 @@ exports[`Application updates user info on new props 1`] = `
   <div
     className="alternative"
   >
-    <div
-      className="content"
+    <h2
+      className="header"
     >
-      <ConnectedServiceComponent
-        info={
-          Object {
-            "email": "email2@example.com",
-            "inputEnabled": false,
-            "name": "Test2 User",
-          }
+      Brukerinfo
+    </h2>
+    <ConnectedServiceComponent
+      info={
+        Object {
+          "email": "email2@example.com",
+          "inputEnabled": false,
+          "name": "Test2 User",
         }
-        loggedIn={true}
-        onChange={[Function]}
-      />
-    </div>
+      }
+      loggedIn={true}
+      onChange={[Function]}
+    />
   </div>
   <div
-    className="main"
+    className="content"
   >
-    <div
-      className="content"
-    >
-      <SelectContainer
-        committees={
-          Map {
-            "arrkom" => Object {
-              "icon": "/static/arrkom-square.png",
-              "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
-              tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
-              immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
-              mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
-              person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
-              "name": "Arrkom",
-            },
-            "bedkom" => Object {
-              "icon": "/static/bedkom-square.png",
-              "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
-              sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
-              hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
-              mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
-              og potensielle arbeidstakere under studietiden, samtidig som du får et
-              innblikk i hvordan bedrifter rekrutterer studenter. Etter en
-              bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
-              og bli kjent under et godt måltid. Bedriftskomiteen er også
-              knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
-              "name": "Bedkom",
-            },
-            "dotkom" => Object {
-              "icon": "/static/dotkom-square.png",
-              "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
-              datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
-              e-postsystemer, filområder og mye annet spennende. I en stor
-              linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
-              utviklingskomiteen prøver hele tiden å lage smarte løsninger som
-              holder en høy standard, slik som i en bedrift. Er du interessert i
-              programmering, drifting eller teknologi generelt? Vi kan tilby et
-              unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
-              Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
-              "name": "Dotkom",
-            },
-            "fagkom" => Object {
-              "icon": "/static/fagkom-square.png",
-              "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
-              gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
-              studentenes faglige interesser. Vi oppsøker kompetansen i
-              næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
-              kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
-              vil du få god innsikt i emner utenfor skolen, og samtidig knytte
-              tettere bånd til din fremtidige arbeidsgiver.",
-              "name": "Fagkom",
-            },
-            "prokom" => Object {
-              "icon": "/static/prokom-square.png",
-              "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
-              profesjonelt og konsistent. Alt profileringsmateriale som klær,
-              annonser, brev og brosjyrer, plakater, medaljer og andre effekter
-              lages av oss. Vi har også en redaksjon som er ansvarlig for
-              linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
-              skribent i magen? Vi leter etter deg som er interessert i design,
-              markedsføring, journalisme eller skriving!",
-              "name": "Prokom",
-            },
-            "trikom" => Object {
-              "icon": "/static/trikom-square.png",
-              "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
-              Dette inkluderer å arrangere små arrangementer i skoletiden,
-              for eksempel vaffeldager eller andre ting som skaper trivsel.
-              Vi er også ansvarlig for drift av kontoret som vil si å sette opp
-              kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
-              Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
-              "name": "Trikom",
-            },
-          }
+    <SelectContainer
+      committees={
+        Map {
+          "arrkom" => Object {
+            "icon": "/static/arrkom-square.svg",
+            "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
+            tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
+            immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
+            mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
+            person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
+            "name": "Arrkom",
+          },
+          "bedkom" => Object {
+            "icon": "/static/bedkom-square.svg",
+            "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
+            sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
+            hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
+            mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
+            og potensielle arbeidstakere under studietiden, samtidig som du får et
+            innblikk i hvordan bedrifter rekrutterer studenter. Etter en
+            bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
+            og bli kjent under et godt måltid. Bedriftskomiteen er også
+            knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
+            "name": "Bedkom",
+          },
+          "dotkom" => Object {
+            "icon": "/static/dotkom-square.svg",
+            "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
+            datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
+            e-postsystemer, filområder og mye annet spennende. I en stor
+            linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
+            utviklingskomiteen prøver hele tiden å lage smarte løsninger som
+            holder en høy standard, slik som i en bedrift. Er du interessert i
+            programmering, drifting eller teknologi generelt? Vi kan tilby et
+            unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
+            Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
+            "name": "Dotkom",
+          },
+          "fagkom" => Object {
+            "icon": "/static/fagkom-square.svg",
+            "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
+            gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
+            studentenes faglige interesser. Vi oppsøker kompetansen i
+            næringslivet, og samarbeider tett med bedriftskomiteen for å komme i
+            kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
+            vil du få god innsikt i emner utenfor skolen, og samtidig knytte
+            tettere bånd til din fremtidige arbeidsgiver.",
+            "name": "Fagkom",
+          },
+          "prokom" => Object {
+            "icon": "/static/prokom-square.svg",
+            "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
+            profesjonelt og konsistent. Alt profileringsmateriale som klær,
+            annonser, brev og brosjyrer, plakater, medaljer og andre effekter
+            lages av oss. Vi har også en redaksjon som er ansvarlig for
+            linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
+            skribent i magen? Vi leter etter deg som er interessert i design,
+            markedsføring, journalisme eller skriving!",
+            "name": "Prokom",
+          },
+          "trikom" => Object {
+            "icon": "/static/trikom-square.svg",
+            "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
+            Dette inkluderer å arrangere små arrangementer i skoletiden,
+            for eksempel vaffeldager eller andre ting som skaper trivsel.
+            Vi er også ansvarlig for drift av kontoret som vil si å sette opp
+            kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
+            Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
+            "name": "Trikom",
+          },
         }
-        onChange={[Function]}
-        ordered={true}
-        prioritized={false}
-        selected={Array []}
-      />
-    </div>
+      }
+      onChange={[Function]}
+      ordered={true}
+      prioritized={false}
+      selected={Array []}
+    />
+  </div>
+  <div
+    className="alternative"
+  >
+    <h2
+      className="header"
+    >
+      Søknadstekst
+    </h2>
+    <TextArea
+      onChange={[Function]}
+      placeholder="Din søknadstext..."
+      text=""
+    />
   </div>
 </div>
 `;

@@ -31,7 +31,6 @@ export function Login({info, loggedIn, authService, onChange}) {
 
   return(
     <div className={_s.container}>
-      <h2 className={_s.header}>Brukerinfo</h2>
       <div className={_s.box}>
         <label className={_s.label}>Hent Brukerinfo</label>
         <Button
