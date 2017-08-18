@@ -16,6 +16,7 @@ exports[`SelectContainer renders correctly with none selected 1`] = `
         Object {
           "icon": "MockIcon",
           "info": "Default info",
+          "key": "test0kom",
           "name": "Test0kom",
         }
       }
@@ -28,6 +29,7 @@ exports[`SelectContainer renders correctly with none selected 1`] = `
         Object {
           "icon": "MockIcon",
           "info": "Default info",
+          "key": "test1kom",
           "name": "Test1kom",
         }
       }
@@ -40,6 +42,7 @@ exports[`SelectContainer renders correctly with none selected 1`] = `
         Object {
           "icon": "MockIcon",
           "info": "Default info",
+          "key": "test2kom",
           "name": "Test2kom",
         }
       }
@@ -52,6 +55,7 @@ exports[`SelectContainer renders correctly with none selected 1`] = `
         Object {
           "icon": "MockIcon",
           "info": "Default info",
+          "key": "test3kom",
           "name": "Test3kom",
         }
       }
@@ -65,6 +69,7 @@ exports[`SelectContainer renders correctly with none selected 1`] = `
   >
     <SelectedList
       committees={Array []}
+      onChange={[Function]}
       totalChoices={3}
     />
   </div>
@@ -87,6 +92,7 @@ exports[`SelectContainer renders correctly with one selected 1`] = `
         Object {
           "icon": "MockIcon",
           "info": "Default info",
+          "key": "test0kom",
           "name": "Test0kom",
         }
       }
@@ -99,6 +105,7 @@ exports[`SelectContainer renders correctly with one selected 1`] = `
         Object {
           "icon": "MockIcon",
           "info": "Default info",
+          "key": "test1kom",
           "name": "Test1kom",
         }
       }
@@ -111,6 +118,7 @@ exports[`SelectContainer renders correctly with one selected 1`] = `
         Object {
           "icon": "MockIcon",
           "info": "Default info",
+          "key": "test2kom",
           "name": "Test2kom",
         }
       }
@@ -123,6 +131,7 @@ exports[`SelectContainer renders correctly with one selected 1`] = `
         Object {
           "icon": "MockIcon",
           "info": "Default info",
+          "key": "test3kom",
           "name": "Test3kom",
         }
       }
@@ -140,10 +149,12 @@ exports[`SelectContainer renders correctly with one selected 1`] = `
           Object {
             "icon": "MockIcon",
             "info": "Default info",
+            "key": "test1kom",
             "name": "Test1kom",
           },
         ]
       }
+      onChange={[Function]}
       totalChoices={3}
     />
   </div>
@@ -166,6 +177,7 @@ exports[`SelectContainer renders correctly with two selected 1`] = `
         Object {
           "icon": "MockIcon",
           "info": "Default info",
+          "key": "test0kom",
           "name": "Test0kom",
         }
       }
@@ -178,6 +190,7 @@ exports[`SelectContainer renders correctly with two selected 1`] = `
         Object {
           "icon": "MockIcon",
           "info": "Default info",
+          "key": "test1kom",
           "name": "Test1kom",
         }
       }
@@ -190,6 +203,7 @@ exports[`SelectContainer renders correctly with two selected 1`] = `
         Object {
           "icon": "MockIcon",
           "info": "Default info",
+          "key": "test2kom",
           "name": "Test2kom",
         }
       }
@@ -202,6 +216,7 @@ exports[`SelectContainer renders correctly with two selected 1`] = `
         Object {
           "icon": "MockIcon",
           "info": "Default info",
+          "key": "test3kom",
           "name": "Test3kom",
         }
       }
@@ -219,15 +234,18 @@ exports[`SelectContainer renders correctly with two selected 1`] = `
           Object {
             "icon": "MockIcon",
             "info": "Default info",
+            "key": "test2kom",
             "name": "Test2kom",
           },
           Object {
             "icon": "MockIcon",
             "info": "Default info",
+            "key": "test1kom",
             "name": "Test1kom",
           },
         ]
       }
+      onChange={[Function]}
       totalChoices={3}
     />
   </div>

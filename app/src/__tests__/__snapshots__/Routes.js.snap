@@ -226,6 +226,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                       immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
                                       mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
                                       person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
+                                    "key": "arrkom",
                                     "name": "Arrkom",
                                   }
                                 }
@@ -271,6 +272,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                       bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
                                       og bli kjent under et godt måltid. Bedriftskomiteen er også
                                       knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
+                                    "key": "bedkom",
                                     "name": "Bedkom",
                                   }
                                 }
@@ -320,6 +322,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                       programmering, drifting eller teknologi generelt? Vi kan tilby et
                                       unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
                                       Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
+                                    "key": "dotkom",
                                     "name": "Dotkom",
                                   }
                                 }
@@ -367,6 +370,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                       kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
                                       vil du få god innsikt i emner utenfor skolen, og samtidig knytte
                                       tettere bånd til din fremtidige arbeidsgiver.",
+                                    "key": "fagkom",
                                     "name": "Fagkom",
                                   }
                                 }
@@ -412,6 +416,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                       linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
                                       skribent i magen? Vi leter etter deg som er interessert i design,
                                       markedsføring, journalisme eller skriving!",
+                                    "key": "prokom",
                                     "name": "Prokom",
                                   }
                                 }
@@ -456,6 +461,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                       Vi er også ansvarlig for drift av kontoret som vil si å sette opp
                                       kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
                                       Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
+                                    "key": "trikom",
                                     "name": "Trikom",
                                   }
                                 }
