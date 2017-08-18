@@ -24,6 +24,7 @@ exports[`Application renders correctly 1`] = `
         info={
           Object {
             "email": "",
+            "inputEnabled": false,
             "name": "",
           }
         }
@@ -72,6 +73,7 @@ exports[`Application renders correctly with user info 1`] = `
         info={
           Object {
             "email": "email@example.com",
+            "inputEnabled": false,
             "name": "Test User",
           }
         }
@@ -120,6 +122,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
         info={
           Object {
             "email": "email@example.com",
+            "inputEnabled": false,
             "name": "Test Login",
           }
         }
@@ -172,6 +175,7 @@ exports[`Application updates info on onChange from login 1`] = `
         info={
           Object {
             "email": "emaillogin@example.com",
+            "inputEnabled": false,
             "name": "Post Login",
           }
         }
@@ -220,6 +224,7 @@ exports[`Application updates user info on new props 1`] = `
         info={
           Object {
             "email": "email2@example.com",
+            "inputEnabled": false,
             "name": "Test2 User",
           }
         }

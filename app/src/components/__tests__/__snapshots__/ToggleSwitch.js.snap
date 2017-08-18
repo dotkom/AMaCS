@@ -38,21 +38,91 @@ exports[`ToggleSwitch.jsx renders correctly 1`] = `
 </button>
 `;
 
-exports[`ToggleSwitch.jsx toggles checked when clicked 1`] = `
-<button
-  className="container"
-  onClick={[Function]}
+exports[`ToggleSwitch.jsx toggles and checks if onChange is called with correct values 1`] = `
+<ToggleSwitch
+  checked={true}
+  onChange={[Function]}
 >
-  <div
-    className="slider checked"
+  <button
+    className="container"
+    onClick={[Function]}
   >
-    <span
-      className="icon"
+    <div
+      className="slider checked"
     >
-      <SVGMockComponent
-        width={12}
-      />
-    </span>
-  </div>
-</button>
+      <span
+        className="icon"
+      >
+        <SVGMockComponent
+          width={12}
+        />
+      </span>
+    </div>
+  </button>
+</ToggleSwitch>
+`;
+
+exports[`ToggleSwitch.jsx toggles checked when clicked 1`] = `
+<ToggleSwitch>
+  <button
+    className="container"
+    onClick={[Function]}
+  >
+    <div
+      className="slider checked"
+    >
+      <span
+        className="icon"
+      >
+        <SVGMockComponent
+          width={12}
+        />
+      </span>
+    </div>
+  </button>
+</ToggleSwitch>
+`;
+
+exports[`ToggleSwitch.jsx toggles checked when clicked and component updates as an uncontrolled component 1`] = `
+<ToggleSwitch>
+  <button
+    className="container"
+    onClick={[Function]}
+  >
+    <div
+      className="slider checked"
+    >
+      <span
+        className="icon"
+      >
+        <SVGMockComponent
+          width={12}
+        />
+      </span>
+    </div>
+  </button>
+</ToggleSwitch>
+`;
+
+exports[`ToggleSwitch.jsx toggles un-checked when clicked and component updates as a controlled component 1`] = `
+<ToggleSwitch
+  checked={true}
+>
+  <button
+    className="container"
+    onClick={[Function]}
+  >
+    <div
+      className="slider checked"
+    >
+      <span
+        className="icon"
+      >
+        <SVGMockComponent
+          width={12}
+        />
+      </span>
+    </div>
+  </button>
+</ToggleSwitch>
 `;

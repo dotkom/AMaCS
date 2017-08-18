@@ -14,7 +14,8 @@ class Application extends Component {
       name: props.user ? props.user.fullname : "",
       email: props.user ? props.user.email : "",
       selectedComittees: [],
-      ordered: true
+      ordered: true,
+      inputEnabled: false
     }
   }
 
@@ -26,7 +27,7 @@ class Application extends Component {
   }
 
   _infoChanged(info){
-    this.setState(_.pick(info,["name","email"]));
+    this.setState(_.pick(info,["name","email","inputEnabled"]));
   }
 
   _selectedChanged(selected){
@@ -56,7 +57,7 @@ class Application extends Component {
             <Login
               onChange={(info) => this._infoChanged(info)}
               loggedIn={!!this.props.user}
-              info={_.pick(this.state,["name","email"])}
+              info={_.pick(this.state,["name","email","inputEnabled"])}
             />
           </div>
         </div>

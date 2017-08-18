@@ -10,14 +10,25 @@ class ToggleSwitch extends React.Component {
     super(props);
 
     this.state = {
-      checked: this.props.checked || false,
+      checked: props.checked != null ? props.checked : false,
     };
+  }
+
+  componentWillReceiveProps(props){
+    this.setState({
+      checked: props.checked != null ? props.checked : this.state.checked,
+    });
   }
 
   handleToggle(e, a) {
     this.setState({
-      checked: !this.state.checked
+      checked: !this.state.checked,
+    }, () => {
+      if(this.props.onChange){
+        this.props.onChange(this.state.checked);
+      }
     });
+    
   }
 
   render() {
@@ -25,6 +36,7 @@ class ToggleSwitch extends React.Component {
     const SvgIcon = checked ? Check : Cross;
     return(
       <button
+        disabled={this.props.disabled}
         onClick={() => this.handleToggle()}
         className={_s.container}
       >

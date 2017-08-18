@@ -11,6 +11,7 @@ import { connectServices } from 'services';
 const onlineIconWhite = "/static/online-icon-white.png"
 
 export function Login({info, loggedIn, authService, onChange}) {
+
   const handleLoginClick = () => {
     if(loggedIn)
       authService.logout();
@@ -19,11 +20,10 @@ export function Login({info, loggedIn, authService, onChange}) {
   }
 
   const handleInputChange = (field, value) => {
-    const { name, email } = Object.assign({}, info, {
-      [field]: value
-    });
     if(onChange){
-      onChange({ name, email });
+      onChange(Object.assign({}, info, {
+        [field]: value
+      }));
     }
   }
 
@@ -40,7 +40,12 @@ export function Login({info, loggedIn, authService, onChange}) {
           text={"Logg " + buttonText}
         />
         <label className={_s.label}>Ingen Online bruker?</label>
-        <ToggleSwitch text="Fyll inn rukerinfo selv"/>
+        <ToggleSwitch 
+          text="Fyll inn rukerinfo selv" 
+          disabled={loggedIn} 
+          checked={info.inputEnabled && !loggedIn}
+          onChange={(...a) => handleInputChange("inputEnabled",...a)}
+        />
       </div>
       <div className={_s.box}>
         <Input
@@ -50,7 +55,7 @@ export function Login({info, loggedIn, authService, onChange}) {
           label="Navn"
           value={info.name || ""}
           onChange={(r) => handleInputChange("name", r.target.value)}
-          disabled={loggedIn}
+          disabled={!info.inputEnabled || loggedIn}
         />
         <Input
           type="email"
@@ -58,7 +63,7 @@ export function Login({info, loggedIn, authService, onChange}) {
           name="email"
           label="E-Postadresse"
           onChange={(r) => handleInputChange("email", r.target.value)}
-          disabled={loggedIn}
+          disabled={!info.inputEnabled || loggedIn}
           value={info.email || ""}
         />
       </div>
