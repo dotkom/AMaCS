@@ -12,14 +12,14 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   flex: 1;
   background: #ffffff;
-  border: 0.25rem solid #ffffff;
+  border: 0.10rem solid #ffffff;
   padding: 0.5rem;
   display: flex;
   align-items: center;
 }
 
 .header:hover {
-  border: 0.25rem solid #0060a3;
+  border: 0.10rem solid #0060a3;
 }
 
 .open .header {
