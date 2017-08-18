@@ -7,6 +7,7 @@ const committees = new Map([
     mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
     person selv? Da er kanskje Arrangementskomitéen stedet for deg!`,
     icon: "/static/arrkom-square.svg",
+    id: 1,
   }],
   ['bedkom', {
     name: "Bedkom",
@@ -20,6 +21,7 @@ const committees = new Map([
     og bli kjent under et godt måltid. Bedriftskomiteen er også
     knutepunktet til våre samarbeidspartnere i næringslivet ellers.`,
     icon: "/static/bedkom-square.svg",
+    id: 3,
   }],
   ['dotkom', {
     name: "Dotkom",
@@ -33,6 +35,7 @@ const committees = new Map([
     unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
     Ingen forkunnskaper er påkrevd annet enn stor lærevilje!`,
     icon: "/static/dotkom-square.svg",
+    id: 4,
   }],
   ['fagkom', {
     name: "Fagkom",
@@ -44,6 +47,7 @@ const committees = new Map([
     vil du få god innsikt i emner utenfor skolen, og samtidig knytte
     tettere bånd til din fremtidige arbeidsgiver.`,
     icon: "/static/fagkom-square.svg",
+    id: 6,
   }],
   ['prokom', {
     name: "Prokom",
@@ -55,6 +59,7 @@ const committees = new Map([
     skribent i magen? Vi leter etter deg som er interessert i design,
     markedsføring, journalisme eller skriving!`,
     icon: "/static/prokom-square.svg",
+    id: 7,
   }],
   ['trikom', {
     name: "Trikom",
@@ -65,6 +70,7 @@ const committees = new Map([
     kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
     Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.`,
     icon: "/static/trikom-square.svg",
+    id: 8,
   }],
 ]);
 
