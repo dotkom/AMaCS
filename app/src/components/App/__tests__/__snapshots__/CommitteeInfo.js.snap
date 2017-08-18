@@ -2,7 +2,7 @@
 
 exports[`CommitteeInfo renders correctly 1`] = `
 <section
-  className="container"
+  className="component"
   onClick={[Function]}
 >
   <header
@@ -28,7 +28,7 @@ exports[`CommitteeInfo renders correctly 1`] = `
 
 exports[`CommitteeInfo renders correctly after click 1`] = `
 <section
-  className="container open"
+  className="component open"
   onClick={[Function]}
 >
   <header

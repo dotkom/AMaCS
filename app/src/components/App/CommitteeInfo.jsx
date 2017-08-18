@@ -24,7 +24,7 @@ class CommitteeInfo extends React.Component {
     const { showInfo } = this.state
 
     return(
-      <section onClick={() => this.handleClick()} className={classNames(_s.container, { [_s.open]: showInfo})}>
+      <section onClick={() => this.handleClick()} className={classNames(_s.component, { [_s.open]: showInfo})}>
         <header className={_s.header}>
           <img className={_s.img} src={ committee.icon } />
           <h3 className={_s.name}>{ committee.name }</h3>
