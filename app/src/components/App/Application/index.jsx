@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 
 import Button from '../../Button';
+import committeesMap from 'common/committees';
 import SelectContainer from '../SelectContainer';
 import NavigationButton from '../../NavigationButton';
 import Login from '../../Login';
@@ -20,6 +21,7 @@ class Application extends Component {
       inputEnabled: false,
       applicationText: '',
       isRequesting: false,
+      responseMessage: '',
     }
   }
 
@@ -45,6 +47,61 @@ class Application extends Component {
       ordered: ordered,
       selectedComittees: ordered ? [] : this.state.selectedComittees
     });
+  }
+
+  async submitApplication() {
+    const { name, email,
+      ordered: prioritized,
+      selectedComittees: committees,
+    } = this.state;
+    const application_text = "most awesomest application text"; // @ToDo: Replace with actual application text when implemented.
+    const application = {
+      name, email, prioritized, application_text,
+      committees: committees.map((committee, index) => Object.assign({
+        group: committeesMap.get(committee).id,
+        priority: index + 1,
+      })),
+    };
+
+    const uri = `${process.env.SG_APPLICATION_BACKEND}${process.env.SG_APPLICATION_ENDPOINT}`;
+    this.setState({ isRequesting: true });
+
+    try {
+      const resp = await fetch(uri, {
+        body: JSON.stringify(application),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        method: 'POST',
+      });
+
+      const json = await resp.json();
+
+      if (resp.status === 201) {
+        this.setState({
+          isRequesting: false,
+          responseMessage: 'Søknad er sendt.' ,
+        });
+        return;
+      }
+
+      // Sometimes we get an array of messages and sometimes we get
+      // an object. If we get an array we can concat it together,
+      // if we get an object we show a more generic error message.
+      const errorMessage = json instanceof Array ? json : 'Pass på at du har fylt ut alle feltene og valgt komiteer å søke.';
+
+      this.setState({
+        isRequesting: false,
+        responseMessage: `Noe gikk galt. ${errorMessage}`
+      });
+
+    } catch (err) {
+      console.error("Error response", err)
+      this.setState({
+        isRequesting: false,
+        responseMessage: `Noe gikk galt. ${err}`
+      });
+    }
   }
 
   render() {
@@ -84,6 +141,7 @@ class Application extends Component {
               <Button
                 text={"Send søknad"}
                 disabled={this.state.isRequesting}
+                onClick={() => this.submitApplication()}
                 />
         </div>
       </div>
