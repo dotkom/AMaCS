@@ -16,7 +16,8 @@ class Application extends Component {
       email: props.user ? props.user.email : "",
       selectedComittees: [],
       ordered: true,
-      inputEnabled: false
+      inputEnabled: false,
+      applicationText: '',
     }
   }
 
@@ -70,7 +71,11 @@ class Application extends Component {
         </div>
         <div className={_s.alternative}>
           <h2 className={_s.header}>Søknadstekst</h2>
-          <TextArea text="Test" placeholder="Din søknadstext..." />
+          <TextArea
+            text={this.state.applicationText}
+            onChange={(text) => this.setState({ applicationText: text })}
+            placeholder="Din søknadstext..."
+          />
         </div>
       </div>
     );
