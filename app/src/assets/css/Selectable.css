@@ -1,12 +1,19 @@
 
 .container {
   background: #ffffff;
+  border: .1rem solid #fff;
   padding: 0.6em 0.8em;
   margin: 0.8em;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   flex-direction: column;
+  border-radius: 2px;
+  transition: 0.25s border-color;
+}
+
+.container:hover {
+  border-color: #0060a3;
 }
 
 .container.small {

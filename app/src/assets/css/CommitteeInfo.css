@@ -13,10 +13,16 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   flex: 1;
   background: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
+  border: 0.1rem solid #ffffff;
   padding: 0.5rem;
   display: flex;
   align-items: center;
+  transition: 0.25s border;
+  border-radius: 2px;
+}
+
+.header:hover {
+  border-color: #0060a3;
 }
 
 .open .header {
@@ -26,6 +32,7 @@
 .info {
   display: none;
   background: #ffffff;
+  border-top: 1px solid #e0e0e0;
   padding: 1rem 2rem;
   line-height: 1.5rem;
 }
