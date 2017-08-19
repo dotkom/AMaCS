@@ -47,9 +47,9 @@ class Button extends React.Component {
         onMouseLeave={(...a) => this._mouseLeave(...a)}
       >
         <div className={_s.buttonContent}>
-          { icLeft && <img className={_s.iconLeft} src={icLeft} /> }
+          { icLeft && <img className={_s.iconLeft} src={icLeft} alt="Ikon" /> }
           { text }
-          { icRight && <img className={_s.iconRight} src={icRight} /> }
+          { icRight && <img className={_s.iconRight} src={icRight} alt="Ikon" /> }
         </div>
       </button>
     );
