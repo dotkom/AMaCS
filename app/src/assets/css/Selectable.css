@@ -2,7 +2,7 @@
 .container {
   background: #ffffff;
   border: .1rem solid #fff;
-  padding: 0.6em 0.8em;
+  padding: 0.6em 0.75em;
   margin: 0.8em;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -17,7 +17,7 @@
 }
 
 .container.small {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .container.selected {
@@ -27,13 +27,21 @@
   border-radius: 3px;
 }
 
-.img {
-  height: 4em;
-  width: 4em;
+.container svg {
+  height: 3.8em;
+  width: 3.8em;
 }
 
 .name {
   margin: 0;
   font-size: 0.9em;
   font-weight: 600;
+}
+
+
+@media (min-width: 600px) {
+  .container svg {
+    height: 4rem;
+    width: 4rem;
+  }
 }
