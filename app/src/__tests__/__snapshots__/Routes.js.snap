@@ -234,10 +234,10 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               >
                                 <section
                                   className="component"
-                                  onClick={[Function]}
                                 >
                                   <header
                                     className="header"
+                                    onClick={[Function]}
                                   >
                                     <SVGMockComponent
                                       className="img"
@@ -280,10 +280,10 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               >
                                 <section
                                   className="component"
-                                  onClick={[Function]}
                                 >
                                   <header
                                     className="header"
+                                    onClick={[Function]}
                                   >
                                     <SVGMockComponent
                                       className="img"
@@ -330,10 +330,10 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               >
                                 <section
                                   className="component"
-                                  onClick={[Function]}
                                 >
                                   <header
                                     className="header"
+                                    onClick={[Function]}
                                   >
                                     <SVGMockComponent
                                       className="img"
@@ -378,10 +378,10 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               >
                                 <section
                                   className="component"
-                                  onClick={[Function]}
                                 >
                                   <header
                                     className="header"
+                                    onClick={[Function]}
                                   >
                                     <SVGMockComponent
                                       className="img"
@@ -424,10 +424,10 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               >
                                 <section
                                   className="component"
-                                  onClick={[Function]}
                                 >
                                   <header
                                     className="header"
+                                    onClick={[Function]}
                                   >
                                     <SVGMockComponent
                                       className="img"
@@ -469,10 +469,10 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               >
                                 <section
                                   className="component"
-                                  onClick={[Function]}
                                 >
                                   <header
                                     className="header"
+                                    onClick={[Function]}
                                   >
                                     <SVGMockComponent
                                       className="img"
