@@ -57,7 +57,7 @@
 
 
 @media (max-width: 600px) {
-  .container {
+  .component {
     width: 100%;
   }
 }
