@@ -13,6 +13,7 @@ exports[`Login renders correctly 1`] = `
       Hent Brukerinfo
     </label>
     <Button
+      hoverIconLeft="TEST_FILE_STUB"
       iconLeft="TEST_FILE_STUB"
       onClick={[Function]}
       text="Logg inn"
@@ -67,6 +68,7 @@ exports[`Login renders with user info 1`] = `
       Hent Brukerinfo
     </label>
     <Button
+      hoverIconLeft="TEST_FILE_STUB"
       iconLeft="TEST_FILE_STUB"
       onClick={[Function]}
       text="Logg inn"
@@ -121,6 +123,7 @@ exports[`Login renders with user info and logged in 1`] = `
       Hent Brukerinfo
     </label>
     <Button
+      hoverIconLeft="TEST_FILE_STUB"
       iconLeft="TEST_FILE_STUB"
       onClick={[Function]}
       text="Logg ut"
