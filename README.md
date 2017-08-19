@@ -1,6 +1,8 @@
 # supreme-guacamole
 Committee application application for Online online.
 
+![image](https://user-images.githubusercontent.com/5422571/29482662-0f67dbb8-8496-11e7-8943-64ae41f75427.png)
+
 ## Configuration
 
 ### Authorization configuration
