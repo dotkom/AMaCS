@@ -220,13 +220,14 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               <CommitteeInfo
                                 committee={
                                   Object {
-                                    "icon": "/static/arrkom-square.svg",
+                                    "icon": "SVGMockComponent",
                                     "id": 1,
                                     "info": "Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
                                       tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
                                       immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
                                       mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
                                       person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
+                                    "key": "arrkom",
                                     "name": "Arrkom",
                                   }
                                 }
@@ -238,9 +239,8 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                   <header
                                     className="header"
                                   >
-                                    <img
+                                    <SVGMockComponent
                                       className="img"
-                                      src="/static/arrkom-square.svg"
                                     />
                                     <h3
                                       className="name"
@@ -262,7 +262,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               <CommitteeInfo
                                 committee={
                                   Object {
-                                    "icon": "/static/bedkom-square.svg",
+                                    "icon": "SVGMockComponent",
                                     "id": 3,
                                     "info": "Bedriftskomiteens oppgave er å knytte studentene og næringslivet
                                       sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
@@ -273,6 +273,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                       bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
                                       og bli kjent under et godt måltid. Bedriftskomiteen er også
                                       knutepunktet til våre samarbeidspartnere i næringslivet ellers.",
+                                    "key": "bedkom",
                                     "name": "Bedkom",
                                   }
                                 }
@@ -284,9 +285,8 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                   <header
                                     className="header"
                                   >
-                                    <img
+                                    <SVGMockComponent
                                       className="img"
-                                      src="/static/bedkom-square.svg"
                                     />
                                     <h3
                                       className="name"
@@ -312,7 +312,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               <CommitteeInfo
                                 committee={
                                   Object {
-                                    "icon": "/static/dotkom-square.svg",
+                                    "icon": "SVGMockComponent",
                                     "id": 4,
                                     "info": "Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
                                       datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
@@ -323,6 +323,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                       programmering, drifting eller teknologi generelt? Vi kan tilby et
                                       unikt verv i en meget sosial gjeng som driver med IT på høyt nivå.
                                       Ingen forkunnskaper er påkrevd annet enn stor lærevilje!",
+                                    "key": "dotkom",
                                     "name": "Dotkom",
                                   }
                                 }
@@ -334,9 +335,8 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                   <header
                                     className="header"
                                   >
-                                    <img
+                                    <SVGMockComponent
                                       className="img"
-                                      src="/static/dotkom-square.svg"
                                     />
                                     <h3
                                       className="name"
@@ -362,7 +362,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               <CommitteeInfo
                                 committee={
                                   Object {
-                                    "icon": "/static/fagkom-square.svg",
+                                    "icon": "SVGMockComponent",
                                     "id": 6,
                                     "info": "Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
                                       gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
@@ -371,6 +371,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                       kontakt med de aktuelle bedriftene. Som medlem av Fag- og kurskomiteen
                                       vil du få god innsikt i emner utenfor skolen, og samtidig knytte
                                       tettere bånd til din fremtidige arbeidsgiver.",
+                                    "key": "fagkom",
                                     "name": "Fagkom",
                                   }
                                 }
@@ -382,9 +383,8 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                   <header
                                     className="header"
                                   >
-                                    <img
+                                    <SVGMockComponent
                                       className="img"
-                                      src="/static/fagkom-square.svg"
                                     />
                                     <h3
                                       className="name"
@@ -408,7 +408,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               <CommitteeInfo
                                 committee={
                                   Object {
-                                    "icon": "/static/prokom-square.svg",
+                                    "icon": "SVGMockComponent",
                                     "id": 7,
                                     "info": "Profil- og aviskomiteen sørger for at Onlines ansikt utad er
                                       profesjonelt og konsistent. Alt profileringsmateriale som klær,
@@ -417,6 +417,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                       linjeforeningens tidsskrift, Offline. Har du en designerspire eller en
                                       skribent i magen? Vi leter etter deg som er interessert i design,
                                       markedsføring, journalisme eller skriving!",
+                                    "key": "prokom",
                                     "name": "Prokom",
                                   }
                                 }
@@ -428,9 +429,8 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                   <header
                                     className="header"
                                   >
-                                    <img
+                                    <SVGMockComponent
                                       className="img"
-                                      src="/static/prokom-square.svg"
                                     />
                                     <h3
                                       className="name"
@@ -454,7 +454,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               <CommitteeInfo
                                 committee={
                                   Object {
-                                    "icon": "/static/trikom-square.svg",
+                                    "icon": "SVGMockComponent",
                                     "id": 8,
                                     "info": "Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
                                       Dette inkluderer å arrangere små arrangementer i skoletiden,
@@ -462,6 +462,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                       Vi er også ansvarlig for drift av kontoret som vil si å sette opp
                                       kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
                                       Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.",
+                                    "key": "trikom",
                                     "name": "Trikom",
                                   }
                                 }
@@ -473,9 +474,8 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                   <header
                                     className="header"
                                   >
-                                    <img
+                                    <SVGMockComponent
                                       className="img"
-                                      src="/static/trikom-square.svg"
                                     />
                                     <h3
                                       className="name"

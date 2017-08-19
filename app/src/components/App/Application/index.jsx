@@ -137,9 +137,9 @@ class Application extends Component {
         <div className={_s.alternative}>
           <h2 className={_s.header}>Søknadstekst</h2>
           <TextArea
-            text={this.state.applicationText}
+            value={this.state.applicationText}
             onChange={(text) => this.setState({ applicationText: text })}
-            placeholder="Din søknadstext..."
+            placeholder="Din søknadstekst..."
           />
         </div>
         <div className={_s.alternative}>
