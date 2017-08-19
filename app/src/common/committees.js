@@ -1,5 +1,6 @@
 const committees = new Map([
   ['arrkom', {
+    key: 'arrkom',
     name: "Arrkom",
     info: `Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
     tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
@@ -9,6 +10,7 @@ const committees = new Map([
     icon: "/static/arrkom-square.svg",
   }],
   ['bedkom', {
+    key: 'bedkom',
     name: "Bedkom",
     info: `Bedriftskomiteens oppgave er å knytte studentene og næringslivet
     sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
@@ -22,6 +24,7 @@ const committees = new Map([
     icon: "/static/bedkom-square.svg",
   }],
   ['dotkom', {
+    key: 'dotkom',
     name: "Dotkom",
     info: `Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
     datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
@@ -35,6 +38,7 @@ const committees = new Map([
     icon: "/static/dotkom-square.svg",
   }],
   ['fagkom', {
+    key: "fagkom",
     name: "Fagkom",
     info: `Fag- og kurskomiteen tilbyr kunnskap om ny og spennende teknologi,
     gjennom blant annet kurs og foredrag. Vår jobb er å stimulere
@@ -46,6 +50,7 @@ const committees = new Map([
     icon: "/static/fagkom-square.svg",
   }],
   ['prokom', {
+    key: "prokom",
     name: "Prokom",
     info: `Profil- og aviskomiteen sørger for at Onlines ansikt utad er
     profesjonelt og konsistent. Alt profileringsmateriale som klær,
@@ -57,6 +62,7 @@ const committees = new Map([
     icon: "/static/prokom-square.svg",
   }],
   ['trikom', {
+    key: "trikom",
     name: "Trikom",
     info: `Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
     Dette inkluderer å arrangere små arrangementer i skoletiden,

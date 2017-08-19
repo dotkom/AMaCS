@@ -83,10 +83,13 @@ exports[`SelectedList renders correctly with one out of three choices 1`] = `
     <Selectable
       committee={
         Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "key": "testkom",
           "name": "Testkom",
         }
       }
-      onClick={null}
+      onClick={[Function]}
       selected={false}
       small={true}
     />
@@ -127,10 +130,13 @@ exports[`SelectedList renders correctly with three out of three choices 1`] = `
     <Selectable
       committee={
         Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "key": "testkom",
           "name": "Testkom",
         }
       }
-      onClick={null}
+      onClick={[Function]}
       selected={false}
       small={true}
     />
@@ -146,10 +152,13 @@ exports[`SelectedList renders correctly with three out of three choices 1`] = `
     <Selectable
       committee={
         Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "key": "bestkom",
           "name": "Bestkom",
         }
       }
-      onClick={null}
+      onClick={[Function]}
       selected={false}
       small={true}
     />
@@ -165,10 +174,13 @@ exports[`SelectedList renders correctly with three out of three choices 1`] = `
     <Selectable
       committee={
         Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "key": "sickkom",
           "name": "Sickkom",
         }
       }
-      onClick={null}
+      onClick={[Function]}
       selected={false}
       small={true}
     />
@@ -191,10 +203,13 @@ exports[`SelectedList renders correctly with two out of three choices 1`] = `
     <Selectable
       committee={
         Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "key": "testkom",
           "name": "Testkom",
         }
       }
-      onClick={null}
+      onClick={[Function]}
       selected={false}
       small={true}
     />
@@ -210,10 +225,13 @@ exports[`SelectedList renders correctly with two out of three choices 1`] = `
     <Selectable
       committee={
         Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "key": "bestkom",
           "name": "Bestkom",
         }
       }
-      onClick={null}
+      onClick={[Function]}
       selected={false}
       small={true}
     />
@@ -245,10 +263,13 @@ exports[`SelectedList renders with more than total choices 1`] = `
     <Selectable
       committee={
         Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "key": "testkom",
           "name": "Testkom",
         }
       }
-      onClick={null}
+      onClick={[Function]}
       selected={false}
       small={true}
     />
@@ -264,10 +285,13 @@ exports[`SelectedList renders with more than total choices 1`] = `
     <Selectable
       committee={
         Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "key": "bestkom",
           "name": "Bestkom",
         }
       }
-      onClick={null}
+      onClick={[Function]}
       selected={false}
       small={true}
     />
