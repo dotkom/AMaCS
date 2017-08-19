@@ -9,6 +9,7 @@ import NavigationButton from '../../NavigationButton';
 import Login from '../../Login';
 import TextArea from '../../TextArea';
 
+import blueArrow from 'assets/images/arrow-blue.png';
 import _s from 'assets/css/Application.css';
 
 class Application extends Component {
@@ -116,7 +117,7 @@ class Application extends Component {
     return (
       <div className={_s.component}>
         <NavigationButton link="/">
-          <img src="/static/arrow-blue.png" />
+          <img src={blueArrow} />
           Tilbake
         </NavigationButton>
         <div className={_s.alternative}>

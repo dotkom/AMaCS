@@ -12,7 +12,7 @@ exports[`Heading renders correctly 1`] = `
       to="/"
     >
       <img
-        src="https://online.ntnu.no/static/img/online_logo.svg"
+        src="TEST_FILE_STUB"
       />
     </Link>
   </div>

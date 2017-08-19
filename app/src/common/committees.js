@@ -1,9 +1,9 @@
-import arrkomIcon from '../../../static/arrkom-square.svg';
-import bedkomIcon from '../../../static/bedkom-square.svg';
-import dotkomIcon from '../../../static/dotkom-square.svg';
-import fagkomIcon from '../../../static/fagkom-square.svg';
-import prokomIcon from '../../../static/prokom-square.svg';
-import trikomIcon from '../../../static/trikom-square.svg';
+import arrkomIcon from 'assets/images/arrkom-square.svg';
+import bedkomIcon from 'assets/images/bedkom-square.svg';
+import dotkomIcon from 'assets/images/dotkom-square.svg';
+import fagkomIcon from 'assets/images/fagkom-square.svg';
+import prokomIcon from 'assets/images/prokom-square.svg';
+import trikomIcon from 'assets/images/trikom-square.svg';
 
 const committees = new Map([
   ['arrkom', {

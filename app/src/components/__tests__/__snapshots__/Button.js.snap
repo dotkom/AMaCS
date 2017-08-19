@@ -12,7 +12,7 @@ exports[`button renders correctly with icon 1`] = `
 >
   <img
     className="iconLeft"
-    src="/static/icon.png"
+    src="icon.png"
   />
   Button with icon
 </button>
@@ -25,7 +25,7 @@ exports[`button renders correctly with right icon 1`] = `
   Button with icon right
   <img
     className="iconRight"
-    src="/static/icon2.png"
+    src="icon2.png"
   />
 </button>
 `;

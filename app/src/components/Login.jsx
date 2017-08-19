@@ -8,7 +8,7 @@ import ToggleSwitch from "./ToggleSwitch";
 import _s from "assets/css/Login.css";
 import { connectServices } from 'services';
 
-const onlineIconWhite = "/static/online-icon-white.png"
+import onlineIconWhite from 'assets/images/online-icon-white.png';
 
 export function Login({info, loggedIn, authService, onChange}) {
 
