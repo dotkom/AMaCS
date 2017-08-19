@@ -129,6 +129,7 @@ class Application extends Component {
           />
         </div>
         <div className={classNames(_s.content, _s.selectWrapper)}>
+          <h2 className={_s.header}>Velg komite(er)</h2>
           <SelectContainer
             ordered={this.state.ordered}
             selected={this.state.selectedComittees}
