@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const APP_SRC = path.resolve(__dirname,'./app/src');
 
@@ -118,6 +119,7 @@ module.exports = {
         module.context && module.context.indexOf('node_modules') !== -1
       ),
     }),
+    new FaviconsWebpackPlugin('./app/favicon.png'),
     new webpack.NamedModulesPlugin()
   ],
 };
