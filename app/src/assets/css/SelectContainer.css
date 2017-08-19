@@ -6,6 +6,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: -0.8rem;
+}
+
+.selectables > * {
+  margin: 0.8rem;
 }
 
 .prioritizedSwitch {

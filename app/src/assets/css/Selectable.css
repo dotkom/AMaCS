@@ -3,9 +3,11 @@
   background: #ffffff;
   border: .1rem solid #fff;
   padding: 0.6em 0.75em;
-  margin: 0.8em;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
-  display: flex;
+  display: inline-flex;
+  max-height: 100%;
+  width: 100%;
+  max-width: 5.5rem;
   align-items: center;
   flex-direction: column;
   border-radius: 2px;
@@ -28,8 +30,8 @@
 }
 
 .container svg {
-  height: 3.8em;
-  width: 3.8em;
+  height: 100%;
+  width: 100%;
 }
 
 .name {
