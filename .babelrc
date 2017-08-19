@@ -5,7 +5,13 @@
       "browsers": "last 2 versions"
     }],
     "react"],
-  "plugins": ["react-hot-loader/babel", "transform-object-rest-spread"],
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-object-rest-spread",
+    ["module-resolver", {
+      "root": ["./app/src"]
+    }]
+  ],
   "env": {
     "test": {
       "plugins": ["transform-es2015-modules-commonjs"]
