@@ -1,8 +1,7 @@
 {
   "presets" : [
     ["env", {
-      "modules": false,
-      "browsers": "last 2 versions"
+      "modules": false
     }],
     "react"],
   "plugins": [
