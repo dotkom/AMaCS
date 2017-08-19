@@ -10,6 +10,7 @@ const APP_SRC = path.resolve(__dirname,'./app/src');
 module.exports = {
   entry: [
     'babel-polyfill',
+    'whatwg-fetch',
     'react-hot-loader/patch',
     path.join(APP_SRC,'./index.jsx')
   ],
