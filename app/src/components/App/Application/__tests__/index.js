@@ -1,9 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Application from '../';
+import { Application } from '../';
 
 describe('Application', () => {
+  
+  const applicationServiceMock = {
+    postApplication: jest.fn()
+  };
+  
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('renders correctly', () => {
     const wrapper = shallow(
       <Application />

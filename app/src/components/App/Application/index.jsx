@@ -13,7 +13,7 @@ import _s from 'assets/css/Application.css';
 
 import { CommitteeApplication, connectServices } from 'services';
 
-class Application extends Component {
+export class Application extends Component {
   constructor(props){
     super(props);
     this.state = {

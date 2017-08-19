@@ -109,7 +109,7 @@ module.exports = {
       SG_AUTH_ENDPOINT_USER: 'http://localhost:8000/sso/user/',
       SG_AUTH_ENDPOINT_REVOKE: 'http://localhost:8000/sso/o/revoke/',
       SG_APPLICATION_BACKEND: 'http://localhost:8000',
-      SG_APPLICATION_ENDPOINT: '/api/v1/committeeapplications/',
+      SG_APPLICATION_ENDPOINT: '/api/v1/committeeapplications/'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
