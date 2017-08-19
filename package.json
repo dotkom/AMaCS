@@ -9,6 +9,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "build": "webpack",
+    "build:prod": "webpack --config webpack.config.production.js",
     "watch": "webpack -w",
     "dev": "webpack-dev-server --watch-poll --inline --hot"
   },
@@ -50,7 +51,8 @@
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.2",
     "react-textarea-autosize": "^5.1.0",
-    "rxjs": "^5.4.3"
+    "rxjs": "^5.4.3",
+    "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

@@ -8,9 +8,8 @@ exports[`CommitteeInfo renders correctly 1`] = `
   <header
     className="header"
   >
-    <img
+    <icon-here
       className="img"
-      src="icon-here"
     />
     <h3
       className="name"
@@ -34,9 +33,8 @@ exports[`CommitteeInfo renders correctly after click 1`] = `
   <header
     className="header"
   >
-    <img
+    <icon-here
       className="img"
-      src="icon-here"
     />
     <h3
       className="name"

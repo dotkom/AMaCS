@@ -49,13 +49,15 @@
 }
 
 .img {
+  padding-top: 0.5rem;
   width: 2.5rem;
+  height: inherit;
   display: inline-block;
 }
 
 
 @media (max-width: 600px) {
-  .container {
+  .component {
     width: 100%;
   }
 }

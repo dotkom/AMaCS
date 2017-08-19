@@ -5,9 +5,9 @@ exports[`Selectable renders correctly 1`] = `
   className="container"
   onClick={null}
 >
-  <img
-    className="img"
-    src="icon-here"
+  <icon-here
+    height={64}
+    width={64}
   />
   <h2
     className="name"
