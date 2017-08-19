@@ -27,6 +27,12 @@
   color: #0060a3;
 }
 
+.button:disabled {
+  background: #f2f2f2;
+  border: 3px solid transparent;
+  color: #c0c0c0;
+}
+
 .iconLeft {
   width: 2rem;
   margin-right: 0.5rem;
