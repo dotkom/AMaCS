@@ -22,11 +22,12 @@ class CommitteeInfo extends React.Component {
   render() {
     const { committee } = this.props
     const { showInfo } = this.state
+    const Icon = committee.icon;
 
     return(
       <section onClick={() => this.handleClick()} className={classNames(_s.component, { [_s.open]: showInfo})}>
         <header className={_s.header}>
-          <img className={_s.img} src={ committee.icon } />
+          <Icon className={_s.img} />
           <h3 className={_s.name}>{ committee.name }</h3>
         </header>
         <div className={_s.info}>
