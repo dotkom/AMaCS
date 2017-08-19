@@ -91,4 +91,14 @@ describe('SelectedList', () => {
     wrapper.find('Selectable').last().simulate('click');
     expect(onChangeMock).toHaveBeenCalledWith('sickkom');
   });
+
+  it('renders correctly when ordered', () => {
+    const committees = [
+      createCommitteeObject('Testkom'),
+    ];
+    const wrapper = shallow(
+      <SelectedList ordered totalChoices={3} committees={committees} />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });

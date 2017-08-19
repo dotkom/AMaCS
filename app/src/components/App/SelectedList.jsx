@@ -14,7 +14,7 @@ function SelectedList({ committees, ordered, totalChoices, onChange }) {
           const key = committee  ? committee.key : `empty${i}`;
           return (
             <div key={key} className={_s.committee}>
-              <div className={_s.number}>{ i + 1 }</div>
+              { ordered && <div className={_s.number}>{ i + 1 }</div> }
               { committee && <Selectable onClick={() => onChange(committee.key)} small committee={committee} /> }
             </div>
           );

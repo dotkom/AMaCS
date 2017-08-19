@@ -59,6 +59,7 @@ class SelectContainer extends React.Component {
         </div>
         <div className={_s.selectedList}>
           <SelectedList
+            ordered={ordered}
             committees={selected.map(committeeName => committees.get(committeeName))}
             totalChoices={this.maxSelected}
             onChange={(committee) => { this.handleSelect(committee)}}
