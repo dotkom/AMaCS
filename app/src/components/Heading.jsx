@@ -21,7 +21,7 @@ class Heading extends React.Component {
           <Link to="/"><img src={onlineLogoWhiteGuacamole} /></Link>
         </div>
         <div className={_s.header}>
-          <p className={_s.text} >Komitésøknadssystemet</p>
+          <h1 className={_s.text} >Komitésøknadssystemet</h1>
         </div>
       </header>
     )
