@@ -38,7 +38,7 @@ export class CommitteeApplication {
       "email": this.email,
       "application_text": this.applicationText,
       "prioritized": this.isOrderd(),
-      "committees": this.committees.map((committee, index) => Object.assign({
+      "committees": this.committees.map((committee, index) => ({
         group: committeesMap.get(committee).id,
         priority: index + 1,
       }))
