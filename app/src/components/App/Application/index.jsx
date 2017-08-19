@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
+import classNames from 'classnames';
 
 import Button from '../../Button';
 import committeesMap from 'common/committees';
@@ -114,12 +115,10 @@ class Application extends Component {
   render() {
     return (
       <div className={_s.component}>
-        <div>
-          <NavigationButton link="/">
-            <img src="/static/arrow-blue.png" />
-            Tilbake
-          </NavigationButton>
-        </div>
+        <NavigationButton link="/">
+          <img src="/static/arrow-blue.png" />
+          Tilbake
+        </NavigationButton>
         <div className={_s.alternative}>
           <h2 className={_s.header}>Brukerinfo</h2>
           <Login
@@ -128,7 +127,7 @@ class Application extends Component {
             info={_.pick(this.state,["name","email","inputEnabled"])}
           />
         </div>
-        <div className={_s.content}>
+        <div className={classNames(_s.content, _s.selectWrapper)}>
           <SelectContainer
             ordered={this.state.ordered}
             selected={this.state.selectedComittees}
@@ -136,21 +135,19 @@ class Application extends Component {
             onOrderedChange={() => this._toggleOrdered()}
           />
         </div>
-        <div className={_s.alternative}>
+        <div className={classNames(_s.alternative, _s.application)}>
           <h2 className={_s.header}>Søknadstekst</h2>
           <TextArea
             value={this.state.applicationText}
             onChange={(text) => this.setState({ applicationText: text })}
             placeholder="Din søknadstekst..."
           />
-        </div>
-        <div className={_s.alternative}>
-            { this.state.responseMessage.length > 0 && <p>{this.state.responseMessage}</p> }
-              <Button
-                text={"Send søknad"}
-                disabled={this.state.disableSubmit}
-                onClick={() => this.submitApplication()}
-                />
+          { this.state.responseMessage.length > 0 && <p>{this.state.responseMessage}</p> }
+            <Button
+              text={"Send søknad"}
+              disabled={this.state.disableSubmit}
+              onClick={() => this.submitApplication()}
+              />
         </div>
       </div>
     );

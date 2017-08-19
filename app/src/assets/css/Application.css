@@ -3,7 +3,7 @@
 }
 
 .content, .alternative {
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.5rem 1.5rem;
 }
 
 .content > *, .alternative > * {
@@ -16,7 +16,7 @@
   background: #ffffff;
 }
 
-.content {
+.selectWrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -31,4 +31,8 @@
   flex-basis: 100%;
   text-transform: uppercase;
   font-weight: 300;
+}
+
+.application > * + * {
+  margin-top: 1rem;
 }
