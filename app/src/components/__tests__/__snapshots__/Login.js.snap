@@ -20,7 +20,7 @@ exports[`Login renders correctly 1`] = `
     <label
       className="label"
     >
-      Ingen Online bruker?
+      Ingen Online.ntnu.no-bruker?
     </label>
     <ToggleSwitch
       checked={false}
@@ -74,7 +74,7 @@ exports[`Login renders with user info 1`] = `
     <label
       className="label"
     >
-      Ingen Online bruker?
+      Ingen Online.ntnu.no-bruker?
     </label>
     <ToggleSwitch
       checked={false}
@@ -128,7 +128,7 @@ exports[`Login renders with user info and logged in 1`] = `
     <label
       className="label"
     >
-      Ingen Online bruker?
+      Ingen Online.ntnu.no-bruker?
     </label>
     <ToggleSwitch
       checked={false}

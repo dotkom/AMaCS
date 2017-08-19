@@ -38,7 +38,7 @@ export function Login({info, loggedIn, authService, onChange}) {
           iconLeft={onlineIconWhite}
           text={"Logg " + buttonText}
         />
-        <label className={_s.label}>Ingen Online bruker?</label>
+        <label className={_s.label}>Ingen Online.ntnu.no-bruker?</label>
         <ToggleSwitch 
           text="Fyll inn rukerinfo selv" 
           disabled={loggedIn} 
