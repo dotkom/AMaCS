@@ -11,7 +11,7 @@
 
 .header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  flex: 1;
+  flex: 1 0 auto;
   background: #ffffff;
   border: 0.1rem solid #ffffff;
   padding: 0.5rem;
