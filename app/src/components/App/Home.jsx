@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 
 import CommitteeInfo from "./CommitteeInfo";
 
@@ -11,8 +12,8 @@ function Home() {
   return (
     <div className={_s.container}>
       <p className={_s.text}>
-        Komitémedlemmene våre arbeider for at Online fungerer, og at alle informatikkstudenter har en flott studiehverdag.
-        Her kan du søke om å bli en av oss!
+        Online består av komiteer som sammen arbeider for at informatikkstudenter skal få en bedre hverdag.
+        Her kan du lese mer om hva hver enkelt komité gjør samt å sende inn en søknad om intervju.
       </p>
       <div className={_s.content}>
         { Array.from(committees).map(([key, committee]) => (
