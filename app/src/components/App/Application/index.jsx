@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
+import classNames from 'classnames';
 
 import Button from '../../Button';
 import committeesMap from 'common/committees';
@@ -113,12 +114,10 @@ class Application extends Component {
   render() {
     return (
       <div className={_s.component}>
-        <div>
-          <NavigationButton link="/">
-            <img src="/static/arrow-blue.png" />
-            Tilbake
-          </NavigationButton>
-        </div>
+        <NavigationButton link="/">
+          <img src="/static/arrow-blue.png" />
+          Tilbake
+        </NavigationButton>
         <div className={_s.alternative}>
           <h2 className={_s.header}>Brukerinfo</h2>
           <Login
@@ -127,7 +126,7 @@ class Application extends Component {
             info={_.pick(this.state,["name","email","inputEnabled"])}
           />
         </div>
-        <div className={_s.content}>
+        <div className={classNames(_s.content, _s.selectWrapper)}>
           <SelectContainer
             ordered={this.state.ordered}
             selected={this.state.selectedComittees}

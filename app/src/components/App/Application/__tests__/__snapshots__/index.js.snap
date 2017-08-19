@@ -4,16 +4,14 @@ exports[`Application renders correctly 1`] = `
 <div
   className="component"
 >
-  <div>
-    <NavigationButton
-      link="/"
-    >
-      <img
-        src="/static/arrow-blue.png"
-      />
-      Tilbake
-    </NavigationButton>
-  </div>
+  <NavigationButton
+    link="/"
+  >
+    <img
+      src="/static/arrow-blue.png"
+    />
+    Tilbake
+  </NavigationButton>
   <div
     className="alternative"
   >
@@ -35,7 +33,7 @@ exports[`Application renders correctly 1`] = `
     />
   </div>
   <div
-    className="content"
+    className="content selectWrapper"
   >
     <SelectContainer
       committees={
@@ -157,16 +155,14 @@ exports[`Application renders correctly with user info 1`] = `
 <div
   className="component"
 >
-  <div>
-    <NavigationButton
-      link="/"
-    >
-      <img
-        src="/static/arrow-blue.png"
-      />
-      Tilbake
-    </NavigationButton>
-  </div>
+  <NavigationButton
+    link="/"
+  >
+    <img
+      src="/static/arrow-blue.png"
+    />
+    Tilbake
+  </NavigationButton>
   <div
     className="alternative"
   >
@@ -188,7 +184,7 @@ exports[`Application renders correctly with user info 1`] = `
     />
   </div>
   <div
-    className="content"
+    className="content selectWrapper"
   >
     <SelectContainer
       committees={
@@ -310,16 +306,14 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
 <div
   className="component"
 >
-  <div>
-    <NavigationButton
-      link="/"
-    >
-      <img
-        src="/static/arrow-blue.png"
-      />
-      Tilbake
-    </NavigationButton>
-  </div>
+  <NavigationButton
+    link="/"
+  >
+    <img
+      src="/static/arrow-blue.png"
+    />
+    Tilbake
+  </NavigationButton>
   <div
     className="alternative"
   >
@@ -341,7 +335,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
     />
   </div>
   <div
-    className="content"
+    className="content selectWrapper"
   >
     <SelectContainer
       committees={
@@ -467,16 +461,14 @@ exports[`Application updates info on onChange from login 1`] = `
 <div
   className="component"
 >
-  <div>
-    <NavigationButton
-      link="/"
-    >
-      <img
-        src="/static/arrow-blue.png"
-      />
-      Tilbake
-    </NavigationButton>
-  </div>
+  <NavigationButton
+    link="/"
+  >
+    <img
+      src="/static/arrow-blue.png"
+    />
+    Tilbake
+  </NavigationButton>
   <div
     className="alternative"
   >
@@ -498,7 +490,7 @@ exports[`Application updates info on onChange from login 1`] = `
     />
   </div>
   <div
-    className="content"
+    className="content selectWrapper"
   >
     <SelectContainer
       committees={
@@ -620,16 +612,14 @@ exports[`Application updates user info on new props 1`] = `
 <div
   className="component"
 >
-  <div>
-    <NavigationButton
-      link="/"
-    >
-      <img
-        src="/static/arrow-blue.png"
-      />
-      Tilbake
-    </NavigationButton>
-  </div>
+  <NavigationButton
+    link="/"
+  >
+    <img
+      src="/static/arrow-blue.png"
+    />
+    Tilbake
+  </NavigationButton>
   <div
     className="alternative"
   >
@@ -651,7 +641,7 @@ exports[`Application updates user info on new props 1`] = `
     />
   </div>
   <div
-    className="content"
+    className="content selectWrapper"
   >
     <SelectContainer
       committees={
