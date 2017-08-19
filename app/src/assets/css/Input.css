@@ -3,14 +3,26 @@
 }
 
 .input {
-  background: #F4F4F4;
-  border: 1px solid #E0E0E0;
+  background: #ffffff;
+  border: 2px solid #e1e1e1;
+  border-radius: 2px;
   width: 100%;
-  font-size: 1.25rem;
-  padding: 1rem 0.5rem; 
+  font-size: 1.1rem;
+  padding: 0.7rem 0.4rem;
+  color: #333333;
+}
+
+.input:focus {
+  border-color: #55a8e2;
+  outline: none;
 }
 
 .input::placeholder {
+  color: #a5a5a5;
+}
+
+.input:disabled, .input:disabled::placeholder {
+  background: #f0f0f0;
   color: #b8b8b8;
 }
 

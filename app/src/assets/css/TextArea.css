@@ -1,7 +1,6 @@
 .component {
-  background: #F4F4F4;
-  border: 1px solid #E0E0E0;
-  color: #333333;
+  background: #ffffff;
+  border: 2px solid #e1e1e1;
   display: block;
   width: 100%;
   min-height: 10rem;
@@ -10,6 +9,11 @@
   padding: 0.5rem;
 }
 
+.component:focus {
+  border-color: #55a8e2;
+  outline: none;
+}
+
 .component::placeholder {
-  color: #B8B8B8
+  color: #a5a5a5;
 }
