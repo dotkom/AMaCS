@@ -3,10 +3,10 @@
 exports[`CommitteeInfo renders correctly 1`] = `
 <section
   className="component"
-  onClick={[Function]}
 >
   <header
     className="header"
+    onClick={[Function]}
   >
     <icon-here
       className="img"
@@ -27,11 +27,11 @@ exports[`CommitteeInfo renders correctly 1`] = `
 
 exports[`CommitteeInfo renders correctly after click 1`] = `
 <section
-  className="component open"
-  onClick={[Function]}
+  className="component"
 >
   <header
     className="header"
+    onClick={[Function]}
   >
     <icon-here
       className="img"
