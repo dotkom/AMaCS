@@ -11,11 +11,11 @@ exports[`CommitteeInfo renders correctly 1`] = `
     <icon-here
       className="img"
     />
-    <h3
+    <h2
       className="name"
     >
       Testkom
-    </h3>
+    </h2>
   </header>
   <div
     className="info"
@@ -36,11 +36,11 @@ exports[`CommitteeInfo renders correctly after click 1`] = `
     <icon-here
       className="img"
     />
-    <h3
+    <h2
       className="name"
     >
       Testkom
-    </h3>
+    </h2>
   </header>
   <div
     className="info"
