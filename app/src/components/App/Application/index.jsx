@@ -74,7 +74,7 @@ class Application extends Component {
           <TextArea
             value={this.state.applicationText}
             onChange={(text) => this.setState({ applicationText: text })}
-            placeholder="Din søknadstext..."
+            placeholder="Din søknadstekst..."
           />
         </div>
       </div>

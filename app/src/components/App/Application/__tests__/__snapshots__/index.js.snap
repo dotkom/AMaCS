@@ -131,7 +131,7 @@ exports[`Application renders correctly 1`] = `
     </h2>
     <TextArea
       onChange={[Function]}
-      placeholder="Din søknadstext..."
+      placeholder="Din søknadstekst..."
       value=""
     />
   </div>
@@ -269,7 +269,7 @@ exports[`Application renders correctly with user info 1`] = `
     </h2>
     <TextArea
       onChange={[Function]}
-      placeholder="Din søknadstext..."
+      placeholder="Din søknadstekst..."
       value=""
     />
   </div>
@@ -411,7 +411,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
     </h2>
     <TextArea
       onChange={[Function]}
-      placeholder="Din søknadstext..."
+      placeholder="Din søknadstekst..."
       value=""
     />
   </div>
@@ -549,7 +549,7 @@ exports[`Application updates info on onChange from login 1`] = `
     </h2>
     <TextArea
       onChange={[Function]}
-      placeholder="Din søknadstext..."
+      placeholder="Din søknadstekst..."
       value=""
     />
   </div>
@@ -687,7 +687,7 @@ exports[`Application updates user info on new props 1`] = `
     </h2>
     <TextArea
       onChange={[Function]}
-      placeholder="Din søknadstext..."
+      placeholder="Din søknadstekst..."
       value=""
     />
   </div>
