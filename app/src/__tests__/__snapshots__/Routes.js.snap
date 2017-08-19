@@ -132,6 +132,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                             onClick={[Function]}
                           >
                             <img
+                              alt="Online logo"
                               src="TEST_FILE_STUB"
                             />
                           </a>
@@ -140,11 +141,11 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                       <div
                         className="header"
                       >
-                        <p
+                        <h1
                           className="text"
                         >
                           Komitésøknadssystemet
-                        </p>
+                        </h1>
                       </div>
                     </header>
                   </Heading>

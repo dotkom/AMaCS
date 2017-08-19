@@ -8,6 +8,7 @@ exports[`Application renders correctly 1`] = `
     link="/"
   >
     <img
+      alt="Pil"
       src="TEST_FILE_STUB"
     />
     Tilbake
@@ -161,6 +162,7 @@ exports[`Application renders correctly with user info 1`] = `
     link="/"
   >
     <img
+      alt="Pil"
       src="TEST_FILE_STUB"
     />
     Tilbake
@@ -314,6 +316,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
     link="/"
   >
     <img
+      alt="Pil"
       src="TEST_FILE_STUB"
     />
     Tilbake
@@ -471,6 +474,7 @@ exports[`Application updates info on onChange from login 1`] = `
     link="/"
   >
     <img
+      alt="Pil"
       src="TEST_FILE_STUB"
     />
     Tilbake
@@ -624,6 +628,7 @@ exports[`Application updates user info on new props 1`] = `
     link="/"
   >
     <img
+      alt="Pil"
       src="TEST_FILE_STUB"
     />
     Tilbake
