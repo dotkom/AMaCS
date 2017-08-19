@@ -49,6 +49,17 @@ module.exports = {
         ],
       },
       {
+        test: /\.(png|gif|jpe?g)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ],
+      },
+      {
         test: /\.css$/,
         use: [
           {loader: 'style-loader'},

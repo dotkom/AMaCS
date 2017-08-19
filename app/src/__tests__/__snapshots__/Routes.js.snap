@@ -132,7 +132,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                             onClick={[Function]}
                           >
                             <img
-                              src="https://online.ntnu.no/static/img/online_logo.svg"
+                              src="TEST_FILE_STUB"
                             />
                           </a>
                         </Link>
@@ -143,7 +143,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                         <p
                           className="text"
                         >
-                          Komitésøknadssystemet Supreme-Guacamole
+                          Komitésøknadssystemet
                         </p>
                       </div>
                     </header>

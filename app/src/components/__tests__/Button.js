@@ -23,7 +23,7 @@ describe('button', () => {
 
   it('renders correctly with icon', () => {
     const wrapper = shallow(
-      <Button text="Button with icon" iconLeft="/static/icon.png" />
+      <Button text="Button with icon" iconLeft="icon.png" />
     );
 
     expect(wrapper).toMatchSnapshot();
@@ -31,7 +31,7 @@ describe('button', () => {
 
   it('renders correctly with right icon', () => {
     const wrapper = shallow(
-      <Button text="Button with icon right" iconRight="/static/icon2.png" />
+      <Button text="Button with icon right" iconRight="icon2.png" />
     );
 
     expect(wrapper).toMatchSnapshot();

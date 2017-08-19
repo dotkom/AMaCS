@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 import _s from 'assets/css/Heading.css';
 
-const onlineLogoWhite = "/static/online-logo-white.png"
-const onlineLogoWhiteGuacamole = "/static/online-logo-white-guacamole.png"
+import onlineLogoWhiteGuacamole from 'assets/images/online-logo-white-guacamole.png';
 
 class Heading extends React.Component {
   constructor(props) {
@@ -19,10 +18,10 @@ class Heading extends React.Component {
     return (
       <header className={_s.heading}>
         <div className={_s.logo}>
-          <Link to="/"><img src="https://online.ntnu.no/static/img/online_logo.svg" /></Link>
+          <Link to="/"><img src={onlineLogoWhiteGuacamole} /></Link>
         </div>
         <div className={_s.header}>
-          <p className={_s.text} >Komitésøknadssystemet Supreme-Guacamole</p>
+          <p className={_s.text} >Komitésøknadssystemet</p>
         </div>
       </header>
     )
