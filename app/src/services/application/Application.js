@@ -1,7 +1,9 @@
 
 import _ from 'lodash';
 
-export class ComitteeApplicaton{
+import committeesMap from 'common/committees';
+
+export class CommitteeApplication {
   constructor(id=null, name, email, applicationText, committees, ordered){
     this._name = name;
     this._email = email;
@@ -36,7 +38,10 @@ export class ComitteeApplicaton{
       "email": this.email,
       "application_text": this.applicationText,
       "prioritized": this.isOrderd(),
-      "committees": this.committees
+      "committees": this.committees.map((committee, index) => Object.assign({
+        group: committeesMap.get(committee).id,
+        priority: index + 1,
+      }))
     }
   }
 }

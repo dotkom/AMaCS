@@ -10,3 +10,8 @@ export const OAUTH_SETTINGS = {
     end_session_endpoint: process.env.SG_AUTH_ENDPOINT_REVOKE,
   }
 }
+
+export const API_SETTINGS = {
+  host: process.env.SG_APPLICATION_BACKEND,
+  application_endpoint: process.env.SG_APPLICATION_ENDPOINT
+} 

@@ -6,14 +6,17 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import Routes from "./Routes"
 
-import { ServiceProvider, ServiceManager, HttpServiceProvider, AuthServiceProvider } from 'services';
-import { OAUTH_SETTINGS } from 'common/constants';
+import { ServiceProvider, ServiceManager, HttpServiceProvider, AuthServiceProvider, ApplicationServiceProvider } from 'services';
+import { OAUTH_SETTINGS, API_SETTINGS } from 'common/constants';
 
 const serviceManager = new ServiceManager();
 serviceManager.registerService("http.service",HttpServiceProvider);
 serviceManager.alias("http","http.service");
 serviceManager.registerService("auth.service",AuthServiceProvider,OAUTH_SETTINGS);
 serviceManager.alias("auth","auth.service");
+serviceManager.registerService("application.service",ApplicationServiceProvider,`${API_SETTINGS.host}${API_SETTINGS.application_endpoint}`);
+serviceManager.alias("application","application.service");
+
 
 const render = Component => {
   ReactDOM.render(
