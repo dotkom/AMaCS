@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SelectedList renders correctly with empty choices 1`] = `
+exports[`SelectedList renders correctly when ordered 1`] = `
 <div
   className="container"
 >
@@ -12,6 +12,19 @@ exports[`SelectedList renders correctly with empty choices 1`] = `
     >
       1
     </div>
+    <Selectable
+      committee={
+        Object {
+          "icon": "MockIcon",
+          "info": "Default info",
+          "key": "testkom",
+          "name": "Testkom",
+        }
+      }
+      onClick={[Function]}
+      selected={false}
+      small={true}
+    />
   </div>
   <div
     className="committee"
@@ -34,37 +47,35 @@ exports[`SelectedList renders correctly with empty choices 1`] = `
 </div>
 `;
 
+exports[`SelectedList renders correctly with empty choices 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="committee"
+  />
+  <div
+    className="committee"
+  />
+  <div
+    className="committee"
+  />
+</div>
+`;
+
 exports[`SelectedList renders correctly with no choices 1`] = `
 <div
   className="container"
 >
   <div
     className="committee"
-  >
-    <div
-      className="number"
-    >
-      1
-    </div>
-  </div>
+  />
   <div
     className="committee"
-  >
-    <div
-      className="number"
-    >
-      2
-    </div>
-  </div>
+  />
   <div
     className="committee"
-  >
-    <div
-      className="number"
-    >
-      3
-    </div>
-  </div>
+  />
 </div>
 `;
 
@@ -75,11 +86,6 @@ exports[`SelectedList renders correctly with one out of three choices 1`] = `
   <div
     className="committee"
   >
-    <div
-      className="number"
-    >
-      1
-    </div>
     <Selectable
       committee={
         Object {
@@ -96,22 +102,10 @@ exports[`SelectedList renders correctly with one out of three choices 1`] = `
   </div>
   <div
     className="committee"
-  >
-    <div
-      className="number"
-    >
-      2
-    </div>
-  </div>
+  />
   <div
     className="committee"
-  >
-    <div
-      className="number"
-    >
-      3
-    </div>
-  </div>
+  />
 </div>
 `;
 
@@ -122,11 +116,6 @@ exports[`SelectedList renders correctly with three out of three choices 1`] = `
   <div
     className="committee"
   >
-    <div
-      className="number"
-    >
-      1
-    </div>
     <Selectable
       committee={
         Object {
@@ -144,11 +133,6 @@ exports[`SelectedList renders correctly with three out of three choices 1`] = `
   <div
     className="committee"
   >
-    <div
-      className="number"
-    >
-      2
-    </div>
     <Selectable
       committee={
         Object {
@@ -166,11 +150,6 @@ exports[`SelectedList renders correctly with three out of three choices 1`] = `
   <div
     className="committee"
   >
-    <div
-      className="number"
-    >
-      3
-    </div>
     <Selectable
       committee={
         Object {
@@ -195,11 +174,6 @@ exports[`SelectedList renders correctly with two out of three choices 1`] = `
   <div
     className="committee"
   >
-    <div
-      className="number"
-    >
-      1
-    </div>
     <Selectable
       committee={
         Object {
@@ -217,11 +191,6 @@ exports[`SelectedList renders correctly with two out of three choices 1`] = `
   <div
     className="committee"
   >
-    <div
-      className="number"
-    >
-      2
-    </div>
     <Selectable
       committee={
         Object {
@@ -238,13 +207,7 @@ exports[`SelectedList renders correctly with two out of three choices 1`] = `
   </div>
   <div
     className="committee"
-  >
-    <div
-      className="number"
-    >
-      3
-    </div>
-  </div>
+  />
 </div>
 `;
 
@@ -255,11 +218,6 @@ exports[`SelectedList renders with more than total choices 1`] = `
   <div
     className="committee"
   >
-    <div
-      className="number"
-    >
-      1
-    </div>
     <Selectable
       committee={
         Object {
@@ -277,11 +235,6 @@ exports[`SelectedList renders with more than total choices 1`] = `
   <div
     className="committee"
   >
-    <div
-      className="number"
-    >
-      2
-    </div>
     <Selectable
       committee={
         Object {

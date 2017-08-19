@@ -1,5 +1,5 @@
 .container {
-  display: flex;
+  display: inline-flex;
   cursor: pointer;
   background-color: #ffffff;
   border: 2px solid #636363;
@@ -22,10 +22,18 @@
   background: #D06969;
 }
 
+.container:hover .slider {
+  background: #a55555;
+}
+
 .checked {
   margin-left: 1.5rem;
   margin-right: -0.17rem;
   background: #0060A3;
+}
+
+.container:hover .checked {
+  background: #004b80;
 }
 
 .icon {

@@ -1,9 +1,18 @@
+.component > * + * {
+  margin-top: 1rem;
+}
+
 .selectables {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.selectedList {
-  
+.prioritizedSwitch {
+  display: flex;
+  align-items: center;
+}
+
+.prioritizedSwitch > * + * {
+  margin-left: 0.5rem;
 }

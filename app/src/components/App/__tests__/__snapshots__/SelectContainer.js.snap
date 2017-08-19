@@ -2,7 +2,7 @@
 
 exports[`SelectContainer renders correctly with none selected 1`] = `
 <div
-  className="container"
+  className="component"
 >
   <p>
     Velg komiteene du ønsker å søke ved å klikke på dem
@@ -65,6 +65,16 @@ exports[`SelectContainer renders correctly with none selected 1`] = `
     />
   </div>
   <div
+    className="prioritizedSwitch"
+  >
+    <ToggleSwitch
+      checked={false}
+    />
+    <span>
+      Prioritert rekkefølge?
+    </span>
+  </div>
+  <div
     className="selectedList"
   >
     <SelectedList
@@ -78,7 +88,7 @@ exports[`SelectContainer renders correctly with none selected 1`] = `
 
 exports[`SelectContainer renders correctly with one selected 1`] = `
 <div
-  className="container"
+  className="component"
 >
   <p>
     Velg komiteene du ønsker å søke ved å klikke på dem
@@ -139,6 +149,16 @@ exports[`SelectContainer renders correctly with one selected 1`] = `
       selected={false}
       small={false}
     />
+  </div>
+  <div
+    className="prioritizedSwitch"
+  >
+    <ToggleSwitch
+      checked={false}
+    />
+    <span>
+      Prioritert rekkefølge?
+    </span>
   </div>
   <div
     className="selectedList"
@@ -163,7 +183,7 @@ exports[`SelectContainer renders correctly with one selected 1`] = `
 
 exports[`SelectContainer renders correctly with two selected 1`] = `
 <div
-  className="container"
+  className="component"
 >
   <p>
     Velg komiteene du ønsker å søke ved å klikke på dem
@@ -224,6 +244,16 @@ exports[`SelectContainer renders correctly with two selected 1`] = `
       selected={false}
       small={false}
     />
+  </div>
+  <div
+    className="prioritizedSwitch"
+  >
+    <ToggleSwitch
+      checked={false}
+    />
+    <span>
+      Prioritert rekkefølge?
+    </span>
   </div>
   <div
     className="selectedList"

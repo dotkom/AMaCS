@@ -28,7 +28,7 @@ export function Login({info, loggedIn, authService, onChange}) {
   }
 
   const buttonText = loggedIn ? 'ut' : 'inn'
-
+  const checked = info.inputEnabled && !loggedIn;
   return(
     <div className={_s.container}>
       <div className={_s.box}>
@@ -42,8 +42,8 @@ export function Login({info, loggedIn, authService, onChange}) {
         <ToggleSwitch 
           text="Fyll inn rukerinfo selv" 
           disabled={loggedIn} 
-          checked={info.inputEnabled && !loggedIn}
-          onChange={(...a) => handleInputChange("inputEnabled",...a)}
+          checked={checked}
+          onChange={() => handleInputChange("inputEnabled", !checked)}
         />
       </div>
       <div className={_s.box}>

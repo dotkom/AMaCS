@@ -122,6 +122,7 @@ exports[`Application renders correctly 1`] = `
         }
       }
       onChange={[Function]}
+      onOrderedChange={[Function]}
       ordered={true}
       prioritized={false}
       selected={Array []}
@@ -275,6 +276,7 @@ exports[`Application renders correctly with user info 1`] = `
         }
       }
       onChange={[Function]}
+      onOrderedChange={[Function]}
       ordered={true}
       prioritized={false}
       selected={Array []}
@@ -428,6 +430,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
         }
       }
       onChange={[Function]}
+      onOrderedChange={[Function]}
       ordered={true}
       prioritized={false}
       selected={
@@ -585,6 +588,7 @@ exports[`Application updates info on onChange from login 1`] = `
         }
       }
       onChange={[Function]}
+      onOrderedChange={[Function]}
       ordered={true}
       prioritized={false}
       selected={Array []}
@@ -738,6 +742,7 @@ exports[`Application updates user info on new props 1`] = `
         }
       }
       onChange={[Function]}
+      onOrderedChange={[Function]}
       ordered={true}
       prioritized={false}
       selected={Array []}

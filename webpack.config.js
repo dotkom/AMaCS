@@ -66,13 +66,7 @@ module.exports = {
         test: /\.svg$/,
         loaders: [
           {
-            loader: 'babel-loader'
-          },
-          {
-            loader: 'react-svg-loader',
-            query: {
-              jsx: true
-            }
+            loader: 'svg-react-loader',
           }
         ]
       }
