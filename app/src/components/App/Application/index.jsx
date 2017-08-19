@@ -16,7 +16,6 @@ import { CommitteeApplication, connectServices } from 'services';
 class Application extends Component {
   constructor(props){
     super(props);
-    console.log(props.applicationService);
     this.state = {
       name: props.user ? props.user.fullname : "",
       email: props.user ? props.user.email : "",
