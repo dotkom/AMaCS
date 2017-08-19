@@ -19,6 +19,9 @@
   align-items: center;
   transition: 0.25s border;
   border-radius: 2px;
+  user-select: none;
+  cursor: pointer;
+  cursor: hand;
 }
 
 .header:hover {

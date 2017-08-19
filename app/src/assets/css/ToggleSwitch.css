@@ -5,6 +5,7 @@
   border: 2px solid #636363;
   border-radius: 2rem;
   justify-content: center;
+  user-select: none;
 }
 
 .container:focus {
