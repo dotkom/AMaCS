@@ -43,6 +43,7 @@
     ]
   },
   "dependencies": {
+    "babel-plugin-module-resolver": "^2.7.1",
     "babel-polyfill": "^6.23.0",
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",

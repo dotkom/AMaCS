@@ -20,10 +20,6 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   resolve: {
-    modules: [
-      APP_SRC,
-      'node_modules',
-    ],
     extensions: ['.js', '.json', '.jsx']
   },
   module: {
