@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import _s from 'assets/css/Heading.css';
 
-import onlineLogoWhiteGuacamole from 'assets/images/online-logo-white-guacamole.png';
+import onlineLogoWhiteGuacamole from 'assets/images/online-logo-white.png';
 
 class Heading extends React.Component {
   constructor(props) {
