@@ -66,12 +66,19 @@ class Application extends Component {
     const uri = `${process.env.SG_APPLICATION_BACKEND}${process.env.SG_APPLICATION_ENDPOINT}`;
     this.setState({ disableSubmit: true });
 
+    const headers = {
+      'Content-Type': 'application/json'
+    }
+    if (this.props.user && this.props.user._access_token.length > 0) {
+      headers.Authorization = `Bearer ${this.props.user._access_token}`;
+      application.name = '';
+      application.email = '';
+    }
+
     try {
       const resp = await fetch(uri, {
+        headers,
         body: JSON.stringify(application),
-        headers: {
-          'Content-Type': 'application/json'
-        },
         method: 'POST',
       });
 
@@ -79,7 +86,7 @@ class Application extends Component {
 
       if (resp.status === 201) {
         this.setState({
-          responseMessage: 'Søknad er sendt.' ,
+          responseMessage: 'Søknad er sendt.',
         });
         return;
       }
