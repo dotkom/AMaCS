@@ -14,8 +14,7 @@
   transition: 0.2s;
   display: block;
   user-select: none;
-  cursor: pointer;
-  cursor: hand;
+  cursor: default;
 }
 
 .buttonContent {
@@ -51,5 +50,5 @@
 }
 
 a .button:hover {
-  cursor: pointer;
+   
 }

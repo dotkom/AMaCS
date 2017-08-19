@@ -11,8 +11,7 @@
   border-radius: 2px;
   transition: 0.25s border-color;
   user-select: none;
-  cursor: pointer;
-  cursor: hand;
+  cursor: default;
 }
 
 .container:hover, .container.container.selected:hover {
