@@ -9,6 +9,7 @@ import _s from "assets/css/Login.css";
 import { connectServices } from 'services';
 
 import onlineIconWhite from 'assets/images/online-icon-white.png';
+import onlineIcon from 'assets/images/online-icon.png';
 
 export function Login({info, loggedIn, authService, onChange}) {
 
@@ -36,6 +37,7 @@ export function Login({info, loggedIn, authService, onChange}) {
         <Button
           onClick={handleLoginClick}
           iconLeft={onlineIconWhite}
+          hoverIconLeft={onlineIcon}
           text={"Logg " + buttonText}
         />
         <label className={_s.label}>Ingen Online bruker?</label>

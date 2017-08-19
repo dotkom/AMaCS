@@ -2,17 +2,47 @@ import React from "react";
 
 import _s from 'assets/css/Button.css';
 
+class Button extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      hover: false
+    }
+  }
 
-function Button({ children, onClick, text, iconLeft, iconRight, disabled }) {
-  return(
-    <button className={_s.button} onClick={onClick} disabled={disabled}>
-      <div className={_s.buttonContent}>
-      { iconLeft && <img className={_s.iconLeft} src={iconLeft} /> }
-      { text }
-      { iconRight && <img className={_s.iconRight} src={iconRight} /> }
-      </div>
-    </button>
-  )
+  _mouseEnter(...a){
+    this.setState({hover: true});
+    if(this.props.onMouseEnter)
+      this.props.onMouseEnter(...a);
+  }
+
+  _mouseLeave(...a){
+    this.setState({hover: false});
+    if(this.props.onMouseLeave)
+      this.props.onMouseLeave(...a);
+  }
+
+  render(){
+    const { children, text, iconLeft, iconRight, hoverIconLeft, hoverIconRight } = this.props;
+    
+    const icLeft = this.state.hover ? hoverIconLeft || iconLeft : iconLeft || hoverIconLeft;
+    const icRight = this.state.hover ? hoverIconRight || iconRight : iconRight || hoverIconRight;
+    
+    return (
+      <button 
+        {...this.props} 
+        className={_s.button} 
+        onMouseEnter={(...a) => this._mouseEnter(...a)}
+        onMouseLeave={(...a) => this._mouseLeave(...a)}
+      >
+        <div className={_s.buttonContent}>
+          { icLeft && <img className={_s.iconLeft} src={icLeft} /> }
+          { text }
+          { icRight && <img className={_s.iconRight} src={icRight} /> }
+        </div>
+      </button>
+    );
+  }
 }
 
 export default Button;
