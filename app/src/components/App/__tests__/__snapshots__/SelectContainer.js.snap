@@ -67,7 +67,9 @@ exports[`SelectContainer renders correctly with none selected 1`] = `
   <div
     className="prioritizedSwitch"
   >
-    <ToggleSwitch />
+    <ToggleSwitch
+      checked={false}
+    />
     <span>
       Prioritert rekkefølge?
     </span>
@@ -151,7 +153,9 @@ exports[`SelectContainer renders correctly with one selected 1`] = `
   <div
     className="prioritizedSwitch"
   >
-    <ToggleSwitch />
+    <ToggleSwitch
+      checked={false}
+    />
     <span>
       Prioritert rekkefølge?
     </span>
@@ -244,7 +248,9 @@ exports[`SelectContainer renders correctly with two selected 1`] = `
   <div
     className="prioritizedSwitch"
   >
-    <ToggleSwitch />
+    <ToggleSwitch
+      checked={false}
+    />
     <span>
       Prioritert rekkefølge?
     </span>

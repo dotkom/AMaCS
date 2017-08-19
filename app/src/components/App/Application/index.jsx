@@ -42,10 +42,11 @@ class Application extends Component {
     });
   }
 
-  _setOrdered(ordered){
+  _toggleOrdered() {
+    const { ordered, selectedComittees} = this.state;
     this.setState({
-      ordered: ordered,
-      selectedComittees: ordered ? [] : this.state.selectedComittees
+      ordered: !ordered,
+      selectedComittees: !ordered ? [] : selectedComittees
     });
   }
 
@@ -132,7 +133,7 @@ class Application extends Component {
             ordered={this.state.ordered}
             selected={this.state.selectedComittees}
             onChange={(selected) => this._selectedChanged(selected) }
-            onOrderedChange={(ordered) => this._setOrdered(ordered)}
+            onOrderedChange={() => this._toggleOrdered()}
           />
         </div>
         <div className={_s.alternative}>
