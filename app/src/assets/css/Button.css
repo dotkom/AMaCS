@@ -11,10 +11,14 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.5rem;
+  transition: 0.2s;
+  display: block;
+}
+
+.buttonContent {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.2s;
 }
 
 .button:hover {

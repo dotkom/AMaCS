@@ -3,18 +3,26 @@
 exports[`button renders correctly 1`] = `
 <button
   className="button"
-/>
+>
+  <div
+    className="buttonContent"
+  />
+</button>
 `;
 
 exports[`button renders correctly with icon 1`] = `
 <button
   className="button"
 >
-  <img
-    className="iconLeft"
-    src="icon.png"
-  />
-  Button with icon
+  <div
+    className="buttonContent"
+  >
+    <img
+      className="iconLeft"
+      src="icon.png"
+    />
+    Button with icon
+  </div>
 </button>
 `;
 
@@ -22,11 +30,15 @@ exports[`button renders correctly with right icon 1`] = `
 <button
   className="button"
 >
-  Button with icon right
-  <img
-    className="iconRight"
-    src="icon2.png"
-  />
+  <div
+    className="buttonContent"
+  >
+    Button with icon right
+    <img
+      className="iconRight"
+      src="icon2.png"
+    />
+  </div>
 </button>
 `;
 
@@ -34,6 +46,10 @@ exports[`button renders correctly with text 1`] = `
 <button
   className="button"
 >
-  Button with text
+  <div
+    className="buttonContent"
+  >
+    Button with text
+  </div>
 </button>
 `;

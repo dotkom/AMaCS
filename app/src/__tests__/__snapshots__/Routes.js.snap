@@ -513,7 +513,11 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                     <button
                                       className="button"
                                     >
-                                      Gå til søknad
+                                      <div
+                                        className="buttonContent"
+                                      >
+                                        Gå til søknad
+                                      </div>
                                     </button>
                                   </Button>
                                 </a>
