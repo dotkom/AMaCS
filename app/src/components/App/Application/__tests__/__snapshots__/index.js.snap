@@ -126,7 +126,7 @@ exports[`Application renders correctly 1`] = `
     />
   </div>
   <div
-    className="alternative"
+    className="alternative application"
   >
     <h2
       className="header"
@@ -138,10 +138,6 @@ exports[`Application renders correctly 1`] = `
       placeholder="Din søknadstekst..."
       value=""
     />
-  </div>
-  <div
-    className="alternative"
-  >
     <Button
       disabled={false}
       onClick={[Function]}
@@ -277,7 +273,7 @@ exports[`Application renders correctly with user info 1`] = `
     />
   </div>
   <div
-    className="alternative"
+    className="alternative application"
   >
     <h2
       className="header"
@@ -289,10 +285,6 @@ exports[`Application renders correctly with user info 1`] = `
       placeholder="Din søknadstekst..."
       value=""
     />
-  </div>
-  <div
-    className="alternative"
-  >
     <Button
       disabled={false}
       onClick={[Function]}
@@ -432,7 +424,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
     />
   </div>
   <div
-    className="alternative"
+    className="alternative application"
   >
     <h2
       className="header"
@@ -444,10 +436,6 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
       placeholder="Din søknadstekst..."
       value=""
     />
-  </div>
-  <div
-    className="alternative"
-  >
     <Button
       disabled={false}
       onClick={[Function]}
@@ -583,7 +571,7 @@ exports[`Application updates info on onChange from login 1`] = `
     />
   </div>
   <div
-    className="alternative"
+    className="alternative application"
   >
     <h2
       className="header"
@@ -595,10 +583,6 @@ exports[`Application updates info on onChange from login 1`] = `
       placeholder="Din søknadstekst..."
       value=""
     />
-  </div>
-  <div
-    className="alternative"
-  >
     <Button
       disabled={false}
       onClick={[Function]}
@@ -734,7 +718,7 @@ exports[`Application updates user info on new props 1`] = `
     />
   </div>
   <div
-    className="alternative"
+    className="alternative application"
   >
     <h2
       className="header"
@@ -746,10 +730,6 @@ exports[`Application updates user info on new props 1`] = `
       placeholder="Din søknadstekst..."
       value=""
     />
-  </div>
-  <div
-    className="alternative"
-  >
     <Button
       disabled={false}
       onClick={[Function]}

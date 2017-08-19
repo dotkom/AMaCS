@@ -133,21 +133,19 @@ class Application extends Component {
             onChange={(selected) => this._selectedChanged(selected) }
           />
         </div>
-        <div className={_s.alternative}>
+        <div className={classNames(_s.alternative, _s.application)}>
           <h2 className={_s.header}>Søknadstekst</h2>
           <TextArea
             value={this.state.applicationText}
             onChange={(text) => this.setState({ applicationText: text })}
             placeholder="Din søknadstekst..."
           />
-        </div>
-        <div className={_s.alternative}>
-            { this.state.responseMessage.length > 0 && <p>{this.state.responseMessage}</p> }
-              <Button
-                text={"Send søknad"}
-                disabled={this.state.disableSubmit}
-                onClick={() => this.submitApplication()}
-                />
+          { this.state.responseMessage.length > 0 && <p>{this.state.responseMessage}</p> }
+            <Button
+              text={"Send søknad"}
+              disabled={this.state.disableSubmit}
+              onClick={() => this.submitApplication()}
+              />
         </div>
       </div>
     );
