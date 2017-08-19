@@ -59,8 +59,14 @@ export class Application extends Component {
       ordered,
       selectedComittees,
     } = this.state;
-  
-    const application = new CommitteeApplication(null, name, email, applicationText, selectedComittees, ordered);
+    
+    const application = new CommitteeApplication({
+      name: name,
+      email: email,
+      application_text: applicationText,
+      prioritized: ordered,
+      committees: selectedComittees
+    });
     
     this.setState({ disableSubmit: true });
     this.props.applicationService.postApplication(application).subscribe(() => {
