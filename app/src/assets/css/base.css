@@ -12,5 +12,12 @@ body {
   font-family: 'Open Sans';
   background: #f2f2f2;
   color: #333333;
-  padding-bottom: 5rem;
+}
+
+.footer {
+  background: #ffffff;
+  padding: 1rem;
+  padding-bottom: 2.5rem;
+  margin-top: 5rem;
+  text-align: center;
 }
