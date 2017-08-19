@@ -22,7 +22,7 @@ exports[`Heading renders correctly 1`] = `
     <p
       className="text"
     >
-      Komitésøknadssystemet Supreme-Guacamole
+      Komitésøknadssystemet
     </p>
   </div>
 </header>
