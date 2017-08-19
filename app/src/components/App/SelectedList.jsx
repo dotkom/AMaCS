@@ -5,7 +5,7 @@ import Selectable from "./Selectable"
 
 import _s from 'assets/css/SelectedList.css';
 
-function SelectedList({ committees, totalChoices, onChange }) {
+function SelectedList({ committees, ordered, totalChoices, onChange }) {
   return (
     <div className={_s.container}>
       {

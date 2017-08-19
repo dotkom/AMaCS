@@ -132,6 +132,7 @@ class Application extends Component {
             ordered={this.state.ordered}
             selected={this.state.selectedComittees}
             onChange={(selected) => this._selectedChanged(selected) }
+            onOrderedChange={(ordered) => this._setOrdered(ordered)}
           />
         </div>
         <div className={_s.alternative}>

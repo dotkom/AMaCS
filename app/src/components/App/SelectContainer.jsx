@@ -4,6 +4,7 @@ import _ from "lodash";
 
 import Selectable from "./Selectable"
 import SelectedList from "./SelectedList"
+import ToggleSwitch from "../ToggleSwitch"
 
 import committeesMap from 'common/committees';
 import _s from 'assets/css/SelectContainer.css';
@@ -36,11 +37,11 @@ class SelectContainer extends React.Component {
   }
 
   render() {
-    const { selected } = this.props;
+    const { selected, ordered, onOrderedChange } = this.props;
     const committees = this.props.committees || committeesMap;
     const prioritized = this.props.prioritized;
     return (
-      <div className={_s.container}>
+      <div className={_s.component}>
         <p>Velg komiteene du ønsker å søke ved å klikke på dem{prioritized && ' i prioritert rekkefølge'}.</p>
         <div className={_s.selectables}>
           { Array.from(committees).map(([key, committee]) => (
@@ -51,6 +52,10 @@ class SelectContainer extends React.Component {
               selected={selected.some(c => c.toLowerCase() === committee.name.toLowerCase())}
             />
           ))}
+        </div>
+        <div className={_s.prioritizedSwitch}>
+          <ToggleSwitch ordered={ordered} onChange={onOrderedChange} />
+          <span>Prioritert rekkefølge?</span>
         </div>
         <div className={_s.selectedList}>
           <SelectedList
