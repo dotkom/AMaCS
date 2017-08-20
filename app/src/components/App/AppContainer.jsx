@@ -5,7 +5,7 @@ import Application from "./Application"
 import Heading from "../Heading";
 import Home from "./Home"
 import NotFound from "../NotFound"
-import 'assets/css/base.css';
+import _s from 'assets/css/base.css';
 
 class AppContainer extends React.Component {
   constructor(props) {
@@ -33,6 +33,10 @@ class AppContainer extends React.Component {
             <Route component={NotFound} />
           </Switch>
         </main>
+        <div className={_s.footer}>
+          <p>Dersom du opplever problemer eller finner feil, ta kontakt med <a href="mailto:dotkom@online.ntnu.no">dotkom@online.ntnu.no</a>.</p>
+          <p>Får du ikke sendt inn søknaden, eller vil du heller bruke e-post? Send søknaden din til <a href="mailto:opptak@online.ntnu.no">opptak@online.ntnu.no</a>.</p>
+        </div>
       </div>
     );
   }
