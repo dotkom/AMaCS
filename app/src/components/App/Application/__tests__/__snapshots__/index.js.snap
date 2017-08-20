@@ -35,6 +35,11 @@ exports[`Application renders correctly 1`] = `
   <div
     className="content selectWrapper"
   >
+    <h2
+      className="header"
+    >
+      Velg komite(er)
+    </h2>
     <SelectContainer
       committees={
         Map {
@@ -183,6 +188,11 @@ exports[`Application renders correctly with user info 1`] = `
   <div
     className="content selectWrapper"
   >
+    <h2
+      className="header"
+    >
+      Velg komite(er)
+    </h2>
     <SelectContainer
       committees={
         Map {
@@ -331,6 +341,11 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
   <div
     className="content selectWrapper"
   >
+    <h2
+      className="header"
+    >
+      Velg komite(er)
+    </h2>
     <SelectContainer
       committees={
         Map {
@@ -483,6 +498,11 @@ exports[`Application updates info on onChange from login 1`] = `
   <div
     className="content selectWrapper"
   >
+    <h2
+      className="header"
+    >
+      Velg komite(er)
+    </h2>
     <SelectContainer
       committees={
         Map {
@@ -631,6 +651,11 @@ exports[`Application updates user info on new props 1`] = `
   <div
     className="content selectWrapper"
   >
+    <h2
+      className="header"
+    >
+      Velg komite(er)
+    </h2>
     <SelectContainer
       committees={
         Map {
