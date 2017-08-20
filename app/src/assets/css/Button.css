@@ -13,6 +13,8 @@
   font-size: 1.5rem;
   transition: 0.2s;
   display: block;
+  user-select: none;
+  cursor: default;
 }
 
 .buttonContent {
@@ -48,5 +50,5 @@
 }
 
 a .button:hover {
-  cursor: pointer;
+   
 }
