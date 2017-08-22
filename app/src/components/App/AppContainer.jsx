@@ -5,6 +5,7 @@ import Application from "./Application"
 import Heading from "../Heading";
 import Home from "./Home"
 import NotFound from "../NotFound"
+import Thankyou from './Thankyou';
 import _s from 'assets/css/base.css';
 
 class AppContainer extends React.Component {
@@ -30,6 +31,7 @@ class AppContainer extends React.Component {
                 {...props}
               />
             } />
+            <Route exact path={'/thankyou'} component={Thankyou} />
             <Route component={NotFound} />
           </Switch>
         </main>

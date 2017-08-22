@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import classNames from 'classnames';
+import { withRouter } from 'react-router-dom'
 
 import Button from '../../Button';
 import SelectContainer from '../SelectContainer';
@@ -71,9 +72,7 @@ export class Application extends Component {
     this.setState({ disableSubmit: true });
     this.props.applicationService.postApplication(application).subscribe(() => {
       //Everything went ok
-      this.setState({
-        responseMessage: 'Søknad er sendt.',
-      });
+      this.props.history.push('/thankyou');
     },(err) => {
       // Error, something went wrong
       const errorMessage = err instanceof Array ? err : 'Pass på at du har fylt ut alle feltene og valgt komiteer å søke.';
@@ -140,4 +139,4 @@ const mapServicesToProps = (serviceManager) => ({
   applicationService: serviceManager.getService("application")
 })
 
-export default connectServices(mapServicesToProps)(Application);
+export default withRouter(connectServices(mapServicesToProps)(Application));
