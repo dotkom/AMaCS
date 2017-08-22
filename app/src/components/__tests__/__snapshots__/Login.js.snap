@@ -27,7 +27,6 @@ exports[`Login renders correctly 1`] = `
       checked={false}
       disabled={false}
       onChange={[Function]}
-      text="Fyll inn rukerinfo selv"
     />
   </div>
   <div
@@ -82,7 +81,6 @@ exports[`Login renders with user info 1`] = `
       checked={false}
       disabled={false}
       onChange={[Function]}
-      text="Fyll inn rukerinfo selv"
     />
   </div>
   <div
@@ -137,7 +135,6 @@ exports[`Login renders with user info and logged in 1`] = `
       checked={false}
       disabled={true}
       onChange={[Function]}
-      text="Fyll inn rukerinfo selv"
     />
   </div>
   <div

@@ -56,7 +56,6 @@ export class Login extends React.Component {
           { (!loggedIn && this.state.showExternalLoginHelp)  ? <p className={_s.helptext}>Innlogging skjer i eget vindu.</p> : null}
           <label className={_s.label}>Ingen Online.ntnu.no-bruker?</label>
           <ToggleSwitch
-            text="Fyll inn rukerinfo selv"
             disabled={loggedIn}
             checked={checked}
             onChange={() => this.handleInputChange("inputEnabled", !checked)}
