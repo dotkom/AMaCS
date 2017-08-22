@@ -515,7 +515,6 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                       className="button"
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      text="Gå til søknad"
                                     >
                                       <div
                                         className="buttonContent"

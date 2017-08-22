@@ -34,14 +34,14 @@ class Button extends React.Component {
   }
 
   render(){
-    const { children, text, iconLeft, iconRight, hoverIconLeft, hoverIconRight } = this.props;
+    const { children, text, iconLeft, iconRight, hoverIconLeft, hoverIconRight, ...rest } = this.props;
     
     const icLeft = this.state.hover ? hoverIconLeft || iconLeft : iconLeft || hoverIconLeft;
     const icRight = this.state.hover ? hoverIconRight || iconRight : iconRight || hoverIconRight;
     
     return (
       <button 
-        {...this.props} 
+        {...rest}
         className={_s.button} 
         onMouseEnter={(...a) => this._mouseEnter(...a)}
         onMouseLeave={(...a) => this._mouseLeave(...a)}
