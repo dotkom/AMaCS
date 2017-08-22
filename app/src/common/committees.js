@@ -9,7 +9,7 @@ const committees = new Map([
   ['arrkom', {
     key: 'arrkom',
     name: "Arrkom",
-    info: `Arrangementskomitéen jobber for at informatikkstudentene skal ha sosiale
+    info: `Arrangementskomiteen jobber for at informatikkstudentene skal ha sosiale
     tilbud gjennom hele året. Vi arrangerer velkjente arrangement som
     immatrikuleringsball, blåtur, Åre-tur, kryssfest, filmkvelder og mye
     mer! Liker du at andre skal ha det kult? Er du en sosial og sprudlende
@@ -36,7 +36,7 @@ const committees = new Map([
     key: 'dotkom',
     name: "Dotkom",
     info: `Drifts- og utviklingskomiteen har ansvaret for alle linjeforeningens
-    datasystemer. Vi leverer tjenester som nettside, intraweb og wiki,
+    datasystemer. Vi leverer tjenester som nettside, wiki,
     e-postsystemer, filområder og mye annet spennende. I en stor
     linjeforening er informasjonsflyt og kvalitet viktig. Drifts- og
     utviklingskomiteen prøver hele tiden å lage smarte løsninger som
@@ -76,12 +76,11 @@ const committees = new Map([
   ['trikom', {
     key: "trikom",
     name: "Trikom",
-    info: `Trivselelskomiteen har ansvaret for trivsel blant informatikkstudentene.
-    Dette inkluderer å arrangere små arrangementer i skoletiden,
-    for eksempel vaffeldager eller andre ting som skaper trivsel.
-    Vi er også ansvarlig for drift av kontoret som vil si å sette opp
-    kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
-    Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medelever er trikom komiteen for deg.`,
+    info: `Trivselskomiteen har ansvaret for trivsel blant informatikkstudentene.
+    Dette inkluderer å arrangere flere små arrangementer og hyggelige sammenkomster i løpet av året, og drift av kontoret.
+    Vi arrangerer frokoster og serievisninger på kontoret, teltturer, juleverksted og andre ting som skaper trivsel.
+    Vi er også ansvarlig for drift av kontoret, som vil si å sette opp kontorvakter, møter, administrere tilganger og passe på at det er tilstrekkelig med mat, drikke, rekvisitter og lignende.
+    Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medstudenter, er trikom komiteen for deg!`,
     id: 8,
     icon: trikomIcon,
   }],
