@@ -3,7 +3,6 @@ import _ from 'lodash';
 import classNames from 'classnames';
 
 import Button from '../../Button';
-import committeesMap from 'common/committees';
 import SelectContainer from '../SelectContainer';
 import NavigationButton from '../../NavigationButton';
 import Login from '../../Login';
@@ -12,7 +11,9 @@ import TextArea from '../../TextArea';
 import blueArrow from 'assets/images/arrow-blue.png';
 import _s from 'assets/css/Application.css';
 
-class Application extends Component {
+import { CommitteeApplication, connectServices } from 'services';
+
+export class Application extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -52,65 +53,36 @@ class Application extends Component {
     });
   }
 
-  async submitApplication() {
+  submitApplication() {
     const { name, email,
-      applicationText: application_text,
-      ordered: prioritized,
-      selectedComittees: committees,
+      applicationText,
+      ordered,
+      selectedComittees,
     } = this.state;
-    const application = {
-      name, email, prioritized, application_text,
-      committees: committees.map((committee, index) => Object.assign({
-        group: committeesMap.get(committee).id,
-        priority: index + 1,
-      })),
-    };
-
-    const uri = `${process.env.SG_APPLICATION_BACKEND}${process.env.SG_APPLICATION_ENDPOINT}`;
+    
+    const application = new CommitteeApplication({
+      name: name,
+      email: email,
+      application_text: applicationText,
+      prioritized: ordered,
+      committees: selectedComittees
+    });
+    
     this.setState({ disableSubmit: true });
-
-    const headers = {
-      'Content-Type': 'application/json'
-    }
-    if (this.props.user && this.props.user._access_token.length > 0) {
-      headers.Authorization = `Bearer ${this.props.user._access_token}`;
-      application.name = '';
-      application.email = '';
-    }
-
-    try {
-      const resp = await fetch(uri, {
-        headers,
-        body: JSON.stringify(application),
-        method: 'POST',
+    this.props.applicationService.postApplication(application).subscribe(() => {
+      //Everything went ok
+      this.setState({
+        responseMessage: 'Søknad er sendt.',
       });
-
-      const json = await resp.json();
-
-      if (resp.status === 201) {
-        this.setState({
-          responseMessage: 'Søknad er sendt.',
-        });
-        return;
-      }
-
-      // Sometimes we get an array of messages and sometimes we get
-      // an object. If we get an array we can concat it together,
-      // if we get an object we show a more generic error message.
-      const errorMessage = json instanceof Array ? json : 'Pass på at du har fylt ut alle feltene og valgt komiteer å søke.';
-
+    },(err) => {
+      // Error, something went wrong
+      const errorMessage = err instanceof Array ? err : 'Pass på at du har fylt ut alle feltene og valgt komiteer å søke.';
       this.setState({
         disableSubmit: false,
         responseMessage: `Noe gikk galt. ${errorMessage}`
       });
+    });
 
-    } catch (err) {
-      console.error("Error response", err)
-      this.setState({
-        disableSubmit: false,
-        responseMessage: `Noe gikk galt. ${err}`
-      });
-    }
   }
 
   render() {
@@ -160,4 +132,8 @@ Application.defaultProps = {
   user: null
 }
 
-export default Application;
+const mapServicesToProps = (serviceManager) => ({
+  applicationService: serviceManager.getService("application")
+})
+
+export default connectServices(mapServicesToProps)(Application);
