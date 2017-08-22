@@ -20,15 +20,12 @@ const committees = new Map([
   ['bedkom', {
     key: 'bedkom',
     name: "Bedkom",
-    info: `Bedriftskomiteens oppgave er å knytte studentene og næringslivet
-    sammen. Som medlem vil du være med å arrangere bedriftspresentasjoner
-    hvor bedriftene får fortelle om arbeidsmetoder, miljø og prosjekter
-    mm. På denne måten vil du opprette en tidlig kontakt med næringslivet
-    og potensielle arbeidstakere under studietiden, samtidig som du får et
-    innblikk i hvordan bedrifter rekrutterer studenter. Etter en
-    bedriftspresentasjon tar gjerne bedriften studentene ut for å mingle
-    og bli kjent under et godt måltid. Bedriftskomiteen er også
-    knutepunktet til våre samarbeidspartnere i næringslivet ellers.`,
+    info: `Bedriftskomiteen er bindeleddet mellom næringslivet og informatikkstudenter,
+    og skal i tillegg samarbeide med andre linjeforeninger på NTNU for å ivareta informatikkstudentenes interesser.
+    Som medlem vil du ha flere oppgaver, blant annet, å planlegge og arrangere bedriftspresentasjoner, legge ut annonser på våre nettsider, mm. 
+    Gjennom bedriftskomiteen vil du opprette en tidlig og god kontakt med næringslivet
+    og potensielle arbeidsgivere under studietiden, samtidig som du får et
+    innblikk i hvordan bedrifter rekrutterer studenter.`,
     id: 3,
     icon: bedkomIcon,
   }],
