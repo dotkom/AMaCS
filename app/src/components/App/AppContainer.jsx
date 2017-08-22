@@ -2,6 +2,7 @@ import React, { PropTypes } from "react";
 import { Link, Route, Switch } from "react-router-dom";
 
 import Application from "./Application"
+import AuthenticationEndpoint from "../AuthenticationEndpoint"
 import Heading from "../Heading";
 import Home from "./Home"
 import NotFound from "../NotFound"
@@ -32,6 +33,7 @@ class AppContainer extends React.Component {
               />
             } />
             <Route exact path={'/thankyou'} component={Thankyou} />
+            <Route exact path={'/auth'} component={AuthenticationEndpoint} />
             <Route component={NotFound} />
           </Switch>
         </main>
