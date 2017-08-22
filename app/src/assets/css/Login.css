@@ -11,6 +11,11 @@
   flex-basis: 20rem;
 }
 
+.helptext {
+  color: #909090;
+  font-style: italic;
+}
+
 .label {
   display: block;
   margin: 0.5rem 0;

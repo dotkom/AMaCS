@@ -15,13 +15,20 @@ export class Login extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      showExternalLoginHelp: false,
+    };
   }
 
   handleLoginClick() {
-    if(this.props.loggedIn)
+    if(this.props.loggedIn) {
       this.props.authService.logout();
-    else
+      this.setState({ showExternalLoginHelp: false });
+    }
+    else {
       this.props.authService.login();
+      this.setState({ showExternalLoginHelp: true });
+    }
   }
 
   handleInputChange(field, value) {
@@ -46,7 +53,7 @@ export class Login extends React.Component {
             hoverIconLeft={onlineIcon}
             text={"Logg " + buttonText}
           />
-          { (!loggedIn)  ? <p className={_s.helptext}>Innlogging skjer i eget vindu.</p> : null}
+          { (!loggedIn && this.state.showExternalLoginHelp)  ? <p className={_s.helptext}>Innlogging skjer i eget vindu.</p> : null}
           <label className={_s.label}>Ingen Online.ntnu.no-bruker?</label>
           <ToggleSwitch
             text="Fyll inn rukerinfo selv"
