@@ -1,7 +1,7 @@
 
 .container {
   background: #ffffff;
-  border: .1rem solid #fff;
+  border: 2px solid #fff;
   padding: 0.6em 0.75em;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
   display: inline-flex;
