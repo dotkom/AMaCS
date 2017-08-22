@@ -10,7 +10,7 @@ exports[`Login renders correctly 1`] = `
     <label
       className="label"
     >
-      Hent Brukerinfo
+      Hent brukerinfo
     </label>
     <Button
       hoverIconLeft="TEST_FILE_STUB"
@@ -21,7 +21,7 @@ exports[`Login renders correctly 1`] = `
     <label
       className="label"
     >
-      Ingen Online.ntnu.no-bruker?
+      Ingen online.ntnu.no-bruker?
     </label>
     <ToggleSwitch
       checked={false}
@@ -64,7 +64,7 @@ exports[`Login renders with user info 1`] = `
     <label
       className="label"
     >
-      Hent Brukerinfo
+      Hent brukerinfo
     </label>
     <Button
       hoverIconLeft="TEST_FILE_STUB"
@@ -75,7 +75,7 @@ exports[`Login renders with user info 1`] = `
     <label
       className="label"
     >
-      Ingen Online.ntnu.no-bruker?
+      Ingen online.ntnu.no-bruker?
     </label>
     <ToggleSwitch
       checked={false}
@@ -118,7 +118,7 @@ exports[`Login renders with user info and logged in 1`] = `
     <label
       className="label"
     >
-      Hent Brukerinfo
+      Hent brukerinfo
     </label>
     <Button
       hoverIconLeft="TEST_FILE_STUB"
@@ -129,7 +129,7 @@ exports[`Login renders with user info and logged in 1`] = `
     <label
       className="label"
     >
-      Ingen Online.ntnu.no-bruker?
+      Ingen online.ntnu.no-bruker?
     </label>
     <ToggleSwitch
       checked={false}
