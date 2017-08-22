@@ -45,7 +45,8 @@ export class AuthServiceProvider{
       this.services.getService("http").get(this.settings.metadata.userinfo_endpoint).map((profile) => {
         return new User(user.access_token,user.scope,profile);
       }).catch((err) => {
-        return Observable.of(new User(user.access_token,user.scope,null));
+        // return null if login failed
+        return Observable.of(null);
       }).subscribe((user) => {
         this._user = user;
         if(push){
