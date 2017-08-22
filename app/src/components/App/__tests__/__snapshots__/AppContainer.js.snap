@@ -17,6 +17,11 @@ exports[`AppContainer renders correctly 1`] = `
       />
       <Route
         component={[Function]}
+        exact={true}
+        path="/thankyou"
+      />
+      <Route
+        component={[Function]}
       />
     </Switch>
   </main>
