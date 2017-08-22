@@ -23,11 +23,18 @@ exports[`Login renders correctly 1`] = `
     >
       Ingen online.ntnu.no-bruker?
     </label>
-    <ToggleSwitch
-      checked={false}
-      disabled={false}
-      onChange={[Function]}
-    />
+    <div
+      className="userinfoSwitch"
+    >
+      <ToggleSwitch
+        checked={false}
+        disabled={false}
+        onChange={[Function]}
+      />
+      <span>
+        Fyll inn brukerinfo selv
+      </span>
+    </div>
   </div>
   <div
     className="box"
@@ -77,11 +84,18 @@ exports[`Login renders with user info 1`] = `
     >
       Ingen online.ntnu.no-bruker?
     </label>
-    <ToggleSwitch
-      checked={false}
-      disabled={false}
-      onChange={[Function]}
-    />
+    <div
+      className="userinfoSwitch"
+    >
+      <ToggleSwitch
+        checked={false}
+        disabled={false}
+        onChange={[Function]}
+      />
+      <span>
+        Fyll inn brukerinfo selv
+      </span>
+    </div>
   </div>
   <div
     className="box"
@@ -131,11 +145,18 @@ exports[`Login renders with user info and logged in 1`] = `
     >
       Ingen online.ntnu.no-bruker?
     </label>
-    <ToggleSwitch
-      checked={false}
-      disabled={true}
-      onChange={[Function]}
-    />
+    <div
+      className="userinfoSwitch"
+    >
+      <ToggleSwitch
+        checked={false}
+        disabled={true}
+        onChange={[Function]}
+      />
+      <span>
+        Fyll inn brukerinfo selv
+      </span>
+    </div>
   </div>
   <div
     className="box"
