@@ -9,7 +9,9 @@ Log.level = Log.ERROR;
 
 export class AuthServiceProvider{
   constructor(serviceManager,settings){
-    this.userManager = new UserManager(settings);
+    this.userManager = new UserManager(Object.assign({
+      popupWindowFeatures: 'location=no,toolbar=no,width=900,height=700,left=100,top=100'
+    }, settings));
     this.settings = settings;
     this._user = null;  
     this.userSubject = new Subject();
