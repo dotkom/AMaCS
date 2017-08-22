@@ -10,6 +10,17 @@ class Button extends React.Component {
     }
   }
 
+  componentDidMount() {
+    const { hoverIconLeft, hoverIconRight } = this.props;
+    // Preload hover icons
+    if(hoverIconLeft) {
+      new Image().src = hoverIconLeft;
+    }
+    if(hoverIconRight) {
+      new Image().src = hoverIconRight;
+    }
+  }
+
   _mouseEnter(...a){
     this.setState({hover: true});
     if(this.props.onMouseEnter)
