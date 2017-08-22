@@ -15,10 +15,8 @@ exports[`button renders correctly 1`] = `
 exports[`button renders correctly with icon 1`] = `
 <button
   className="button"
-  iconLeft="icon.png"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
-  text="Button with icon"
 >
   <div
     className="buttonContent"
@@ -36,10 +34,8 @@ exports[`button renders correctly with icon 1`] = `
 exports[`button renders correctly with right icon 1`] = `
 <button
   className="button"
-  iconRight="icon2.png"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
-  text="Button with icon right"
 >
   <div
     className="buttonContent"
@@ -59,7 +55,6 @@ exports[`button renders correctly with text 1`] = `
   className="button"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
-  text="Button with text"
 >
   <div
     className="buttonContent"
