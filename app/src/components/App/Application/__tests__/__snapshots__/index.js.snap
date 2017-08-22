@@ -140,7 +140,7 @@ exports[`Application renders correctly 1`] = `
       Søknadstekst
     </h2>
     <p>
-      Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og evt. tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
+      Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
     <TextArea
       onChange={[Function]}
@@ -296,7 +296,7 @@ exports[`Application renders correctly with user info 1`] = `
       Søknadstekst
     </h2>
     <p>
-      Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og evt. tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
+      Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
     <TextArea
       onChange={[Function]}
@@ -456,7 +456,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
       Søknadstekst
     </h2>
     <p>
-      Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og evt. tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
+      Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
     <TextArea
       onChange={[Function]}
@@ -612,7 +612,7 @@ exports[`Application updates info on onChange from login 1`] = `
       Søknadstekst
     </h2>
     <p>
-      Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og evt. tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
+      Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
     <TextArea
       onChange={[Function]}
@@ -768,7 +768,7 @@ exports[`Application updates user info on new props 1`] = `
       Søknadstekst
     </h2>
     <p>
-      Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og evt. tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
+      Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
     <TextArea
       onChange={[Function]}

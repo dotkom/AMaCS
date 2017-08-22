@@ -140,7 +140,7 @@ class Application extends Component {
         <div className={classNames(_s.alternative, _s.application)}>
           <h2 className={_s.header}>Søknadstekst</h2>
           <p>
-            Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og evt. tidligere erfaring fra lignende arbeid.
+            Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid.
             Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
           </p>
           <TextArea
