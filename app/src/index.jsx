@@ -10,6 +10,9 @@ import Routes from "./Routes"
 import { ServiceProvider, ServiceManager, HttpServiceProvider, AuthServiceProvider, ApplicationServiceProvider } from 'services';
 import { OAUTH_SETTINGS, API_SETTINGS } from 'common/constants';
 import { initializeAnalytics, logPageView } from 'common/analytics';
+import { initializeErrorReporting } from 'common/errorReporting';
+
+initializeErrorReporting();
 
 const serviceManager = new ServiceManager();
 serviceManager.registerService("http.service",HttpServiceProvider);

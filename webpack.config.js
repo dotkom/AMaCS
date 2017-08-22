@@ -113,6 +113,7 @@ module.exports = {
       SG_APPLICATION_BACKEND: 'http://localhost:8000',
       SG_APPLICATION_ENDPOINT: '/api/v1/committeeapplications/',
       SG_GA_TRACKING_ID: '',
+      SG_SENTRY_URL: '',
       NODE_ENV: 'development',
     }),
     new webpack.optimize.CommonsChunkPlugin({
