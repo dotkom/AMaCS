@@ -13,6 +13,11 @@
   outline: none;
 }
 
+.container:disabled {
+  background: #f0f0f0;
+  border-color: #b8b8b8;
+}
+
 .slider {
   margin: 0.07rem -0.17rem;
   margin-right: 1.5rem;
@@ -36,6 +41,10 @@
 
 .container:hover .checked {
   background: #004b80;
+}
+
+.container:disabled .slider {
+  background: #ababab;
 }
 
 .icon {
