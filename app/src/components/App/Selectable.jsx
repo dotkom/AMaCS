@@ -23,7 +23,7 @@ Selectable.defaultProps = {
 
 Selectable.propTypes = {
   committee: PropTypes.shape({
-    icon: PropTypes.func,
+    icon: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
     name: PropTypes.string,
   }).isRequired,
   onClick: PropTypes.func,
