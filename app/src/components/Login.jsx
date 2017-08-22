@@ -46,7 +46,7 @@ export class Login extends React.Component {
     return(
       <div className={_s.container}>
         <div className={_s.box}>
-          <label className={_s.label}>Hent Brukerinfo</label>
+          <label className={_s.label}>Hent brukerinfo</label>
           <Button
             onClick={() => this.handleLoginClick()}
             iconLeft={onlineIconWhite}
@@ -54,7 +54,7 @@ export class Login extends React.Component {
             text={"Logg " + buttonText}
           />
           { (!loggedIn && this.state.showExternalLoginHelp)  ? <p className={_s.helptext}>Innlogging skjer i eget vindu.</p> : null}
-          <label className={_s.label}>Ingen Online.ntnu.no-bruker?</label>
+          <label className={_s.label}>Ingen online.ntnu.no-bruker?</label>
           <ToggleSwitch
             disabled={loggedIn}
             checked={checked}
