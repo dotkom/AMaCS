@@ -74,6 +74,7 @@
     "react-test-renderer": "^15.6.1",
     "react-textarea-autosize": "^5.1.0",
     "rxjs": "^5.4.3",
+    "style-loader": "^0.18.2",
     "svg-react-loader": "^0.4.4",
     "url-loader": "^0.5.9",
     "webpack": "^3.5.4",
@@ -85,7 +86,6 @@
     "enzyme-to-json": "^1.5.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
-    "style-loader": "^0.18.2",
     "webpack-dev-server": "^2.7.1"
   }
 }
