@@ -24,6 +24,7 @@ exports[`button renders correctly with icon 1`] = `
     className="buttonContent"
   >
     <img
+      alt="Ikon"
       className="iconLeft"
       src="icon.png"
     />
@@ -45,6 +46,7 @@ exports[`button renders correctly with right icon 1`] = `
   >
     Button with icon right
     <img
+      alt="Ikon"
       className="iconRight"
       src="icon2.png"
     />

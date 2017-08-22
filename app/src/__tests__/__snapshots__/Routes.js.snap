@@ -132,6 +132,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                             onClick={[Function]}
                           >
                             <img
+                              alt="Online logo"
                               src="TEST_FILE_STUB"
                             />
                           </a>
@@ -140,11 +141,11 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                       <div
                         className="header"
                       >
-                        <p
+                        <h1
                           className="text"
                         >
                           Komitésøknadssystemet
-                        </p>
+                        </h1>
                       </div>
                     </header>
                   </Heading>
@@ -242,11 +243,11 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                     <SVGMockComponent
                                       className="img"
                                     />
-                                    <h3
+                                    <h2
                                       className="name"
                                     >
                                       Arrkom
-                                    </h3>
+                                    </h2>
                                   </header>
                                   <div
                                     className="info"
@@ -288,11 +289,11 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                     <SVGMockComponent
                                       className="img"
                                     />
-                                    <h3
+                                    <h2
                                       className="name"
                                     >
                                       Bedkom
-                                    </h3>
+                                    </h2>
                                   </header>
                                   <div
                                     className="info"
@@ -338,11 +339,11 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                     <SVGMockComponent
                                       className="img"
                                     />
-                                    <h3
+                                    <h2
                                       className="name"
                                     >
                                       Dotkom
-                                    </h3>
+                                    </h2>
                                   </header>
                                   <div
                                     className="info"
@@ -386,11 +387,11 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                     <SVGMockComponent
                                       className="img"
                                     />
-                                    <h3
+                                    <h2
                                       className="name"
                                     >
                                       Fagkom
-                                    </h3>
+                                    </h2>
                                   </header>
                                   <div
                                     className="info"
@@ -432,11 +433,11 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                     <SVGMockComponent
                                       className="img"
                                     />
-                                    <h3
+                                    <h2
                                       className="name"
                                     >
                                       Prokom
-                                    </h3>
+                                    </h2>
                                   </header>
                                   <div
                                     className="info"
@@ -477,11 +478,11 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                     <SVGMockComponent
                                       className="img"
                                     />
-                                    <h3
+                                    <h2
                                       className="name"
                                     >
                                       Trikom
-                                    </h3>
+                                    </h2>
                                   </header>
                                   <div
                                     className="info"

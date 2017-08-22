@@ -117,7 +117,7 @@ class Application extends Component {
     return (
       <div className={_s.component}>
         <NavigationButton link="/">
-          <img src={blueArrow} />
+          <img src={blueArrow} alt="Pil" />
           Tilbake
         </NavigationButton>
         <div className={_s.alternative}>

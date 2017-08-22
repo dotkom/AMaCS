@@ -31,7 +31,7 @@ class CommitteeInfo extends React.Component {
           className={_s.header}
         >
           <Icon className={_s.img} />
-          <h3 className={_s.name}>{ committee.name }</h3>
+          <h2 className={_s.name}>{ committee.name }</h2>
         </header>
         <div className={_s.info}>
           { committee.info }
