@@ -44,7 +44,7 @@ class CommitteeInfo extends React.Component {
 CommitteeInfo.propTypes = {
   committee: PropTypes.shape({
     name: PropTypes.string,
-    icon: PropTypes.string,
+    icon: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     info: PropTypes.string,
   }),
 };
