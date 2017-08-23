@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import { AppContainer } from 'react-hot-loader'
 import { Router } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
+import Oidc from 'oidc-client';
 
 import Routes from "./Routes"
 
@@ -25,6 +26,9 @@ serviceManager.alias("application","application.service");
 
 const history = createBrowserHistory();
 initializeAnalytics(history);
+
+if (process.env.NODE_ENV.toLowerCase() === 'production')
+  Oidc.Log.reset(); // Turn off Oidc vendor logging to browser console in production.
 
 const render = Component => {
   ReactDOM.render(
