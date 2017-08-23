@@ -64,6 +64,8 @@ export class AuthServiceProvider{
   login(){
     this._loginState = 1;
     Observable.from(this.userManager.signinPopup()).subscribe(()=> {
+    }, (err) => {
+      console.log(`Error happened regarding SSO signin popup: ${err.message}`);
     });
     return this.getUser();
   }
