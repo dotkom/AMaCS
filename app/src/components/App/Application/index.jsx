@@ -121,7 +121,7 @@ export class Application extends Component {
           />
           { this.state.responseMessage.length > 0 && <p>{this.state.responseMessage}</p> }
             <Button
-              text={"Send søknad"}
+              text={this.state.disableSubmit ? "Sender søknad..." : "Send søknad"}
               disabled={this.state.disableSubmit}
               onClick={() => this.submitApplication()}
               />
