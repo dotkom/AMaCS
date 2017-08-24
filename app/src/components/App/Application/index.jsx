@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
 import classNames from 'classnames';
 import { withRouter } from 'react-router-dom'
 
@@ -37,7 +36,8 @@ export class Application extends Component {
   }
 
   _infoChanged(info){
-    this.setState(_.pick(info,["name","email","inputEnabled"]));
+    const { name, email, inputEnabled } = info;
+    this.setState({ name, email, inputEnabled });
   }
 
   _selectedChanged(selected){
@@ -85,6 +85,7 @@ export class Application extends Component {
   }
 
   render() {
+    const { name, email, inputEnabled } = this.state;
     return (
       <div className={_s.component}>
         <NavigationButton link="/">
@@ -96,7 +97,7 @@ export class Application extends Component {
           <Login
             onChange={(info) => this._infoChanged(info)}
             loggedIn={!!this.props.user}
-            info={_.pick(this.state,["name","email","inputEnabled"])}
+            info={{ name, email, inputEnabled }}
           />
         </div>
         <div className={classNames(_s.content, _s.selectWrapper)}>

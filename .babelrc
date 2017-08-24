@@ -6,7 +6,6 @@
     "react"],
   "plugins": [
     "transform-runtime",
-    "lodash",
     "react-hot-loader/babel",
     "transform-object-rest-spread",
     ["module-resolver", {

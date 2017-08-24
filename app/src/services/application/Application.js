@@ -1,6 +1,3 @@
-
-import _ from 'lodash';
-
 import committeesMap from 'common/committees';
 
 export class CommitteeApplication {
@@ -8,7 +5,7 @@ export class CommitteeApplication {
     this._name = data.name;
     this._email = data.email;
     this._application_text = data.application_text;
-    this._committees = _.clone(data.committees || []);
+    this._committees = data.committees || [];
     this._prioritized = data.prioritized;
   }
 
