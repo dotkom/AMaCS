@@ -48,5 +48,9 @@ module.exports = merge.smart(config, {
       },
       comments: false,
     }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    }),
   ],
 });
