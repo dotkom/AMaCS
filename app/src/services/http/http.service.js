@@ -1,5 +1,11 @@
-import { Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
+import 'rxjs/add/operator/concatMap';
+import 'rxjs/add/operator/delay';
+import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/observable/fromPromise';
+import 'rxjs/add/observable/of';
 
 export class HttpServiceProvider {
 

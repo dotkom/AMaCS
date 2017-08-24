@@ -1,6 +1,10 @@
 import { UserManager, Log } from 'oidc-client';
-import { Observable, Subject, ReplaySubject } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+import { ReplaySubject } from 'rxjs/ReplaySubject';
 
+import 'rxjs/add/observable/from';
+import 'rxjs/add/operator/take';
 
 import { User } from './user';
 
