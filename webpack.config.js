@@ -89,6 +89,8 @@ module.exports = {
     historyApiFallback: true
   },
   plugins: [
+    new webpack.NamedModulesPlugin(),
+    new webpack.NamedChunksPlugin(),
     new HtmlWebpackPlugin({
       template: 'app/index.html',
     }),
@@ -123,6 +125,5 @@ module.exports = {
       ),
     }),
     new FaviconsWebpackPlugin('./app/favicon.png'),
-    new webpack.NamedModulesPlugin()
   ],
 };
