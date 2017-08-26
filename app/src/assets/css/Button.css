@@ -1,6 +1,8 @@
+@value $blue, $light-gray from './_variables.css';
+
 .button {
-  background: #0060a3;
-  border: 3px solid #0060a3;
+  background: $blue;
+  border: 3px solid $blue;
   box-sizing: border-box;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
@@ -24,17 +26,17 @@
 }
 
 .button:hover {
-  background: #f2f2f2;
-  color: #0060a3;
+  background: $light-gray;
+  color: $blue;
 }
 
 .button:active, button.active {
-  background: #ffffff;
-  color: #0060a3;
+  background: white;
+  color: $blue;
 }
 
 .button:disabled {
-  background: #f2f2f2;
+  background: $light-gray;
   border: 3px solid transparent;
   color: #c0c0c0;
 }

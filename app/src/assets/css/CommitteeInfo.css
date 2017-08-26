@@ -1,3 +1,5 @@
+@value $blue from './_variables.css';
+
 .component {
   display: flex;
   flex-direction: column;
@@ -12,8 +14,8 @@
 .header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   flex: 1 0 auto;
-  background: #ffffff;
-  border: 2px solid #ffffff;
+  background: white;
+  border: 2px solid white;
   padding: 0.5rem;
   display: flex;
   align-items: center;
@@ -24,7 +26,7 @@
 }
 
 .header:hover {
-  border-color: #0060a3;
+  border-color: $blue;
 }
 
 .open .header {
@@ -33,7 +35,7 @@
 
 .info {
   display: none;
-  background: #ffffff;
+  background: white;
   border-top: 1px solid #e0e0e0;
   padding: 1rem 2rem;
   line-height: 1.5rem;

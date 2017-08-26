@@ -2808,6 +2808,12 @@ icss-utils@^2.1.0:
   dependencies:
     postcss "^6.0.1"
 
+icss-utils@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/icss-utils/-/icss-utils-3.0.1.tgz#ee70d3ae8cac38c6be5ed91e851b27eed343ad0f"
+  dependencies:
+    postcss "^6.0.2"
+
 identity-obj-proxy@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/identity-obj-proxy/-/identity-obj-proxy-3.0.0.tgz#94d2bda96084453ef36fbc5aaec37e0f79f1fc14"
@@ -4544,6 +4550,15 @@ postcss-filter-plugins@^2.0.0:
   dependencies:
     postcss "^5.0.4"
     uniqid "^4.0.0"
+
+postcss-icss-values@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-icss-values/-/postcss-icss-values-2.0.1.tgz#5a3388b759986ed25aa1c1c06836584b2b32780f"
+  dependencies:
+    icss-utils "^3.0.1"
+    lodash "^4.17.4"
+    postcss "^6.0.2"
+    postcss-value-parser "^3.3.0"
 
 postcss-load-config@^1.2.0:
   version "1.2.0"
