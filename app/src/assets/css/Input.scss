@@ -1,4 +1,4 @@
-@value $input-focus, $input-border, $input-placeholder, $font-color from './_variables.css';
+@import 'variables';
 
 .container {
   margin-bottom: 1rem;
@@ -15,7 +15,7 @@
 }
 
 .input:focus {
-  border-color: $focus;
+  border-color: $input-focus;
   outline: none;
 }
 

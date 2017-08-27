@@ -6,7 +6,7 @@ import CommitteeInfo from "./CommitteeInfo";
 
 import Button from 'components/Button';
 import committees from 'common/committees';
-import _s from "assets/css/Home.css";
+import _s from "assets/css/Home.scss";
 
 function Home() {
   return (

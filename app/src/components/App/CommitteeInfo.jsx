@@ -2,7 +2,7 @@ import React from "react";
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
 
-import _s from 'assets/css/CommitteeInfo.css';
+import _s from 'assets/css/CommitteeInfo.scss';
 
 class CommitteeInfo extends React.Component {
   constructor(props) {

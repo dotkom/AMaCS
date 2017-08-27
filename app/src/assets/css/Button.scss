@@ -1,4 +1,4 @@
-@value $blue, $light-gray from './_variables.css';
+@import 'variables';
 
 .button {
   background: $blue;

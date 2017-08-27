@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import _s from 'assets/css/Heading.css';
+import _s from 'assets/css/Heading.scss';
 
 import onlineLogoWhiteGuacamole from 'assets/images/online-logo-white.png';
 

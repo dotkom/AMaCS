@@ -1,6 +1,6 @@
 import React from "react";
 
-import _s from 'assets/css/Input.css';
+import _s from 'assets/css/Input.scss';
 
 function Input({ label, name, ...rest}) {
   return(

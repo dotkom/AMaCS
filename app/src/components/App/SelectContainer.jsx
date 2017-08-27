@@ -7,7 +7,7 @@ import SelectedList from "./SelectedList"
 import ToggleSwitch from "../ToggleSwitch"
 
 import committeesMap from 'common/committees';
-import _s from 'assets/css/SelectContainer.css';
+import _s from 'assets/css/SelectContainer.scss';
 
 export function updateSelection(selected, committeeName, maxSelected) {
   const selectedIndex = selected.indexOf(committeeName)

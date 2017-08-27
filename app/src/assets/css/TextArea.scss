@@ -1,4 +1,4 @@
-@value $input-border, $input-placeholder, $input-focus from './_variables.css';
+@import 'variables';
 
 .component {
   background: white;

@@ -1,4 +1,4 @@
-@value $gray from './_variables.css';
+@import 'variables';
 
 .component > * + * {
   margin-top: 1rem;

@@ -10,7 +10,7 @@ import Login from '../../Login';
 import TextArea from '../../TextArea';
 
 import blueArrow from 'assets/images/arrow-blue.png';
-import _s from 'assets/css/Application.css';
+import _s from 'assets/css/Application.scss';
 
 import { CommitteeApplication, connectServices } from 'services';
 
