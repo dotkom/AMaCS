@@ -81,6 +81,16 @@ const committees = new Map([
     id: 8,
     icon: trikomIcon,
   }],
+  ['kjelleren', {
+    key: "kjelleren",
+    name: "Realfagskjelleren",
+    info: `Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
+    Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
+    På Kjelleren arrangerer vi fester på tvers av linjeforeningene, og fester for hver av linjeforeningene, så om du ønsker å møte både onlinere og andre studenter vil kjelleren være det perfekte stedet for deg!
+    Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!`,
+    id: 9,
+    icon: kjellerenIcon,
+  }] 
 ]);
 
 export default committees;
