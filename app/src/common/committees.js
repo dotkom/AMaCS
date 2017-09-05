@@ -4,6 +4,7 @@ import dotkomIcon from 'assets/images/dotkom-square.svg';
 import fagkomIcon from 'assets/images/fagkom-square.svg';
 import prokomIcon from 'assets/images/prokom-square.svg';
 import trikomIcon from 'assets/images/trikom-square.svg';
+import kjellerenIcon from 'assets/images/realfagskjelleren-square.svg';
 
 const committees = new Map([
   ['arrkom', {
