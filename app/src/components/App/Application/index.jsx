@@ -48,7 +48,7 @@ export class Application extends Component {
   _isValidInput(){
     const { name, email, selectedComittees, applicationText } = this.state;
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return (this.props.user != nil || (name.length > 0 && re.test(email))) && applicationText.length > 0 && selectedComittees.length > 0;
+    return (this.props.user != null || (name.length > 0 && re.test(email))) && applicationText.length > 0 && selectedComittees.length > 0;
   }
   _toggleOrdered() {
     const { ordered, selectedComittees} = this.state;
