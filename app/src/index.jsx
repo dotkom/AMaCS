@@ -27,8 +27,14 @@ serviceManager.alias("application","application.service");
 const history = createBrowserHistory();
 initializeAnalytics(history);
 
+history.listen(() => {
+  window.scrollTo(0, 0);
+});
+
 if (process.env.NODE_ENV.toLowerCase() === 'production')
   Oidc.Log.reset(); // Turn off Oidc vendor logging to browser console in production.
+
+
 
 const render = Component => {
   ReactDOM.render(
