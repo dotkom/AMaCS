@@ -45,7 +45,11 @@ export class Application extends Component {
       selectedComittees: selected.slice(0,3)
     });
   }
-
+  _isValidInput(){
+    const { name, email, selectedComittees, applicationText } = this.state;
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return (this.props.user != null || (name.length > 0 && re.test(email))) && applicationText.length > 0 && selectedComittees.length > 0;
+  }
   _toggleOrdered() {
     const { ordered, selectedComittees} = this.state;
     this.setState({
@@ -122,7 +126,7 @@ export class Application extends Component {
           { this.state.responseMessage.length > 0 && <p>{this.state.responseMessage}</p> }
             <Button
               text={this.state.disableSubmit ? "Sender søknad..." : "Send søknad"}
-              disabled={this.state.disableSubmit}
+              disabled={this.state.disableSubmit || !this._isValidInput()}
               onClick={() => this.submitApplication()}
               />
         </div>

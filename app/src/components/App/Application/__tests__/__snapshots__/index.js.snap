@@ -145,7 +145,7 @@ exports[`Application renders correctly 1`] = `
       value=""
     />
     <Button
-      disabled={false}
+      disabled={true}
       onClick={[Function]}
       text="Send søknad"
     />
@@ -298,7 +298,7 @@ exports[`Application renders correctly with user info 1`] = `
       value=""
     />
     <Button
-      disabled={false}
+      disabled={true}
       onClick={[Function]}
       text="Send søknad"
     />
@@ -455,7 +455,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
       value=""
     />
     <Button
-      disabled={false}
+      disabled={true}
       onClick={[Function]}
       text="Send søknad"
     />
@@ -608,7 +608,7 @@ exports[`Application updates info on onChange from login 1`] = `
       value=""
     />
     <Button
-      disabled={false}
+      disabled={true}
       onClick={[Function]}
       text="Send søknad"
     />
@@ -761,7 +761,7 @@ exports[`Application updates user info on new props 1`] = `
       value=""
     />
     <Button
-      disabled={false}
+      disabled={true}
       onClick={[Function]}
       text="Send søknad"
     />
