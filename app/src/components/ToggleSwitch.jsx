@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import Cross from 'assets/images/cross.svg';
 import Check from 'assets/images/check.svg';
-import _s from 'assets/css/ToggleSwitch.css';
+import _s from 'assets/css/ToggleSwitch.scss';
 
 function ToggleSwitch({ checked, disabled, onChange }) {
   const SvgIcon = checked ? Check : Cross;

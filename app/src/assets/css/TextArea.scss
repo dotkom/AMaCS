@@ -1,6 +1,8 @@
+@import 'variables';
+
 .component {
-  background: #ffffff;
-  border: 2px solid #e1e1e1;
+  background: white;
+  border: 2px solid $input-border;
   display: block;
   width: 100%;
   min-height: 10rem;
@@ -10,10 +12,10 @@
 }
 
 .component:focus {
-  border-color: #55a8e2;
+  border-color: $input-focus;
   outline: none;
 }
 
 .component::placeholder {
-  color: #a5a5a5;
+  color: $input-placeholder;
 }

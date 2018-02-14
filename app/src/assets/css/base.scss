@@ -1,3 +1,5 @@
+@import 'variables';
+
 html {
   box-sizing: border-box;
 }
@@ -9,13 +11,13 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans';
-  background: #f2f2f2;
-  color: #333333;
+  font-family: $font;
+  background: $light-gray;
+  color: $font-color;
 }
 
 .footer {
-  background: #ffffff;
+  background: white;
   padding: 1rem;
   padding-bottom: 2.5rem;
   margin-top: 5rem;

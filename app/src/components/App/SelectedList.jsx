@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Selectable from "./Selectable"
 
 
-import _s from 'assets/css/SelectedList.css';
+import _s from 'assets/css/SelectedList.scss';
 
 function SelectedList({ committees, ordered, totalChoices, onChange }) {
   return (

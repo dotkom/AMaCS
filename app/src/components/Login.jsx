@@ -5,7 +5,7 @@ import Input from "./Input";
 import ToggleSwitch from "./ToggleSwitch";
 
 
-import _s from "assets/css/Login.css";
+import _s from "assets/css/Login.scss";
 import { connectServices } from 'services';
 
 import onlineIconWhite from 'assets/images/online-icon-white.png';

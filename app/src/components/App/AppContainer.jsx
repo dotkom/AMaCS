@@ -7,7 +7,7 @@ import Heading from "../Heading";
 import Home from "./Home"
 import NotFound from "../NotFound"
 import Thankyou from './Thankyou';
-import _s from 'assets/css/base.css';
+import _s from 'assets/css/base.scss';
 
 class AppContainer extends React.Component {
   constructor(props) {

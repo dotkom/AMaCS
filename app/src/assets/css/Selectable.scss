@@ -1,7 +1,8 @@
+@import 'variables';
 
 .container {
-  background: #ffffff;
-  border: 2px solid #fff;
+  background: white;
+  border: 2px solid white;
   padding: 0.6em 0.75em;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
   display: inline-flex;
@@ -17,7 +18,7 @@
 }
 
 .container:hover, .container.container.selected:hover {
-  border-color: #0060a3;
+  border-color: $blue;
 }
 
 .container.small {
@@ -26,7 +27,7 @@
 
 .container.selected {
   background: #C4C4C4;
-  border-color: #f2f2f2;
+  border-color: $light-gray;
   box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }

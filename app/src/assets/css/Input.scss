@@ -1,24 +1,26 @@
+@import 'variables';
+
 .container {
   margin-bottom: 1rem;
 }
 
 .input {
-  background: #ffffff;
-  border: 2px solid #e1e1e1;
+  background: white;
+  border: 2px solid $input-border;
   border-radius: 2px;
   width: 100%;
   font-size: 1.1rem;
   padding: 0.7rem 0.4rem;
-  color: #333333;
+  color: $font-color;
 }
 
 .input:focus {
-  border-color: #55a8e2;
+  border-color: $input-focus;
   outline: none;
 }
 
 .input::placeholder {
-  color: #a5a5a5;
+  color: $input-placeholder;
 }
 
 .input:disabled, .input:disabled::placeholder {

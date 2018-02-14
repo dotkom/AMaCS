@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import _s  from 'assets/css/NavigationButton.css';
+import _s  from 'assets/css/NavigationButton.scss';
 
 function NavigationButton({ children, link }) {
   return(

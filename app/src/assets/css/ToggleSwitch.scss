@@ -1,8 +1,10 @@
+@import 'variables';
+
 .container {
   display: inline-flex;
    
   background-color: #ffffff;
-  border: 2px solid #636363;
+  border: 2px solid $gray;
   border-radius: 16px;
   justify-content: center;
   user-select: none;
@@ -36,7 +38,7 @@
 .checked {
   margin-left: 1.5rem;
   margin-right: -0.17rem;
-  background: #0060A3;
+  background: $blue;
 }
 
 .container:hover .checked {

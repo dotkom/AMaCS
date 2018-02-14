@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-import _s from "assets/css/Selectable.css";
+import _s from "assets/css/Selectable.scss";
 import classNames from "classnames";
 
 

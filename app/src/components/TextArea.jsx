@@ -1,7 +1,7 @@
 import React from 'react';
 import Textarea from 'react-textarea-autosize';
 
-import _s from 'assets/css/TextArea.css';
+import _s from 'assets/css/TextArea.scss';
 
 function TextArea({ onChange, ...rest }) {
   return (

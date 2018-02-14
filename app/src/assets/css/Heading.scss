@@ -1,6 +1,8 @@
+@import 'variables';
+
 .heading {
   box-shadow: 0 0 0 0 rgba(0, 0, 0,0.1);
-  background: #0060A3;
+  background: $blue;
   margin-bottom: 1rem;
 }
 

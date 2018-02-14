@@ -1,6 +1,6 @@
 import React from "react";
 
-import _s from "assets/css/AuthenticationEndpoint.css";
+import _s from "assets/css/AuthenticationEndpoint.scss";
 
 class Auth extends React.Component {
   componentDidMount() {

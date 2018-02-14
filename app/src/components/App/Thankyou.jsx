@@ -1,6 +1,6 @@
 import React from "react";
 
-import _s from "assets/css/Thankyou.css";
+import _s from "assets/css/Thankyou.scss";
 
 function Thankyou() {
   return (
