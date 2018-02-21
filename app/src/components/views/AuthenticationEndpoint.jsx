@@ -11,12 +11,12 @@ class Auth extends React.Component {
 
   render() {
     return (
-        <div className={_s.container}>
+      <div className={_s.container}>
         <h2>Denne siden lukkes automatisk</h2>
         <p className={_s.text}>
             Denne siden skal lukkes automatisk. Dersom den ikke gjør det, så kan du lukke den selv.
         </p>
-        </div>
+      </div>
     );
   }
 }
