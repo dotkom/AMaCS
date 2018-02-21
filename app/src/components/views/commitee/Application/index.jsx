@@ -3,11 +3,11 @@ import _ from 'lodash';
 import classNames from 'classnames';
 import { withRouter } from 'react-router-dom'
 
-import Button from '../../Button';
-import SelectContainer from '../SelectContainer';
-import NavigationButton from '../../NavigationButton';
-import Login from '../../Login';
-import TextArea from '../../TextArea';
+import Button from 'components/misc/Button';
+import SelectContainer from 'components/misc/SelectContainer';
+import NavigationButton from 'components/misc/NavigationButton';
+import Login from 'components/misc/Login';
+import TextArea from 'components/misc/TextArea';
 
 import blueArrow from 'assets/images/arrow-blue.png';
 import _s from 'assets/css/Application.scss';
