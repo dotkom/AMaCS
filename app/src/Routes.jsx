@@ -32,7 +32,6 @@ export class Routes extends React.Component {
     const { user } = this.state;
     return (
       <Switch>
-        <Route path="/admin" render={props => <div user={user} {...props} />} />
         <Route path="/" render={props => <AppContainer
           user={user}
           {...props}
