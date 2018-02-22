@@ -4,7 +4,7 @@ import _ from "lodash";
 
 import Selectable from "./Selectable"
 import SelectedList from "./SelectedList"
-import ToggleSwitch from "../ToggleSwitch"
+import ToggleSwitch from "./ToggleSwitch"
 
 import committeesMap from 'common/committees';
 import _s from 'assets/css/SelectContainer.scss';

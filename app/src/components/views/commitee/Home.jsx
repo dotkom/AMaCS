@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
-import CommitteeInfo from "./CommitteeInfo";
+import CommitteeInfo from "components/misc/CommitteeInfo";
 
-import Button from 'components/Button';
+import Button from 'components/misc/Button';
 import committees from 'common/committees';
 import _s from "assets/css/Home.scss";
 
