@@ -5,7 +5,7 @@ import { Observable, Subject, ReplaySubject } from 'rxjs';
 import { User } from './user';
 
 Log.logger = console;
-Log.level = Log.ERROR;
+Log.level = Log.DEBUG;
 
 export class AuthServiceProvider{
   constructor(serviceManager,settings){
@@ -41,8 +41,8 @@ export class AuthServiceProvider{
     let u = null;
     this._loginState = 0;
     this.services.getService("http").setToken(user && user.access_token);
-    if(user && user.access_token)
-      this.services.getService("http").get(this.settings.metadata.userinfo_endpoint).map((profile) => {
+    if(user && user.access_token){
+      this.services.getService("http").get(this.settings.userinfo_endpoint).map((profile) => {
         return new User(user.access_token,user.scope,profile);
       }).catch((err) => {
         // return null if login failed
@@ -54,10 +54,11 @@ export class AuthServiceProvider{
           this.userReplay.next(this._user);
         };
       });
-    else if(push)
+    }
+    else if(push){
       this.userSubject.next(null);
       this.userReplay.next(null);
-       
+    }
   }
 
   //Login
@@ -75,8 +76,8 @@ export class AuthServiceProvider{
     sessionStorage.clear();
     this.setToken(null,true);
     //Revoking the token does not work "405 Method not allowed"
-    /*Observable.from(this.userManager.signoutRedirect()).subscribe((user)=> {
-    });*/
+    Observable.from(this.userManager.signoutRedirect()).subscribe((user)=> {
+    });
     return this.getUser();
   
   }
