@@ -4,6 +4,7 @@ export const OAUTH_SETTINGS = {
   response_type: process.env.SG_AUTH_RESPONSE_TYPE,
   redirect_uri: process.env.SG_AUTH_REDIRECT_URI,
   scope: process.env.SG_AUTH_SCOPE,
+  automaticSilentRenew: true
 }
 
 export const API_SETTINGS = {
