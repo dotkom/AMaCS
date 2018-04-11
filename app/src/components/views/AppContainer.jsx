@@ -1,11 +1,11 @@
 import React, { PropTypes } from "react";
 import { Link, Route, Switch } from "react-router-dom";
 
-import Application from "components/views/commitee/Application"
-import AuthenticationEndpoint from "components/views/AuthenticationEndpoint"
+import Application from "components/views/commitee/Application";
+import AuthenticationEndpoint from "components/views/AuthenticationEndpoint";
 import Heading from "components/misc/Heading";
-import Home from "components/views/commitee/Home"
-import NotFound from "components/views/NotFound"
+import Home from "components/views/Home";
+import NotFound from "components/views/NotFound";
 import Thankyou from 'components/views/Thankyou';
 import _s from 'assets/css/base.scss';
 
@@ -25,13 +25,14 @@ class AppContainer extends React.Component {
         <Heading />
         <main>
           <Switch>
-            <Route exact path={'/'} component={Home} />
+            <Route exact path={'/'} render={props => <Home/>}
+            />
             <Route exact path={`/application`} render={props =>
               <Application
                 user={user}
                 {...props}
-              />
-            } />
+              />}
+            />
             <Route exact path={'/thankyou'} component={Thankyou} />
             <Route exact path={'/auth'} component={AuthenticationEndpoint} />
             <Route component={NotFound} />

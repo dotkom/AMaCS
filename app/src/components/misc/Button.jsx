@@ -1,6 +1,7 @@
 import React from "react";
 
 import _s from 'assets/css/Button.scss';
+import classnames from 'classnames';
 
 class Button extends React.Component {
   constructor(props){
@@ -35,14 +36,14 @@ class Button extends React.Component {
 
   render(){
     const { children, text, iconLeft, iconRight, hoverIconLeft, hoverIconRight, ...rest } = this.props;
-    
+
     const icLeft = this.state.hover ? hoverIconLeft || iconLeft : iconLeft || hoverIconLeft;
     const icRight = this.state.hover ? hoverIconRight || iconRight : iconRight || hoverIconRight;
-    
+
     return (
-      <button 
+      <button
         {...rest}
-        className={_s.button} 
+        className={classnames(_s.button, this.props.className)} 
         onMouseEnter={(...a) => this._mouseEnter(...a)}
         onMouseLeave={(...a) => this._mouseLeave(...a)}
       >

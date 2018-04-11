@@ -38,7 +38,7 @@ export class Routes extends React.Component {
         />} />
         <Route component={NotFound} />
       </Switch>
-    )
+    );
   }
 }
 

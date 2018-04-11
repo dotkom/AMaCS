@@ -1,0 +1,41 @@
+@import 'variables';
+
+.card{
+  width: 150px;
+  border: 1px solid $gray;
+  background-color: white;
+  text-align: center;
+  margin: auto;
+}
+
+.card > h1 {
+  background-color: $blue;
+  color: white;
+  font-weight: 200;
+  margin: 0;
+}
+
+.card > p {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.cardButton {
+  font-size: 0.9rem;
+  font-weight: 200;
+  border-radius: 0;
+}
+
+.card.disabled {
+  background-color: darken( white, 20% );
+}
+
+.card.disabled > h1 {
+  background-color: darken( $blue, 20% );
+  color: darken( white, 20% );
+}
+
+.cardButton:disabled {
+  background: darken( $blue, 20% );
+  border-radius: 0;
+}
