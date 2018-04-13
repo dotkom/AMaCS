@@ -1,18 +1,35 @@
 @import 'variables';
 
 .card{
-  width: 150px;
+  width: 12rem;
   border: 1px solid $gray;
   background-color: white;
   text-align: center;
-  margin: auto;
+  transition: box-shadow 0.5s;
+  margin-bottom: 1rem;
 }
 
-.card > h1 {
+.card:hover{
+  box-shadow: 0px 0px 20px -2px $font-color;
+}
+
+.top{
   background-color: $blue;
+  padding: 0.5rem 0rem;
+}
+
+.top > img {
+  display: inline-block;
+  vertical-align: sub;
+  width: 1.7rem;
+  margin-right: 0.3rem;
+  margin-left: -0.3rem;
+}
+
+.top > span {
   color: white;
   font-weight: 200;
-  margin: 0;
+  font-size: 1rem;
 }
 
 .card > p {
@@ -20,19 +37,32 @@
   margin-right: 0.2rem;
 }
 
+
 .cardButton {
   font-size: 0.9rem;
   font-weight: 200;
   border-radius: 0;
+  text-transform: none;
 }
 
 .card.disabled {
   background-color: darken( white, 20% );
 }
 
-.card.disabled > h1 {
+.card.disabled:hover{
+  box-shadow: none;
+}
+
+.card.disabled > .top {
   background-color: darken( $blue, 20% );
+}
+
+.card.disabled > .top > span {
   color: darken( white, 20% );
+}
+
+.card.disabled > .top > img {
+  filter: brightness(80%);
 }
 
 .cardButton:disabled {

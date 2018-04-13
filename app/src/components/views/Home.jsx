@@ -13,14 +13,14 @@ class Home extends React.Component{
 
   render() {
     let cards = [];
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 7; i++) {
       cards.push(
         <Card
-          title = "Tittel"
+          title = "Søknadsnavn"
           key = { i }
           disabled = { i % 2 == 0 }
         >
-          <p>Dette er en søknad</p>
+          <p>Lorem ipsum Dolor sit Amet</p>
         </Card>
       );
     }

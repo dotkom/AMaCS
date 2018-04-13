@@ -8,7 +8,10 @@ console.log(_s);
 export function Card({title, children, disabled}) {
   return(
     <div className={classnames(_s.card, {[_s.disabled]: disabled})}>
-      <h1>{title}</h1>
+      <div className={_s.top}>
+        <img src="../app/src/assets/images/online-icon-white.png"/>
+        <span>{title}</span>
+      </div>
       {children}
       <Button
         text = "Til søknad"
