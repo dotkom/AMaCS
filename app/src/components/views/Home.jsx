@@ -18,6 +18,7 @@ class Home extends React.Component{
         <Card
           title = "Søknadsnavn"
           key = { i }
+          id = { i }
           disabled = { i % 2 == 0 }
           short = "Lorem ipsum Dolor sit Amet"
         >
