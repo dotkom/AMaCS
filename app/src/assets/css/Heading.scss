@@ -21,6 +21,7 @@
 
 .logo img {
   max-width: 100%;
+  margin: auto;
 }
 
 .header {
@@ -40,4 +41,12 @@
   font-weight: bold;
   line-height: normal;
   font-size: 1.2rem;
+}
+
+.login{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $light-gray;
+  color: $blue;
 }

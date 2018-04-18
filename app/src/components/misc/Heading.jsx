@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "components/misc/Button"
 
 import _s from 'assets/css/Heading.scss';
 
 import onlineLogoWhiteGuacamole from 'assets/images/online-logo-white.png';
+import onlineIcon from 'assets/images/online-icon.png'
 
 class Heading extends React.Component {
   constructor(props) {
@@ -17,6 +19,12 @@ class Heading extends React.Component {
   render () {
     return (
       <header className={_s.heading}>
+        <Button
+          className={_s.login}
+          text="Logg Inn"
+          iconLeft={onlineIcon}
+        >
+        </Button>
         <div className={_s.logo}>
           <Link to="/"><img src={onlineLogoWhiteGuacamole} alt="Online logo" /></Link>
         </div>
