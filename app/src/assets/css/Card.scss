@@ -11,7 +11,12 @@
 }
 
 .card:hover{
-  box-shadow: 0px 0px 20px -2px $font-color;
+  box-shadow: 0px 0px 10px -2px $font-color;
+}
+
+.link{
+  text-decoration: none;
+  color: inherit;
 }
 
 .top{
@@ -69,31 +74,4 @@
 .cardButton:disabled {
   background: darken( $blue, 20% );
   border-radius: 0;
-}
-
-.ingress{
-  position: absolute;
-  z-index: -1;
-  margin: 0 auto 1rem auto;
-  padding: 0 6rem 1rem 6rem;
-  top: 12rem;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  background-color: $light-gray;
-  transition: opacity 0.5s;
-}
-
-.ingress.enabled{
-  transition: opacity 0.5s;
-  z-index: 1;
-  opacity: 1;
-}
-
-.ingress > h1{
-  text-align: center;
-}
-
-.ingressButton{
-  margin: auto;
 }
