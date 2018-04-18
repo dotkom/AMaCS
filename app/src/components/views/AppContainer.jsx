@@ -5,6 +5,7 @@ import Application from "components/views/commitee/Application";
 import AuthenticationEndpoint from "components/views/AuthenticationEndpoint";
 import Heading from "components/misc/Heading";
 import Home from "components/views/Home";
+import Ingress from "components/views/Ingress"
 import NotFound from "components/views/NotFound";
 import Thankyou from 'components/views/Thankyou';
 import _s from 'assets/css/base.scss';
@@ -35,6 +36,10 @@ class AppContainer extends React.Component {
             />
             <Route exact path={'/thankyou'} component={Thankyou} />
             <Route exact path={'/auth'} component={AuthenticationEndpoint} />
+            <Route path="/ingress/:id" render={props => <Ingress
+              user={user}
+              {...props}
+            />} />
             <Route component={NotFound} />
           </Switch>
         </main>
