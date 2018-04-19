@@ -13,7 +13,7 @@ class Home extends React.Component{
 
   render() {
     let cards = [];
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 3; i++) {
       cards.push(
         <Card
           title = "Søknadsnavn"

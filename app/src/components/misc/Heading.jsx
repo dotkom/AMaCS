@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "components/misc/Button"
+import Login from "components/misc/Login";
 
 import _s from 'assets/css/Heading.scss';
 
@@ -15,16 +16,18 @@ class Heading extends React.Component {
 
     };
   }
-
   render () {
     return (
       <header className={_s.heading}>
         <Button
-          className={_s.login}
+          className={_s.loginHeader}
           text="Logg Inn"
           iconLeft={onlineIcon}
         >
         </Button>
+        <div className={_s.loginPanel}>
+          <Login/>
+        </div>
         <div className={_s.logo}>
           <Link to="/"><img src={onlineLogoWhiteGuacamole} alt="Online logo" /></Link>
         </div>
