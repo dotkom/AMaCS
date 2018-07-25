@@ -2,9 +2,8 @@
 import React from "react";
 import { Route, Switch } from 'react-router-dom';
 
-import AppContainer from "./components/App/AppContainer";
-import AdminContainer from "./components/Admin/AdminContainer";
-import NotFound from "./components/NotFound"
+import AppContainer from "components/views/AppContainer";
+import NotFound from "components/views/NotFound"
 
 import { connectServices } from 'services';
 
@@ -33,7 +32,6 @@ export class Routes extends React.Component {
     const { user } = this.state;
     return (
       <Switch>
-        <Route path="/admin" render={props => <AdminContainer user={user} {...props} />} />
         <Route path="/" render={props => <AppContainer
           user={user}
           {...props}

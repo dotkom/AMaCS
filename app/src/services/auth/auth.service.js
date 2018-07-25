@@ -5,7 +5,7 @@ import { Observable, Subject, ReplaySubject } from 'rxjs';
 import { User } from './user';
 
 Log.logger = console;
-Log.level = Log.ERROR;
+Log.level = Log.DEBUG;
 
 export class AuthServiceProvider{
   constructor(serviceManager,settings){
@@ -24,11 +24,11 @@ export class AuthServiceProvider{
   _initBindings(){
     
     this.userManager.events.addUserLoaded((user) => {
-      this.setToken(user,true);
+      this.setUser(user,true);
     });
 
     Observable.from(this.userManager.getUser()).subscribe((user) => {
-      this.setToken(user,true);
+      this.setUser(user,true);
     });
 
     Observable.from(this.userManager.signinPopupCallback()).subscribe((user) => {
@@ -37,27 +37,21 @@ export class AuthServiceProvider{
     });
   }
   
-  setToken(user,push){
-    let u = null;
+  setUser(user,push){
     this._loginState = 0;
     this.services.getService("http").setToken(user && user.access_token);
-    if(user && user.access_token)
-      this.services.getService("http").get(this.settings.metadata.userinfo_endpoint).map((profile) => {
-        return new User(user.access_token,user.scope,profile);
-      }).catch((err) => {
-        // return null if login failed
-        return Observable.of(null);
-      }).subscribe((user) => {
-        this._user = user;
-        if(push){
-          this.userSubject.next(this._user);
-          this.userReplay.next(this._user);
-        };
-      });
-    else if(push)
+    
+    if(user && user.profile){
+      this._user = new User(user.access_token,user.scope,user.profile);
+      if(push){
+        this.userSubject.next(this._user);
+        this.userReplay.next(this._user);
+      };
+    }
+    else if(push){
       this.userSubject.next(null);
       this.userReplay.next(null);
-       
+    }
   }
 
   //Login
@@ -73,10 +67,10 @@ export class AuthServiceProvider{
   logout(){
     this._loginState = 2;
     sessionStorage.clear();
-    this.setToken(null,true);
-    //Revoking the token does not work "405 Method not allowed"
-    /*Observable.from(this.userManager.signoutRedirect()).subscribe((user)=> {
-    });*/
+    this.setUser(null,true);
+    // Logs out user from OW4 aswell
+    Observable.from(this.userManager.signoutPopup()).subscribe((user)=> {
+    });
     return this.getUser();
   
   }
