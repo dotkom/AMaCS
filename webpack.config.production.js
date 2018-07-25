@@ -11,7 +11,7 @@ module.exports = merge.smart(config, {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -26,6 +26,9 @@ module.exports = merge.smart(config, {
             },
             {
               loader: 'postcss-loader',
+            },
+            {
+              loader: 'sass-loader',
             },
           ]
         }),

@@ -29,16 +29,21 @@ export class User{
   }
   
   get firstname(){
-    return this._userdata.first_name;
+    return this._userdata.given_name;
   }
 
   get lastname(){
-    return this._userdata.last_name;
+    return this._userdata.family_name;
   }
 
   get fullname(){
     return `${this.firstname} ${this.lastname}`
   }
+
+  get name(){
+    return this._userdata.name;
+  }
+
   isMemeber(){
     return !!this._userdata.memeber;
   }

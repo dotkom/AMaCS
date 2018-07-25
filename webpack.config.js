@@ -58,7 +58,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           {loader: 'style-loader'},
           {
@@ -72,6 +72,9 @@ module.exports = {
           },
           {
             loader: 'postcss-loader',
+          },
+          {
+            loader: 'sass-loader',
           },
         ]
       },
@@ -93,23 +96,15 @@ module.exports = {
       template: 'app/index.html',
     }),
     new webpack.EnvironmentPlugin({
-      SG_AUTH_AUTHORITY: 'http://localhost:8000',
+      SG_AUTH_AUTHORITY: 'http://localhost:8000/openid/',
       SG_AUTH_CLIENT_ID: 'secret',
-      SG_AUTH_RESPONSE_TYPE: 'token',
+      SG_AUTH_RESPONSE_TYPE: 'id_token token',
       SG_AUTH_REDIRECT_URI: 'http://localhost:8080/auth',
       SG_AUTH_SCOPE: [
-        'authentication.onlineuser.username.read',
-        'authentication.onlineuser.first_name.read',
-        'authentication.onlineuser.last_name.read',
-        'authentication.onlineuser.email.read',
-        'authentication.onlineuser.is_member.read',
-        'authentication.onlineuser.field_of_study.read',
-        'authentication.onlineuser.nickname.read',
-        'authentication.onlineuser.rfid.read'
+        'openid',
+        'profile',
+        'onlineweb4'
       ].join(' '),
-      SG_AUTH_ENDPOINT_AUTH: 'http://localhost:8000/sso/o/authorize/',
-      SG_AUTH_ENDPOINT_USER: 'http://localhost:8000/sso/user/',
-      SG_AUTH_ENDPOINT_REVOKE: 'http://localhost:8000/sso/o/revoke/',
       SG_APPLICATION_BACKEND: 'http://localhost:8000',
       SG_APPLICATION_ENDPOINT: '/api/v1/committeeapplications/',
       SG_GA_TRACKING_ID: '',
