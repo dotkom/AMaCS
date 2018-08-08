@@ -118,6 +118,10 @@ export class Application extends Component {
             Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid.
             Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
           </p>
+          <p>
+            Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn
+            dette i søknaden dersom dette er aktuelt for deg.
+          </p>
           <TextArea
             value={this.state.applicationText}
             onChange={(text) => this.setState({ applicationText: text })}
