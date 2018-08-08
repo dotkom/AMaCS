@@ -1,14 +1,21 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import _s from "assets/css/Selectable.scss";
 import classNames from "classnames";
 
 
-function Selectable({ committee, onClick, small, selected }) {
+function Selectable({ committee, onClick, small, selected, draggable }) {
   const Icon = committee.icon;
   return(
-    <div className={classNames(_s.container, { [_s.small]: small, [_s.selected]: selected })} onClick={onClick}>
+    <div
+      className={classNames(_s.container, {
+        [_s.small]: small,
+        [_s.selected]: selected,
+        [_s.draggable]: draggable,
+      })}
+      onClick={onClick}
+    >
       <Icon width={64} height={64} />
       <h2 className={classNames(_s.name)}>{committee.name}</h2>
     </div>

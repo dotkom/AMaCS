@@ -51,10 +51,9 @@ export class Application extends Component {
     return (this.props.user != null || (name.length > 0 && re.test(email))) && applicationText.length > 0 && selectedComittees.length > 0;
   }
   _toggleOrdered() {
-    const { ordered, selectedComittees} = this.state;
+    const { ordered } = this.state;
     this.setState({
       ordered: !ordered,
-      selectedComittees: !ordered ? [] : selectedComittees
     });
   }
 

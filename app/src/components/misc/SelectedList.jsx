@@ -1,11 +1,12 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import { SortableContainer, SortableElement } from "react-sortable-hoc";
 import Selectable from "./Selectable"
-
 
 import _s from 'assets/css/SelectedList.scss';
 
-function SelectedList({ committees, ordered, totalChoices, onChange }) {
+const SortableSelectable = SortableElement(Selectable);
+
+function SelectedList({ committees, disabled, totalChoices }) {
   return (
     <div className={_s.container}>
       {
@@ -14,8 +15,17 @@ function SelectedList({ committees, ordered, totalChoices, onChange }) {
           const key = committee  ? committee.key : `empty${i}`;
           return (
             <div key={key} className={_s.committee}>
-              { ordered && <div className={_s.number}>{ i + 1 }</div> }
-              { committee && <Selectable onClick={() => onChange(committee.key)} small committee={committee} /> }
+              { !disabled && <div className={_s.number}>{ i + 1 }</div> }
+
+              { committee && (
+                <SortableSelectable
+                  index={i}
+                  committee={committee}
+                  disabled={disabled}
+                  draggable={!disabled} // Need this prop twice, as the HOC does not pass on disabled.
+                  small
+                />
+              )}
             </div>
           );
         })
@@ -24,4 +34,4 @@ function SelectedList({ committees, ordered, totalChoices, onChange }) {
   );
 }
 
-export default SelectedList;
+export default SortableContainer(SelectedList);

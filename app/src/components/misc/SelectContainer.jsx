@@ -1,6 +1,6 @@
 import React from "react";
-import PropTypes from 'prop-types';
-import _ from "lodash";
+import PropTypes from "prop-types";
+import { arrayMove } from "react-sortable-hoc";
 
 import Selectable from "./Selectable"
 import SelectedList from "./SelectedList"
@@ -31,17 +31,21 @@ class SelectContainer extends React.Component {
   }
 
   handleSelect(committeeName) {
-    const { selected, onChange } = this.props;
+    const { selected } = this.props;
     const newSelection = updateSelection(selected, committeeName, this.maxSelected);
     this.props.onChange(newSelection);
   }
+
+  onSortEnd(oldIndex, newIndex) {
+    this.props.onChange(arrayMove(this.props.selected, oldIndex, newIndex));
+  };
 
   render() {
     const { selected, ordered, onOrderedChange } = this.props;
     const committees = this.props.committees || committeesMap;
     return (
       <div className={_s.component}>
-        <p>Velg komiteene du ønsker å søke ved å klikke på dem{ordered && ' i prioritert rekkefølge'}.</p>
+        <p>Velg komiteene du ønsker å søke ved å klikke på dem.</p>
         <div className={_s.selectables}>
           { Array.from(committees).map(([key, committee]) => (
             <Selectable
@@ -56,12 +60,17 @@ class SelectContainer extends React.Component {
           <ToggleSwitch checked={ordered} onChange={onOrderedChange} />
           <span>Prioritert rekkefølge?</span>
         </div>
+        {ordered && (
+          <p>
+            Dra komiteene for å prioritere dem.
+          </p>
+        )}
         <div className={_s.selectedList}>
           <SelectedList
-            ordered={ordered}
+            disabled={!ordered}
             committees={selected.map(committeeName => committees.get(committeeName))}
             totalChoices={this.maxSelected}
-            onChange={(committee) => { this.handleSelect(committee)}}
+            onSortEnd={(oldIndex, newIndex) => this.onSortEnd(oldIndex, newIndex)}
           />
         </div>
       </div>

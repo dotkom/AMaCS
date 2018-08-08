@@ -65,33 +65,6 @@ describe('SelectedList', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('calls onChange when clicking on a choice', () => {
-    const committees = [
-      createCommitteeObject('Testkom'),
-      createCommitteeObject('Bestkom'),
-      createCommitteeObject('Sickkom'),
-    ]
-    const onChangeMock = jest.fn();
-    const wrapper = shallow(
-      <SelectedList totalChoices={3} committees={committees} onChange={onChangeMock} />
-    );
-    wrapper.find('Selectable').first().simulate('click');
-    expect(onChangeMock).toHaveBeenCalledWith('testkom');  });
-
-  it('calls onChange when clicking on a choice', () => {
-    const committees = [
-      createCommitteeObject('Testkom'),
-      createCommitteeObject('Bestkom'),
-      createCommitteeObject('Sickkom'),
-    ]
-    const onChangeMock = jest.fn();
-    const wrapper = shallow(
-      <SelectedList totalChoices={3} committees={committees} onChange={onChangeMock} />
-    );
-    wrapper.find('Selectable').last().simulate('click');
-    expect(onChangeMock).toHaveBeenCalledWith('sickkom');
-  });
-
   it('renders correctly when ordered', () => {
     const committees = [
       createCommitteeObject('Testkom'),

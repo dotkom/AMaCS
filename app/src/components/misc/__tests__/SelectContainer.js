@@ -66,20 +66,6 @@ describe('SelectContainer', () => {
     wrapper.find('Selectable').first().simulate('click');
     expect(onChangeMock).toHaveBeenCalledWith(['Test2kom', 'Test1kom']);
   });
-
-  it('calls onChange when removing committee from SelectedList', () => {
-    const selected = ['Test2kom', 'Test0kom', 'Test1kom'];
-    const onChangeMock = jest.fn();
-    const wrapper = shallow(
-      <SelectContainer
-        committees={committees}
-        selected={selected}
-        onChange={onChangeMock}
-      />
-    );
-    wrapper.find('SelectedList').first().simulate('change', 'Test0kom');
-    expect(onChangeMock).toHaveBeenCalledWith(['Test2kom', 'Test1kom']);
-  });
 });
 
 describe('updateSelection', () => {

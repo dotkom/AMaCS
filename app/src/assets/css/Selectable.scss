@@ -17,7 +17,7 @@
   cursor: default;
 }
 
-.container:hover, .container.container.selected:hover {
+.container.draggable:hover, .container.draggable.selected:hover {
   border-color: $blue;
 }
 
