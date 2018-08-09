@@ -1,4 +1,5 @@
 import arrkomIcon from 'assets/images/arrkom-square.svg';
+import bankomIcon from 'assets/images/bankom-square.svg';
 import bedkomIcon from 'assets/images/bedkom-square.svg';
 import dotkomIcon from 'assets/images/dotkom-square.svg';
 import fagkomIcon from 'assets/images/fagkom-square.svg';
@@ -16,6 +17,19 @@ const committees = new Map([
     person selv? Da er kanskje Arrangementskomitéen stedet for deg!`,
     id: 1,
     icon: arrkomIcon,
+  }],
+  ['bankom', {
+    key: 'bankom',
+    name: 'Bankom',
+    info: `Bank- og økonomikomtiteen sørger for at det blir satt opp fornuftige budsjett
+    og at de blir fulgt. Komiteen består av de økonmiansvarlige fra hver av de andre
+    komiteene, en komiteeleder og en økonomiansvarlig for Online/Hovedstyret. Vi setter
+    hvert år opp budsjett og fører månedlige regnskap. Ukentlige arbeidsoppgaver som
+    fakturering og betaling av regninger hører også med i et verv i bankom. Er du
+    interessert i økonomi, regnskap, kontroll og gode rutiner vil vi gjerne at du informerer
+    oss om at du er interessert i et tilleggsverv som økonomiansvarlig!`,
+    icon: bankomIcon,
+    disableSelect: true,
   }],
   ['bedkom', {
     key: 'bedkom',
