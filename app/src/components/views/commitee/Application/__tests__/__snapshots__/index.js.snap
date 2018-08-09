@@ -153,7 +153,9 @@ exports[`Application renders correctly 1`] = `
       Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
     <p>
-      Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      <em>
+        Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      </em>
     </p>
     <TextArea
       onChange={[Function]}
@@ -322,7 +324,9 @@ exports[`Application renders correctly with user info 1`] = `
       Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
     <p>
-      Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      <em>
+        Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      </em>
     </p>
     <TextArea
       onChange={[Function]}
@@ -495,7 +499,9 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
       Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
     <p>
-      Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      <em>
+        Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      </em>
     </p>
     <TextArea
       onChange={[Function]}
@@ -664,7 +670,9 @@ exports[`Application updates info on onChange from login 1`] = `
       Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
     <p>
-      Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      <em>
+        Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      </em>
     </p>
     <TextArea
       onChange={[Function]}
@@ -833,7 +841,9 @@ exports[`Application updates user info on new props 1`] = `
       Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
     <p>
-      Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      <em>
+        Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      </em>
     </p>
     <TextArea
       onChange={[Function]}

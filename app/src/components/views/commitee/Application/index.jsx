@@ -119,8 +119,10 @@ export class Application extends Component {
             Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
           </p>
           <p>
-            Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn
-            dette i søknaden dersom dette er aktuelt for deg.
+            <em>
+              Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn
+              dette i søknaden dersom dette er aktuelt for deg.
+            </em>
           </p>
           <TextArea
             value={this.state.applicationText}
