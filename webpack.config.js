@@ -103,6 +103,7 @@ module.exports = {
       SG_AUTH_SCOPE: [
         'openid',
         'profile',
+        'email',
         'onlineweb4'
       ].join(' '),
       SG_APPLICATION_BACKEND: 'http://localhost:8000',
