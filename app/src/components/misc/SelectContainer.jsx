@@ -39,6 +39,7 @@ class SelectContainer extends React.Component {
   render() {
     const { selected, ordered, onOrderedChange } = this.props;
     const committees = this.props.committees || committeesMap;
+
     return (
       <div className={_s.component}>
         <p>Velg komiteene du ønsker å søke ved å klikke på dem{ordered && ' i prioritert rekkefølge'}.</p>
@@ -50,7 +51,7 @@ class SelectContainer extends React.Component {
                 key={key}
                 onClick={() => this.handleSelect(key)}
                 committee={committee}
-                selected={selected.some(c => c.toLowerCase() === committee.name.toLowerCase())}
+                selected={selected.some(c => c === committee.key)}
               />
             )
           )}
