@@ -5,6 +5,7 @@ import dotkomIcon from 'assets/images/dotkom-square.svg';
 import fagkomIcon from 'assets/images/fagkom-square.svg';
 import prokomIcon from 'assets/images/prokom-square.svg';
 import trikomIcon from 'assets/images/trikom-square.svg';
+import kjellerenIcon from 'assets/images/realfagskjelleren-square.svg';
 
 const committees = new Map([
   ['arrkom', {
@@ -95,6 +96,18 @@ const committees = new Map([
     id: 8,
     icon: trikomIcon,
   }],
+  ['kjelleren', {
+    key: "kjelleren",
+    name: "Realfagskjelleren",
+    info: `Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
+    Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
+    Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.
+	  Derfor passer dette vervet perfekt for deg som ønsker å møte både onlinere og andre studenter!
+    Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
+	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)`,
+    id: 33,
+    icon: kjellerenIcon,
+  }] 
 ]);
 
 export default committees;

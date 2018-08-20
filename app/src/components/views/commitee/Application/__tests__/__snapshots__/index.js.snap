@@ -132,6 +132,18 @@ exports[`Application renders correctly 1`] = `
             "key": "trikom",
             "name": "Trikom",
           },
+          "kjelleren" => Object {
+            "icon": "SVGMockComponent",
+            "id": 33,
+            "info": "Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
+            Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
+            Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.
+        	  Derfor passer dette vervet perfekt for deg som ønsker å møte både onlinere og andre studenter!
+            Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
+        	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)",
+            "key": "kjelleren",
+            "name": "Realfagskjelleren",
+          },
         }
       }
       onChange={[Function]}
@@ -303,6 +315,18 @@ exports[`Application renders correctly with user info 1`] = `
             "key": "trikom",
             "name": "Trikom",
           },
+          "kjelleren" => Object {
+            "icon": "SVGMockComponent",
+            "id": 33,
+            "info": "Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
+            Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
+            Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.
+        	  Derfor passer dette vervet perfekt for deg som ønsker å møte både onlinere og andre studenter!
+            Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
+        	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)",
+            "key": "kjelleren",
+            "name": "Realfagskjelleren",
+          },
         }
       }
       onChange={[Function]}
@@ -473,6 +497,18 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
             Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medstudenter, er trikom komiteen for deg!",
             "key": "trikom",
             "name": "Trikom",
+          },
+          "kjelleren" => Object {
+            "icon": "SVGMockComponent",
+            "id": 33,
+            "info": "Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
+            Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
+            Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.
+        	  Derfor passer dette vervet perfekt for deg som ønsker å møte både onlinere og andre studenter!
+            Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
+        	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)",
+            "key": "kjelleren",
+            "name": "Realfagskjelleren",
           },
         }
       }
@@ -649,6 +685,18 @@ exports[`Application updates info on onChange from login 1`] = `
             "key": "trikom",
             "name": "Trikom",
           },
+          "kjelleren" => Object {
+            "icon": "SVGMockComponent",
+            "id": 33,
+            "info": "Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
+            Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
+            Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.
+        	  Derfor passer dette vervet perfekt for deg som ønsker å møte både onlinere og andre studenter!
+            Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
+        	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)",
+            "key": "kjelleren",
+            "name": "Realfagskjelleren",
+          },
         }
       }
       onChange={[Function]}
@@ -819,6 +867,18 @@ exports[`Application updates user info on new props 1`] = `
             Så hvis du har en gledesspreder i deg og liker å spre trivsel til dine medstudenter, er trikom komiteen for deg!",
             "key": "trikom",
             "name": "Trikom",
+          },
+          "kjelleren" => Object {
+            "icon": "SVGMockComponent",
+            "id": 33,
+            "info": "Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
+            Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
+            Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.
+        	  Derfor passer dette vervet perfekt for deg som ønsker å møte både onlinere og andre studenter!
+            Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
+        	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)",
+            "key": "kjelleren",
+            "name": "Realfagskjelleren",
           },
         }
       }
