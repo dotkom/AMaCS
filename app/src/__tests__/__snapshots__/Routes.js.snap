@@ -263,6 +263,52 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               <CommitteeInfo
                                 committee={
                                   Object {
+                                    "disableSelect": true,
+                                    "icon": "SVGMockComponent",
+                                    "info": "Bank- og økonomikomtiteen sørger for at det blir satt opp fornuftige budsjett
+                                      og at de blir fulgt. Komiteen består av de økonmiansvarlige fra hver av de andre
+                                      komiteene, en komiteeleder og en økonomiansvarlig for Online/Hovedstyret. Vi setter
+                                      hvert år opp budsjett og fører månedlige regnskap. Ukentlige arbeidsoppgaver som
+                                      fakturering og betaling av regninger hører også med i et verv i bankom. Er du
+                                      interessert i økonomi, regnskap, kontroll og gode rutiner vil vi gjerne at du informerer
+                                      oss om at du er interessert i et tilleggsverv som økonomiansvarlig!",
+                                    "key": "bankom",
+                                    "name": "Bankom",
+                                  }
+                                }
+                              >
+                                <section
+                                  className="component"
+                                >
+                                  <header
+                                    className="header"
+                                    onClick={[Function]}
+                                  >
+                                    <SVGMockComponent
+                                      className="img"
+                                    />
+                                    <h2
+                                      className="name"
+                                    >
+                                      Bankom
+                                    </h2>
+                                  </header>
+                                  <div
+                                    className="info"
+                                  >
+                                    Bank- og økonomikomtiteen sørger for at det blir satt opp fornuftige budsjett
+                                        og at de blir fulgt. Komiteen består av de økonmiansvarlige fra hver av de andre
+                                        komiteene, en komiteeleder og en økonomiansvarlig for Online/Hovedstyret. Vi setter
+                                        hvert år opp budsjett og fører månedlige regnskap. Ukentlige arbeidsoppgaver som
+                                        fakturering og betaling av regninger hører også med i et verv i bankom. Er du
+                                        interessert i økonomi, regnskap, kontroll og gode rutiner vil vi gjerne at du informerer
+                                        oss om at du er interessert i et tilleggsverv som økonomiansvarlig!
+                                  </div>
+                                </section>
+                              </CommitteeInfo>
+                              <CommitteeInfo
+                                committee={
+                                  Object {
                                     "icon": "SVGMockComponent",
                                     "id": 3,
                                     "info": "Bedriftskomiteen er bindeleddet mellom næringslivet og informatikkstudenter,

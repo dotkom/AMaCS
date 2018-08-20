@@ -55,6 +55,19 @@ exports[`Application renders correctly 1`] = `
             "key": "arrkom",
             "name": "Arrkom",
           },
+          "bankom" => Object {
+            "disableSelect": true,
+            "icon": "SVGMockComponent",
+            "info": "Bank- og økonomikomtiteen sørger for at det blir satt opp fornuftige budsjett
+            og at de blir fulgt. Komiteen består av de økonmiansvarlige fra hver av de andre
+            komiteene, en komiteeleder og en økonomiansvarlig for Online/Hovedstyret. Vi setter
+            hvert år opp budsjett og fører månedlige regnskap. Ukentlige arbeidsoppgaver som
+            fakturering og betaling av regninger hører også med i et verv i bankom. Er du
+            interessert i økonomi, regnskap, kontroll og gode rutiner vil vi gjerne at du informerer
+            oss om at du er interessert i et tilleggsverv som økonomiansvarlig!",
+            "key": "bankom",
+            "name": "Bankom",
+          },
           "bedkom" => Object {
             "icon": "SVGMockComponent",
             "id": 3,
@@ -150,6 +163,11 @@ exports[`Application renders correctly 1`] = `
     </h2>
     <p>
       Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
+    </p>
+    <p>
+      <em>
+        Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      </em>
     </p>
     <TextArea
       onChange={[Function]}
@@ -220,6 +238,19 @@ exports[`Application renders correctly with user info 1`] = `
             "key": "arrkom",
             "name": "Arrkom",
           },
+          "bankom" => Object {
+            "disableSelect": true,
+            "icon": "SVGMockComponent",
+            "info": "Bank- og økonomikomtiteen sørger for at det blir satt opp fornuftige budsjett
+            og at de blir fulgt. Komiteen består av de økonmiansvarlige fra hver av de andre
+            komiteene, en komiteeleder og en økonomiansvarlig for Online/Hovedstyret. Vi setter
+            hvert år opp budsjett og fører månedlige regnskap. Ukentlige arbeidsoppgaver som
+            fakturering og betaling av regninger hører også med i et verv i bankom. Er du
+            interessert i økonomi, regnskap, kontroll og gode rutiner vil vi gjerne at du informerer
+            oss om at du er interessert i et tilleggsverv som økonomiansvarlig!",
+            "key": "bankom",
+            "name": "Bankom",
+          },
           "bedkom" => Object {
             "icon": "SVGMockComponent",
             "id": 3,
@@ -316,6 +347,11 @@ exports[`Application renders correctly with user info 1`] = `
     <p>
       Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
+    <p>
+      <em>
+        Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      </em>
+    </p>
     <TextArea
       onChange={[Function]}
       placeholder="Din søknadstekst..."
@@ -384,6 +420,19 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
             person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
             "key": "arrkom",
             "name": "Arrkom",
+          },
+          "bankom" => Object {
+            "disableSelect": true,
+            "icon": "SVGMockComponent",
+            "info": "Bank- og økonomikomtiteen sørger for at det blir satt opp fornuftige budsjett
+            og at de blir fulgt. Komiteen består av de økonmiansvarlige fra hver av de andre
+            komiteene, en komiteeleder og en økonomiansvarlig for Online/Hovedstyret. Vi setter
+            hvert år opp budsjett og fører månedlige regnskap. Ukentlige arbeidsoppgaver som
+            fakturering og betaling av regninger hører også med i et verv i bankom. Er du
+            interessert i økonomi, regnskap, kontroll og gode rutiner vil vi gjerne at du informerer
+            oss om at du er interessert i et tilleggsverv som økonomiansvarlig!",
+            "key": "bankom",
+            "name": "Bankom",
           },
           "bedkom" => Object {
             "icon": "SVGMockComponent",
@@ -485,6 +534,11 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
     <p>
       Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
+    <p>
+      <em>
+        Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      </em>
+    </p>
     <TextArea
       onChange={[Function]}
       placeholder="Din søknadstekst..."
@@ -553,6 +607,19 @@ exports[`Application updates info on onChange from login 1`] = `
             person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
             "key": "arrkom",
             "name": "Arrkom",
+          },
+          "bankom" => Object {
+            "disableSelect": true,
+            "icon": "SVGMockComponent",
+            "info": "Bank- og økonomikomtiteen sørger for at det blir satt opp fornuftige budsjett
+            og at de blir fulgt. Komiteen består av de økonmiansvarlige fra hver av de andre
+            komiteene, en komiteeleder og en økonomiansvarlig for Online/Hovedstyret. Vi setter
+            hvert år opp budsjett og fører månedlige regnskap. Ukentlige arbeidsoppgaver som
+            fakturering og betaling av regninger hører også med i et verv i bankom. Er du
+            interessert i økonomi, regnskap, kontroll og gode rutiner vil vi gjerne at du informerer
+            oss om at du er interessert i et tilleggsverv som økonomiansvarlig!",
+            "key": "bankom",
+            "name": "Bankom",
           },
           "bedkom" => Object {
             "icon": "SVGMockComponent",
@@ -650,6 +717,11 @@ exports[`Application updates info on onChange from login 1`] = `
     <p>
       Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
     </p>
+    <p>
+      <em>
+        Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      </em>
+    </p>
     <TextArea
       onChange={[Function]}
       placeholder="Din søknadstekst..."
@@ -718,6 +790,19 @@ exports[`Application updates user info on new props 1`] = `
             person selv? Da er kanskje Arrangementskomitéen stedet for deg!",
             "key": "arrkom",
             "name": "Arrkom",
+          },
+          "bankom" => Object {
+            "disableSelect": true,
+            "icon": "SVGMockComponent",
+            "info": "Bank- og økonomikomtiteen sørger for at det blir satt opp fornuftige budsjett
+            og at de blir fulgt. Komiteen består av de økonmiansvarlige fra hver av de andre
+            komiteene, en komiteeleder og en økonomiansvarlig for Online/Hovedstyret. Vi setter
+            hvert år opp budsjett og fører månedlige regnskap. Ukentlige arbeidsoppgaver som
+            fakturering og betaling av regninger hører også med i et verv i bankom. Er du
+            interessert i økonomi, regnskap, kontroll og gode rutiner vil vi gjerne at du informerer
+            oss om at du er interessert i et tilleggsverv som økonomiansvarlig!",
+            "key": "bankom",
+            "name": "Bankom",
           },
           "bedkom" => Object {
             "icon": "SVGMockComponent",
@@ -814,6 +899,11 @@ exports[`Application updates user info on new props 1`] = `
     </h2>
     <p>
       Send inn din søknad hvor du forteller litt om deg selv, din motivasjon for vervet, og eventuelt tidligere erfaring fra lignende arbeid. Hold gjerne søknaden kort ettersom at vi arrangerer et intervju med hver søker så vi kan bli enda bedre kjent med deg.
+    </p>
+    <p>
+      <em>
+        Vi vil særlig vite om du er interessert i et tilleggsverv i bankom. Gjerne nevn dette i søknaden dersom dette er aktuelt for deg.
+      </em>
     </p>
     <TextArea
       onChange={[Function]}

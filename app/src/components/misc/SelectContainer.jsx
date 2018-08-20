@@ -43,14 +43,17 @@ class SelectContainer extends React.Component {
       <div className={_s.component}>
         <p>Velg komiteene du ønsker å søke ved å klikke på dem{ordered && ' i prioritert rekkefølge'}.</p>
         <div className={_s.selectables}>
-          { Array.from(committees).map(([key, committee]) => (
-            <Selectable
-              key={key}
-              onClick={() => this.handleSelect(key)}
-              committee={committee}
-              selected={selected.some(c => c.toLowerCase() === committee.name.toLowerCase())}
-            />
-          ))}
+          {Array.from(committees)
+            .filter(([key, committee]) => !committee.disableSelect)
+            .map(([key, committee]) => (
+              <Selectable
+                key={key}
+                onClick={() => this.handleSelect(key)}
+                committee={committee}
+                selected={selected.some(c => c.toLowerCase() === committee.name.toLowerCase())}
+              />
+            )
+          )}
         </div>
         <div className={_s.prioritizedSwitch}>
           <ToggleSwitch checked={ordered} onChange={onOrderedChange} />
