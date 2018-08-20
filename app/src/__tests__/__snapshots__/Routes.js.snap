@@ -39,7 +39,6 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
             "hash": "",
             "pathname": "/",
             "search": "",
-            "state": undefined,
           },
           "push": [Function],
           "replace": [Function],
@@ -74,7 +73,6 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                   "hash": "",
                   "pathname": "/",
                   "search": "",
-                  "state": undefined,
                 }
               }
               path="/"
@@ -94,7 +92,6 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                       "hash": "",
                       "pathname": "/",
                       "search": "",
-                      "state": undefined,
                     },
                     "push": [Function],
                     "replace": [Function],
@@ -105,7 +102,6 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                     "hash": "",
                     "pathname": "/",
                     "search": "",
-                    "state": undefined,
                   }
                 }
                 match={
@@ -171,7 +167,6 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                             "hash": "",
                             "pathname": "/",
                             "search": "",
-                            "state": undefined,
                           }
                         }
                         path="/"
@@ -190,7 +185,6 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                 "hash": "",
                                 "pathname": "/",
                                 "search": "",
-                                "state": undefined,
                               },
                               "push": [Function],
                               "replace": [Function],
@@ -201,7 +195,6 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                               "hash": "",
                               "pathname": "/",
                               "search": "",
-                              "state": undefined,
                             }
                           }
                           match={
