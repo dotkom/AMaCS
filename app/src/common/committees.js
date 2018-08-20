@@ -91,7 +91,7 @@ const committees = new Map([
 	  Derfor passer dette vervet perfekt for deg som ønsker å møte både onlinere og andre studenter!
     Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
 	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)`,
-    id: 9,
+    id: 33,
     icon: kjellerenIcon,
   }] 
 ]);

@@ -121,7 +121,7 @@ exports[`Application renders correctly 1`] = `
           },
           "kjelleren" => Object {
             "icon": "SVGMockComponent",
-            "id": 9,
+            "id": 33,
             "info": "Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
             Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
             Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.
@@ -286,7 +286,7 @@ exports[`Application renders correctly with user info 1`] = `
           },
           "kjelleren" => Object {
             "icon": "SVGMockComponent",
-            "id": 9,
+            "id": 33,
             "info": "Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
             Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
             Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.
@@ -451,7 +451,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
           },
           "kjelleren" => Object {
             "icon": "SVGMockComponent",
-            "id": 9,
+            "id": 33,
             "info": "Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
             Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
             Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.
@@ -620,7 +620,7 @@ exports[`Application updates info on onChange from login 1`] = `
           },
           "kjelleren" => Object {
             "icon": "SVGMockComponent",
-            "id": 9,
+            "id": 33,
             "info": "Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
             Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
             Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.
@@ -785,7 +785,7 @@ exports[`Application updates user info on new props 1`] = `
           },
           "kjelleren" => Object {
             "icon": "SVGMockComponent",
-            "id": 9,
+            "id": 33,
             "info": "Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
             Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
             Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.

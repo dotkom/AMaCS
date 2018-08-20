@@ -492,7 +492,7 @@ exports[`ConnectedRoutes renders mounted root route 1`] = `
                                 committee={
                                   Object {
                                     "icon": "SVGMockComponent",
-                                    "id": 9,
+                                    "id": 33,
                                     "info": "Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
                                       Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
                                       Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.
