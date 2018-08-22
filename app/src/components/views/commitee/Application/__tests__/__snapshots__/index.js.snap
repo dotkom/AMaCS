@@ -142,7 +142,7 @@ exports[`Application renders correctly 1`] = `
             Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
         	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)",
             "key": "kjelleren",
-            "name": "Realfagskjelleren",
+            "name": "Kjelleren",
           },
         }
       }
@@ -325,7 +325,7 @@ exports[`Application renders correctly with user info 1`] = `
             Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
         	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)",
             "key": "kjelleren",
-            "name": "Realfagskjelleren",
+            "name": "Kjelleren",
           },
         }
       }
@@ -508,7 +508,7 @@ exports[`Application updates info on onChange from SelectContainer 1`] = `
             Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
         	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)",
             "key": "kjelleren",
-            "name": "Realfagskjelleren",
+            "name": "Kjelleren",
           },
         }
       }
@@ -695,7 +695,7 @@ exports[`Application updates info on onChange from login 1`] = `
             Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
         	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)",
             "key": "kjelleren",
-            "name": "Realfagskjelleren",
+            "name": "Kjelleren",
           },
         }
       }
@@ -878,7 +878,7 @@ exports[`Application updates user info on new props 1`] = `
             Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
         	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)",
             "key": "kjelleren",
-            "name": "Realfagskjelleren",
+            "name": "Kjelleren",
           },
         }
       }
