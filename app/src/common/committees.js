@@ -98,7 +98,7 @@ const committees = new Map([
   }],
   ['kjelleren', {
     key: "kjelleren",
-    name: "Realfagskjelleren",
+    name: "Kjelleren",
     info: `Realfagskjelleren er en linjeforenings bar som drives i samarbeid med linjeforeningene Spanskrøret (lektorutdanning i realfag), Delta (matematikk og fysikk) og Volvox & Alkymisten (biologi, kjemi og bioteknologi).
     Vi jobber for å få i gang fester og andre sosiale sprell for alle studentene som studerer realfag.
     Kjelleren har arrangemang både på tvers av linjeforeningene og for hver av linjeforeningene.
