@@ -140,7 +140,7 @@ exports[`Home renders correctly 1`] = `
             Så hvis du har lyst til å prøve deg som bartender, bli kjent med andre og arrangere fester er kjelleren det perfekte stedet for deg!
         	  NB: Du kan få verv i både kjelleren og en annen komité, det er ikke noe problem :)",
           "key": "kjelleren",
-          "name": "Realfagskjelleren",
+          "name": "Kjelleren",
         }
       }
     />
