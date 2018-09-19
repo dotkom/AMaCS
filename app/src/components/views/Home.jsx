@@ -2,6 +2,9 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
 import Card from 'components/misc/Card';
+import Button from 'components/misc/Button';
+import onlineIcon from '../../assets/images/online-icon.png';
+import onlineIconWhite from '../../assets/images/online-icon-white.png';
 
 import _s from 'assets/css/Home2.scss';
 
@@ -19,8 +22,8 @@ class Home extends React.Component{
           title = "Søknadsnavn"
           key = { i }
           id = { i }
-          disabled = { i % 2 == 0 }
-          short = "Lorem ipsum Dolor sit Amet"
+          disabled = { (i + 1) % 2 == 0 }
+          short = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ex aliquet"
         >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ex aliquet, congue dolor ut, maximus lorem. Pellentesque id massa laoreet, hendrerit purus non, posuere dolor. Proin diam velit, posuere et felis et, dapibus laoreet nunc. Sed ultricies laoreet ante ac feugiat. Nam ac laoreet sem. Nulla nec lectus nec lectus cursus ullamcorper. Maecenas erat enim, accumsan sit amet maximus vel, pellentesque sed neque. Maecenas nec dolor feugiat, rutrum risus sit amet, mattis lectus. Vestibulum bibendum ipsum vitae libero efficitur, a sollicitudin metus consectetur. Aliquam aliquam tellus eget purus facilisis hendrerit. Aenean eu ullamcorper nulla. Nunc semper arcu nibh, non tempor augue sagittis eget. Sed eu quam eu odio viverra consequat.
 
@@ -28,7 +31,17 @@ class Home extends React.Component{
         </Card>
       );
     }
-    return <div className={_s.content}>{ cards }</div>
+    return (
+      <div>
+        <Button
+          text="Logg inn"
+          iconLeft={onlineIconWhite}
+          hoverIconLeft={onlineIcon}
+          className={_s.loggInnButton}
+         />
+        <div className={_s.content}>{ cards }</div>
+      </div>
+    )
   }
 }
 

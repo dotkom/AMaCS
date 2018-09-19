@@ -29,7 +29,7 @@ class Card extends React.Component {
           <img src="../app/src/assets/images/online-icon-white.png"/>
           <span>{this.props.title}</span>
         </div>
-        <p>{this.props.short}</p>
+        <p className={_s.short}>{this.props.short}</p>
         </div>
       );
 

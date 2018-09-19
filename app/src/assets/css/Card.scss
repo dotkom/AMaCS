@@ -1,13 +1,36 @@
 @import 'variables';
 
+
+@mixin dark-overlay{
+  &:after{
+    content: "";
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 0;  // Take note of this negative z-index and compare to each article's positive z-index. This helps your content to show up over the overlay.
+    top: 0;
+	  right: 0;
+	  left: 0;
+	  bottom: 0;
+    background-color: black;
+    opacity: 0.5;
+  }
+}
+
+$cardWidth: 13rem;
+$cardHeight: 11rem;
+
 .card{
+  position: relative;
   z-index: 0;
-  width: 12rem;
+  width: $cardWidth;
+  height: $cardHeight;
   border: 1px solid $gray;
   background-color: white;
   text-align: center;
   transition: box-shadow 0.5s;
   margin-bottom: 1rem;
+  overflow: hidden;
 }
 
 .card:hover{
@@ -49,29 +72,24 @@
   font-weight: 200;
   border-radius: 0;
   text-transform: none;
+  position: absolute;
+  bottom: 0;
+  background-color: $blue;
 }
 
 .card.disabled {
-  background-color: darken( white, 20% );
+  @include dark-overlay;
 }
 
-.card.disabled:hover{
-  box-shadow: none;
-}
 
-.card.disabled > .top {
-  background-color: darken( $blue, 20% );
-}
 
-.card.disabled > .top > span {
-  color: darken( white, 20% );
-}
-
-.card.disabled > .top > img {
-  filter: brightness(80%);
-}
-
-.cardButton:disabled {
-  background: darken( $blue, 20% );
-  border-radius: 0;
+.short{
+  //font-size: calc(#{$cardHeight} / 15);
+  line-height: 14px;
+  height: $cardHeight - 5rem;
+  width: $cardWidth;
+  margin: 0px;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 1rem;
 }

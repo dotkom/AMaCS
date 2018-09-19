@@ -7,28 +7,17 @@ import _s from 'assets/css/Heading.scss';
 
 import onlineLogoWhiteGuacamole from 'assets/images/online-logo-white.png';
 import onlineIcon from 'assets/images/online-icon.png'
+import onlineIconWhite from 'assets/images/online-icon-white.png'
 
 class Heading extends React.Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-
-    };
   }
+
   render () {
     return (
       <header className={_s.heading}>
-        <Button
-          className={_s.loginHeader}
-          text="Logg Inn"
-          iconLeft={onlineIcon}
-        >
-        </Button>
-        <div className={_s.loginPanel}>
-          <Login/>
-        </div>
-        <div className={_s.logo}>
+        <div className={_s.logo} >
           <Link to="/"><img src={onlineLogoWhiteGuacamole} alt="Online logo" /></Link>
         </div>
         <div className={_s.header}>

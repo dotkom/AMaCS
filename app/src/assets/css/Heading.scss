@@ -42,39 +42,3 @@
   line-height: normal;
   font-size: 1.2rem;
 }
-
-.loginHeader{
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background-color: white;
-  color: $blue;
-  width: 9rem;
-  height: 2.5rem;
-  font-size: 0.7rem;
-  text-transform: none;
-}
-
-.loginHeader img{
-  width: 1.25rem;
-  margin-right: 0.25rem;
-}
-
-$panelW: 40rem;
-$panelH: 24rem;
-
-.loginPanel{
-  box-sizing: border-box;
-  background-color: white;
-  border: 1px solid $light-gray;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: calc((#{$panelW})/ -2);
-  margin-top: calc((#{$panelH})/ -2);
-  width: $panelW;
-  height: $panelH;
-  padding: 1rem;
-  box-shadow: 0px 0px 5px 0px;
-  border-radius: 1px;
-}
