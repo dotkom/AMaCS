@@ -7,6 +7,8 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "classnames": "^2.2.6",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
     "oidc-client": "^1.10.1",
@@ -25,7 +27,11 @@
     "eject": "react-scripts eject",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "format-check": "prettier --check 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint-check": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -61,7 +67,12 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
     "enzyme": "^3.11.0",
-    "enzyme-to-json": "^3.4.4"
+    "enzyme-to-json": "^3.4.4",
+    "eslint": "^6.8.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.3"
   }
 }
