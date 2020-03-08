@@ -1,7 +1,7 @@
-import { UserManager, Log } from "oidc-client";
-import { Observable, Subject, ReplaySubject } from "rxjs";
+import { UserManager, Log } from 'oidc-client';
+import { Observable, Subject, ReplaySubject } from 'rxjs';
 
-import { User } from "./user";
+import { User } from './user';
 
 Log.logger = console;
 Log.level = Log.DEBUG;
@@ -11,8 +11,7 @@ export class AuthServiceProvider {
     this.userManager = new UserManager(
       Object.assign(
         {
-          popupWindowFeatures:
-            "location=no,toolbar=no,width=900,height=700,left=100,top=100"
+          popupWindowFeatures: 'location=no,toolbar=no,width=900,height=700,left=100,top=100',
         },
         settings
       )
@@ -27,22 +26,22 @@ export class AuthServiceProvider {
   }
 
   _initBindings() {
-    this.userManager.events.addUserLoaded(user => {
+    this.userManager.events.addUserLoaded((user) => {
       this.setUser(user, true);
     });
 
-    Observable.from(this.userManager.getUser()).subscribe(user => {
+    Observable.from(this.userManager.getUser()).subscribe((user) => {
       this.setUser(user, true);
     });
 
-    Observable.from(this.userManager.signinPopupCallback()).subscribe(user => {
-      if (user) window.location.href = "/";
+    Observable.from(this.userManager.signinPopupCallback()).subscribe((user) => {
+      if (user) window.location.href = '/';
     });
   }
 
   setUser(user, push) {
     this._loginState = 0;
-    this.services.getService("http").setToken(user && user.access_token);
+    this.services.getService('http').setToken(user && user.access_token);
 
     if (user && user.profile) {
       this._user = new User(user.access_token, user.scope, user.profile);
@@ -60,11 +59,9 @@ export class AuthServiceProvider {
   login() {
     this._loginState = 1;
     Observable.from(this.userManager.signinPopup()).subscribe(
-      () => {},
-      err => {
-        console.log(
-          `Error happened regarding SSO signin popup: ${err.message}`
-        );
+      () => {}, // eslint-disable-line @typescript-eslint/no-empty-function
+      (err) => {
+        console.log(`Error happened regarding SSO signin popup: ${err.message}`);
       }
     );
     return this.getUser();
@@ -75,7 +72,8 @@ export class AuthServiceProvider {
     sessionStorage.clear();
     this.setUser(null, true);
     // Logs out user from OW4 aswell
-    Observable.from(this.userManager.signoutPopup()).subscribe(user => {});
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    Observable.from(this.userManager.signoutPopup()).subscribe(() => {});
     return this.getUser();
   }
 

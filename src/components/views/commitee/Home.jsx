@@ -1,19 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import CommitteeInfo from "components/misc/CommitteeInfo";
+import CommitteeInfo from 'components/misc/CommitteeInfo';
 
-import Button from "components/misc/Button";
-import committees from "common/committees";
-import _s from "assets/css/Home.module.scss";
+import Button from 'components/misc/Button';
+import committees from 'common/committees';
+import _s from 'assets/css/Home.module.scss';
 
 function Home() {
   return (
     <div className={_s.container}>
       <p className={_s.text}>
-        Online består av komiteer som sammen arbeider for at
-        informatikkstudenter skal få en bedre hverdag. Her kan du lese mer om
-        hva hver enkelt komité gjør samt å sende inn en søknad om intervju.
+        Online består av komiteer som sammen arbeider for at informatikkstudenter skal få en bedre hverdag. Her kan du
+        lese mer om hva hver enkelt komité gjør samt å sende inn en søknad om intervju.
       </p>
       <div className={_s.content}>
         {Array.from(committees).map(([key, committee]) => (

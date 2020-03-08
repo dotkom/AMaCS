@@ -1,7 +1,7 @@
-import { Component, Children } from "react";
-import PropTypes from "prop-types";
+import { Component, Children } from 'react';
+import PropTypes from 'prop-types';
 
-import { ServiceManager } from "services";
+import { ServiceManager } from 'services';
 
 export class ServiceProvider extends Component {
   getChildContext() {
@@ -15,5 +15,5 @@ export class ServiceProvider extends Component {
 }
 
 ServiceProvider.childContextTypes = {
-  serviceManager: PropTypes.instanceOf(ServiceManager)
+  serviceManager: PropTypes.instanceOf(ServiceManager),
 };

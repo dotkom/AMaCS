@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import _s from "assets/css/AuthenticationEndpoint.module.scss";
+import _s from 'assets/css/AuthenticationEndpoint.module.scss';
 
 class Auth extends React.Component {
   componentDidMount() {
@@ -14,7 +14,7 @@ class Auth extends React.Component {
       <div className={_s.container}>
         <h2>Denne siden lukkes automatisk</h2>
         <p className={_s.text}>
-            Denne siden skal lukkes automatisk. Dersom den ikke gjør det, så kan du lukke den selv.
+          Denne siden skal lukkes automatisk. Dersom den ikke gjør det, så kan du lukke den selv.
         </p>
       </div>
     );

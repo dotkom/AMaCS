@@ -1,23 +1,23 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-import AppContainer from "components/views/AppContainer";
-import NotFound from "components/views/NotFound";
+import AppContainer from 'components/views/AppContainer';
+import NotFound from 'components/views/NotFound';
 
-import { connectServices } from "services";
+import { connectServices } from 'services';
 
 export class Routes extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: null
+      user: null,
     };
   }
   componentDidMount() {
     const { auth } = this.props;
-    this.userSub = auth.onUserChange().subscribe(user => {
+    this.userSub = auth.onUserChange().subscribe((user) => {
       this.setState({
-        user: user
+        user: user,
       });
     });
   }
@@ -30,18 +30,15 @@ export class Routes extends React.Component {
     const { user } = this.state;
     return (
       <Switch>
-        <Route
-          path="/"
-          render={props => <AppContainer user={user} {...props} />}
-        />
+        <Route path="/" render={(props) => <AppContainer user={user} {...props} />} />
         <Route component={NotFound} />
       </Switch>
     );
   }
 }
 
-const mapServicesToProps = serviceManager => ({
-  auth: serviceManager.getService("auth")
+const mapServicesToProps = (serviceManager) => ({
+  auth: serviceManager.getService('auth'),
 });
 
 export default connectServices(mapServicesToProps)(Routes);

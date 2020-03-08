@@ -1,5 +1,5 @@
-import React from "react";
-import { PropTypes } from 'prop-types';
+import React from 'react';
+import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
 
 import _s from 'assets/css/CommitteeInfo.module.scss';
@@ -11,33 +11,27 @@ class CommitteeInfo extends React.Component {
     this.state = {
       showInfo: false,
     };
-
   }
 
   handleClick() {
     const { showInfo } = this.state;
-    this.setState({ showInfo: !showInfo })
+    this.setState({ showInfo: !showInfo });
   }
 
   render() {
-    const { committee } = this.props
-    const { showInfo } = this.state
+    const { committee } = this.props;
+    const { showInfo } = this.state;
     const Icon = committee.icon;
 
-    return(
-      <section className={classNames(_s.component, { [_s.open]: showInfo})}>
-        <header 
-          onClick={() => this.handleClick()} 
-          className={_s.header}
-        >
+    return (
+      <section className={classNames(_s.component, { [_s.open]: showInfo })}>
+        <header onClick={() => this.handleClick()} className={_s.header}>
           <Icon className={_s.img} />
-          <h2 className={_s.name}>{ committee.name }</h2>
+          <h2 className={_s.name}>{committee.name}</h2>
         </header>
-        <div className={_s.info}>
-          { committee.info }
-        </div>
+        <div className={_s.info}>{committee.info}</div>
       </section>
-    )
+    );
   }
 }
 

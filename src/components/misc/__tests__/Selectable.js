@@ -8,19 +8,15 @@ describe('Selectable', () => {
     name: 'Testkom',
     icon: 'icon-here',
   };
-  
+
   it('renders correctly', () => {
-    const wrapper = shallow(
-      <Selectable committee={committee} />
-    );
+    const wrapper = shallow(<Selectable committee={committee} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('calls onClick when clicked', () => {
     const onClickMock = jest.fn();
-    const wrapper = shallow(
-      <Selectable committee={committee} onClick={onClickMock} />
-    );
+    const wrapper = shallow(<Selectable committee={committee} onClick={onClickMock} />);
     wrapper.simulate('click');
     expect(onClickMock).toHaveBeenCalled();
   });

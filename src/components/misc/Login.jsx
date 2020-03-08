@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react';
 
-import Button from "./Button";
-import Input from "./Input";
-import ToggleSwitch from "./ToggleSwitch";
+import Button from './Button';
+import Input from './Input';
+import ToggleSwitch from './ToggleSwitch';
 
-import _s from "assets/css/Login.module.scss";
-import { connectServices } from "services";
+import _s from 'assets/css/Login.module.scss';
+import { connectServices } from 'services';
 
-import onlineIconWhite from "assets/images/online-icon-white.png";
-import onlineIcon from "assets/images/online-icon.png";
+import onlineIconWhite from 'assets/images/online-icon-white.png';
+import onlineIcon from 'assets/images/online-icon.png';
 
 export class Login extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      showExternalLoginHelp: false
+      showExternalLoginHelp: false,
     };
   }
 
@@ -33,7 +33,7 @@ export class Login extends React.Component {
     if (this.props.onChange) {
       this.props.onChange(
         Object.assign({}, this.props.info, {
-          [field]: value
+          [field]: value,
         })
       );
     }
@@ -41,7 +41,7 @@ export class Login extends React.Component {
 
   render() {
     const { info, loggedIn } = this.props;
-    const buttonText = loggedIn ? "ut" : "inn";
+    const buttonText = loggedIn ? 'ut' : 'inn';
     const checked = info.inputEnabled && !loggedIn;
     return (
       <div className={_s.container}>
@@ -51,7 +51,7 @@ export class Login extends React.Component {
             onClick={() => this.handleLoginClick()}
             iconLeft={onlineIconWhite}
             hoverIconLeft={onlineIcon}
-            text={"Logg " + buttonText}
+            text={'Logg ' + buttonText}
           />
           {!loggedIn && this.state.showExternalLoginHelp ? (
             <p className={_s.helptext}>Innlogging skjer i eget vindu.</p>
@@ -61,7 +61,7 @@ export class Login extends React.Component {
             <ToggleSwitch
               disabled={loggedIn}
               checked={checked}
-              onChange={() => this.handleInputChange("inputEnabled", !checked)}
+              onChange={() => this.handleInputChange('inputEnabled', !checked)}
             />
             <span>Fyll inn brukerinfo selv</span>
           </div>
@@ -72,8 +72,8 @@ export class Login extends React.Component {
             placeholder="Navn"
             name="name"
             label="Navn"
-            value={info.name || ""}
-            onChange={r => this.handleInputChange("name", r.target.value)}
+            value={info.name || ''}
+            onChange={(r) => this.handleInputChange('name', r.target.value)}
             disabled={!info.inputEnabled || loggedIn}
           />
           <Input
@@ -81,9 +81,9 @@ export class Login extends React.Component {
             placeholder="Mailadresse"
             name="email"
             label="E-Postadresse"
-            onChange={r => this.handleInputChange("email", r.target.value)}
+            onChange={(r) => this.handleInputChange('email', r.target.value)}
             disabled={!info.inputEnabled || loggedIn}
-            value={info.email || ""}
+            value={info.email || ''}
           />
         </div>
       </div>
@@ -93,11 +93,11 @@ export class Login extends React.Component {
 
 Login.defaultProps = {
   loggedIn: false,
-  info: {}
+  info: {},
 };
 
-const mapServicesToProps = serviceManager => ({
-  authService: serviceManager.getService("auth")
+const mapServicesToProps = (serviceManager) => ({
+  authService: serviceManager.getService('auth'),
 });
 
 export default connectServices(mapServicesToProps)(Login);

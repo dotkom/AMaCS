@@ -4,10 +4,10 @@ export const OAUTH_SETTINGS = {
   response_type: process.env.REACT_APP_AUTH_RESPONSE_TYPE,
   redirect_uri: process.env.REACT_APP_AUTH_REDIRECT_URI,
   scope: process.env.REACT_APP_AUTH_SCOPE,
-  automaticSilentRenew: true
+  automaticSilentRenew: true,
 };
 
 export const API_SETTINGS = {
   host: process.env.REACT_APP_APPLICATION_BACKEND,
-  application_endpoint: process.env.REACT_APP_APPLICATION_ENDPOINT
+  application_endpoint: process.env.REACT_APP_APPLICATION_ENDPOINT,
 };

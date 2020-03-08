@@ -1,21 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Selectable from "./Selectable";
-import SelectedList from "./SelectedList";
-import ToggleSwitch from "./ToggleSwitch";
+import Selectable from './Selectable';
+import SelectedList from './SelectedList';
+import ToggleSwitch from './ToggleSwitch';
 
-import committeesMap from "common/committees";
-import _s from "assets/css/SelectContainer.module.scss";
+import committeesMap from 'common/committees';
+import _s from 'assets/css/SelectContainer.module.scss';
 
 export function updateSelection(selected, committeeName, maxSelected) {
   const selectedIndex = selected.indexOf(committeeName);
   const alreadySelected = selectedIndex !== -1;
   if (alreadySelected) {
-    selected = [
-      ...selected.slice(0, selectedIndex),
-      ...selected.slice(selectedIndex + 1)
-    ];
+    selected = [...selected.slice(0, selectedIndex), ...selected.slice(selectedIndex + 1)];
   } else if (selected.length < maxSelected) {
     selected = [...selected, committeeName];
   }
@@ -31,11 +28,7 @@ class SelectContainer extends React.Component {
 
   handleSelect(committeeName) {
     const { selected } = this.props;
-    const newSelection = updateSelection(
-      selected,
-      committeeName,
-      this.maxSelected
-    );
+    const newSelection = updateSelection(selected, committeeName, this.maxSelected);
     this.props.onChange(newSelection);
   }
 
@@ -47,19 +40,17 @@ class SelectContainer extends React.Component {
       <div className={_s.component}>
         <p>
           Velg komiteene du ønsker å søke ved å klikke på dem
-          {ordered && " i prioritert rekkefølge"}.
+          {ordered && ' i prioritert rekkefølge'}.
         </p>
         <div className={_s.selectables}>
           {Array.from(committees)
-            .filter(([key, committee]) => !committee.disableSelect)
+            .filter(([_, committee]) => !committee.disableSelect)
             .map(([key, committee]) => (
               <Selectable
                 key={key}
                 onClick={() => this.handleSelect(key)}
                 committee={committee}
-                selected={selected.some(
-                  c => c.toLowerCase() === committee.name.toLowerCase()
-                )}
+                selected={selected.some((c) => c.toLowerCase() === committee.name.toLowerCase())}
               />
             ))}
         </div>
@@ -70,11 +61,9 @@ class SelectContainer extends React.Component {
         <div className={_s.selectedList}>
           <SelectedList
             ordered={ordered}
-            committees={selected.map(committeeName =>
-              committees.get(committeeName)
-            )}
+            committees={selected.map((committeeName) => committees.get(committeeName))}
             totalChoices={this.maxSelected}
-            onChange={committee => {
+            onChange={(committee) => {
               this.handleSelect(committee);
             }}
           />
@@ -86,13 +75,13 @@ class SelectContainer extends React.Component {
 
 SelectContainer.defaultProps = {
   committees: committeesMap,
-  prioritized: false
+  prioritized: false,
 };
 
 SelectContainer.propTypes = {
   committees: PropTypes.instanceOf(Map),
   prioritized: PropTypes.bool,
-  selected: PropTypes.array.isRequired
+  selected: PropTypes.array.isRequired,
 };
 
 export default SelectContainer;

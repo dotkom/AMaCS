@@ -9,14 +9,14 @@ export function connectServices(mapServicesToProps) {
       render() {
         const { serviceManager } = this.context;
         const serviceProps = mapServicesToProps(serviceManager);
-        return <WrappedComponent {...serviceProps} {...this.props} />
+        return <WrappedComponent {...serviceProps} {...this.props} />;
       }
     }
 
     ConnectedServiceComponent.contextTypes = {
-      serviceManager: PropTypes.instanceOf(ServiceManager)
-    }
+      serviceManager: PropTypes.instanceOf(ServiceManager),
+    };
 
     return ConnectedServiceComponent;
-  }
+  };
 }

@@ -1,10 +1,9 @@
-
 import _ from 'lodash';
 
 import committeesMap from 'common/committees';
 
 export class CommitteeApplication {
-  constructor(data){
+  constructor(data) {
     this._name = data.name;
     this._email = data.email;
     this._application_text = data.application_text;
@@ -12,36 +11,36 @@ export class CommitteeApplication {
     this._prioritized = data.prioritized;
   }
 
-  isPrioritized(){
+  isPrioritized() {
     return this._prioritized;
   }
 
-  get committees(){
+  get committees() {
     return this._committees;
   }
 
-  get application_text(){
+  get application_text() {
     return this._application_text;
   }
 
-  get name(){
+  get name() {
     return this._name;
   }
-  
-  get email(){
+
+  get email() {
     return this._email;
   }
 
-  get json(){
+  get json() {
     return {
-      "name": this.name,
-      "email": this.email,
-      "application_text": this.application_text,
-      "prioritized": this.isPrioritized(),
-      "committees": this.committees.map((committee, index) => ({
+      name: this.name,
+      email: this.email,
+      application_text: this.application_text,
+      prioritized: this.isPrioritized(),
+      committees: this.committees.map((committee, index) => ({
         group: committeesMap.get(committee).id,
         priority: index + 1,
-      }))
-    }
+      })),
+    };
   }
 }

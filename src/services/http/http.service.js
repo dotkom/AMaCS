@@ -1,6 +1,7 @@
-import { Observable, Subject } from "rxjs";
+import { Observable, Subject } from 'rxjs';
 
 export class HttpServiceProvider {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   constructor(serviceManager) {
     this.requestQueue = [];
     this.requestSubject = new Subject();
@@ -8,9 +9,9 @@ export class HttpServiceProvider {
     // Prevents 'DOS' protection
     this.requestSubject
       // Limit throughput by 150ms
-      .concatMap(v => Observable.of(v).delay(150))
+      .concatMap((v) => Observable.of(v).delay(150))
       // Subscrive to this stream
-      .subscribe(requestPair => {
+      .subscribe((requestPair) => {
         // preforme request
         this.count++;
         Observable.fromPromise(fetch(requestPair.request))
@@ -18,13 +19,13 @@ export class HttpServiceProvider {
             Send response to handleResponse()
             handleResponse will resolve
           */
-          .flatMap(response => this.handleResponse(response))
+          .flatMap((response) => this.handleResponse(response))
           // When the request is resolved, send it back to the source of the request
           .subscribe(
-            r => {
+            (r) => {
               requestPair.subject.next(r);
             },
-            error => {
+            (error) => {
               requestPair.subject.error(error);
             },
             () => {
@@ -36,7 +37,7 @@ export class HttpServiceProvider {
 
   setToken(token) {
     this.auth_token = token;
-    this.token_type = "Bearer";
+    this.token_type = 'Bearer';
   }
 
   handleResponse(r) {
@@ -52,10 +53,7 @@ export class HttpServiceProvider {
   request(request) {
     // Add token to request
     if (this.auth_token) {
-      request.headers.set(
-        "Authorization",
-        `${this.token_type} ${this.auth_token}`
-      );
+      request.headers.set('Authorization', `${this.token_type} ${this.auth_token}`);
     }
     const resolver = new Subject();
     // Push request into request 'stream'/queue
@@ -73,15 +71,15 @@ export class HttpServiceProvider {
       pUrl += HttpServiceProvider.urlEncode(params);
     }
     // Create request
-    const request = new Request(pUrl, { method: "GET" });
+    const request = new Request(pUrl, { method: 'GET' });
     return this.request(request);
   }
 
   static urlEncode(data) {
-    let ret = "";
+    let ret = '';
     for (const key in data) {
-      if (ret !== "") {
-        ret += "&";
+      if (ret !== '') {
+        ret += '&';
       }
       ret += `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`;
     }
@@ -98,22 +96,19 @@ export class HttpServiceProvider {
     let pUrl = url;
     let pBody = body;
     const headers = new Headers();
-    headers.set("Content-Type", "application/json");
+    headers.set('Content-Type', 'application/json');
     if (url_encoded) {
       pUrl += HttpServiceProvider.urlEncode(pBody);
-      headers.set(
-        "Content-Type",
-        "application/x-www-form-urlencoded; charset=UTF-8"
-      );
+      headers.set('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
       pBody = null;
     } else {
       pBody = JSON.stringify(pBody);
     }
     // Create request
     const request = new Request(pUrl, {
-      method: "POST",
+      method: 'POST',
       body: pBody,
-      headers
+      headers,
     });
     return this.request(request);
   }

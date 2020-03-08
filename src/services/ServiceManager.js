@@ -4,10 +4,7 @@ export class ServiceManager {
     this.aliases = {};
   }
   registerService(name, service, ...a) {
-    console.assert(
-      typeof service == "function" && typeof service.constructor == "function",
-      "Service is not a class!"
-    );
+    console.assert(typeof service == 'function' && typeof service.constructor == 'function', 'Service is not a class!');
     this.services[name] = new service(this, ...a);
   }
   alias(alias, name) {
