@@ -1,0 +1,27 @@
+@import 'variables';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font;
+  background: $gray-lighten-90;
+  color: $gray-darken-60;
+}
+
+.footer {
+  background: white;
+  padding: 1rem;
+  padding-bottom: 2.5rem;
+  margin-top: 5rem;
+  text-align: center;
+}

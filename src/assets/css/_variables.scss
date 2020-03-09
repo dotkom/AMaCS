@@ -1,0 +1,60 @@
+/* Font */
+$font: 'Open Sans';
+
+/* Design System colors */
+/* https://design.online.ntnu.no/?path=/docs/global-colors--primary */
+
+$primary-lighten-45: #7aa1b3;
+$primary-lighten-30: #56879e;
+$primary-lighten-15: #316e89;
+$primary: #0d5474;
+$primary-darken-15: #0b4763;
+$primary-darken-30: #093b51;
+$primary-darken-45: #072e40;
+
+$secondary-lighten-45: #fcd7a4;
+$secondary-lighten-30: #fbcd8b;
+$secondary-lighten-15: #fac272;
+$secondary: #f9b759;
+$secondary-darken-15: #d49c4c;
+$secondary-darken-30: #ae803e;
+$secondary-darken-45: #896531;
+
+$white: #ffffff;
+$gray-lighten-90: #f2f2f2;
+$gray-lighten-60: #cccccc;
+$gray-lighten-30: #a6a6a6;
+$gray: #808080;
+$gray-darken-30: #5a5a5a;
+$gray-darken-60: #333333;
+$gray-darken-90: #0d0d0d;
+$black: #000000;
+
+$info-lighten-90: #e7f4f9;
+$info-lighten-45: #78c4dd;
+$info: #0a94c2;
+$info-darken-35: #07607e;
+$info-darken-70: #032c3a;
+
+$success-lighten-90: #e6f7e6;
+$success-lighten-45: #78d078;
+$success: #09aa09;
+$success-darken-35: #066f06;
+$success-darken-70: #033303;
+
+$warning-lighten-90: #fff9e6;
+$warning-lighten-45: #ffdc73;
+$warning: #ffc000;
+$warning-darken-35: #a67d00;
+$warning-darken-70: #4d3a00;
+
+$error-lighten-90: #fce9e9;
+$error-lighten-45: #ed8484;
+$error: #df2020;
+$error-darken-35: #911515;
+$error-darken-70: #430a0a;
+
+/* Input colors */
+$input-focus: $info;
+$input-border: #e1e1e1;
+$input-placeholder: $gray-lighten-30;
