@@ -1,7 +1,5 @@
-@import 'variables';
-
 .container {
-  background-color: white;
+  background-color: var(--background);
   width: 100%;
   max-width: 50rem;
   text-align: center;
@@ -19,7 +17,7 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.3rem;
-  color: $primary;
+  color: var(--blue);
   text-decoration: none;
   text-align: center;
   display: flex;

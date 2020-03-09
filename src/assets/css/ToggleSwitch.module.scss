@@ -3,8 +3,8 @@
 .container {
   display: inline-flex;
 
-  background-color: #ffffff;
-  border: 2px solid $gray-darken-30;
+  background-color: var(--background);
+  border: 2px solid var(--inputBorder);
   border-radius: 16px;
   justify-content: center;
   user-select: none;
@@ -20,7 +20,7 @@
 }
 
 .container:disabled {
-  background: #f0f0f0;
+  background: var(--backgroundAlt);
   border-color: #b8b8b8;
 }
 
@@ -42,7 +42,7 @@
 .checked {
   margin-left: 1.5rem;
   margin-right: -0.17rem;
-  background: $primary;
+  background: var(--blue);
 }
 
 .container:hover .checked {
@@ -54,6 +54,6 @@
 }
 
 .icon {
-  stroke: white;
+  stroke: var(--background);
   stroke-width: 3;
 }

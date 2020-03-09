@@ -1,5 +1,3 @@
-@import 'variables';
-
 html {
   box-sizing: border-box;
 }
@@ -13,9 +11,9 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: $font;
-  background: $gray-lighten-90;
-  color: $gray-darken-60;
+  font-family: var(--font);
+  background: var(--backgroundAlt);
+  color: var(--paragraph);
 }
 
 .app {
@@ -25,7 +23,7 @@ body {
 }
 
 .footer {
-  background: white;
+  background: var(--background);
   padding: 1rem;
   padding-bottom: 2.5rem;
   margin-top: 5rem;
