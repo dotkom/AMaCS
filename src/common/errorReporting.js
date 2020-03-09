@@ -1,10 +1,10 @@
 import Raven from 'raven-js';
 
-const sentryUrl = process.env.REACT_APP_SENTRY_URL;
+import { SENTRY_DSN } from './constants';
 
 export function initializeErrorReporting() {
-  if (sentryUrl) {
-    Raven.config(sentryUrl).install();
+  if (SENTRY_DSN) {
+    Raven.config(SENTRY_DSN).install();
     console.log('Started sentry');
   }
 }

@@ -1,7 +1,8 @@
 import ReactGA from 'react-ga';
 
+import { GA_TRACKING_ID } from './constants';
+
 const debug = process.env.NODE_ENV === 'development';
-const trackingId = process.env.REACT_APP_GA_TRACKING_ID;
 
 export function logPageView(location) {
   ReactGA.set({ page: location.pathname + location.search });
@@ -9,10 +10,10 @@ export function logPageView(location) {
 }
 
 export function initializeAnalytics(history) {
-  if (!trackingId) {
+  if (!GA_TRACKING_ID) {
     return;
   }
-  ReactGA.initialize(trackingId, {
+  ReactGA.initialize(GA_TRACKING_ID, {
     debug,
   });
   history.listen(logPageView);
