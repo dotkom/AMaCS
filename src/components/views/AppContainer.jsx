@@ -7,6 +7,7 @@ import Heading from 'components/misc/Heading';
 import Home from 'components/views/commitee/Home';
 import NotFound from 'components/views/NotFound';
 import Thankyou from 'components/views/Thankyou';
+import { Link } from '@dotkomonline/design-system';
 import _s from 'assets/css/base.module.scss';
 
 class AppContainer extends React.Component {
@@ -33,11 +34,11 @@ class AppContainer extends React.Component {
         <div className={_s.footer}>
           <p>
             Dersom du opplever problemer eller finner feil, ta kontakt med{' '}
-            <a href="mailto:dotkom@online.ntnu.no">dotkom@online.ntnu.no</a>.
+            <Link href="mailto:dotkom@online.ntnu.no">dotkom@online.ntnu.no</Link>.
           </p>
           <p>
             Får du ikke sendt inn søknaden, eller vil du heller bruke e-post? Send søknaden din til{' '}
-            <a href="mailto:opptak@online.ntnu.no">opptak@online.ntnu.no</a>.
+            <Link href="mailto:opptak@online.ntnu.no">opptak@online.ntnu.no</Link>.
           </p>
         </div>
       </div>

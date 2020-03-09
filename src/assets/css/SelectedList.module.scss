@@ -28,10 +28,10 @@
   top: -0.5rem;
   left: 0.25rem;
   font-size: 0.9rem;
-  color: $gray;
+  color: $gray-darken-30;
 }
 
-@media(min-width: 600px) {
+@media (min-width: 600px) {
   .container {
     height: 9rem;
   }

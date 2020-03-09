@@ -11,7 +11,7 @@
   width: 100%;
   font-size: 1.1rem;
   padding: 0.7rem 0.4rem;
-  color: $font-color;
+  color: $gray-darken-60;
 }
 
 .input:focus {
@@ -23,7 +23,8 @@
   color: $input-placeholder;
 }
 
-.input:disabled, .input:disabled::placeholder {
+.input:disabled,
+.input:disabled::placeholder {
   background: #f0f0f0;
   color: #b8b8b8;
 }

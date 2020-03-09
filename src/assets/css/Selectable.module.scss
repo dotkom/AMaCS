@@ -17,8 +17,9 @@
   cursor: default;
 }
 
-.container:hover, .container.container.selected:hover {
-  border-color: $blue;
+.container:hover,
+.container.container.selected:hover {
+  border-color: $primary;
 }
 
 .container.small {
@@ -26,8 +27,8 @@
 }
 
 .container.selected {
-  background: #C4C4C4;
-  border-color: $light-gray;
+  background: #c4c4c4;
+  border-color: $gray-lighten-90;
   box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
@@ -42,7 +43,6 @@
   font-size: 0.9em;
   font-weight: 600;
 }
-
 
 @media (min-width: 600px) {
   .container svg {

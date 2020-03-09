@@ -2,9 +2,9 @@
 
 .container {
   display: inline-flex;
-   
+
   background-color: #ffffff;
-  border: 2px solid $gray;
+  border: 2px solid $gray-darken-30;
   border-radius: 16px;
   justify-content: center;
   user-select: none;
@@ -26,9 +26,9 @@
   align-self: left;
   width: 1.5rem;
   height: 1.5rem;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 100%;
-  background: #D06969;
+  background: #d06969;
 }
 
 .container:hover .slider {
@@ -38,7 +38,7 @@
 .checked {
   margin-left: 1.5rem;
   margin-right: -0.17rem;
-  background: $blue;
+  background: $primary;
 }
 
 .container:hover .checked {

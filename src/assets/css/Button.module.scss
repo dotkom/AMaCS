@@ -1,8 +1,8 @@
-@import "variables";
+@import 'variables';
 
 .button {
-  background: $blue;
-  border: 3px solid $blue;
+  background: $primary;
+  border: 3px solid $primary;
   box-sizing: border-box;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
@@ -26,18 +26,18 @@
 }
 
 .button:hover {
-  background: $light-gray;
-  color: $blue;
+  background: $gray-lighten-90;
+  color: $primary;
 }
 
 .button:active,
 button.active {
   background: white;
-  color: $blue;
+  color: $primary;
 }
 
 .button:disabled {
-  background: $light-gray;
+  background: $gray-lighten-90;
   border: 3px solid transparent;
   color: #c0c0c0;
 }

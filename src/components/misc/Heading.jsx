@@ -3,21 +3,15 @@ import { Link } from 'react-router-dom';
 
 import _s from 'assets/css/Heading.module.scss';
 
-import onlineLogoWhiteGuacamole from 'assets/images/online-logo-white.png';
+import onlineLogo from 'assets/images/online-logo-white.png';
 
 class Heading extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-
   render() {
     return (
       <header className={_s.heading}>
         <div className={_s.logo}>
           <Link to="/">
-            <img src={onlineLogoWhiteGuacamole} alt="Online logo" />
+            <img src={onlineLogo} alt="Online logo" />
           </Link>
         </div>
         <div className={_s.header}>

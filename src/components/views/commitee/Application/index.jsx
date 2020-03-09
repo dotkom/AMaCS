@@ -9,7 +9,7 @@ import NavigationButton from 'components/misc/NavigationButton';
 import Login from 'components/misc/Login';
 import TextArea from 'components/misc/TextArea';
 
-import blueArrow from 'assets/images/arrow-blue.png';
+import { ReactComponent as BackArrow } from 'assets/images/arrow.svg';
 import _s from 'assets/css/Application.module.scss';
 
 import { CommitteeApplication, connectServices } from 'services';
@@ -95,7 +95,7 @@ export class Application extends Component {
     return (
       <div className={_s.component}>
         <NavigationButton link="/">
-          <img src={blueArrow} alt="Pil" />
+          <BackArrow className={_s.arrow} />
           Tilbake
         </NavigationButton>
         <div className={_s.alternative}>

@@ -4,7 +4,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -12,8 +14,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: $font;
-  background: $light-gray;
-  color: $font-color;
+  background: $gray-lighten-90;
+  color: $gray-darken-60;
 }
 
 .footer {
