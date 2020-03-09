@@ -13,6 +13,7 @@ import { ReactComponent as BackArrow } from 'assets/images/arrow.svg';
 import _s from 'assets/css/Application.module.scss';
 
 import { CommitteeApplication, connectServices } from 'services';
+import { getSubmittedUrl } from 'common/urls';
 
 export class Application extends Component {
   constructor(props) {
@@ -77,7 +78,7 @@ export class Application extends Component {
     this.props.applicationService.postApplication(application).subscribe(
       () => {
         //Everything went ok
-        this.props.history.push('/thankyou');
+        this.props.history.push(getSubmittedUrl());
       },
       (err) => {
         // Error, something went wrong

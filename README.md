@@ -15,7 +15,6 @@ To connect Supreme Guacamole to an authentication backend you might have to chan
 | `REACT_APP_AUTH_AUTHORITY`     |                                `http://localhost:8000/openid/`                                | Authority server / OpenID provider                                                           |
 | `REACT_APP_AUTH_CLIENT_ID`     |                                                                                               | The client ID from OpenID                                                                    |
 | `REACT_APP_AUTH_RESPONSE_TYPE` |                                       `id_token token`                                        | The response type. Should probably not be changed unless implementation of OAuth is changed. |
-| `REACT_APP_AUTH_REDIRECT_URI`  |                                 `http://localhost:3000/auth`                                  | The local SG endpoint to handle the login attempt.                                           |
 | `REACT_APP_AUTH_SCOPE`         | See [scopes](https://github.com/dotkom/supreme-guacamole/tree/master/src/common/constants.js) | The scopes this application requires from the OAuth provider.                                |
 
 ## Sentry configuration

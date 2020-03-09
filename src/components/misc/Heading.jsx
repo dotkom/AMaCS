@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 import _s from 'assets/css/Heading.module.scss';
 
 import onlineLogo from 'assets/images/online-logo-white.png';
+import { getBaseUrl } from 'common/urls';
 
 class Heading extends React.Component {
   render() {
     return (
       <header className={_s.heading}>
         <div className={_s.logo}>
-          <Link to="/">
+          <Link to={getBaseUrl()}>
             <img src={onlineLogo} alt="Online logo" />
           </Link>
         </div>

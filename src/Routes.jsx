@@ -5,6 +5,7 @@ import AppContainer from 'components/views/AppContainer';
 import NotFound from 'components/views/NotFound';
 
 import { connectServices } from 'services';
+import { getBaseUrl } from 'common/urls';
 
 export class Routes extends React.Component {
   constructor(props) {
@@ -30,7 +31,7 @@ export class Routes extends React.Component {
     const { user } = this.state;
     return (
       <Switch>
-        <Route path="/" render={(props) => <AppContainer user={user} {...props} />} />
+        <Route path={getBaseUrl()} render={(props) => <AppContainer user={user} {...props} />} />
         <Route component={NotFound} />
       </Switch>
     );

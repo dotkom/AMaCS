@@ -6,6 +6,7 @@ import CommitteeInfo from 'components/misc/CommitteeInfo';
 import Button from 'components/misc/Button';
 import committees from 'common/committees';
 import _s from 'assets/css/Home.module.scss';
+import { getApplicationUrl } from 'common/urls';
 
 function Home() {
   return (
@@ -20,7 +21,7 @@ function Home() {
         ))}
       </div>
       <div className={_s.nextLink}>
-        <Link to="/application">
+        <Link to={getApplicationUrl()}>
           <Button text="Gå til søknad" />
         </Link>
       </div>

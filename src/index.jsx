@@ -16,13 +16,19 @@ import {
 import { OAUTH_SETTINGS, API_SETTINGS } from 'common/constants';
 import { initializeAnalytics } from 'common/analytics';
 import { initializeErrorReporting } from 'common/errorReporting';
+import { getAuthRedirectUrl } from 'common/urls';
+
+const authSettings = {
+  ...OAUTH_SETTINGS,
+  redirect_uri: getAuthRedirectUrl(),
+};
 
 initializeErrorReporting();
 
 const serviceManager = new ServiceManager();
 serviceManager.registerService('http.service', HttpServiceProvider);
 serviceManager.alias('http', 'http.service');
-serviceManager.registerService('auth.service', AuthServiceProvider, OAUTH_SETTINGS);
+serviceManager.registerService('auth.service', AuthServiceProvider, authSettings);
 serviceManager.alias('auth', 'auth.service');
 serviceManager.registerService(
   'application.service',

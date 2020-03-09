@@ -9,6 +9,7 @@ import NotFound from 'components/views/NotFound';
 import Thankyou from 'components/views/Thankyou';
 import { Link } from '@dotkomonline/design-system';
 import _s from 'assets/css/base.module.scss';
+import { getApplicationUrl, getBaseUrl, getSubmittedUrl, getAuthCallbackUrl } from 'common/urls';
 
 class AppContainer extends React.Component {
   constructor(props) {
@@ -24,10 +25,10 @@ class AppContainer extends React.Component {
         <Heading />
         <main>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/application" render={(props) => <Application user={user} {...props} />} />
-            <Route exact path="/thankyou" component={Thankyou} />
-            <Route exact path="/auth" component={AuthenticationEndpoint} />
+            <Route exact path={getBaseUrl()} component={Home} />
+            <Route exact path={getApplicationUrl()} render={(props) => <Application user={user} {...props} />} />
+            <Route exact path={getSubmittedUrl()} component={Thankyou} />
+            <Route exact path={getAuthCallbackUrl()} component={AuthenticationEndpoint} />
             <Route component={NotFound} />
           </Switch>
         </main>
