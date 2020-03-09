@@ -44,7 +44,7 @@ class SelectContainer extends React.Component {
         </p>
         <div className={_s.selectables}>
           {Array.from(committees)
-            .filter(([_, committee]) => !committee.disableSelect)
+            .filter(([, committee]) => !committee.disableSelect)
             .map(([key, committee]) => (
               <Selectable
                 key={key}
