@@ -29,7 +29,3 @@ export const getUser = async () => {
 };
 
 export const authEvents = USER_MANAGER.events;
-
-USER_MANAGER.events.addUserLoaded((user) => {
-  console.log(user);
-});
