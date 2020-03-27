@@ -8,11 +8,11 @@ function SelectedList({ committees, ordered, totalChoices, onChange }) {
     <div className={_s.container}>
       {[...Array(totalChoices)].map((_, i) => {
         const committee = committees && committees.length > i ? committees[i] : null;
-        const key = committee ? committee.key : `empty${i}`;
+        const key = committee ? committee.id : `empty${i}`;
         return (
           <div key={key} className={_s.committee}>
             {ordered && <div className={_s.number}>{i + 1}</div>}
-            {committee && <Selectable onClick={() => onChange(committee.key)} small committee={committee} />}
+            {committee && <Selectable onClick={() => onChange(committee.id)} small committee={committee} />}
           </div>
         );
       })}

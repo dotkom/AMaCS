@@ -1,46 +1,32 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 
 import _s from 'assets/css/CommitteeInfo.module.scss';
+import { selectOnlineGroupById } from 'common/features/onlineGroup';
+import { API_SETTINGS } from 'common/constants';
 
-class CommitteeInfo extends React.Component {
-  constructor(props) {
-    super(props);
+const CommitteeInfo = ({ committeeId }) => {
+  const [showInfo, setShowInfo] = useState(false);
+  const committee = useSelector(selectOnlineGroupById(committeeId));
 
-    this.state = {
-      showInfo: false,
-    };
+  const handleClick = () => {
+    setShowInfo((current) => !current);
+  };
+
+  if (!committee) {
+    return 'Laster...';
   }
 
-  handleClick() {
-    const { showInfo } = this.state;
-    this.setState({ showInfo: !showInfo });
-  }
-
-  render() {
-    const { committee } = this.props;
-    const { showInfo } = this.state;
-    const Icon = committee.icon;
-
-    return (
-      <section className={classNames(_s.component, { [_s.open]: showInfo })}>
-        <header onClick={() => this.handleClick()} className={_s.header}>
-          <Icon className={_s.img} />
-          <h2 className={_s.name}>{committee.name}</h2>
-        </header>
-        <div className={_s.info}>{committee.info}</div>
-      </section>
-    );
-  }
-}
-
-CommitteeInfo.propTypes = {
-  committee: PropTypes.shape({
-    name: PropTypes.string,
-    icon: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    info: PropTypes.string,
-  }),
+  return (
+    <section className={classNames(_s.component, { [_s.open]: showInfo })}>
+      <header onClick={handleClick} className={_s.header}>
+        <img className={_s.img} src={`${API_SETTINGS.host}${committee.image.lg}`} alt={committee.name_long} />
+        <h2 className={_s.name}>{committee.name_short}</h2>
+      </header>
+      <div className={_s.info}>{committee.description_long}</div>
+    </section>
+  );
 };
 
 export default CommitteeInfo;

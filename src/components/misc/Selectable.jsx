@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import _s from 'assets/css/Selectable.module.scss';
 import classNames from 'classnames';
 
+import _s from 'assets/css/Selectable.module.scss';
+import { API_SETTINGS } from 'common/constants';
+
 function Selectable({ committee, onClick, small, selected }) {
-  const Icon = committee.icon;
   return (
     <div className={classNames(_s.container, { [_s.small]: small, [_s.selected]: selected })} onClick={onClick}>
-      <Icon width={64} height={64} />
-      <h2 className={classNames(_s.name)}>{committee.name}</h2>
+      <img className={_s.img} src={`${API_SETTINGS.host}${committee.image.md}`} alt={committee.name_long} />
+      <h2 className={classNames(_s.name)}>{committee.name_short}</h2>
     </div>
   );
 }
@@ -22,8 +22,7 @@ Selectable.defaultProps = {
 
 Selectable.propTypes = {
   committee: PropTypes.shape({
-    icon: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-    name: PropTypes.string,
+    name_short: PropTypes.string,
   }).isRequired,
   onClick: PropTypes.func,
   small: PropTypes.bool,
