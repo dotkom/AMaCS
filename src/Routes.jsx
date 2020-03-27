@@ -1,45 +1,42 @@
-import React from 'react';
+import React, { useEffect, useCallback } from 'react';
+import { useDispatch } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 
 import AppContainer from 'components/views/AppContainer';
 import NotFound from 'components/views/NotFound';
 
-import { connectServices } from 'services';
 import { getBaseUrl } from 'common/urls';
+import { authEvents, loginCallback } from 'common/auth';
+import { setUser } from 'common/features/auth';
 
-export class Routes extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      user: null,
+export const Routes = () => {
+  const dispatch = useDispatch();
+
+  const dispatchUser = useCallback(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    ({ expired, expires_in, ...user }) => {
+      dispatch(setUser(user));
+    },
+    [dispatch]
+  );
+
+  useEffect(() => {
+    authEvents.addUserLoaded(dispatchUser);
+    return () => {
+      authEvents.removeUserLoaded(dispatchUser);
     };
-  }
-  componentDidMount() {
-    const { auth } = this.props;
-    this.userSub = auth.onUserChange().subscribe((user) => {
-      this.setState({
-        user: user,
-      });
-    });
-  }
+  }, [dispatchUser]);
 
-  componentWillUnmount() {
-    if (this.userSub) this.userSub.unsubscribe();
-  }
+  useEffect(() => {
+    loginCallback();
+  }, []);
 
-  render() {
-    const { user } = this.state;
-    return (
-      <Switch>
-        <Route path={getBaseUrl()} render={(props) => <AppContainer user={user} {...props} />} />
-        <Route component={NotFound} />
-      </Switch>
-    );
-  }
-}
+  return (
+    <Switch>
+      <Route path={getBaseUrl()} render={(props) => <AppContainer {...props} />} />
+      <Route component={NotFound} />
+    </Switch>
+  );
+};
 
-const mapServicesToProps = (serviceManager) => ({
-  auth: serviceManager.getService('auth'),
-});
-
-export default connectServices(mapServicesToProps)(Routes);
+export default Routes;
