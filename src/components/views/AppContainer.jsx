@@ -24,18 +24,12 @@ const AppContainer = () => {
   }, [dispatch, committees]);
 
   return (
-    <div>
+    <div className={_s.app}>
       <Heading />
       <main>
-        <Switch>
-          <Route exact path={getBaseUrl()} component={Home} />
-          <Route exact path={getApplicationUrl()} render={(props) => <Application user={user} {...props} />} />
-          <Route exact path={getSubmittedUrl()} component={Thankyou} />
-          <Route exact path={getAuthCallbackUrl()} component={AuthenticationEndpoint} />
-          <Route component={NotFound} />
-        </Switch>
+        <MainView />
       </main>
-      <div className={_s.footer}>
+      <footer className={_s.footer}>
         <p>
           Dersom du opplever problemer eller finner feil, ta kontakt med{' '}
           <Link href="mailto:dotkom@online.ntnu.no">dotkom@online.ntnu.no</Link>.
@@ -44,7 +38,7 @@ const AppContainer = () => {
           Får du ikke sendt inn søknaden, eller vil du heller bruke e-post? Send søknaden din til{' '}
           <Link href="mailto:opptak@online.ntnu.no">opptak@online.ntnu.no</Link>.
         </p>
-      </div>
+      </footer>
     </div>
   );
 };

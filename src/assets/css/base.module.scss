@@ -18,6 +18,12 @@ body {
   color: $gray-darken-60;
 }
 
+.app {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: min-content auto min-content;
+}
+
 .footer {
   background: white;
   padding: 1rem;

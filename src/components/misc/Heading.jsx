@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import _s from 'assets/css/Heading.module.scss';
 
-import onlineLogo from 'assets/images/online-logo-white.png';
 import { getBaseUrl } from 'common/urls';
+import { colors, Logo } from '@dotkomonline/design-system';
 
 class Heading extends React.Component {
   render() {
@@ -12,7 +12,7 @@ class Heading extends React.Component {
       <header className={_s.heading}>
         <div className={_s.logo}>
           <Link to={getBaseUrl()}>
-            <img src={onlineLogo} alt="Online logo" />
+            <Logo primaryColor={colors.white} />
           </Link>
         </div>
         <div className={_s.header}>
