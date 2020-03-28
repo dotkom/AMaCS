@@ -1,24 +1,19 @@
-import { createAsyncThunk, createSlice, createEntityAdapter } from '@reduxjs/toolkit';
-import { getApplicationPeriods } from 'clients/applicationPeriod';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { getAvailableApplicationPeriod } from 'clients/applicationPeriod';
 
 export const fetchApplicationPeriods = createAsyncThunk('applicationPeriods/fetch', async () => {
-  const data = await getApplicationPeriods();
-  return data.results;
+  const data = await getAvailableApplicationPeriod();
+  return data;
 });
-
-const applicationPeriodsAdapter = createEntityAdapter();
 
 export const applicationPeriodsSlice = createSlice({
   name: 'applicationPeriods',
-  initialState: applicationPeriodsAdapter.getInitialState({
+  initialState: {
     loading: 'idle',
     error: null,
-    entities: [],
-  }),
-  reducers: {
-    applicationPeriodsLoaded: applicationPeriodsAdapter.setAll,
-    applicationPeriodDeleted: applicationPeriodsAdapter.removeOne,
+    entity: null,
   },
+  reducers: {},
   extraReducers: {
     [fetchApplicationPeriods.pending]: (state) => {
       if (state.loading === 'idle') {
@@ -28,7 +23,7 @@ export const applicationPeriodsSlice = createSlice({
     [fetchApplicationPeriods.fulfilled]: (state, action) => {
       if (state.loading === 'pending') {
         state.loading = 'idle';
-        applicationPeriodsAdapter.addMany(state, action.payload);
+        state.entity = action.payload;
       }
     },
     [fetchApplicationPeriods.rejected]: (state, action) => {
@@ -40,30 +35,19 @@ export const applicationPeriodsSlice = createSlice({
   },
 });
 
-export const { applicationPeriodDeleted, applicationPeriodsLoaded } = applicationPeriodsSlice.actions;
+export const { setApplicationPeriod } = applicationPeriodsSlice.actions;
 
-export const selectCurrentApplicationPeriod = (state) => {
-  const entities = state.applicationPeriods.entities.filter(Boolean);
-  return entities.find((period) => period.accepting_applications);
+export const selectApplicationPeriod = (state) => {
+  return state.applicationPeriods.entity;
 };
 
-export const selectLatestApplicationPeriod = (state) => {
-  const entities = state.applicationPeriods.entities.filter(Boolean);
-  const [latestPeriod] = entities.sort((periodA, periodB) => Date.parse(periodB.start) - Date.parse(periodA.start));
-  return latestPeriod;
+export const selectOnlineGroupIds = (state) => {
+  const applicationPeriod = selectApplicationPeriod(state);
+  return applicationPeriod ? applicationPeriod.committees : [];
 };
 
-export const selectCurrentOrLatestApplicationPeriod = (state) => {
-  let period = selectCurrentApplicationPeriod(state);
-  if (!period) {
-    period = selectLatestApplicationPeriod(state);
-  }
-  return period;
-};
-
-export const selectCurrentOrLatestOnlineGroups = (state) => {
-  const period = selectCurrentOrLatestApplicationPeriod(state);
-  return period ? period.committees : [];
+export const selectApplicationPeriodLoading = (state) => {
+  return state.applicationPeriods.loading;
 };
 
 export default applicationPeriodsSlice.reducer;

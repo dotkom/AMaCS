@@ -15,10 +15,7 @@ export const onlineGroupsSlice = createSlice({
     error: null,
     entities: [],
   }),
-  reducers: {
-    onlineGroupsLoaded: onlineGroupsAdapter.setAll,
-    onlineGroupDeleted: onlineGroupsAdapter.removeOne,
-  },
+  reducers: {},
   extraReducers: {
     [fetchOnlineGroupsByIds.pending]: (state) => {
       if (state.loading === 'idle') {
@@ -40,8 +37,6 @@ export const onlineGroupsSlice = createSlice({
   },
 });
 
-export const { onlineGroupsLoaded, onlineGroupDeleted } = onlineGroupsSlice.actions;
-
 export const selectOnlineGroupById = (id) => (state) => {
   const groups = state.onlineGroups.entities.filter(Boolean);
   return groups.find((group) => group.id === id);
@@ -52,6 +47,10 @@ export const selectOnlineGroupsByIds = (ids) => (state) => {
     .filter(Boolean)
     .filter((group) => ids.some((id) => group.id === id))
     .sort((groupA, groupB) => groupB.name_long.localeCompare(groupA.name_long));
+};
+
+export const selectOnlineGroupsLoading = (state) => {
+  return state.onlineGroups.loading;
 };
 
 export default onlineGroupsSlice.reducer;

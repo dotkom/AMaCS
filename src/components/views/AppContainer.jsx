@@ -1,22 +1,17 @@
 import React, { useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
 
-import Application from 'components/views/commitee/Application';
-import AuthenticationEndpoint from 'components/views/AuthenticationEndpoint';
 import Heading from 'components/misc/Heading';
-import Home from 'components/views/commitee/Home';
-import NotFound from 'components/views/NotFound';
-import Thankyou from 'components/views/Thankyou';
+import MainView from 'components/views/commitee';
+
 import { Link } from '@dotkomonline/design-system';
 import _s from 'assets/css/base.module.scss';
-import { getApplicationUrl, getBaseUrl, getSubmittedUrl, getAuthCallbackUrl } from 'common/urls';
-import { selectCurrentOrLatestOnlineGroups, fetchApplicationPeriods } from 'common/features/applicationPeriods';
+import { selectOnlineGroupIds, fetchApplicationPeriods } from 'common/features/applicationPeriods';
 import { fetchOnlineGroupsByIds } from 'common/features/onlineGroup';
 
-const AppContainer = ({ user }) => {
+const AppContainer = () => {
   const dispatch = useDispatch();
-  const committees = useSelector(selectCurrentOrLatestOnlineGroups, shallowEqual);
+  const committees = useSelector(selectOnlineGroupIds, shallowEqual);
 
   useEffect(() => {
     dispatch(fetchApplicationPeriods());

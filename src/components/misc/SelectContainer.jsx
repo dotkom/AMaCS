@@ -8,7 +8,7 @@ import ToggleSwitch from './ToggleSwitch';
 
 import _s from 'assets/css/SelectContainer.module.scss';
 import { selectOnlineGroupsByIds } from 'common/features/onlineGroup';
-import { selectCurrentOrLatestOnlineGroups } from 'common/features/applicationPeriods';
+import { selectOnlineGroupIds } from 'common/features/applicationPeriods';
 
 export function updateSelection(selected, committeeName, maxSelected) {
   const selectedIndex = selected.indexOf(committeeName);
@@ -22,7 +22,7 @@ export function updateSelection(selected, committeeName, maxSelected) {
 }
 
 const selectCurrentOrLatestCommittees = (state) => {
-  const committeeIds = selectCurrentOrLatestOnlineGroups(state);
+  const committeeIds = selectOnlineGroupIds(state);
   const committees = selectOnlineGroupsByIds(committeeIds)(state);
   return committees;
 };

@@ -13,7 +13,7 @@ import _s from 'assets/css/Application.module.scss';
 
 import { getSubmittedUrl } from 'common/urls';
 import { connect } from 'react-redux';
-import { selectCurrentApplicationPeriod } from 'common/features/applicationPeriods';
+import { selectApplicationPeriod } from 'common/features/applicationPeriods';
 import { postApplication } from 'clients/application';
 import { selectUser } from 'common/features/auth';
 
@@ -152,7 +152,7 @@ Application.defaultProps = {
 };
 
 const mapStateToProps = (state) => ({
-  applicationPeriod: selectCurrentApplicationPeriod(state),
+  applicationPeriod: selectApplicationPeriod(state),
   user: selectUser(state),
 });
 
