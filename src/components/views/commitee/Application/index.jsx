@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
 import classNames from 'classnames';
 import { withRouter } from 'react-router-dom';
 
@@ -12,15 +11,18 @@ import TextArea from 'components/misc/TextArea';
 import { ReactComponent as BackArrow } from 'assets/images/arrow.svg';
 import _s from 'assets/css/Application.module.scss';
 
-import { CommitteeApplication, connectServices } from 'services';
 import { getSubmittedUrl } from 'common/urls';
+import { connect } from 'react-redux';
+import { selectApplicationPeriod } from 'common/features/applicationPeriods';
+import { postApplication } from 'clients/application';
+import { selectUser } from 'common/features/auth';
 
 export class Application extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: props.user ? props.user.fullname : '',
-      email: props.user ? props.user.email : '',
+      name: props.user ? props.user.profile.name : '',
+      email: props.user ? props.user.profile.email : '',
       selectedComittees: [],
       ordered: true,
       inputEnabled: false,
@@ -32,13 +34,14 @@ export class Application extends Component {
 
   UNSAFE_componentWillReceiveProps(props) {
     this.setState({
-      name: props.user ? props.user.fullname : '',
-      email: props.user ? props.user.email : '',
+      name: props.user ? props.user.profile.name : '',
+      email: props.user ? props.user.profile.email : '',
     });
   }
 
   _infoChanged(info) {
-    this.setState(_.pick(info, ['name', 'email', 'inputEnabled']));
+    const { name, email, inputEnabled } = info;
+    this.setState({ name, email, inputEnabled });
   }
 
   _selectedChanged(selected) {
@@ -63,36 +66,38 @@ export class Application extends Component {
     });
   }
 
-  submitApplication() {
+  async submitApplication() {
     const { name, email, applicationText, ordered, selectedComittees } = this.state;
+    const { applicationPeriod } = this.props;
 
-    const application = new CommitteeApplication({
-      name: name,
-      email: email,
+    const applicationData = {
+      name,
+      email,
+      application_period: applicationPeriod ? applicationPeriod.id : null,
       application_text: applicationText,
       prioritized: ordered,
-      committees: selectedComittees,
-    });
+      committees: selectedComittees.map((committeeId, index) => ({
+        group: committeeId,
+        priority: index + 1,
+      })),
+    };
 
-    this.setState({ disableSubmit: true });
-    this.props.applicationService.postApplication(application).subscribe(
-      () => {
-        //Everything went ok
-        this.props.history.push(getSubmittedUrl());
-      },
-      (err) => {
-        // Error, something went wrong
-        const errorMessage =
-          err instanceof Array ? err : 'Pass på at du har fylt ut alle feltene og valgt komiteer å søke.';
-        this.setState({
-          disableSubmit: false,
-          responseMessage: `Noe gikk galt. ${errorMessage}`,
-        });
-      }
-    );
+    try {
+      await postApplication(applicationData);
+      this.props.history.push(getSubmittedUrl());
+    } catch (err) {
+      // Error, something went wrong
+      const errorMessage =
+        err instanceof Array ? err : 'Pass på at du har fylt ut alle feltene og valgt komiteer å søke.';
+      this.setState({
+        disableSubmit: false,
+        responseMessage: `Noe gikk galt. ${errorMessage}`,
+      });
+    }
   }
 
   render() {
+    const { name, email, inputEnabled } = this.state;
     return (
       <div className={_s.component}>
         <NavigationButton link="/">
@@ -101,11 +106,7 @@ export class Application extends Component {
         </NavigationButton>
         <div className={_s.alternative}>
           <h2 className={_s.header}>Brukerinfo</h2>
-          <Login
-            onChange={(info) => this._infoChanged(info)}
-            loggedIn={!!this.props.user}
-            info={_.pick(this.state, ['name', 'email', 'inputEnabled'])}
-          />
+          <Login onChange={(info) => this._infoChanged(info)} info={{ name, email, inputEnabled }} />
         </div>
         <div className={classNames(_s.content, _s.selectWrapper)}>
           <h2 className={_s.header}>Velg komite(er)</h2>
@@ -150,8 +151,9 @@ Application.defaultProps = {
   user: null,
 };
 
-const mapServicesToProps = (serviceManager) => ({
-  applicationService: serviceManager.getService('application'),
+const mapStateToProps = (state) => ({
+  applicationPeriod: selectApplicationPeriod(state),
+  user: selectUser(state),
 });
 
-export default withRouter(connectServices(mapServicesToProps)(Application));
+export default withRouter(connect(mapStateToProps)(Application));

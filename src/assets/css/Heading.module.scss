@@ -13,14 +13,14 @@
   max-width: 30rem;
   margin: 0 auto;
   padding: 1rem;
-}
 
-.logo a {
-  max-width: 100%;
-}
+  a {
+    width: 100%;
+  }
 
-.logo img {
-  max-width: 100%;
+  svg {
+    width: 100%;
+  }
 }
 
 .header {

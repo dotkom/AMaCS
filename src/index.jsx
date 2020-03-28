@@ -1,41 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 import Oidc from 'oidc-client';
 
 import Routes from './Routes';
 
-import {
-  ServiceProvider,
-  ServiceManager,
-  HttpServiceProvider,
-  AuthServiceProvider,
-  ApplicationServiceProvider,
-} from 'services';
-import { OAUTH_SETTINGS, API_SETTINGS } from 'common/constants';
+import store from 'common/store';
 import { initializeAnalytics } from 'common/analytics';
 import { initializeErrorReporting } from 'common/errorReporting';
-import { getAuthRedirectUrl } from 'common/urls';
-
-const authSettings = {
-  ...OAUTH_SETTINGS,
-  redirect_uri: getAuthRedirectUrl(),
-};
 
 initializeErrorReporting();
-
-const serviceManager = new ServiceManager();
-serviceManager.registerService('http.service', HttpServiceProvider);
-serviceManager.alias('http', 'http.service');
-serviceManager.registerService('auth.service', AuthServiceProvider, authSettings);
-serviceManager.alias('auth', 'auth.service');
-serviceManager.registerService(
-  'application.service',
-  ApplicationServiceProvider,
-  `${API_SETTINGS.host}${API_SETTINGS.application_endpoint}`
-);
-serviceManager.alias('application', 'application.service');
 
 const history = createBrowserHistory();
 initializeAnalytics(history);
@@ -48,11 +24,11 @@ if (process.env.NODE_ENV.toLowerCase() === 'production') Oidc.Log.reset(); // Tu
 
 const render = (Component) => {
   ReactDOM.render(
-    <ServiceProvider serviceManager={serviceManager}>
+    <Provider store={store}>
       <Router history={history}>
         <Component />
       </Router>
-    </ServiceProvider>,
+    </Provider>,
     document.getElementById('root')
   );
 };

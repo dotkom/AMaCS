@@ -5,10 +5,12 @@ import Input from './Input';
 import ToggleSwitch from './ToggleSwitch';
 
 import _s from 'assets/css/Login.module.scss';
-import { connectServices } from 'services';
 
 import onlineIconWhite from 'assets/images/online-icon-white.png';
 import onlineIcon from 'assets/images/online-icon.png';
+import { logout, login } from 'common/auth';
+import { connect } from 'react-redux';
+import { selectIsLoggedIn } from 'common/features/auth';
 
 export class Login extends React.Component {
   constructor(props) {
@@ -19,12 +21,13 @@ export class Login extends React.Component {
     };
   }
 
-  handleLoginClick() {
-    if (this.props.loggedIn) {
-      this.props.authService.logout();
+  async handleLoginClick() {
+    const { loggedIn } = this.props;
+    if (loggedIn) {
+      await logout();
       this.setState({ showExternalLoginHelp: false });
     } else {
-      this.props.authService.login();
+      await login();
       this.setState({ showExternalLoginHelp: true });
     }
   }
@@ -96,8 +99,8 @@ Login.defaultProps = {
   info: {},
 };
 
-const mapServicesToProps = (serviceManager) => ({
-  authService: serviceManager.getService('auth'),
+const mapStateToProps = (state) => ({
+  loggedIn: selectIsLoggedIn(state),
 });
 
-export default connectServices(mapServicesToProps)(Login);
+export default connect(mapStateToProps)(Login);

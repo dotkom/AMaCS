@@ -44,8 +44,14 @@
   font-weight: 600;
 }
 
+.img {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-block;
+}
+
 @media (min-width: 600px) {
-  .container svg {
+  .img {
     height: 4rem;
     width: 4rem;
   }
