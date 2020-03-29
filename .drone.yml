@@ -58,17 +58,6 @@ steps:
     depends_on:
       - install
 
-  - name: test
-    image: node:13-alpine
-    when:
-      event:
-        - push
-    group: testing
-    commands:
-      - yarn test
-    depends_on:
-      - install
-
   - name: rebuild-cache
     image: drillster/drone-volume-cache
     when:

@@ -7,7 +7,7 @@ import Oidc from 'oidc-client';
 
 import Routes from './Routes';
 
-import store from 'common/store';
+import createStore from 'common/store';
 import { initializeAnalytics } from 'common/analytics';
 import { initializeErrorReporting } from 'common/errorReporting';
 
@@ -23,6 +23,7 @@ history.listen(() => {
 if (process.env.NODE_ENV.toLowerCase() === 'production') Oidc.Log.reset(); // Turn off Oidc vendor logging to browser console in production.
 
 const render = (Component) => {
+  const store = createStore();
   ReactDOM.render(
     <Provider store={store}>
       <Router history={history}>
