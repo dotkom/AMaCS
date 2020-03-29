@@ -32,15 +32,15 @@ export const getLatestApplicationPeriod = async () => {
 export const getAvailableApplicationPeriod = async () => {
   // Execute both requests at the same time. So we don't have to wait for the current
   // to resolve before requesting the latest if the current does not exist.
-  const current = getCurrentApplicationPeriod();
-  const latest = getLatestApplicationPeriod();
+  const requestCurrent = getCurrentApplicationPeriod();
+  const requestLatest = getLatestApplicationPeriod();
 
-  await current;
+  const current = await requestCurrent;
   if (current) {
     return current;
   }
 
-  await latest;
+  const latest = await requestLatest;
   if (latest) {
     return latest;
   }
