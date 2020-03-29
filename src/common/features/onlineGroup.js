@@ -46,7 +46,7 @@ export const selectOnlineGroupsByIds = (ids) => (state) => {
   return state.onlineGroups.entities
     .filter(Boolean)
     .filter((group) => ids.some((id) => group.id === id))
-    .sort((groupA, groupB) => groupB.name_long.localeCompare(groupA.name_long));
+    .sort((groupA, groupB) => groupA.name_long.localeCompare(groupB.name_long));
 };
 
 export const selectOnlineGroupsLoading = (state) => {
