@@ -1,8 +1,73 @@
-pipeline:
-  test:
-    image: node:8-alpine
+kind: pipeline
+name: default
+
+steps:
+  - name: restore-cache
+    image: drillster/drone-volume-cache
     when:
-      event: pull_request
+      event:
+        - push
+    settings:
+      restore: true
+      mount:
+        - ./node_modules
+      volumes:
+        - /tmp/cache:/cache
+
+  - name: install
+    image: node:13-alpine
+    when:
+      event:
+        - push
+    group: testing
     commands:
-      - yarn
-      - yarn test
+      - yarn install --pure-lockfile
+    depends_on:
+      - restore-cache
+
+  - name: build
+    image: node:13-alpine
+    when:
+      event:
+        - push
+    group: testing
+    commands:
+      - yarn build
+    depends_on:
+      - install
+
+  - name: prettier
+    image: node:13-alpine
+    when:
+      event:
+        - push
+    group: testing
+    commands:
+      - yarn format-check
+    depends_on:
+      - install
+
+  - name: eslint
+    image: node:13-alpine
+    when:
+      event:
+        - push
+    group: testing
+    commands:
+      - yarn lint-check
+    depends_on:
+      - install
+
+  - name: rebuild-cache
+    image: drillster/drone-volume-cache
+    when:
+      event:
+        - push
+    settings:
+      rebuild: true
+      mount:
+        - ./node_modules
+      volumes:
+        - /tmp/cache:/cache
+    depends_on:
+      - install

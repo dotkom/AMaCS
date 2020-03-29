@@ -1,10 +1,12 @@
-import Raven from 'raven-js';
+import * as Sentry from '@sentry/browser';
 
 import { SENTRY_DSN } from './constants';
 
 export function initializeErrorReporting() {
   if (SENTRY_DSN) {
-    Raven.config(SENTRY_DSN).install();
+    Sentry.init({
+      dsn: SENTRY_DSN,
+    });
     console.log('Started sentry');
   }
 }
