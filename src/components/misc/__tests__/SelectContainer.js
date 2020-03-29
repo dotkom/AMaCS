@@ -35,10 +35,7 @@ describe('SelectContainer', () => {
     const selected = ['Test2kom', 'Test1kom'];
     const onChangeMock = jest.fn();
     const wrapper = shallow(<SelectContainer committees={committees} selected={selected} onChange={onChangeMock} />);
-    wrapper
-      .find('Selectable')
-      .first()
-      .simulate('click');
+    wrapper.find('Selectable').first().simulate('click');
     expect(onChangeMock).toHaveBeenCalledWith(['Test2kom', 'Test1kom', 'Test0kom']);
   });
 
@@ -46,10 +43,7 @@ describe('SelectContainer', () => {
     const selected = ['Test2kom', 'Test0kom', 'Test1kom'];
     const onChangeMock = jest.fn();
     const wrapper = shallow(<SelectContainer committees={committees} selected={selected} onChange={onChangeMock} />);
-    wrapper
-      .find('Selectable')
-      .first()
-      .simulate('click');
+    wrapper.find('Selectable').first().simulate('click');
     expect(onChangeMock).toHaveBeenCalledWith(['Test2kom', 'Test1kom']);
   });
 
@@ -57,10 +51,7 @@ describe('SelectContainer', () => {
     const selected = ['Test2kom', 'Test0kom', 'Test1kom'];
     const onChangeMock = jest.fn();
     const wrapper = shallow(<SelectContainer committees={committees} selected={selected} onChange={onChangeMock} />);
-    wrapper
-      .find('SelectedList')
-      .first()
-      .simulate('change', 'Test0kom');
+    wrapper.find('SelectedList').first().simulate('change', 'Test0kom');
     expect(onChangeMock).toHaveBeenCalledWith(['Test2kom', 'Test1kom']);
   });
 });

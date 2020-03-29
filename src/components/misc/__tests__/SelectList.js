@@ -56,10 +56,7 @@ describe('SelectedList', () => {
     ];
     const onChangeMock = jest.fn();
     const wrapper = shallow(<SelectedList totalChoices={3} committees={committees} onChange={onChangeMock} />);
-    wrapper
-      .find('Selectable')
-      .first()
-      .simulate('click');
+    wrapper.find('Selectable').first().simulate('click');
     expect(onChangeMock).toHaveBeenCalledWith('testkom');
   });
 
@@ -71,10 +68,7 @@ describe('SelectedList', () => {
     ];
     const onChangeMock = jest.fn();
     const wrapper = shallow(<SelectedList totalChoices={3} committees={committees} onChange={onChangeMock} />);
-    wrapper
-      .find('Selectable')
-      .last()
-      .simulate('click');
+    wrapper.find('Selectable').last().simulate('click');
     expect(onChangeMock).toHaveBeenCalledWith('sickkom');
   });
 
