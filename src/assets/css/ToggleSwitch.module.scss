@@ -11,6 +11,10 @@
   cursor: default;
 }
 
+.container::-moz-focus-inner {
+  border: 0;
+}
+
 .container:focus {
   outline: none;
 }

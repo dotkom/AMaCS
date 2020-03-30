@@ -24,7 +24,7 @@ const CommitteeInfo = ({ committeeId }) => {
         <img className={_s.img} src={`${API_SETTINGS.host}${committee.image.lg}`} alt={committee.name_long} />
         <h2 className={_s.name}>{committee.name_short}</h2>
       </header>
-      <div className={_s.info}>{committee.description_long}</div>
+      <div className={_s.info}>{committee.application_description}</div>
     </section>
   );
 };
