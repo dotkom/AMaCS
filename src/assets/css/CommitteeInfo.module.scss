@@ -54,7 +54,11 @@
   width: 2.5rem;
   height: 2.5rem;
   display: inline-block;
-  fill: var(--iconColor);
+
+  /* Make colored arts of an image completly dark, then invert them to make them white */
+  @media (prefers-color-scheme: dark) {
+    filter: brightness(0) invert(1);
+  }
 }
 
 @media (max-width: 600px) {
