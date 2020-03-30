@@ -1,21 +1,20 @@
-@import 'variables';
-
 .component {
-  background: white;
-  border: 2px solid $input-border;
+  background: var(--background);
+  border: 2px solid var(--inputBorder);
   display: block;
   width: 100%;
   min-height: 10rem;
   font-size: 1rem;
   font-family: inherit;
   padding: 0.5rem;
+  color: var(--paragraph);
 }
 
 .component:focus {
-  border-color: $input-focus;
+  border-color: var(--inputFocus);
   outline: none;
 }
 
 .component::placeholder {
-  color: $input-placeholder;
+  color: var(--inputPlaceholder);
 }

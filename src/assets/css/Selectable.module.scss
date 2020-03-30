@@ -1,8 +1,6 @@
-@import 'variables';
-
 .container {
-  background: white;
-  border: 2px solid white;
+  background: var(--background);
+  border: 2px solid var(--background);
   padding: 0.6em 0.75em;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
   display: inline-flex;
@@ -19,7 +17,7 @@
 
 .container:hover,
 .container.container.selected:hover {
-  border-color: $primary;
+  border-color: var(--blue);
 }
 
 .container.small {
@@ -27,8 +25,8 @@
 }
 
 .container.selected {
-  background: #c4c4c4;
-  border-color: $gray-lighten-90;
+  background: var(--inputAlt);
+  border-color: var(--backgroundAlt);
   box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
@@ -48,6 +46,15 @@
   width: 2.5rem;
   height: 2.5rem;
   display: inline-block;
+
+  /* Make colored arts of an image completly dark, then invert them to make them white */
+  @media (prefers-color-scheme: dark) {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.icon {
+  fill: var(--iconColor);
 }
 
 @media (min-width: 600px) {

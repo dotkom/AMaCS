@@ -1,15 +1,13 @@
-@import 'variables';
-
 .button {
-  background: $primary;
-  border: 3px solid $primary;
+  background: var(--blue);
+  border: 3px solid var(--blue);
   box-sizing: border-box;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   width: 100%;
   max-width: 24rem;
   padding: 0.5rem 1.5rem;
-  color: white;
+  color: var(--background);
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.3rem;
@@ -26,20 +24,20 @@
 }
 
 .button:hover {
-  background: $gray-lighten-90;
-  color: $primary;
+  background: var(--backgroundAlt);
+  color: var(--blue);
 }
 
 .button:active,
 button.active {
-  background: white;
-  color: $primary;
+  background: var(--background);
+  color: var(--blue);
 }
 
 .button:disabled {
-  background: $gray-lighten-90;
+  background: var(--backgroundAlt);
   border: 3px solid transparent;
-  color: #c0c0c0;
+  color: var(--grayLighten60);
 }
 
 .iconLeft {

@@ -1,8 +1,6 @@
-@import 'variables';
-
 .heading {
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
-  background: $primary;
+  background: var(--blue);
   margin-bottom: 1rem;
 }
 
@@ -33,7 +31,7 @@
 }
 
 .text {
-  color: white;
+  color: var(--background);
   margin: 0 auto;
   align-items: center;
   font-style: normal;

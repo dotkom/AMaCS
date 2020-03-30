@@ -1,31 +1,29 @@
-@import 'variables';
-
 .container {
   margin-bottom: 1rem;
 }
 
 .input {
-  background: white;
-  border: 2px solid $input-border;
+  background: var(--background);
+  border: 2px solid var(--inputBorder);
   border-radius: 2px;
   width: 100%;
   font-size: 1.1rem;
   padding: 0.7rem 0.4rem;
-  color: $gray-darken-60;
+  color: var(--grayDarken60);
 }
 
 .input:focus {
-  border-color: $input-focus;
+  border-color: var(--inputFocus);
   outline: none;
 }
 
 .input::placeholder {
-  color: $input-placeholder;
+  color: var(--inputPlaceholder);
 }
 
 .input:disabled,
 .input:disabled::placeholder {
-  background: #f0f0f0;
+  background: var(--backgroundAlt);
   color: #b8b8b8;
 }
 
@@ -34,5 +32,5 @@
   margin: 0.5rem 0;
   font-size: 1.1rem;
   text-transform: uppercase;
-  color: #767676;
+  color: var(--gray);
 }

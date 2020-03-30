@@ -10,7 +10,7 @@
 }
 
 .helptext {
-  color: #909090;
+  color: var(--gray);
   font-style: italic;
 }
 
@@ -19,7 +19,7 @@
   margin: 0.5rem 0;
   font-size: 1.1rem;
   text-transform: uppercase;
-  color: #767676;
+  color: var(--gray);
 }
 
 .userinfoSwitch {

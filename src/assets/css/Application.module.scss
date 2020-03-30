@@ -1,5 +1,3 @@
-@import 'variables';
-
 .component > * + * {
   margin-top: 1rem;
 }
@@ -17,7 +15,7 @@
 }
 
 .alternative {
-  background: white;
+  background: var(--background);
 }
 
 .selectWrapper {
@@ -31,7 +29,7 @@
 
 .header {
   font-size: 1.4rem;
-  color: $gray-darken-30;
+  color: var(--text);
   flex-basis: 100%;
   text-transform: uppercase;
   font-weight: 300;
@@ -42,6 +40,6 @@
 }
 
 .arrow {
-  fill: $primary;
+  fill: var(--blue);
   margin: 2px;
 }
