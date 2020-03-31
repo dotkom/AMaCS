@@ -59,6 +59,7 @@
 
   --background: var(--white);
   --backgroundAlt: var(--grayLighten90);
+  --backgroundHeading: var(--primary);
   --text: var(--grayDarken30);
   --paragraph: var(--grayDarken60);
   --blue: var(--primary);
@@ -72,6 +73,7 @@
   @media (prefers-color-scheme: dark) {
     --background: var(--grayDarken90);
     --backgroundAlt: #1a1a1a;
+    --backgroundHeading: var(--black);
     --text: var(--white);
     --paragraph: var(--grayLighten30);
     --blue: var(--info);

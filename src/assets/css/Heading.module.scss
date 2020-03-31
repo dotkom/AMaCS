@@ -1,6 +1,6 @@
 .heading {
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
-  background: var(--blue);
+  background: var(--backgroundHeading);
   margin-bottom: 1rem;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .text {
-  color: var(--background);
+  color: var(--white);
   margin: 0 auto;
   align-items: center;
   font-style: normal;
