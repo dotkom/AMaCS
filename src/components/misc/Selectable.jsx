@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import _s from 'assets/css/Selectable.module.scss';
@@ -12,15 +11,6 @@ const Selectable = ({ committee, onClick = null, small = false, selected = false
       <h2 className={classNames(_s.name)}>{committee.name_short}</h2>
     </div>
   );
-};
-
-Selectable.propTypes = {
-  committee: PropTypes.shape({
-    name_short: PropTypes.string,
-  }).isRequired,
-  onClick: PropTypes.func,
-  small: PropTypes.bool,
-  selected: PropTypes.bool,
 };
 
 export default Selectable;
