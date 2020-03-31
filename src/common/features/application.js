@@ -120,7 +120,7 @@ export const {
  */
 export const selectName = (state) => {
   const user = selectUser(state);
-  return user ? user.name : state.application.entity.name;
+  return user ? user.profile.name : state.application.entity.name;
 };
 
 /**
@@ -128,7 +128,7 @@ export const selectName = (state) => {
  */
 export const selectEmail = (state) => {
   const user = selectUser(state);
-  return user ? user.email : state.application.entity.email;
+  return user ? user.profile.email : state.application.entity.email;
 };
 
 /**
