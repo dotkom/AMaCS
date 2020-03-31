@@ -1,57 +1,49 @@
-import React from 'react';
+import React, { useState, useLayoutEffect, useCallback } from 'react';
 
 import _s from 'assets/css/Button.module.scss';
 
-class Button extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hover: false,
-    };
-  }
+const Button = ({ text, iconLeft, iconRight, hoverIconLeft, hoverIconRight, onMouseEnter, onMouseLeave, ...props }) => {
+  const [hover, setHover] = useState(false);
 
-  componentDidMount() {
-    const { hoverIconLeft, hoverIconRight } = this.props;
-    // Preload hover icons
+  const preloadIcons = useCallback(() => {
     if (hoverIconLeft) {
       new Image().src = hoverIconLeft;
     }
     if (hoverIconRight) {
       new Image().src = hoverIconRight;
     }
-  }
+  }, [hoverIconLeft, hoverIconRight]);
 
-  _mouseEnter(...a) {
-    this.setState({ hover: true });
-    if (this.props.onMouseEnter) this.props.onMouseEnter(...a);
-  }
+  const HandleMouseEnter = (...a) => {
+    setHover(true);
+    if (onMouseEnter) {
+      onMouseEnter(...a);
+    }
+  };
 
-  _mouseLeave(...a) {
-    this.setState({ hover: false });
-    if (this.props.onMouseLeave) this.props.onMouseLeave(...a);
-  }
+  const handleMouseLeave = (...a) => {
+    setHover(false);
+    if (onMouseLeave) {
+      onMouseLeave(...a);
+    }
+  };
 
-  render() {
-    const { text, iconLeft, iconRight, hoverIconLeft, hoverIconRight, ...rest } = this.props;
+  useLayoutEffect(() => {
+    preloadIcons();
+  }, [preloadIcons]);
 
-    const icLeft = this.state.hover ? hoverIconLeft || iconLeft : iconLeft || hoverIconLeft;
-    const icRight = this.state.hover ? hoverIconRight || iconRight : iconRight || hoverIconRight;
+  const icLeft = hover ? hoverIconLeft || iconLeft : iconLeft || hoverIconLeft;
+  const icRight = hover ? hoverIconRight || iconRight : iconRight || hoverIconRight;
 
-    return (
-      <button
-        {...rest}
-        className={_s.button}
-        onMouseEnter={(...a) => this._mouseEnter(...a)}
-        onMouseLeave={(...a) => this._mouseLeave(...a)}
-      >
-        <div className={_s.buttonContent}>
-          {icLeft && <img className={_s.iconLeft} src={icLeft} alt="Ikon" />}
-          {text}
-          {icRight && <img className={_s.iconRight} src={icRight} alt="Ikon" />}
-        </div>
-      </button>
-    );
-  }
-}
+  return (
+    <button {...props} className={_s.button} onMouseEnter={HandleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div className={_s.buttonContent}>
+        {icLeft && <img className={_s.iconLeft} src={icLeft} alt="Ikon" />}
+        {text}
+        {icRight && <img className={_s.iconRight} src={icRight} alt="Ikon" />}
+      </div>
+    </button>
+  );
+};
 
 export default Button;

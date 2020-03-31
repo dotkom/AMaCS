@@ -2,7 +2,7 @@ import React from 'react';
 
 import _s from 'assets/css/Input.module.scss';
 
-function Input({ label, name, ...rest }) {
+const Input = ({ label, name, ...rest }) => {
   return (
     <div className={_s.container}>
       <label className={_s.label} htmlFor={name}>
@@ -11,6 +11,6 @@ function Input({ label, name, ...rest }) {
       <input className={_s.input} name={name} {...rest} />
     </div>
   );
-}
+};
 
 export default Input;

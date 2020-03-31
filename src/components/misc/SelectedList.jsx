@@ -3,7 +3,7 @@ import Selectable from './Selectable';
 
 import _s from 'assets/css/SelectedList.module.scss';
 
-function SelectedList({ committees, ordered, totalChoices, onChange }) {
+const SelectedList = ({ committees, ordered, totalChoices, onChange }) => {
   return (
     <div className={_s.container}>
       {[...Array(totalChoices)].map((_, i) => {
@@ -18,6 +18,6 @@ function SelectedList({ committees, ordered, totalChoices, onChange }) {
       })}
     </div>
   );
-}
+};
 
 export default SelectedList;

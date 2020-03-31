@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
@@ -24,11 +24,13 @@ if (process.env.NODE_ENV.toLowerCase() === 'production') Oidc.Log.reset(); // Tu
 
 const render = (Component) => {
   ReactDOM.render(
-    <Provider store={store}>
-      <Router history={history}>
-        <Component />
-      </Router>
-    </Provider>,
+    <StrictMode>
+      <Provider store={store}>
+        <Router history={history}>
+          <Component />
+        </Router>
+      </Provider>
+    </StrictMode>,
     document.getElementById('root')
   );
 };

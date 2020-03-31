@@ -10,7 +10,7 @@ import _s from 'assets/css/SelectContainer.module.scss';
 import { selectOnlineGroupsByIds } from 'common/features/onlineGroup';
 import { selectOnlineGroupIds } from 'common/features/applicationPeriods';
 
-export function updateSelection(selected, committeeName, maxSelected) {
+const updateSelection = (selected, committeeName, maxSelected) => {
   const selectedIndex = selected.indexOf(committeeName);
   const alreadySelected = selectedIndex !== -1;
   if (alreadySelected) {
@@ -19,7 +19,7 @@ export function updateSelection(selected, committeeName, maxSelected) {
     selected = [...selected, committeeName];
   }
   return selected;
-}
+};
 
 const selectCurrentOrLatestCommittees = (state) => {
   const committeeIds = selectOnlineGroupIds(state);

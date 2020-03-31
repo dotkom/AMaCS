@@ -2,7 +2,7 @@ import React from 'react';
 
 import _s from 'assets/css/Thankyou.module.scss';
 
-function Thankyou() {
+const ThankYou = () => {
   return (
     <div className={_s.container}>
       <h1>Takk for søknaden!</h1>
@@ -11,6 +11,6 @@ function Thankyou() {
       </p>
     </div>
   );
-}
+};
 
-export default Thankyou;
+export default ThankYou;
