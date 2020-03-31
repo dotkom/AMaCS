@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 
 import Selectable from './Selectable';
 import SelectedList from './SelectedList';
@@ -9,17 +8,12 @@ import ToggleSwitch from './ToggleSwitch';
 import _s from 'assets/css/SelectContainer.module.scss';
 import { selectOnlineGroupsByIds } from 'common/features/onlineGroup';
 import { selectOnlineGroupIds } from 'common/features/applicationPeriods';
-
-const updateSelection = (selected, committeeName, maxSelected) => {
-  const selectedIndex = selected.indexOf(committeeName);
-  const alreadySelected = selectedIndex !== -1;
-  if (alreadySelected) {
-    selected = [...selected.slice(0, selectedIndex), ...selected.slice(selectedIndex + 1)];
-  } else if (selected.length < maxSelected) {
-    selected = [...selected, committeeName];
-  }
-  return selected;
-};
+import {
+  toggleCommitteeById,
+  toggleOrdered,
+  selectIsOrdered,
+  selectSelectedCommittees,
+} from 'common/features/application';
 
 const selectCurrentOrLatestCommittees = (state) => {
   const committeeIds = selectOnlineGroupIds(state);
@@ -29,12 +23,18 @@ const selectCurrentOrLatestCommittees = (state) => {
 
 const MAX_SELECTED = 3;
 
-const SelectContainer = ({ selected, ordered = false, onOrderedChange, onChange }) => {
+const SelectContainer = () => {
+  const dispatch = useDispatch();
   const committees = useSelector(selectCurrentOrLatestCommittees);
+  const ordered = useSelector(selectIsOrdered);
+  const selectedComittees = useSelector(selectSelectedCommittees, shallowEqual);
 
-  const handleSelect = (committeeName) => {
-    const newSelection = updateSelection(selected, committeeName, MAX_SELECTED);
-    onChange(newSelection);
+  const disptachToggleCommitteeById = (committeeId) => {
+    dispatch(toggleCommitteeById(committeeId));
+  };
+
+  const dispatchToggleOrdered = () => {
+    dispatch(toggleOrdered());
   };
 
   return (
@@ -47,31 +47,26 @@ const SelectContainer = ({ selected, ordered = false, onOrderedChange, onChange 
         {committees.map((committee) => (
           <Selectable
             key={committee.id}
-            onClick={() => handleSelect(committee.id)}
+            onClick={() => disptachToggleCommitteeById(committee.id)}
             committee={committee}
-            selected={selected.some((id) => id === committee.id)}
+            selected={selectedComittees.some((id) => id === committee.id)}
           />
         ))}
       </div>
       <div className={_s.prioritizedSwitch}>
-        <ToggleSwitch checked={ordered} onChange={onOrderedChange} />
+        <ToggleSwitch checked={ordered} onChange={dispatchToggleOrdered} />
         <span>Prioritert rekkefølge?</span>
       </div>
       <div className={_s.selectedList}>
         <SelectedList
           ordered={ordered}
-          committees={selected.map((id) => committees.find((committee) => committee.id === id))}
+          committees={selectedComittees.map((id) => committees.find((committee) => committee.id === id))}
           totalChoices={MAX_SELECTED}
-          onChange={handleSelect}
+          onChange={disptachToggleCommitteeById}
         />
       </div>
     </div>
   );
-};
-
-SelectContainer.propTypes = {
-  prioritized: PropTypes.bool,
-  selected: PropTypes.array.isRequired,
 };
 
 export default SelectContainer;

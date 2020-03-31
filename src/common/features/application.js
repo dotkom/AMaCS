@@ -1,11 +1,12 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { postApplication } from 'clients/application';
-import { getSubmittedUrl } from 'common/urls';
 import { selectUser } from './auth';
+import { selectApplicationPeriod } from './applicationPeriods';
 
-export const submitApplication = createAsyncThunk('application/submit', async (history, thunkAPI) => {
+export const submitApplication = createAsyncThunk('application/submit', async (_, thunkAPI) => {
   const state = thunkAPI.getState();
-  const { name, email, applicationText, ordered, selectedComittees } = state;
+  const applicationPeriod = selectApplicationPeriod(state);
+  const { name, email, applicationText, ordered, selectedComittees } = state.application.entity;
 
   const applicationData = {
     name,
@@ -20,7 +21,6 @@ export const submitApplication = createAsyncThunk('application/submit', async (h
   };
 
   const response = await postApplication(applicationData);
-  history.push(getSubmittedUrl());
 
   return response;
 });
@@ -36,22 +36,24 @@ const updateSelection = (selected, committeeId, maxSelected) => {
   return selected;
 };
 
+const INITIAL_STATE = {
+  MAX_SELECTED: 3,
+  loading: 'idle',
+  error: null,
+  entity: {
+    name: '',
+    email: '',
+    selectedComittees: [],
+    ordered: true,
+    inputEnabled: false,
+    applicationText: '',
+    disableSubmit: false,
+  },
+};
+
 export const applicationSlice = createSlice({
   name: 'application',
-  initialState: {
-    MAX_SELECTED: 3,
-    loading: 'idle',
-    error: null,
-    entity: {
-      name: '',
-      email: '',
-      selectedComittees: [],
-      ordered: true,
-      inputEnabled: false,
-      applicationText: '',
-      disableSubmit: false,
-    },
-  },
+  initialState: INITIAL_STATE,
   reducers: {
     setName(state, action) {
       state.entity.name = action.payload;
@@ -63,7 +65,7 @@ export const applicationSlice = createSlice({
       state.entity.applicationText = action.payload;
     },
     toggleOrdered(state) {
-      const { ordered, selectedComittees } = state.entity.ordered;
+      const { ordered, selectedComittees } = state.entity;
       state.entity.ordered = !ordered;
       state.entity.selectedComittees = !ordered ? [] : selectedComittees;
     },
@@ -77,6 +79,9 @@ export const applicationSlice = createSlice({
       const committeeId = action.payload;
       const newSelection = updateSelection(state.entity.selectedComittees, committeeId, state.MAX_SELECTED);
       state.entity.selectedComittees = newSelection;
+    },
+    resetForm() {
+      return INITIAL_STATE;
     },
   },
   extraReducers: {
@@ -107,6 +112,7 @@ export const {
   toggleInputEnabled,
   toggleDisableSubmit,
   toggleCommitteeById,
+  resetForm,
 } = applicationSlice.actions;
 
 /**
@@ -157,11 +163,16 @@ export const selectAreInputsEnabled = (state) => {
  @returns {boolean} 
  */
 export const selectIsInputValid = (state) => {
+  const wayTooComplexEmailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  const user = selectUser(state);
   const { name, email, selectedComittees, applicationText } = state.application.entity;
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return (
-    (user !== null || (name.length > 0 && re.test(email))) && applicationText.length > 0 && selectedComittees.length > 0
-  );
+
+  const isNameAndEmailValid = user !== null || (name.length > 0 && wayTooComplexEmailRegex.test(email));
+  const isApplicationTextValid = applicationText.length > 0;
+  const isSelectedCommitteesValid = selectedComittees.length > 0;
+
+  return isNameAndEmailValid && isApplicationTextValid && isSelectedCommitteesValid;
 };
 
 /**
@@ -177,6 +188,10 @@ export const selectIsSubmitDisabled = (state) => {
  */
 export const selectApplicationFormLoading = (state) => {
   return state.application.loading;
+};
+
+export const selectApplicationFormError = (state) => {
+  return state.application.error;
 };
 
 export default applicationSlice.reducer;

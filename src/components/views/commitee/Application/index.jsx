@@ -1,8 +1,17 @@
 import React from 'react';
 import classNames from 'classnames';
-import { useSelector, useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
+import {
+  submitApplication,
+  selectIsSubmitDisabled,
+  selectApplicationFormLoading,
+  setApplicationText,
+  selectApplicationFormError,
+  selectApplicationText,
+} from 'common/features/application';
+import { getSubmittedUrl, getBaseUrl } from 'common/urls';
 import Button from 'components/misc/Button';
 import SelectContainer from 'components/misc/SelectContainer';
 import NavigationButton from 'components/misc/NavigationButton';
@@ -12,27 +21,23 @@ import TextArea from 'components/misc/TextArea';
 import { ReactComponent as BackArrow } from 'assets/images/arrow.svg';
 import _s from 'assets/css/Application.module.scss';
 
-import {
-  submitApplication,
-  selectIsSubmitDisabled,
-  selectApplicationFormLoading,
-  setApplicationText,
-  toggleOrdered,
-} from 'common/features/application';
-
 const Application = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
   const isSubmitDisabled = useSelector(selectIsSubmitDisabled);
   const loading = useSelector(selectApplicationFormLoading);
+  const error = useSelector(selectApplicationFormError, shallowEqual);
+  const applicationText = useSelector(selectApplicationText);
 
-  const dispatchSubmitApplication = dispatch(submitApplication(history));
-  const dispatchSetApplicationText = dispatch(setApplicationText());
-  const dispatchToggleOrdered = dispatch(toggleOrdered());
+  const dispatchSubmitApplication = () => dispatch(submitApplication());
+  const dispatchSetApplicationText = (text) => dispatch(setApplicationText(text));
+
+  if (loading === 'submitted') {
+    return <Redirect to={getSubmittedUrl()} />;
+  }
 
   return (
     <div className={_s.component}>
-      <NavigationButton link="/">
+      <NavigationButton link={getBaseUrl()}>
         <BackArrow className={_s.arrow} />
         Tilbake
       </NavigationButton>
@@ -42,12 +47,7 @@ const Application = () => {
       </div>
       <div className={classNames(_s.content, _s.selectWrapper)}>
         <h2 className={_s.header}>Velg komite(er)</h2>
-        <SelectContainer
-          ordered={state.ordered}
-          selected={state.selectedComittees}
-          onChange={selectedChanged}
-          onOrderedChange={dispatchToggleOrdered}
-        />
+        <SelectContainer />
       </div>
       <div className={classNames(_s.alternative, _s.application)}>
         <h2 className={_s.header}>Søknadstekst</h2>
@@ -62,12 +62,8 @@ const Application = () => {
             dette er aktuelt for deg.
           </em>
         </p>
-        <TextArea
-          value={state.applicationText}
-          onChange={dispatchSetApplicationText}
-          placeholder="Din søknadstekst..."
-        />
-        {state.responseMessage.length > 0 && <p>{state.responseMessage}</p>}
+        <TextArea value={applicationText} onChange={dispatchSetApplicationText} placeholder="Din søknadstekst..." />
+        {error && <p>{error}</p>}
         <Button
           text={loading === 'pending' ? 'Sender søknad...' : 'Send søknad'}
           disabled={isSubmitDisabled}
