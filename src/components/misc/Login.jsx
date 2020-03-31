@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import Button from './Button';
 import Input from './Input';
@@ -11,9 +11,21 @@ import onlineIconWhite from 'assets/images/online-icon-white.png';
 import onlineIcon from 'assets/images/online-icon.png';
 import { logout, login } from 'common/auth';
 import { selectIsLoggedIn } from 'common/features/auth';
+import {
+  setName,
+  setEmail,
+  toggleInputEnabled,
+  selectName,
+  selectEmail,
+  selectAreInputsEnabled,
+} from 'common/features/application';
 
-const Login = ({ info = {}, onChange }) => {
+const Login = () => {
+  const dispatch = useDispatch();
   const loggedIn = useSelector(selectIsLoggedIn);
+  const name = useSelector(selectName);
+  const email = useSelector(selectEmail);
+  const inputEnabled = useSelector(selectAreInputsEnabled);
   const [showExternalLoginHelp, setShowExternalLoginHelp] = useState(false);
 
   const handleLoginClick = async () => {
@@ -26,14 +38,20 @@ const Login = ({ info = {}, onChange }) => {
     }
   };
 
-  const handleInputChange = (field, value) => {
-    if (onChange) {
-      onChange({ ...info, [field]: value });
-    }
+  const dispatchSetName = (event) => {
+    dispatch(setName(event.target.value));
+  };
+
+  const dispatchSetEmail = (event) => {
+    dispatch(setEmail(event.target.value));
+  };
+
+  const dispatchToggleInputEnabled = () => {
+    dispatch(toggleInputEnabled());
   };
 
   const buttonText = loggedIn ? 'ut' : 'inn';
-  const checked = info.inputEnabled && !loggedIn;
+  const checked = inputEnabled && !loggedIn;
 
   return (
     <div className={_s.container}>
@@ -48,11 +66,7 @@ const Login = ({ info = {}, onChange }) => {
         {!loggedIn && showExternalLoginHelp ? <p className={_s.helptext}>Innlogging skjer i eget vindu.</p> : null}
         <label className={_s.label}>Ingen online.ntnu.no-bruker?</label>
         <div className={_s.userinfoSwitch}>
-          <ToggleSwitch
-            disabled={loggedIn}
-            checked={checked}
-            onChange={() => handleInputChange('inputEnabled', !checked)}
-          />
+          <ToggleSwitch disabled={loggedIn} checked={checked} onChange={dispatchToggleInputEnabled} />
           <span>Fyll inn brukerinfo selv</span>
         </div>
       </div>
@@ -62,18 +76,18 @@ const Login = ({ info = {}, onChange }) => {
           placeholder="Navn"
           name="name"
           label="Navn"
-          value={info.name || ''}
-          onChange={(r) => handleInputChange('name', r.target.value)}
-          disabled={!info.inputEnabled || loggedIn}
+          value={name}
+          onChange={dispatchSetName}
+          disabled={!inputEnabled || loggedIn}
         />
         <Input
           type="email"
           placeholder="Mailadresse"
           name="email"
           label="E-Postadresse"
-          onChange={(r) => handleInputChange('email', r.target.value)}
-          disabled={!info.inputEnabled || loggedIn}
-          value={info.email || ''}
+          onChange={dispatchSetEmail}
+          disabled={!inputEnabled || loggedIn}
+          value={email}
         />
       </div>
     </div>
