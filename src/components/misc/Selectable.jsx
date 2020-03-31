@@ -5,14 +5,14 @@ import classNames from 'classnames';
 import _s from 'assets/css/Selectable.module.scss';
 import { API_SETTINGS } from 'common/constants';
 
-function Selectable({ committee, onClick, small, selected }) {
+const Selectable = ({ committee, onClick, small, selected }) => {
   return (
     <div className={classNames(_s.container, { [_s.small]: small, [_s.selected]: selected })} onClick={onClick}>
       <img className={_s.img} src={`${API_SETTINGS.host}${committee.image.md}`} alt={committee.name_long} />
       <h2 className={classNames(_s.name)}>{committee.name_short}</h2>
     </div>
   );
-}
+};
 
 Selectable.defaultProps = {
   small: false,

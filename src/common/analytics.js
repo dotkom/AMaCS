@@ -4,12 +4,12 @@ import { GA_TRACKING_ID } from './constants';
 
 const debug = process.env.NODE_ENV === 'development';
 
-export function logPageView(location) {
+export const logPageView = (location) => {
   ReactGA.set({ page: location.pathname + location.search });
   ReactGA.pageview(location.pathname + location.search);
-}
+};
 
-export function initializeAnalytics(history) {
+export const initializeAnalytics = (history) => {
   if (!GA_TRACKING_ID) {
     return;
   }
@@ -18,4 +18,4 @@ export function initializeAnalytics(history) {
   });
   history.listen(logPageView);
   logPageView(history.location);
-}
+};

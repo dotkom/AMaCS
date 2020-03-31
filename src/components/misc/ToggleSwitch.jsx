@@ -5,7 +5,7 @@ import { ReactComponent as Cross } from 'assets/images/cross.svg';
 import { ReactComponent as Check } from 'assets/images/check.svg';
 import _s from 'assets/css/ToggleSwitch.module.scss';
 
-function ToggleSwitch({ checked, disabled, onChange }) {
+const ToggleSwitch = ({ checked, disabled, onChange }) => {
   const SvgIcon = checked ? Check : Cross;
   return (
     <button disabled={disabled} onClick={onChange} className={_s.container}>
@@ -16,7 +16,7 @@ function ToggleSwitch({ checked, disabled, onChange }) {
       </div>
     </button>
   );
-}
+};
 
 ToggleSwitch.defaultProps = {
   checked: false,
