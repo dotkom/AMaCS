@@ -6,12 +6,12 @@ import MainView from 'components/views/commitee';
 
 import { Link } from '@dotkomonline/design-system';
 import _s from 'assets/css/base.module.scss';
-import { selectOnlineGroupIds, fetchApplicationPeriods } from 'common/features/applicationPeriods';
-import { fetchOnlineGroupsByIds } from 'common/features/onlineGroup';
+import { selectOnlineGroups, fetchApplicationPeriods } from 'common/features/applicationPeriods';
+import { fetchOnlineGroupsByRelations } from 'common/features/onlineGroup';
 
 const AppContainer = () => {
   const dispatch = useDispatch();
-  const committees = useSelector(selectOnlineGroupIds, shallowEqual);
+  const committees = useSelector(selectOnlineGroups, shallowEqual);
 
   useEffect(() => {
     dispatch(fetchApplicationPeriods());
@@ -19,7 +19,7 @@ const AppContainer = () => {
 
   useEffect(() => {
     if (committees) {
-      dispatch(fetchOnlineGroupsByIds(committees));
+      dispatch(fetchOnlineGroupsByRelations(committees));
     }
   }, [dispatch, committees]);
 

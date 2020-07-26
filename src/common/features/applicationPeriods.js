@@ -41,7 +41,7 @@ export const selectApplicationPeriod = (state) => {
   return state.applicationPeriods.entity;
 };
 
-export const selectOnlineGroupIds = (state) => {
+export const selectOnlineGroups = (state) => {
   const applicationPeriod = selectApplicationPeriod(state);
   return applicationPeriod ? applicationPeriod.committees : [];
 };

@@ -22,8 +22,8 @@ const Home = () => {
         lese mer om hva hver enkelt komité gjør samt å sende inn en søknad om intervju.
       </p>
       <div className={_s.content}>
-        {applicationPeriod.committees.map((committeeId) => (
-          <CommitteeInfo key={committeeId} committeeId={committeeId} />
+        {applicationPeriod.committees.map((committee) => (
+          <CommitteeInfo key={committee.id} committeeId={committee.id} />
         ))}
       </div>
       <div className={_s.nextLink}>
