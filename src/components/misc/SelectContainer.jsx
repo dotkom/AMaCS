@@ -6,8 +6,8 @@ import SelectedList from './SelectedList';
 import ToggleSwitch from './ToggleSwitch';
 
 import _s from 'assets/css/SelectContainer.module.scss';
-import { selectOnlineGroupsByIds } from 'common/features/onlineGroup';
-import { selectOnlineGroupIds } from 'common/features/applicationPeriods';
+import { selectOnlineGroupsByRelations } from 'common/features/onlineGroup';
+import { selectOnlineGroups } from 'common/features/applicationPeriods';
 import {
   toggleCommitteeById,
   toggleOrdered,
@@ -16,8 +16,8 @@ import {
 } from 'common/features/application';
 
 const selectCurrentOrLatestCommittees = (state) => {
-  const committeeIds = selectOnlineGroupIds(state);
-  const committees = selectOnlineGroupsByIds(committeeIds)(state);
+  const committeeRelations = selectOnlineGroups(state);
+  const committees = selectOnlineGroupsByRelations(committeeRelations)(state);
   return committees;
 };
 
@@ -44,14 +44,16 @@ const SelectContainer = () => {
         {ordered && ' i prioritert rekkefølge'}.
       </p>
       <div className={_s.selectables}>
-        {committees.map((committee) => (
-          <Selectable
-            key={committee.id}
-            onClick={() => disptachToggleCommitteeById(committee.id)}
-            committee={committee}
-            selected={selectedComittees.some((id) => id === committee.id)}
-          />
-        ))}
+        {committees
+          .filter((c) => c.open_for_applications)
+          .map((committee) => (
+            <Selectable
+              key={committee.id}
+              onClick={() => disptachToggleCommitteeById(committee.id)}
+              committee={committee}
+              selected={selectedComittees.some((id) => id === committee.id)}
+            />
+          ))}
       </div>
       <div className={_s.prioritizedSwitch}>
         <ToggleSwitch checked={ordered} onChange={dispatchToggleOrdered} />

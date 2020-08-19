@@ -21,7 +21,9 @@ const CommitteeInfo = ({ committeeId }) => {
   return (
     <section className={classNames(_s.component, { [_s.open]: showInfo })}>
       <header onClick={handleClick} className={_s.header}>
-        <img className={_s.img} src={`${API_SETTINGS.host}${committee.image.lg}`} alt={committee.name_long} />
+        {committee.image && (
+          <img className={_s.img} src={`${API_SETTINGS.host}${committee.image.lg}`} alt={committee.name_long} />
+        )}
         <h2 className={_s.name}>{committee.name_short}</h2>
       </header>
       <div className={_s.info}>{committee.application_description}</div>

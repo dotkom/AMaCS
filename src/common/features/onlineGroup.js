@@ -1,9 +1,15 @@
-import { createAsyncThunk, createSlice, createEntityAdapter } from '@reduxjs/toolkit';
+import { createAsyncThunk, createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 import { getOnlineGroupById } from 'clients/onlineGroup';
 
-export const fetchOnlineGroupsByIds = createAsyncThunk('onlineGroups/fetchById', async (groupIds) => {
-  const results = await Promise.all(groupIds.map((id) => getOnlineGroupById(id)));
-  return results;
+export const fetchOnlineGroupsByRelations = createAsyncThunk('onlineGroups/fetchById', async (groupRelations) => {
+  return await Promise.all(
+    groupRelations.map(async (g) => {
+      return {
+        open_for_applications: g.open_for_applications,
+        ...(await getOnlineGroupById(g.id)),
+      };
+    })
+  );
 });
 
 const onlineGroupsAdapter = createEntityAdapter();
@@ -17,18 +23,18 @@ export const onlineGroupsSlice = createSlice({
   }),
   reducers: {},
   extraReducers: {
-    [fetchOnlineGroupsByIds.pending]: (state) => {
+    [fetchOnlineGroupsByRelations.pending]: (state) => {
       if (state.loading === 'idle') {
         state.loading = 'pending';
       }
     },
-    [fetchOnlineGroupsByIds.fulfilled]: (state, action) => {
+    [fetchOnlineGroupsByRelations.fulfilled]: (state, action) => {
       if (state.loading === 'pending') {
         state.loading = 'idle';
         onlineGroupsAdapter.addMany(state, action.payload);
       }
     },
-    [fetchOnlineGroupsByIds.rejected]: (state, action) => {
+    [fetchOnlineGroupsByRelations.rejected]: (state, action) => {
       if (state.loading === 'pending') {
         state.loading = 'idle';
         state.error = action.error;
@@ -42,10 +48,10 @@ export const selectOnlineGroupById = (id) => (state) => {
   return groups.find((group) => group.id === id);
 };
 
-export const selectOnlineGroupsByIds = (ids) => (state) => {
+export const selectOnlineGroupsByRelations = (committees) => (state) => {
   return state.onlineGroups.entities
     .filter(Boolean)
-    .filter((group) => ids.some((id) => group.id === id))
+    .filter((group) => committees.some((c) => group.id === c.id))
     .sort((groupA, groupB) => groupA.name_long.localeCompare(groupB.name_long));
 };
 

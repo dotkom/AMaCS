@@ -1,9 +1,9 @@
 import {
   selectApplicationPeriodLoading,
   selectApplicationPeriod,
-  selectOnlineGroupIds,
+  selectOnlineGroups,
 } from 'common/features/applicationPeriods';
-import { selectOnlineGroupsLoading, selectOnlineGroupsByIds } from 'common/features/onlineGroup';
+import { selectOnlineGroupsLoading, selectOnlineGroupsByRelations } from 'common/features/onlineGroup';
 
 export const selectDataLoadingState = (state) => {
   const applicationPeriodLoading = selectApplicationPeriodLoading(state);
@@ -11,8 +11,8 @@ export const selectDataLoadingState = (state) => {
   const isAppRequesting = applicationPeriodLoading === 'pending' || onlineGroupsLoading === 'pending';
 
   const applicationPeriod = selectApplicationPeriod(state);
-  const onlineGroupIds = selectOnlineGroupIds(state);
-  const onlineGroups = selectOnlineGroupsByIds(onlineGroupIds)(state);
+  const onlineGroupIds = selectOnlineGroups(state);
+  const onlineGroups = selectOnlineGroupsByRelations(onlineGroupIds)(state);
   const isDataLoaded = applicationPeriod !== null && onlineGroups.length !== 0;
 
   if (isDataLoaded) {
